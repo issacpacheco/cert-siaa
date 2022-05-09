@@ -1,0 +1,30 @@
+.navigation,
+#login-page {
+  background-image: url('../images/backgrounds/background_dark.jpg');
+}
+
+.navigation:after,
+#login-page:after {
+  background: #2bbcce;
+  background: linear-gradient(to bottom, rgba(43,188,206,0.75) 5%, rgba(43, 188, 250, 0.75) 100%);
+}
+
+body.no-bg-img .navigation:after {
+  background-color: #2bbcce;
+}
+
+.breadcrumb > li.breadcrumb-home > a > i,
+.search-form:hover span.form-control-feedback,
+.search-form span.form-control-feedback:focus {
+  color: #2bbcce;
+}
+
+.search-form .form-control:hover,
+.search-form .form-control:focus {
+  border: 2px solid #2bbcce;
+}
+
+.pace .pace-progress {
+  background: #2bbcce;
+  background: linear-gradient(to right, rgba(43,188,206,0) 5%, rgba(43, 188, 250, 0.75) 100%);
+}

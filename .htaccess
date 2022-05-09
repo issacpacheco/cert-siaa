@@ -1,0 +1,9 @@
+RewriteEngine On
+#Redireccionamiento 301
+#RewriteCond %{HTTP_HOST} ^cert.edu.mx
+#RewriteRule ^(.*)$ http://www.cert.edu.mx/$1 [R=permanent,L]
+
+#Direcciones amigables
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
