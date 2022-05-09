@@ -38,7 +38,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     <div class="form-wrapper col-sm-4">
                         <label>Selecciona material/producto</label>
                         <div class="form-group">
-                            <select name="producto[]" id="" class="form-control">
+                            <select name="producto[]" id="producto" class="form-control" onchange="obtener_cantidad();">
                                 <option value="">Selecciona un material/producto</option>
                                 <?php for($i = 0; $i < $cmateriales; $i++){ ?>
                                 <option value="<?php echo $materiales['id'][$i]; ?>"><?php echo $materiales['nombre'][$i]; ?></option>
@@ -47,7 +47,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">
-                        <label>Cantidad de entrada</label>
+                        <label>Cantidad de salida(queda <strong id="cantidad_dispo">10</strong> disponibles de este producto/material/etc..)</label>
                         <div class="form-group">
                             <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
                         </div>
@@ -63,6 +63,12 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                 <div class="row">
                     <div class="col-3">
                         <input class="btn btn-success clonadorboton letrablanca" placeholder="Agregar entrada +" id="clonador_1" onclick="ClonarDIV();" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="">Comentarios</label>
+                        <textarea name="comentarios" id="comentarios" class="form-control left full" placeholder="Comentarios" cols="30" rows="10"></textarea>
                     </div>
                 </div>
                 <div class="mright textright">
@@ -91,6 +97,18 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             listausarios.children[0].remove(listausarios);
             $("#nombre_proyecto").css({ display: "block" });
         }
+    }
+
+    function obtener_cantidad(){
+        var producto = document.getElementById("producto").value;
+        $.ajax({
+            type: "POST",
+            url: "ajax-get/cantidad-disponible",
+            data: {id_producto: producto},
+            success: function(response){
+                $("#cantidad_dispo").html(response);
+            }
+        })
     }
 
     function ClonarDIV(){

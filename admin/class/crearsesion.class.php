@@ -24,7 +24,7 @@ class newsesion extends mysqlconsultas{
     }
 
     public function login($usuario, $password){
-        $qry = "SELECT * FROM usuarios WHERE correo = '".$usuario."' AND pass = '".$password."' LIMIT 1";
+        $qry = "SELECT * FROM usuarios WHERE correo = '$usuario' AND pass = '$password'";
         $res = $this->consulta($qry);
         return $res;
     }

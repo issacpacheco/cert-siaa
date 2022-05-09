@@ -17,12 +17,13 @@ if($prestamo == 1){
     
     $idsolicitante   = filter_input(INPUT_POST, 'idsolicitante', FILTER_SANITIZE_NUMBER_INT);
     $folio           = filter_input(INPUT_POST, 'folio', FILTER_SANITIZE_SPECIAL_CHARS);
-    $producto   = $_REQUEST['producto'];
-    $cantidad   = $_REQUEST['cantidad'];
-    $estatus    = $_REQUEST['estatus'];
-    $contador = count($producto);
-
-    for($i = 0, $cont = $contador-1; $i < $cont; $i++){
+    $comentarios     = filter_input(INPUT_POST, 'comentarios', FILTER_SANITIZE_SPECIAL_CHARS);
+    $producto        = $_REQUEST['producto'];
+    $cantidad        = $_REQUEST['cantidad'];
+    $estatus         = $_REQUEST['estatus'];
+    $contador        = count($estatus);
+    var_dump($producto);
+    for($i = 0; $i < $contador; $i++){
         $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
         $suma = $cantidad_actual['cantidad'][0] + $cantidad[$i];
 
@@ -31,8 +32,8 @@ if($prestamo == 1){
                                    WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion              -> ejecuta($qryActualizarCantidad);
         //Se registra la entrada del producto por prestamo 
-        $qryAgregaEntrada       = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto, devolucion, id_usuario_dev, clave_solicitud, id_campus) 
-                                   VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','1','$idsolicitante', '$folio','$idcampus')";
+        $qryAgregaEntrada       = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto, devolucion, id_usuario_dev, clave_solicitud, id_campus,comentarios) 
+                                   VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','1','$idsolicitante', '$folio','$idcampus','$comentarios')";
         $ejecucion              -> ejecuta($qryAgregaEntrada);
         //Se actualiza el estatus del prestamo del registro de salidas
         if($estatus[$i] == 4){
@@ -52,11 +53,12 @@ if($prestamo == 1){
 
 }else if($prestamo == 2){
 
-    $factura    = filter_input(INPUT_POST, 'factura', FILTER_SANITIZE_SPECIAL_CHARS);
-    $producto   = $_REQUEST['producto'];
-    $cantidad   = $_REQUEST['cantidad'];
-    $precio     = $_REQUEST['precio'];
-    $contador = count($producto);
+    $factura     = filter_input(INPUT_POST, 'factura', FILTER_SANITIZE_SPECIAL_CHARS);
+    $comentarios = filter_input(INPUT_POST, 'comentarios', FILTER_SANITIZE_SPECIAL_CHARS);
+    $producto    = $_REQUEST['producto'];
+    $cantidad    = $_REQUEST['cantidad'];
+    $precio      = $_REQUEST['precio'];
+    $contador    = count($producto);
     
     for($i = 0; $i < $contador; $i++){
         $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
@@ -65,7 +67,7 @@ if($prestamo == 1){
         $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$suma', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion -> ejecuta($qryActualizarCantidad);
     
-        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$precio[$i]')";
+        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total,comentarios) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$precio[$i]','$comentarios')";
         $ejecucion -> ejecuta($qryAgregaEntrada);
     }
 

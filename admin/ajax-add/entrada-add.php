@@ -47,7 +47,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
 
                 </div>
                 <div class="row panel-body">
-                    <div class="form-wrapper col-sm-4">
+                    <div class="form-wrapper col-sm-4" id="validar_factura">
                         <label>¿La entrada es por factura?</label>
                         <div class="form-group">
                             <select name="facturaSelect" id="facturaselect" onchange="IncluyeFactura();" class="form-control validar">
@@ -95,6 +95,12 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                         <input class="btn btn-success clonadorboton letrablanca" placeholder="Agregar entrada +" id="clonador_1" onclick="ClonarDIV();" readonly>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-3">
+                        <label for="">Comentarios</label>
+                        <textarea name="comentarios" id="comentarios" class="form-control left full" placeholder="Comentarios" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
                 <div class="mright textright">
                     <button type="button" class="btnRegresar right btngral" onclick="saveInfo('entrada-add', 'pr-entradas-salidas', this);">
                         <span class="letrablanca font14">Guardar</span>
@@ -127,12 +133,14 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             $("#listadoprestamos").css({ display: "block" });
             $("#entrada_add").css({ display: "none" });
             $("#clon").css({ display: "none" });
+            $("#validar_factura").css({display: "none" });
         }else if(valor == 0 || valor == 2){
             $("#entrada_add").css({ display: "block" });
             $("#clon").css({ display: "block" });
             $("#folio").css({ display: "none" });
             $("#botonbus").css({ display: "none" });
             $("#listadoprestamos").css({ display: "none" });
+            $("#validar_factura").css({display: "block" });
         }
     }
 

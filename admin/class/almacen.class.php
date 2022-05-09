@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 class almacen extends mysqlconsultas{
     
     public function obtener_categorias(){
-        $qry = "SELECT * FROM inv_categoria";
+        $qry = "SELECT * FROM inv_categoria WHERE id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -41,11 +41,12 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_materiales_categorias(){
-        $qry = "SELECT m.id, m.nombre, m.numero_serie, cp.cantidad, c.nombre AS categoria FROM inv_productos m 
+        $qry = "SELECT m.id, m.nombre, m.numero_serie, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
                 LEFT JOIN inv_categoria c ON c.id = m.id_categoria
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
                 LEFT JOIN campus cam ON cam.id = cp.id_campus
-                WHERE cam.id = {$_SESSION['campus']}";
+                LEFT JOIN inv_unidades u ON u.id = m.id_unidad 
+                WHERE cam.id = {$_SESSION['campus']} AND m.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -90,10 +91,11 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_salidas(){
-        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre, s.nombre AS solicitante
                 FROM inv_salida_producto e
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
+                LEFT JOIN usuarios s ON s.id = e.id_solicitante
                 WHERE e.id_campus = {$_SESSION['campus']}
                 AND e.estatus = 0 OR e.estatus >= 3
                 ORDER BY e.fecha DESC, e.hora DESC";
@@ -165,6 +167,14 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT s.*, p.nombre AS producto FROM inv_salida_transferencia s
         LEFT JOIN inv_productos p ON p.id = s.id_producto
         WHERE s.codigo_transfer = '$folio' AND s.estatus != 3 AND s.id_campus_destino = {$_SESSION['campus']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_transferencia_eliminar($folio,$destino){
+        $qry = "SELECT s.*, p.nombre AS producto FROM inv_salida_transferencia s
+        LEFT JOIN inv_productos p ON p.id = s.id_producto
+        WHERE s.codigo_transfer = '$folio' AND s.estatus != 3 AND s.id_campus_destino = $destino";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -249,6 +259,24 @@ class almacen extends mysqlconsultas{
                 LEFT JOIN campus c ON c.id = s.id_campus
                 LEFT JOIN campus a ON a.id = s.id_campus_destino
                 WHERE s.estatus < 3";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function subareas(){
+        $qry = "SELECT * FROM inv_subareas WHERE id_area = {$_SESSION['area']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+    
+    public function unidades(){
+        $qry = "SELECT * FROM inv_unidades";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_unidad($valor){
+        $qry = "SELECT * FROM inv_unidades WHERE abreviacion LIKE '".$valor."'";
         $res = $this->consulta($qry);
         return $res;
     }

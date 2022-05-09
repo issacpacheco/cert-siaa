@@ -1,4 +1,4 @@
-	<style>	
+<style>	
 	.left-nav-label {
 		margin-top: 2px;
 	}
@@ -26,19 +26,21 @@
                     <span>Panel administrativo</span>
                 </a>
             </li>
-            <?php if($_SESSION['area'] == 1){ ?>
+            <?php if($_SESSION['nivel'] == 1){ ?>
 			<li>
                 <a href="#submenuAccessos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-user-check"></i>
                     <span>Accesos</span>
                 </a>
                 <ul class="collapse nav primary essubmenu" id="submenuAccessos">
+                    <?php if($_SESSION['nivel'] == 99 || $_SESSION['nivel'] == 1){ ?>
                     <li>
                         <a onclick="getPageMenu('pr-grupos')">
                         <i class="fas fa-users-class white"></i>
                             <span class="white">Grupos</span>
                         </a>
                     </li>
+                    <?php } ?>
                     <li>
                         <a onclick="getPageMenu('pr-usuarios')">
                             <i class="fas fa-users white"></i>
@@ -47,8 +49,6 @@
                     </li>
                 </ul>
             </li>
-            <?php } ?>
-            <?php if($_SESSION['area'] == 1 OR $_SESSION['area'] == 3){ ?>
             <li>
                 <a href="#submenuAlmancen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-warehouse"></i>
@@ -82,7 +82,7 @@
                 </ul>
             </li>
             <?php } ?>
-            <?php if($_SESSION['area'] !== "1" AND $_SESSION['area'] !== "3" AND $_SESSION['area'] !== "4"){ ?>
+            <?php if($_SESSION['nivel'] == 2){ ?>
             <li>
                 <a onclick="getPageMenu('pr-solicitudes')">
                     <i class="fas fa-clipboard-list-check"></i>

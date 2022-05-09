@@ -219,10 +219,18 @@ function savePopup(elem) {
             url: "ajax-save/" + page,
             data: $("#frmPopup").serialize(),
             success: function (response) {
-                alertaVerde('Guardado con exito!');
-                simpleload(div, postpagina);
-                cerrarpopup();
-                $('html,body').css('overflow', 'auto');
+                if(response == 1){
+                    alertaVerde('Guardado con exito!');
+                    simpleload(div, postpagina);
+                    cerrarpopup();
+                    $('html,body').css('overflow', 'auto');
+                }else if(response == 0){
+                    alertaRoja("Las contraseñas no coinciden");
+                    simpleload(div, postpagina);
+                    cerrarpopup();
+                    $('html,body').css('overflow', 'auto');
+                }
+                
             },
             failure: function (response) {
                 //----some code here-----//

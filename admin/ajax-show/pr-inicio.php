@@ -38,7 +38,7 @@ $cmisenviosfin  = $fn->cuentarray($misenviosfin);
             <div class="panel-body">
                 <h1 class="text-center">SISTEMA DE INVENTARIO</h1>
                 <hr />
-                <?php if($_SESSION['area'] == 1 OR $_SESSION['area'] == 3){ ?>
+                <?php if($_SESSION['nivel'] == 1){ ?>
                 <div class="row panel-body">
                     <div class="col-sm-6">
                         <h3 class="text-center">Listado de solicitudes</h3>

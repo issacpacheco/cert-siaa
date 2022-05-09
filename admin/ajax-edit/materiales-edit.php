@@ -50,7 +50,7 @@ $ccategorias    = $fn   -> cuentarray($categorias);
                     <div class="form-wrapper col-sm-4">
                         <label>Codigo de barras</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Codigo de barras" value="<?php echo $material['codigo_barras'][0]; ?>">
+                            <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Codigo de barras" value="<?php echo $material['numero_serie'][0]; ?>">
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">

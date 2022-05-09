@@ -5,7 +5,7 @@ $ejecucion = new mysqlconsultas();
 
 $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
 
-$qry="INSERT INTO inv_categoria (nombre) VALUES ('$nombre')";
-echo $qry;
+$qry="INSERT INTO inv_categoria (nombre,id_area) VALUES ('$nombre','{$_SESSION['area']}')";
+echo '1';
 
 $ejecucion->ejecuta($qry);

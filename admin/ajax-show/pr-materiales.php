@@ -44,7 +44,7 @@ $cmateriales    = $fn->cuentarray($materiales);
                             <tr onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-materiales" data-form="" data-page="materiales-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $materiales["id"][$i]; ?>">
                                 <td><?php echo $a; ?></td>
                                 <td><?php echo $materiales['nombre'][$i]; ?></td>
-                                <td><?php echo $materiales['cantidad'][$i]; ?></td>
+                                <td><?php echo $materiales['cantidad'][$i]; ?> - <?php echo $materiales['unidad'][$i] ?></td>
                                 <td><?php echo $materiales['numero_serie'][$i]; ?></td>
                                 <td><?php echo $materiales['categoria'][$i]; ?></td>
                             </tr>

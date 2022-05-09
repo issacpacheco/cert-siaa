@@ -4,7 +4,11 @@ use conexionbd\mysqlconsultas;
 
 class usuarios extends mysqlconsultas{
     public function obtener_grupos(){
-        $qry = "SELECT * FROM area WHERE sistema = 2";
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT * FROM area WHERE sistema = 2";
+        }else if($_SESSION['nivel'] == 1){
+            $qry = "SELECT * FROM inv_subareas WHERE id_area = {$_SESSION['area']}";
+        }
         $res = $this->consulta($qry);
         return $res;
     }
@@ -40,6 +44,12 @@ class usuarios extends mysqlconsultas{
                 FROM usuarios u 
                 LEFT JOIN area a ON a.id = u.id_area
                 WHERE u.id = '$id'";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function nivelesusuarios(){
+        $qry = "SELECT * FROM inv_niveles";
         $res = $this->consulta($qry);
         return $res;
     }

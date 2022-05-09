@@ -38,6 +38,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <th> Cantidad </th>
                                 <th> Fecha y Hora </th>
                                 <th> Usuario que realizo la acción </th>
+                                <th> Comentarios </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -48,6 +49,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <td><?php echo $entradas['cantidad'][$i]; ?></td>
                                 <td><?php echo $entradas['fecha'][$i].' -/- '.$entradas['hora'][$i] ?></td>
                                 <td><?php echo $entradas['nombre'][$i]; ?></td>
+                                <td><?php echo $entradas['comentarios'][$i]; ?></td>
                             </tr>
                         <?php } ?>    
                         </tbody>    
@@ -74,6 +76,8 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <th> Fecha y Hora </th>
                                 <th> Usuario que realizo la acción </th>
                                 <th> Codigo de prestamo </th>
+                                <th> Solicitante </th>
+                                <th> Comentarios </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -85,6 +89,8 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <td><?php echo $salidas['fecha'][$i].' -/- '.$salidas['hora'][$i] ?></td>
                                 <td><?php echo $salidas['nombre'][$i]; ?></td>
                                 <td><?php echo $salidas['clave_solicitud'][$i]; ?></td>
+                                <td><?php echo $salidas['solicitante'][$i]; ?></td>
+                                <td><?php echo $salidas['comentarios'][$i]; ?></td>
                             </tr>
                         <?php } ?>    
                         </tbody>    

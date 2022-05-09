@@ -1,6 +1,6 @@
 <?php
 require('../class/allClass.php');
-
+error_reporting(0);
 $usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
 $contra  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
@@ -11,7 +11,7 @@ $fn = new funciones();
 $get = new newsesion();
 
 $logeo = $get->login($usuario, $contra);
-$clogeo = $fn->cuentarray($logeo);
+// $clogeo = $fn->cuentarray($logeo);
 $inicio = $logeo['id'][0];
 
 if($inicio > 0){

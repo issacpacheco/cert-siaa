@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="panel-body">
-					<form class="row" method="post" action="login" id="LoginForm">
+					<form class="row" id="LoginForm">
 						<div class="form-wrapper col-sm-6">
 							<label for="Login">Correo</label>
 							<div class="form-group">
@@ -52,7 +52,7 @@
 							</div>
 						</div>
 
-						<button type="submit" class="btn btn-lg btn-info btn-block" style="margin-top: 30px" id="boton_enviar_login" onClick="fnvalidar()"><i class="fa fa-sign-in"></i> Entrar</button>
+						<button type="button" class="btn btn-lg btn-info btn-block" style="margin-top: 30px" id="boton_enviar_login" onClick="fnvalidar()"><i class="fa fa-sign-in"></i> Entrar</button>
 					</form>
 				</div>
 			</div>

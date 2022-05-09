@@ -92,6 +92,7 @@ function fnvalidar(){
         url: "admin/scripts/login",
         data: $("#LoginForm").serialize(),
         success: function (response) {
+            console.log(response);
             if(response==0){
                 Swal.fire({
                     icon: 'error',

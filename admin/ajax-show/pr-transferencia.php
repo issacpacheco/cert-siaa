@@ -39,6 +39,10 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <th> Usuario que realizo la acción </th>
                                 <th> Folio </th>
                                 <th> Reporte </th>
+                                <?php for($i = 0,$a=0; $i < $csalidas; $i++){?>
+                                <?php if($salidas['estatus'][$i] !== '4'){ ?>
+                                <th> Cancelar transferencia </th>
+                                <?php }} ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,6 +55,9 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <td><?php echo $salidas['nombre'][$i]; ?></td>
                                 <td><?php echo $salidas['codigo_transfer'][$i]; ?></td>
                                 <td class="text-center"><i class="btn btn-danger fas fa-file-pdf" onclick="generarreporte('<?php echo $salidas['codigo_transfer'][$i]; ?>');"></i></td>
+                                <?php if($salidas['estatus'][$i] !== '4'){ ?>
+                                <td class="text-center"><i class="btn btn-danger fas fa-times-circle" onclick="cancelartransferencia('<?php echo $salidas['codigo_transfer'][$i]; ?>');"> <span>Cancelar transferencia</span></i></td>
+                                <?php } ?>
                             </tr>
                         <?php } ?>    
                         </tbody>    
@@ -133,5 +140,17 @@ $csalidas    = $fn    -> cuentarray($salidas);
     });
     function generarreporte(clave){
         window.location.href = "../admin/upload/pdf/reportes-transferencia.php?clave="+clave;
+    }
+    function cancelartransferencia(clave){
+        var postpagina = "pr-transferencia";
+        $.ajax({
+            type: 'post',
+            url: 'ajax-delete/cancelartransferencia',
+            data: {folio:clave},
+            success: function(response){
+                alertaVerde('Se elimino la transferencia con exito!');
+                simpleload('contenedor', postpagina);
+            }
+        })
     }
 </script>

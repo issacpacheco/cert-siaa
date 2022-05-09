@@ -45,7 +45,36 @@ class funciones {
             $cuantos = 0;
         }
         return $cuantos;
-    }    
+    }
+    
+    public function BorrarCarpeta($dir){
+        $Res = false;
+        if ( file_exists($dir) )
+        {
+            $dh = opendir($dir);
+            while ($file=readdir($dh)) 
+            {
+                if ($file!="." && $file!="..") 
+                {
+                    $fullpath = $dir."/".$file;
+                    if (!is_dir($fullpath)) 
+                    {
+                        unlink($fullpath);
+                    } 
+                    else 
+                    {
+                        BorrarCarpeta($fullpath);
+                    }
+                }
+            }
+            closedir($dh);
+            if (rmdir($dir)) 
+            {
+                $Res = true;
+            } 
+        }
+        return $Res;
+    }
     
     public function redondeaTiempo($fechahora, $minutos){
         $fecha = date("Y-m-d",strtotime($fechahora));

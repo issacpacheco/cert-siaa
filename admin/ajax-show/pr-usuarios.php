@@ -19,7 +19,7 @@ $cusuarios = $fn->cuentarray($usuarios);
                     Lista de usuarios
                 </div>
                 <div class="col-6 mright textright">
-                    <button id="idtest" onclick="universalLoad(this)" data-postload="0" data-regresar="pr-usuarios" data-valores="" data-form="" data-page="usuarios-add" data-carpeta="ajax-add" data-load="contenedor" data-id="" class="btngral botonVerde mright"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
+                    <button id="idtest" onclick="openPopup(this, 700, 550)" data-postload="0" data-returnpage="pr-usuarios" data-valores="" data-form="" data-page="usuario-add" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                         <span class="letrablanca font14">Agregar</span>
                     </button> 
                 </div>

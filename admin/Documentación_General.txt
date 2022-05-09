@@ -1,0 +1,20 @@
+En este apartado se podra dar a conocer algunos de los punto importantes para este proyecto
+(O eso es lo que se pretende)
+Se hara explicación de algunas funciones que se hayan realizado y el porque se utilizaron algunas 
+librerias.
+
+Realizado por: Issac Pacheco Pérez
+Institución CERT.
+
+Estatus de salida (PRESTAMO)
+
+1 ---------> Solicitud
+2 ---------> Revisión
+3 ---------> Aceptado
+4 ---------> Devolución Incompleta
+5 ---------> Devuelto
+
+Estatus de materia
+
+0 ---------> Inactivo
+1 ---------> Activo 

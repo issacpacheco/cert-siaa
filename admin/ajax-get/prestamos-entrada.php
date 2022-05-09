@@ -32,7 +32,7 @@ for($i = 0; $i < $cprestamos; $i++){
 <div class="form-wrapper col-sm-3">
     <label>Cantidad de entrada a devolver</label>
     <div class="form-group">
-        <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
+        <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad_dev" placeholder="Cantidad" value="" autocomplete="FALSE">
     </div>
 </div>
 <div class="form-wrapper col-sm-3">

@@ -10,12 +10,13 @@ $fn     = new funciones();
 $ejecucion = new mysqlconsultas();
 
 
-$producto   = $_REQUEST['producto'];
-$cantidad   = $_REQUEST['cantidad'];
-$proyecto   = $_REQUEST['proyecto'];
-$idusuario  = $_SESSION['id_admin'];
-$idcampus   = $_SESSION['campus'];
-$prestamo   = filter_input(INPUT_POST, 'prestamo', FILTER_SANITIZE_NUMBER_INT);
+$producto    = $_REQUEST['producto'];
+$cantidad    = $_REQUEST['cantidad'];
+$proyecto    = $_REQUEST['proyecto'];
+$idusuario   = $_SESSION['id_admin'];
+$idcampus    = $_SESSION['campus'];
+$prestamo    = filter_input(INPUT_POST, 'prestamo', FILTER_SANITIZE_NUMBER_INT);
+$comentarios = filter_input(INPUT_POST, 'comentarios', FILTER_SANITIZE_SPECIAL_CHARS);
 
 if($prestamo == 1){
     //Obtenemos el id del solicitante
@@ -31,8 +32,8 @@ if($prestamo == 1){
         $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion -> ejecuta($qryActualizarCantidad);
     
-        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, cantidad_prestada,id_producto, id_solicitante, prestamo, estatus,id_campus) 
-                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$cantidad[$i]','$producto[$i]','$idsolicitante','1','3','$idcampus')";
+        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, cantidad_prestada,id_producto, id_solicitante, prestamo, estatus,id_campus,comentarios) 
+                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$cantidad[$i]','$producto[$i]','$idsolicitante','1','3','$idcampus','$comentarios')";
         $id = $ejecucion -> ejecuta($qryAgregaEntrada);
 
         $qryClavePrestamo = "UPDATE inv_salida_producto SET clave_solicitud = '$claveprestamo' WHERE id = '$id'";
@@ -48,8 +49,8 @@ if($prestamo == 1){
         $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion -> ejecuta($qryActualizarCantidad);
 
-        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, id_producto, id_solicitante,id_campus,estatus,proyecto) 
-                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idsolicitante','$idcampus','0','$proyecto[$i]')";
+        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, id_producto, id_solicitante,id_campus,estatus,proyecto,comentarios) 
+                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idsolicitante','$idcampus','0','$proyecto[$i]','$comentarios')";
         $id = $ejecucion -> ejecuta($qryAgregaEntrada);
     }
 }

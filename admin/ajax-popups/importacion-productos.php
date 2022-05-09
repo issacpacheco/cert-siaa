@@ -37,6 +37,6 @@ $div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_SPECIAL_CHARS);
 
 <script>
     function descargarExcel(){
-        window.location.href = "../admin/upload/generales/listamateriales.xlsx";
+        window.location.href = "../admin/upload/generales/cop_listamateriales.xlsx";
     }
 </script>

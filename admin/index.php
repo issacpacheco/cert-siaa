@@ -38,6 +38,14 @@ include( "includes/config.php" );
 	<!-- Cropper-->
 	<link href="plugins/cropper-master/dist/cropper.min.css" rel="stylesheet">
 	<link href="css/crop_avatar.css?v=<?php echo rand();?>" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="plugins/bootstrap-fileupload/bootstrap-fileupload.css" />
+	<!-- blueimp Gallery styles -->
+	<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload.css" rel="stylesheet" >
+	<link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui.css" rel="stylesheet" >
+	<!-- CSS adjustments for browsers with JavaScript disabled -->
+    <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-noscript.css" rel="stylesheet" ></noscript>
+    <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" ></noscript>
 </head>
 
 <body class="hold-transition"  onload="nobackbutton();">
@@ -110,6 +118,20 @@ include( "includes/config.php" );
 		<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.html5.min.js"></script>    
 		<script type="text/javascript" src="https://cdn.datatables.net/buttons/2.1.0/js/buttons.print.min.js"></script>
 		<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/af-2.2.2/b-1.5.1/b-colvis-1.5.1/b-flash-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/fc-3.2.4/fh-3.1.3/kt-2.3.2/r-2.2.1/rg-1.0.2/rr-1.2.3/sc-1.4.4/sl-1.2.5/datatables.min.js"></script>
+		<!-- The template to display files available for upload -->
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/vendor/jquery.ui.widget.js"></script>
+		<script src="//blueimp.github.io/JavaScript-Templates/js/tmpl.min.js"></script>
+		<script src="//blueimp.github.io/JavaScript-Load-Image/js/load-image.all.min.js"></script>
+		<script src="//blueimp.github.io/JavaScript-Canvas-to-Blob/js/canvas-to-blob.min.js"></script>
+		<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.iframe-transport.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-process.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-image.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-audio.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-video.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-validate.js"></script>
+		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-ui.js"></script>
 		<!-- Current page scripts -->
         <div class="current-scripts">
 
