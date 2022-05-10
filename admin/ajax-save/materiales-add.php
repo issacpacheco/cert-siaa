@@ -18,13 +18,14 @@ $codigo         = filter_input(INPUT_POST, 'codigo',        FILTER_SANITIZE_STRI
 $categoria      = filter_input(INPUT_POST, 'categoria',     FILTER_SANITIZE_NUMBER_INT);
 $estatus        = filter_input(INPUT_POST, 'estatus',       FILTER_SANITIZE_NUMBER_INT);
 $unidad         = filter_input(INPUT_POST, 'unidad',        FILTER_SANITIZE_NUMBER_INT);
+$bodega         = filter_input(INPUT_POST, 'bodega',        FILTER_SANITIZE_NUMBER_INT);
 $idusuario      = $_SESSION['id_admin'];
 $idcampus       = $_SESSION['campus'];
 $area           = $_SESSION['area'];
 
 
-$qry = "INSERT INTO inv_productos (nombre,descripcion,numero_serie,fecha_registro,hora_registro,id_usuario_alta,id_categoria,estatus,id_area,id_unidad) 
-        VALUES ('$nombre','$descripcion','$codigo',curdate(),curtime(),'$idusuario','$categoria','$estatus','$area','$unidad')";
+$qry = "INSERT INTO inv_productos (nombre,descripcion,numero_serie,fecha_registro,hora_registro,id_usuario_alta,id_categoria,estatus,id_area,id_unidad,id_bodega) 
+        VALUES ('$nombre','$descripcion','$codigo',curdate(),curtime(),'$idusuario','$categoria','$estatus','$area','$unidad','$bodega')";
 
 $id = $ejecucion->ejecuta($qry);
 //Crear carpeta

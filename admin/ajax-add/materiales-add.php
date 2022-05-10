@@ -1,6 +1,6 @@
 <?php
 include('../class/allClass.php');
-
+error_reporting(0);
 use nsalmacen\almacen;
 use nsfunciones\funciones;
 
@@ -24,6 +24,8 @@ $categorias             = $info ->  obtener_categorias();
 $ccategorias            = $fn   ->  cuentarray($categorias);
 $unidades               = $info ->  unidades();
 $cunidades              = $fn   ->  cuentarray($unidades);
+$bodegas                = $info ->  mis_bodeguitas();
+$cbodegas               = $fn   ->  cuentarray($bodegas);
 ?>
 
 <div class="col-sm-12">
@@ -83,6 +85,16 @@ $cunidades              = $fn   ->  cuentarray($unidades);
                             </select>
                         </div>
                     </div>
+                    <div class="form-wrapper col-sm-4">
+                        <label>Seleccione bodega donde se almacenara</label>
+                        <div class="form-group">
+                            <select name="bodega" id="bodega" class="form-control">
+                            <?php for($i = 0; $i < $cbodegas; $i++){ ?>
+                                <option value="<?php echo $bodegas['id'][$i]; ?>"><?php echo $bodegas['nombre'][$i] ?></option>
+                            <?php } ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <!-- <div class="mright textright">
                     <button type="button" class="btnRegresar right btngral" onclick="saveInfo('materiales-add', 'pr-materiales', this);">
@@ -90,51 +102,6 @@ $cunidades              = $fn   ->  cuentarray($unidades);
                     </button>
                 </div> -->
             </form>
-            <div class="form-group">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="alert alert-success">
-                            <strong>NOTA:</strong> Para mejores resultados el nombre de los archivos de imagen <strong>no debe contener espacios en blanco ni caracteres especiales</strong>.
-                        </div>
-                        <form id="fileupload" action="" method="POST" enctype="multipart/form-data">
-                            <div class="fileupload-buttonbar">
-                                <div class="col-lg-11 col-md-11 col-sm-12 col-xs-12">
-                                    <span class="btn btn-success fileinput-button">
-                                    <i class="fa fa-plus"></i>
-                                    <span>Agregar imágenes</span>
-                                    <input type="file" name="files[]" multiple>
-                                    </span>
-                                    <button type="submit" class="btn btn-primary start">
-                                    <i class="fa fa-upload"></i>
-                                    <span>Subir</span>
-                                    </button>
-                                    <button type="reset" class="btn btn-warning cancel">
-                                    <i class="fa fa-ban"></i>
-                                    <span>Cancelar subida</span>
-                                    </button>
-                                    <button type="button" class="btn btn-danger delete">
-                                    <i class="fa fa-trash"></i>
-                                    <span>Borrar</span>
-                                    </button>
-                                    Seleccionar todo<input type="checkbox" class="toggle">
-                                    <span class="fileupload-loading"></span>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fileupload-progress fade">
-                                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
-                                            <div class="progress-bar progress-bar-success" style="width:0%;"></div>
-                                        </div>
-                                        <div class="progress-extended">&nbsp;</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <table role="presentation" class="table table-striped clearfix">
-                                <tbody class="files"></tbody>
-                            </table>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <div class="mright textright">
                 <button type="button" class="btnRegresar right btngral" onclick="saveInfo('materiales-add', 'pr-materiales', this);">
                     <span class="letrablanca font14">Guardar</span>

@@ -17,7 +17,9 @@ $material       = $info -> obtener_material($id);
 $fotos          = $info -> obtener_fotos_materiales($id);
 $cfotos         = $fn   -> cuentarray($fotos);
 $categorias     = $info -> obtener_categorias();
-$ccategorias    = $fn   -> cuentarray($categorias);    
+$ccategorias    = $fn   -> cuentarray($categorias);
+$bodegas        = $info -> mis_bodeguitas();
+$cbodegas       = $fn   -> cuentarray($bodegas);
 ?>
 
 <div class="col-sm-12">
@@ -57,9 +59,9 @@ $ccategorias    = $fn   -> cuentarray($categorias);
                         <label>Categoria</label>
                         <div class="form-group">
                             <select name="categoria" id="categoria" class="form-control">
-                                <option value="<?php echo $material['id_categoria'][0]; ?>" selected><?php echo $material['categoria'][0]; ?></option>
+                                <option value="0" selected>Selecciona una categoria</option>
                                 <?php for($i = 0; $i < $ccategorias; $i++){ ?>
-                                <option value="<?php echo $categorias['id'][$i]; ?>"><?php echo $categorias['nombre'][$i]; ?></option>
+                                <option value="<?php echo $categorias['id'][$i]; ?>" <?php if($material['id_categoria'][0] == $categorias['id'][$i]){ echo  'Selected'; } ?>><?php echo $categorias['nombre'][$i] ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -68,9 +70,20 @@ $ccategorias    = $fn   -> cuentarray($categorias);
                         <label>Estatus</label>
                         <div class="form-group">
                             <select name="estatus" id="estatus" class="form-control">
-                                <option value="<?php echo $material['estatus'][0]; ?>"><?php if($material['estatus'][0] == 1){ echo "Activo"; }else{ echo "Inactivo"; } ?></option>
-                                <option value="0">Inactivo</option>
-                                <option value="1">Activo</option>
+                                <option value="2" selected>Selecciona un estatus</option>
+                                <option value="1" <?php if($material['estatus'][0] == 1){ echo "selected"; }?>>Activo</option>
+                                <option value="0" <?php if($material['estatus'][0] == 0){ echo "selected"; }?>>Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-wrapper col-sm-4">
+                        <label>Bodega asiganda</label>
+                        <div class="form-group">
+                            <select name="id_bodega" id="id_bodega" class="form-control">
+                                <option value="0" selected>Selecciona una bodega</option>
+                                <?php for($i = 0; $i < $cbodegas; $i++){ ?>
+                                <option value="<?php echo $bodegas['id'][$i]; ?>" <?php if($material['id_bodega'][0] == $bodegas['id'][$i]){ echo  'Selected'; } ?>><?php echo $bodegas['nombre'][$i] ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

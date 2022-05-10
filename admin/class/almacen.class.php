@@ -281,6 +281,18 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function mis_bodeguitas(){
+        $qry = "SELECT * FROM inv_bodeguitas WHERE id_area = {$_SESSION['area']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_bodega($id){
+        $qry = "SELECT * FROM inv_bodeguitas WHERE id = '$id'";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 
