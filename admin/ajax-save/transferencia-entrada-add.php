@@ -35,13 +35,13 @@ for($i = 0; $i < $contador; $i++){
         $cantidad_prestada = $info -> obtener_cantidad_enviada($producto[$i],$folio);
         $resta = $cantidad_prestada['cantidad_enviada'][0] - $cantidad[$i];
         $qryActualizarTransferencia  = "UPDATE inv_salida_transferencia SET estatus = '$estatus[$i]', cantidad_enviada = '$resta' 
-                                WHERE codigo_transfer = '$folio' AND estatus != 4";
+                                WHERE codigo_transfer = '$folio' AND id_producto = '$producto[$i]' AND estatus != 4";
         $ejecucion              -> ejecuta($qryActualizarTransferencia);
     }else if($estatus[$i] == 4){
         $cantidad_prestada = $info -> obtener_cantidad_enviada($producto[$i],$folio);
         $resta = $cantidad_prestada['cantidad'][0];
         $qryActualizarTransferencia  = "UPDATE inv_salida_transferencia SET estatus = '$estatus[$i]', cantidad_enviada = '$resta' 
-                                WHERE codigo_transfer = '$folio' AND estatus != 4";
+                                WHERE codigo_transfer = '$folio' AND id_producto = '$producto[$i]' AND estatus != 4";
         $ejecucion              -> ejecuta($qryActualizarTransferencia);
     }
 }

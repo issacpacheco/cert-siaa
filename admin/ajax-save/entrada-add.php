@@ -15,14 +15,15 @@ $prestamo   = filter_input(INPUT_POST, 'prestamo', FILTER_SANITIZE_NUMBER_INT);
 
 if($prestamo == 1){
     
-    $idsolicitante   = filter_input(INPUT_POST, 'idsolicitante', FILTER_SANITIZE_NUMBER_INT);
-    $folio           = filter_input(INPUT_POST, 'folio', FILTER_SANITIZE_SPECIAL_CHARS);
-    $comentarios     = filter_input(INPUT_POST, 'comentarios', FILTER_SANITIZE_SPECIAL_CHARS);
+    $idsolicitante   = filter_input(INPUT_POST, 'idsolicitante',    FILTER_SANITIZE_NUMBER_INT);
+    $folio           = filter_input(INPUT_POST, 'folio',            FILTER_SANITIZE_SPECIAL_CHARS);
+    $comentarios     = filter_input(INPUT_POST, 'comentarios',      FILTER_SANITIZE_SPECIAL_CHARS);
     $producto        = $_REQUEST['producto'];
     $cantidad        = $_REQUEST['cantidad'];
     $estatus         = $_REQUEST['estatus'];
     $contador        = count($estatus);
-    var_dump($producto);
+    echo $contador;
+    $consula = [];
     for($i = 0; $i < $contador; $i++){
         $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
         $suma = $cantidad_actual['cantidad'][0] + $cantidad[$i];
@@ -36,20 +37,23 @@ if($prestamo == 1){
                                    VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','1','$idsolicitante', '$folio','$idcampus','$comentarios')";
         $ejecucion              -> ejecuta($qryAgregaEntrada);
         //Se actualiza el estatus del prestamo del registro de salidas
-        if($estatus[$i] == 4){
+        if($estatus[$i] == "4"){
             $cantidad_prestada = $info -> obtener_cantidad_prestada($producto[$i],$folio);
             $resta = $cantidad_prestada['cantidad_prestada'][0] - $cantidad[$i];
             $qryActualizarPrestamo  = "UPDATE inv_salida_producto SET estatus = '$estatus[$i]', cantidad_prestada = '$resta', id_usuario_mod_pres = '$idusuario' 
-                                   WHERE clave_solicitud = '$folio' AND estatus != 5";
+                                       WHERE clave_solicitud = '$folio' AND id_producto = '$producto[$i]' AND estatus != 5";
             $ejecucion              -> ejecuta($qryActualizarPrestamo);
-        }else if($estatus[$i] == 5){
+            $consula[] = "incompleto";
+        }else if($estatus[$i] == "5"){
             $cantidad_prestada = $info -> obtener_cantidad_prestada($producto[$i],$folio);
             $resta = $cantidad_prestada['cantidad'][0];
             $qryActualizarPrestamo  = "UPDATE inv_salida_producto SET estatus = '$estatus[$i]', cantidad_prestada = '$resta', id_usuario_mod_pres = '$idusuario' 
-                                   WHERE clave_solicitud = '$folio' AND estatus != 5";
+                                       WHERE clave_solicitud = '$folio' AND id_producto = '$producto[$i]' AND estatus != 5";
             $ejecucion              -> ejecuta($qryActualizarPrestamo);
+            $consula[] = "completo";
         }
     }
+    var_dump($consula);
 
 }else if($prestamo == 2){
 
