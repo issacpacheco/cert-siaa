@@ -11,16 +11,28 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 09/05/2022 11:40:32
+ Date: 11/05/2022 09:51:00
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
+-- Table structure for inv_bodeguitas
+-- ----------------------------
+DROP TABLE IF EXISTS `inv_bodeguitas`;
+CREATE TABLE `inv_bodeguitas`  (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `id_area` int(11) NULL DEFAULT NULL,
+  `estatus` int(11) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
 -- Table structure for inv_campus_producto
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_campus_producto`;
 CREATE TABLE `inv_campus_producto`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_producto` int(11) NULL DEFAULT NULL,
@@ -32,12 +44,12 @@ CREATE TABLE `inv_campus_producto`  (
   `mod_hora_salida` time(0) NULL DEFAULT NULL,
   `mod_id_usuario` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 173 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_categoria
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_categoria`;
 CREATE TABLE `inv_categoria`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -48,7 +60,7 @@ CREATE TABLE `inv_categoria`  (
 -- ----------------------------
 -- Table structure for inv_entrada_producto
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_entrada_producto`;
 CREATE TABLE `inv_entrada_producto`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NULL DEFAULT NULL,
@@ -57,18 +69,19 @@ CREATE TABLE `inv_entrada_producto`  (
   `cantidad` double NULL DEFAULT NULL,
   `id_producto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `devolucion` int(11) NULL DEFAULT NULL,
+  `comentarios` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `id_usuario_dev` int(11) NULL DEFAULT NULL,
   `clave_solicitud` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `id_campus` int(11) NULL DEFAULT NULL,
   `factura` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `total` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_entrada_transferencia
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_entrada_transferencia`;
 CREATE TABLE `inv_entrada_transferencia`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NULL DEFAULT NULL,
@@ -81,12 +94,12 @@ CREATE TABLE `inv_entrada_transferencia`  (
   `id_campus_origen` int(11) NULL DEFAULT NULL,
   `estatus` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_niveles
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_niveles`;
 CREATE TABLE `inv_niveles`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -96,7 +109,7 @@ CREATE TABLE `inv_niveles`  (
 -- ----------------------------
 -- Table structure for inv_producto_foto
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_producto_foto`;
 CREATE TABLE `inv_producto_foto`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `foto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -108,7 +121,7 @@ CREATE TABLE `inv_producto_foto`  (
 -- ----------------------------
 -- Table structure for inv_productos
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_productos`;
 CREATE TABLE `inv_productos`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -122,13 +135,14 @@ CREATE TABLE `inv_productos`  (
   `estatus` int(11) NULL DEFAULT NULL,
   `id_area` int(11) NULL DEFAULT NULL,
   `id_unidad` int(11) NULL DEFAULT NULL,
+  `id_bodega` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 87 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_salida_producto
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_salida_producto`;
 CREATE TABLE `inv_salida_producto`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NULL DEFAULT NULL,
@@ -141,16 +155,17 @@ CREATE TABLE `inv_salida_producto`  (
   `prestamo` int(11) NULL DEFAULT NULL,
   `estatus` int(11) NULL DEFAULT NULL,
   `clave_solicitud` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `comentarios` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `id_usuario_mod_pres` int(11) NULL DEFAULT NULL,
   `id_campus` int(11) NULL DEFAULT NULL,
   `proyecto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_salida_transferencia
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_salida_transferencia`;
 CREATE TABLE `inv_salida_transferencia`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_usuario` int(11) NULL DEFAULT NULL,
@@ -165,12 +180,12 @@ CREATE TABLE `inv_salida_transferencia`  (
   `estatus` int(11) NULL DEFAULT NULL,
   `cantidad_enviada` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Table structure for inv_subareas
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_subareas`;
 CREATE TABLE `inv_subareas`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
@@ -182,7 +197,7 @@ CREATE TABLE `inv_subareas`  (
 -- ----------------------------
 -- Table structure for inv_unidades
 -- ----------------------------
-
+DROP TABLE IF EXISTS `inv_unidades`;
 CREATE TABLE `inv_unidades`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,

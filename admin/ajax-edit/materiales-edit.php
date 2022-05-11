@@ -20,6 +20,13 @@ $categorias     = $info -> obtener_categorias();
 $ccategorias    = $fn   -> cuentarray($categorias);
 $bodegas        = $info -> mis_bodeguitas();
 $cbodegas       = $fn   -> cuentarray($bodegas);
+
+//Consulta para el historial del material
+$historialEntrada   = $info ->  historial_material_entrada($id);
+$chistorialEntrada  = $fn   ->  cuentarray($historialEntrada);
+
+$historialSalida  = $info ->  historial_material_salida($id);
+$chistorialSalida = $fn   ->  cuentarray($historialSalida);
 ?>
 
 <div class="col-sm-12">
@@ -118,6 +125,68 @@ $cbodegas       = $fn   -> cuentarray($bodegas);
                     </button>
                 </div>
             </form>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label for="">Historial de entrada</label>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Devolución X Prestamo</th>
+                                    <th>Precio</th>
+                                    <th>Ultimo usuario en modificar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php for($i = 0; $i < $chistorialEntrada; $i++){ ?>
+                                <tr>
+                                    <td><?php echo $historialEntrada['cantidad'][$i]; ?></td>
+                                    <td><?php echo $historialEntrada['fecha'][$i]; ?></td>
+                                    <td><?php echo $historialEntrada['hora'][$i]; ?></td>
+                                    <td><?php echo $historialEntrada['devolucion'][$i]; ?></td>
+                                    <td><?php echo $historialEntrada['total'][$i]; ?></td>
+                                    <td><?php echo $historialEntrada['usuario'][$i]; ?></td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+                <div class="col-sm-6">
+                    <label for="">Historial de salida</label>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Cantidad</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Prestamo</th>
+                                    <th>Ultimo usuario en modificar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php for($i = 0; $i < $chistorialSalida; $i++){ ?>
+                                <tr>
+                                    <td><?php echo $historialSalida['cantidad'][$i]; ?></td>
+                                    <td><?php echo $historialSalida['fecha'][$i]; ?></td>
+                                    <td><?php echo $historialSalida['hora'][$i]; ?></td>
+                                    <td><?php echo $historialSalida['prestamo'][$i]; ?></td>
+                                    <td><?php echo $historialSalida['usuario'][$i]; ?></td>
+                                </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </div>
+            </div>
         </div>
     </div>
 </div>

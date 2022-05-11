@@ -293,6 +293,26 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function historial_material_entrada($id){
+        $qry = "SELECT e.id, m.nombre, e.cantidad, e.fecha, e.hora, e.total, e.devolucion, u.nombre AS usuario 
+                FROM inv_entrada_producto e 
+                LEFT JOIN inv_productos m ON m.id = e.id_producto
+                LEFT JOIN usuarios u ON u.id = e.id_usuario
+                WHERE  e.id_producto = $id ORDER BY e.id DESC";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function historial_material_salida($id){
+        $qry = "SELECT e.id, m.nombre, e.cantidad, e.fecha, e.hora, e.prestamo, u.nombre AS usuario 
+                FROM inv_salida_producto e 
+                LEFT JOIN inv_productos m ON m.id = e.id_producto
+                LEFT JOIN usuarios u ON u.id = e.id_usuario
+                WHERE  e.id_producto = $id ORDER BY e.id DESC";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 

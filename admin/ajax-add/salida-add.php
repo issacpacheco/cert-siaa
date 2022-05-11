@@ -58,6 +58,15 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             <input type="text" class="form-control" name="proyecto[]" id="proyecto" placeholder="proyecto" value="" autocomplete="FALSE">
                         </div>
                     </div>
+                    <div class="row">
+                        <label for="">Selecciona un rango de fecha del prestamo</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" id="fechas"  name="fechas" readonly>
+                        </div>
+                    </div>
                 </div>
                 <div id="nueva_entrada"></div>
                 <div class="row">
@@ -80,9 +89,52 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         </div>
     </div>
 </div>
+<!-- Date-range-picker -->
+<script src="plugins/moment/min/moment.min.js"></script>
+<script src="plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
 <script>
     $(document).ready(function() {
         $('.js-example-basic-single').select2();
+        var nowDate = new Date();
+        var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+        var maxLimitDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate() + 15, 0, 0, 0, 0);
+        $('#fechas').daterangepicker({
+            "minDate": today,
+            "maxDate": maxLimitDate,
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "De",
+                "toLabel": "Al",
+                "customRangeLabel": "Custom",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            }
+        });
     });
     function prestamoMaterial(){
         var valor = document.getElementById("prestamo").value;
