@@ -46,7 +46,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                 <div class="row" id="listadoprestamos">
 
                 </div>
-                <div class="row panel-body">
+                <div class="row">
                     <div class="form-wrapper col-sm-4" id="validar_factura">
                         <label>¿La entrada es por factura?</label>
                         <div class="form-group">
@@ -68,7 +68,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     <div class="form-wrapper col-sm-4">
                         <label>Selecciona material/producto</label>
                         <div class="form-group">
-                            <select name="producto[]" id="" class="form-control">
+                            <select name="producto[]" id="" class="form-control js-example-basic-single">
                                 <option value="">Selecciona un material/producto</option>
                                 <?php for($i = 0; $i < $cmateriales; $i++){ ?>
                                 <option value="<?php echo $materiales['id'][$i]; ?>"><?php echo $materiales['nombre'][$i]; ?></option>
@@ -111,7 +111,12 @@ $cmateriales    = $fn   -> cuentarray($materiales);
     </div>
 </div>
 <script>
-
+    $(document).ready(function() {
+        $('.js-example-basic-single').select2();
+        var nowDate = new Date();
+        var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+        var maxLimitDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate() + 15, 0, 0, 0, 0);
+    });
     function obtenerprestamos(){
         var folio = document.getElementById("clave").value;
         console.log(folio);
@@ -161,6 +166,25 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         // clon.id = infoPax;
         var destino = document.getElementById("nueva_entrada");
         destino.appendChild(clon);
+        var documento = document.getElementById("nueva_entrada");
+        var contador = documento.childElementCount;
+        if(contador == 1){
+            var cambio = destino.appendChild(clon);
+            var num = Number(contador + 1);
+            var cambioselector = cambio.children[0].children[1].children[0];
+            cambioselector.className = "js-example-basic-single_"+num;
+            cambioselector.id = "producto_"+num;
+            $('.js-example-basic-single_'+num).select2();
+            var span = documento.children[0].children[0].children[1].children[2];
+            span.parentElement.removeChild(span)
+        }else{
+            var cambio = destino.appendChild(clon);
+            var num = Number(contador + 1);
+            var cambioselector = cambio.children[0].children[1].children[0];
+            cambioselector.className = "js-example-basic-single_"+num;
+            cambioselector.id = "producto_"+num;
+            $('.js-example-basic-single_'+num).select2();
+        }
         var botonelim = document.createElement('button');
         botonelim.textContent = 'Eliminar entrada -';
         botonelim.classList = 'btn btn-danger mbottom20 mleft20';

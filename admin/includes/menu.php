@@ -87,6 +87,20 @@
                     </li>
                 </ul>
             </li>
+            <li>
+                <a href="#submenuAdmon" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-cabinet-filing"></i>
+                    <span>Administración</span>
+                </a>
+                <ul class="collapse nav primary essubmenu" id="submenuAdmon">
+                    <li>
+                        <a onclick="getPageMenu('pr-facturas')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white">Facturas</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <?php } ?>
             <?php if($_SESSION['nivel'] == 2){ ?>
             <li>

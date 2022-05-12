@@ -313,6 +313,15 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_facturas(){
+        $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, u.nombre AS usuario
+                FROM inv_entrada_producto f
+                LEFT JOIN usuarios u ON u.id = f.id_usuario
+                WHERE f.factura is not null GROUP BY f.factura";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 

@@ -47,7 +47,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">
-                        <label>Cantidad de salida(queda <strong id="cantidad_dispo">10</strong> disponibles de este producto/material/etc..)</label>
+                        <label>Cantidad de salida(<strong id="cantidad_dispo">10</strong> disponibles de este material)</label>
                         <div class="form-group">
                             <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
                         </div>
@@ -172,12 +172,54 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         // clon.id = infoPax;
         var destino = document.getElementById("nueva_entrada");
         destino.appendChild(clon);
+        var nowDate = new Date();
+        var today = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate(), 0, 0, 0, 0);
+        var maxLimitDate = new Date(nowDate.getFullYear(), nowDate.getMonth(), nowDate.getDate() + 15, 0, 0, 0, 0);
 
         var documento = document.getElementById("nueva_entrada");
         var contador = documento.childElementCount;
         if(contador == 1){
             var cambio = destino.appendChild(clon);
             var num = Number(contador + 1);
+            var cambiofechas = cambio.children[3].children[1].children[1];
+            cambiofechas.id = "fechas_"+num;
+            $('#fechas_'+num).daterangepicker({
+                "minDate": today,
+                "maxDate": maxLimitDate,
+                "locale": {
+                    "format": "DD/MM/YYYY",
+                    "separator": " - ",
+                    "applyLabel": "Seleccionar",
+                    "cancelLabel": "Cancelar",
+                    "fromLabel": "De",
+                    "toLabel": "Al",
+                    "customRangeLabel": "Custom",
+                    "daysOfWeek": [
+                        "Do",
+                        "Lu",
+                        "Ma",
+                        "Mi",
+                        "Ju",
+                        "Vi",
+                        "Sa"
+                    ],
+                    "monthNames": [
+                        "Enero",
+                        "Febrero",
+                        "Marzo",
+                        "Abril",
+                        "Mayo",
+                        "Junio",
+                        "Julio",
+                        "Agosto",
+                        "Septiembre",
+                        "Octubre",
+                        "Noviembre",
+                        "Diciembre"
+                    ],
+                    "firstDay": 1
+                }
+            });
             var cambioselector = cambio.children[0].children[1].children[0];
             cambioselector.className = "js-example-basic-single_"+num;
             cambioselector.id = "producto_"+num;
