@@ -34,13 +34,13 @@ class usuarios extends mysqlconsultas{
     public function obtener_usuarios_sistema(){
         $qry = "SELECT u.*, a.nombre as area FROM usuarios u
                 LEFT JOIN area a ON a.id = u.id_area
-                WHERE a.sistema = 2";
+                WHERE u.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
 
     public function obtener_usuario($id){
-        $qry = "SELECT u.*, a.nombre AS area 
+        $qry = "SELECT u.*, a.nombre AS area
                 FROM usuarios u 
                 LEFT JOIN area a ON a.id = u.id_area
                 WHERE u.id = '$id'";
@@ -50,6 +50,12 @@ class usuarios extends mysqlconsultas{
 
     public function nivelesusuarios(){
         $qry = "SELECT * FROM inv_niveles";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_subareas(){
+        $qry = "SELECT * FROM inv_subareas";
         $res = $this->consulta($qry);
         return $res;
     }

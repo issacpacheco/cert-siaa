@@ -1,9 +1,9 @@
 <?php
 include('../class/allClass.php');
 
-$regresar   = filter_input(INPUT_POST, 'regresar',      FILTER_SANITIZE_STRING);
-$postload   = filter_input(INPUT_POST, 'returnpage',    FILTER_SANITIZE_STRING);
-$div        = filter_input(INPUT_POST, 'load',          FILTER_SANITIZE_STRING);
+$regresar   = filter_input(INPUT_POST, 'regresar',      FILTER_SANITIZE_SPECIAL_CHARS);
+$postload   = filter_input(INPUT_POST, 'returnpage',    FILTER_SANITIZE_SPECIAL_CHARS);
+$div        = filter_input(INPUT_POST, 'load',          FILTER_SANITIZE_SPECIAL_CHARS);
 $id         = filter_input(INPUT_POST, 'id',            FILTER_SANITIZE_NUMBER_INT);
 
 use nsusuarios\usuarios;
@@ -14,9 +14,13 @@ $fn     = new funciones();
 
 
 
-$usuario = $info->obtener_usuario($id);
-$area    = $info->obtener_grupos();
-$carea   = $fn->cuentarray($area);
+$usuario    = $info     -> obtener_usuario($id);
+$area       = $info     -> obtener_grupos();
+$subareas   = $info     -> obtener_subareas();
+$niveles    = $info     -> nivelesusuarios();
+$carea      = $fn       -> cuentarray($area);
+$cniveles   = $fn       -> cuentarray($niveles);;
+$csubareas  = $fn       -> cuentarray($subareas);
 ?>
 
 <div class="col-sm-12">
@@ -95,6 +99,7 @@ $carea   = $fn->cuentarray($area);
                 </div>
             </div>
             <form id="frmRegistro">
+                <input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
                 <div class="row">
                     <div class="form-wrapper col-sm-4">
                         <label>Nombre</label>
@@ -102,12 +107,14 @@ $carea   = $fn->cuentarray($area);
                             <input type="text" class="form-control validar" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $usuario['nombre'][0]; ?>">
                         </div>
                     </div>
+
                     <div class="form-wrapper col-sm-4">
                         <label>Correo</label>
                         <div class="form-group">
-                            <input type="text" class="form-control esnumero" name="cantidad" id="cantidad" placeholder="<?php echo $usuario['correo'][0]; ?>" value="<?php echo $usuario['correo'][0]; ?>" readonly>
+                            <input type="text" class="form-control" name="correo" id="correo" placeholder="<?php echo $usuario['correo'][0]; ?>" value="<?php echo $usuario['correo'][0]; ?>">
                         </div>
                     </div>
+
                     <div class="form-wrapper col-sm-4">
                         <label>Contraseña</label>
                         <div class="form-group">
@@ -118,21 +125,46 @@ $carea   = $fn->cuentarray($area);
                             &nbsp;&nbsp;Mostrar Contraseñas
                         </div>
                     </div>
-                    
+                    <?php if($_SESSION['nivel'] == 99){ ?>
                     <div class="form-wrapper col-sm-4">
                         <label>Area</label>
                         <div class="form-group">
-                            <select name="categoria" id="categoria" class="form-control">
-                                <option value="<?php echo $usuario['id_area'][0]; ?>" selected><?php echo $usuario['area'][0]; ?></option>
+                            <select name="id_area" id="id_area" class="form-control">
+                                <option value="0" selected>Selecciona un area</option>
                                 <?php for($i = 0; $i < $carea; $i++){ ?>
-                                <option value="<?php echo $area['id'][$i]; ?>"><?php echo $area['nombre'][$i]; ?></option>
+                                <option value="<?php echo $area['id'][$i] ?>" <?php if($usuario['id_area'][0] == $area['id'][$i]){ echo  'selected'; } ?>><?php echo $area['nombre'][$i]; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+                    <?php } ?>
+
+                    <div class="form-wrapper col-sm-4">
+                        <label>SubAreas</label>
+                        <div class="form-group">
+                            <select name="id_subarea" id="id_subarea" class="form-control">
+                                <option value="0" selected>Selecciona una subarea</option>
+                                <?php for($i = 0; $i < $csubareas; $i++){ ?>
+                                <option value="<?php echo $subareas['id'][$i] ?>" <?php if($usuario['id_subarea'][0] == $subareas['id'][$i]){ echo  'selected'; } ?>><?php echo $subareas['nombre'][$i]; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper col-sm-4">
+                        <label class="left full mtop">Nivel de usuario</label>
+                        <div class="form-group">
+                            <select name="niveles" id="niveles" class="form-control left full">
+                                <option value="0" selected>Selecciona un nivel</option>
+                                <?php for($i = 0; $i < $cniveles; $i++){ ?>
+                                <option value="<?php echo $niveles['id'][$i] ?>" <?php if($usuario['nivel'][0] == $niveles['id'][$i]){ echo  'selected'; } ?>><?php echo $niveles['nombre'][$i] ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                     </div>
                 </div>
                 <div class="mright textright">
-                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('materiales-edit', 'pr-materiales', this);">
+                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('usuario-edit', 'pr-usuarios', this);">
                         <span class="letrablanca font14">Guardar</span>
                     </button>
                 </div>
