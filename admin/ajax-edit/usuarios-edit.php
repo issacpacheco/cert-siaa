@@ -19,7 +19,7 @@ $area       = $info     -> obtener_grupos();
 $subareas   = $info     -> obtener_subareas();
 $niveles    = $info     -> nivelesusuarios();
 $carea      = $fn       -> cuentarray($area);
-$cniveles   = $fn       -> cuentarray($niveles);;
+$cniveles   = $fn       -> cuentarray($niveles);
 $csubareas  = $fn       -> cuentarray($subareas);
 ?>
 

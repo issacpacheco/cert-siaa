@@ -6,6 +6,7 @@ $micarpeta = '../images/usuarios/'.$_SESSION['idusuario_foto'].'';
 if (!file_exists($micarpeta)) {
     mkdir($micarpeta, 0777, true);
 }
+// exit;
 ini_set('memory_limit', '512M');
 class CropAvatar {
   private $src;
