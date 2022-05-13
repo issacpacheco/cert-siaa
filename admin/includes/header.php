@@ -17,7 +17,7 @@
                         </a>
                     </li>
                     <li class="profile">
-                        <a href="perfil">
+                        <a onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-inicio" data-form="" data-page="perfil" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $_SESSION['id_admin']; ?>">
                             <?php
                                 if (file_exists('images/usuarios/'.$_SESSION['id_admin'].'/foto.jpg')){
                                     $img = 'images/usuarios/'.$_SESSION['id_admin'].'/foto.jpg?v='.rand();

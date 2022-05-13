@@ -100,7 +100,7 @@ $csubareas  = $fn       -> cuentarray($subareas);
             </div>
             <form id="frmRegistro">
                 <input type="hidden" name="id_usuario" id="id_usuario" value="<?php echo $id; ?>">
-                <input type="hidden" name="edicionPerfil" id="edicionPerfil" value="2">
+                <input type="hidden" name="edicionPerfil" id="edicionPerfil" value="1">
                 <div class="row">
                     <div class="form-wrapper col-sm-4">
                         <label>Nombre</label>
@@ -119,48 +119,11 @@ $csubareas  = $fn       -> cuentarray($subareas);
                     <div class="form-wrapper col-sm-4">
                         <label>Contraseña</label>
                         <div class="form-group">
-                            <input type="password" class="form-control" name="contrasena_personal" id="contrasena_personal" value="<?php echo $usuario['pass'][0]; ?>" autocomplete="nope">
+                            <input type="password" class="form-control" name="contrasena_personal" id="contrasena_personal" value="<?php echo $usuario['pass'][0]; ?>">
                         </div>
                         <div style="margin-top:15px;">
                             <input style="margin-left:20px;" type="checkbox" id="mostrar_contrasena" title="clic para mostrar contraseña"/>
                             &nbsp;&nbsp;Mostrar Contraseñas
-                        </div>
-                    </div>
-                    <?php if($_SESSION['nivel'] == 99){ ?>
-                    <div class="form-wrapper col-sm-4">
-                        <label>Area</label>
-                        <div class="form-group">
-                            <select name="id_area" id="id_area" class="form-control">
-                                <option value="0" selected>Selecciona un area</option>
-                                <?php for($i = 0; $i < $carea; $i++){ ?>
-                                <option value="<?php echo $area['id'][$i] ?>" <?php if($usuario['id_area'][0] == $area['id'][$i]){ echo  'selected'; } ?>><?php echo $area['nombre'][$i]; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-                    <?php } ?>
-
-                    <div class="form-wrapper col-sm-4">
-                        <label>SubAreas</label>
-                        <div class="form-group">
-                            <select name="id_subarea" id="id_subarea" class="form-control">
-                                <option value="0" selected>Selecciona una subarea</option>
-                                <?php for($i = 0; $i < $csubareas; $i++){ ?>
-                                <option value="<?php echo $subareas['id'][$i] ?>" <?php if($usuario['id_subarea'][0] == $subareas['id'][$i]){ echo  'selected'; } ?>><?php echo $subareas['nombre'][$i]; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-wrapper col-sm-4">
-                        <label class="left full mtop">Nivel de usuario</label>
-                        <div class="form-group">
-                            <select name="niveles" id="niveles" class="form-control left full">
-                                <option value="0" selected>Selecciona un nivel</option>
-                                <?php for($i = 0; $i < $cniveles; $i++){ ?>
-                                <option value="<?php echo $niveles['id'][$i] ?>" <?php if($usuario['nivel'][0] == $niveles['id'][$i]){ echo  'selected'; } ?>><?php echo $niveles['nombre'][$i] ?></option>
-                                <?php } ?>
-                            </select>
                         </div>
                     </div>
                 </div>
