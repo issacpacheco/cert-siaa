@@ -41,7 +41,7 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_materiales_categorias(){
-        $qry = "SELECT m.id, m.nombre, m.numero_serie, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
+        $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
                 LEFT JOIN inv_categoria c ON c.id = m.id_categoria
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
                 LEFT JOIN campus cam ON cam.id = cp.id_campus
