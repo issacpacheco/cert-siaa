@@ -78,6 +78,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <th> Codigo de prestamo </th>
                                 <th> Solicitante </th>
                                 <th> Comentarios </th>
+                                <th> Fechas de prestamo </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,6 +92,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
                                 <td><?php echo $salidas['clave_solicitud'][$i]; ?></td>
                                 <td><?php echo $salidas['solicitante'][$i]; ?></td>
                                 <td><?php echo $salidas['comentarios'][$i]; ?></td>
+                                <td>Fecha de salida: <?php echo $salidas['fch_ini'][$i]; ?> <br> Fecha de regreso: <?php echo $salidas['fch_fin'][$i]; ?></td>
                             </tr>
                         <?php } ?>    
                         </tbody>    

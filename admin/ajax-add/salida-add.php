@@ -58,13 +58,13 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             <input type="text" class="form-control" name="proyecto[]" id="proyecto" placeholder="proyecto" value="" autocomplete="FALSE">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" id="rango_fechas" style="display: none;">
                         <label for="">Selecciona un rango de fecha del prestamo</label>
                         <div class="input-group">
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="fechas"  name="fechas" readonly>
+                            <input type="text" class="form-control pull-right" id="fechas"  name="fechas[]" readonly>
                         </div>
                     </div>
                 </div>
@@ -140,6 +140,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         var valor = document.getElementById("prestamo").value;
         if(valor == 1){
             $("#nombre_proyecto").css({ display: "none" });
+            $("#rango_fechas").css({ display: "block" });
             $.ajax({
                 url: "ajax-get/lista-usuarios",
                 success: function(response){
@@ -150,6 +151,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             var listausarios = document.getElementById('listausarios');
             listausarios.children[0].remove(listausarios);
             listausarios.children[0].remove(listausarios);
+            $("#rango_fechas").css({ display: "none" });
             $("#nombre_proyecto").css({ display: "block" });
         }
     }

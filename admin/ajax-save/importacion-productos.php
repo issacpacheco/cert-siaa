@@ -1,5 +1,5 @@
 <?php 
-error_reporting(0);
+error_reporting(E_ALL);
 include_once("../class/allClass.php");
 // require_once('../scripts/PHPExcel/Reader/Excel2007.php');
 
@@ -22,7 +22,8 @@ $ejecucion 	= new mysqlconsultas();
 	$archivo 	= $_FILES['excel']['name'];
 	$tipo 		= $_FILES['excel']['type'];
 	$destino 	= "cop_".$archivo;//Le agregamos un prefijo para identificarlo el archivo cargado
-
+	// echo $destino;
+	// exit;
 	if (copy($_FILES['excel']['tmp_name'],$destino)){ 
 		echo "Archivo Cargado Con Éxito";
 	}else{
