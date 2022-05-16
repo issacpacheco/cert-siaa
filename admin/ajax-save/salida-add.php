@@ -22,42 +22,42 @@ $fechas      = $_REQUEST['fechas'];
 
 if($prestamo == 1){
     //Obtenemos el id del solicitante
-    $idsolicitante = filter_input(INPUT_POST, 'idusuario', FILTER_SANITIZE_NUMBER_INT);
+    $idsolicitante  = filter_input(INPUT_POST, 'idusuario', FILTER_SANITIZE_NUMBER_INT);
     //Generamos una clave para el prestamo
-    $claveprestamo = "C".$_SESSION['campus']."-".date('ymd').'-'.$fn->generateRandomString(5);
-
-    $contador = count($producto);
+    $claveprestamo  = "C".$_SESSION['campus']."-".date('ymd').'-'.$fn->generateRandomString(5);
+    $contador       = count($producto);
     for($i = 0; $i < $contador; $i++){
-        $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
-        $resta = $cantidad_actual['cantidad'][0] - $cantidad[$i];
+        $cantidad_actual        = $info -> obtener_cantidad_material($producto[$i]);
+        $resta                  = $cantidad_actual['cantidad'][0] - $cantidad[$i];
 
-        $fecha1 = substr( $fechas[$i], 0, 2 ) . '/' . substr( $fechas[$i], 3, 2 ) . '/' . substr( $fechas[$i], 6, 4 );
-        $fecha2 = substr( $fechas[$i], 13, 2 ) . '/' . substr( $fechas[$i], 16, 2 ) . '/' . substr( $fechas[$i], 19, 4 );
-        $fecha_ini = FormatoFechaReportes($fecha1);
-        $fecha_fin = FormatoFechaReportes($fecha2);
+        $fecha1                 = substr( $fechas[$i], 0, 2 ) . '/' . substr( $fechas[$i], 3, 2 ) . '/' . substr( $fechas[$i], 6, 4 );
+        $fecha2                 = substr( $fechas[$i], 13, 2 ) . '/' . substr( $fechas[$i], 16, 2 ) . '/' . substr( $fechas[$i], 19, 4 );
+        $fecha_ini              = FormatoFechaReportes($fecha1);
+        $fecha_fin              = FormatoFechaReportes($fecha2);
 
-        $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
-        $ejecucion -> ejecuta($qryActualizarCantidad);
+        $qryActualizarCantidad  = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
+        $ejecucion              -> ejecuta($qryActualizarCantidad);
     
-        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, cantidad_prestada,id_producto, id_solicitante, prestamo, estatus,id_campus,comentarios,fch_ini,fch_fin) 
-                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$cantidad[$i]','$producto[$i]','$idsolicitante','1','3','$idcampus','$comentarios','$fecha_ini','$fecha_fin')";
-        $id = $ejecucion -> ejecuta($qryAgregaEntrada);
+        $qryAgregaEntrada       = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, cantidad_prestada,id_producto, id_solicitante, prestamo, estatus,id_campus,comentarios,fch_ini,fch_fin) 
+                                    VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$cantidad[$i]','$producto[$i]','$idsolicitante','1','3','$idcampus','$comentarios','$fecha_ini','$fecha_fin')";
+        $id = $ejecucion        -> ejecuta($qryAgregaEntrada);
 
-        $qryClavePrestamo = "UPDATE inv_salida_producto SET clave_solicitud = '$claveprestamo' WHERE id = '$id'";
-        $ejecucion -> ejecuta($qryClavePrestamo);
+        $qryClavePrestamo       = "UPDATE inv_salida_producto SET clave_solicitud = '$claveprestamo' WHERE id = '$id'";
+        $ejecucion              -> ejecuta($qryClavePrestamo);
     }
 
 }else if($prestamo == 2){
     $contador = count($producto);
+    $idgrupo  = filter_input(INPUT_POST, 'idgrupo', FILTER_SANITIZE_NUMBER_INT);
     for($i = 0; $i < $contador; $i++){
-        $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
-        $resta = $cantidad_actual['cantidad'][0] - $cantidad[$i];
+        $cantidad_actual        = $info -> obtener_cantidad_material($producto[$i]);
+        $resta                  = $cantidad_actual['cantidad'][0] - $cantidad[$i];
 
-        $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
-        $ejecucion -> ejecuta($qryActualizarCantidad);
+        $qryActualizarCantidad  = "UPDATE inv_campus_producto SET cantidad = '$resta', mod_fecha_salida = curdate(), mod_hora_salida = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
+        $ejecucion              -> ejecuta($qryActualizarCantidad);
 
-        $qryAgregaEntrada = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, id_producto, id_solicitante,id_campus,estatus,proyecto,comentarios) 
-                            VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idsolicitante','$idcampus','0','$proyecto[$i]','$comentarios')";
-        $id = $ejecucion -> ejecuta($qryAgregaEntrada);
+        $qryAgregaEntrada       = "INSERT INTO inv_salida_producto (id_usuario, fecha, hora, cantidad, id_producto, id_solicitante,id_campus,estatus,proyecto,comentarios,id_subarea) 
+                                    VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idsolicitante','$idcampus','0','$proyecto[$i]','$comentarios','$idgrupo')";
+        $id = $ejecucion        -> ejecuta($qryAgregaEntrada);
     }
 }

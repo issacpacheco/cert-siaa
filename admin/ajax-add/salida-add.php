@@ -142,12 +142,24 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             $("#nombre_proyecto").css({ display: "none" });
             $("#rango_fechas").css({ display: "block" });
             $.ajax({
+                type: "POST",
                 url: "ajax-get/lista-usuarios",
+                data: {tipo: 1},
                 success: function(response){
                     $('#listausarios').html(response);
                 }
             });
         }else if(valor == 0 || valor == 2){
+            <?php if($_SESSION['area'] == 6){ ?>
+            $.ajax({
+                type: "POST",
+                url: "ajax-get/lista-usuarios",
+                data: {tipo: 2},
+                success: function(response){
+                    $('#listausarios').html(response);
+                }
+            });
+            <?php } ?>
             var listausarios = document.getElementById('listausarios');
             listausarios.children[0].remove(listausarios);
             listausarios.children[0].remove(listausarios);
