@@ -1,8 +1,8 @@
 <?php
 include("../class/allClass.php");
 
-$postload = filter_input(INPUT_POST, 'returnpage', FILTER_SANITIZE_STRING);
-$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_STRING);
+$postload = filter_input(INPUT_POST, 'returnpage', FILTER_SANITIZE_SPECIAL_CHARS);
+$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_SPECIAL_CHARS);
 $id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
 
 use nsalmacen\almacen;

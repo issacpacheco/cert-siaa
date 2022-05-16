@@ -20,7 +20,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT m.* FROM inv_productos m 
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id 
                 LEFT JOIN campus c ON c.id = cp.id_campus  
-                WHERE c.id = {$_SESSION['campus']}";
+                WHERE c.id = {$_SESSION['campus']} AND m.id_area = {$_SESSION['area']}"; 
         $res = $this->consulta($qry);
         return $res;
     }
@@ -29,7 +29,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT m.id, m.nombre, cp.cantidad FROM inv_productos m 
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id 
                 LEFT JOIN campus c ON c.id = cp.id_campus   
-                WHERE cp.cantidad > 0 AND c.id = {$_SESSION['campus']}";
+                WHERE cp.cantidad > 0 AND c.id = {$_SESSION['campus']} AND m.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -84,7 +84,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_entrada_producto e
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']}
+                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
                 ORDER BY e.fecha DESC, e.hora DESC";
         $res = $this->consulta($qry);
         return $res;
@@ -96,7 +96,7 @@ class almacen extends mysqlconsultas{
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
                 LEFT JOIN usuarios s ON s.id = e.id_solicitante
-                WHERE e.id_campus = {$_SESSION['campus']}
+                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
                 AND e.estatus = 0 OR e.estatus >= 3
                 ORDER BY e.fecha DESC, e.hora DESC";
         $res = $this->consulta($qry);
@@ -108,7 +108,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_entrada_transferencia e
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']}
+                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
                 ORDER BY e.fecha DESC, e.hora DESC";
         $res = $this->consulta($qry);
         return $res;
@@ -119,7 +119,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_salida_transferencia e
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']}
+                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
                 ORDER BY e.fecha DESC, e.hora DESC";
         $res = $this->consulta($qry);
         return $res;
@@ -197,7 +197,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT s.id, s.fecha, s.hora, s.clave_solicitud, u.nombre
                 FROM inv_salida_producto s
                 LEFT JOIN usuarios u ON u.id = s.id_solicitante
-                WHERE s.estatus = 1 AND s.id_campus = {$_SESSION['campus']}
+                WHERE s.estatus = 1 AND s.id_campus = {$_SESSION['campus']} AND u.id_area = {$_SESSION['area']}
                 GROUP BY s.clave_solicitud";
         $res = $this->consulta($qry);
         return $res;
@@ -206,7 +206,7 @@ class almacen extends mysqlconsultas{
     public function obtener_materiales_por_agotarse(){
         $qry = "SELECT p.id, p.nombre, c.cantidad FROM inv_productos p
                 LEFT JOIN inv_campus_producto c ON c.id_producto = p.id
-                WHERE c.cantidad <= 10 and c.id_campus = {$_SESSION['campus']}";
+                WHERE c.cantidad <= 10 and c.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -216,7 +216,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_salida_producto s
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
                 LEFT JOIN usuarios u ON u.id = s.id_solicitante
-                WHERE s.estatus = 3";
+                WHERE s.estatus = 3 AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -258,7 +258,8 @@ class almacen extends mysqlconsultas{
                 FROM inv_salida_transferencia s
                 LEFT JOIN campus c ON c.id = s.id_campus
                 LEFT JOIN campus a ON a.id = s.id_campus_destino
-                WHERE s.estatus < 3";
+                LEFT JOIN inv_productos p ON p.id = s.id_producto
+                WHERE s.estatus < 3 AND p.id_area = {$_SESSION['area']} GROUP BY s.codigo_transfer";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -317,7 +318,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, u.nombre AS usuario
                 FROM inv_entrada_producto f
                 LEFT JOIN usuarios u ON u.id = f.id_usuario
-                WHERE f.factura is not null GROUP BY f.factura";
+                WHERE f.factura is not null AND u.id_area = {$_SESSION['area']} GROUP BY f.factura";
         $res = $this->consulta($qry);
         return $res;
     }

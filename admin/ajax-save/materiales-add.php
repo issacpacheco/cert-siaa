@@ -12,9 +12,9 @@ $fn = new funciones();
 $ejecucion = new mysqlconsultas();
 
 
-$nombre         = filter_input(INPUT_POST, 'nombre',        FILTER_SANITIZE_STRING);
-$descripcion    = filter_input(INPUT_POST, 'descripcion',   FILTER_SANITIZE_STRING);
-$codigo         = filter_input(INPUT_POST, 'codigo',        FILTER_SANITIZE_STRING);
+$nombre         = filter_input(INPUT_POST, 'nombre',        FILTER_SANITIZE_SPECIAL_CHARS);
+$descripcion    = filter_input(INPUT_POST, 'descripcion',   FILTER_SANITIZE_SPECIAL_CHARS);
+$codigo         = filter_input(INPUT_POST, 'codigo',        FILTER_SANITIZE_SPECIAL_CHARS);
 $categoria      = filter_input(INPUT_POST, 'categoria',     FILTER_SANITIZE_NUMBER_INT);
 $estatus        = filter_input(INPUT_POST, 'estatus',       FILTER_SANITIZE_NUMBER_INT);
 $unidad         = filter_input(INPUT_POST, 'unidad',        FILTER_SANITIZE_NUMBER_INT);

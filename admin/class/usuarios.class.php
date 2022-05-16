@@ -20,7 +20,7 @@ class usuarios extends mysqlconsultas{
     }
 
     public function obtener_almacenistas(){
-        $qry = "SELECT * FROM usuarios WHERE id_area = 1";
+        $qry = "SELECT * FROM usuarios WHERE id_area = {$_SESSION['area']}";
         $res = $this-> consulta($qry);
         return $res;
     }
@@ -55,7 +55,7 @@ class usuarios extends mysqlconsultas{
     }
 
     public function obtener_subareas(){
-        $qry = "SELECT * FROM inv_subareas";
+        $qry = "SELECT * FROM inv_subareas WHERE id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }

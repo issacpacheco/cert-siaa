@@ -1,11 +1,11 @@
 <?php
 include("../class/allClass.php");
 
-$postload = filter_input(INPUT_POST, 'returnpage', FILTER_SANITIZE_STRING);
-$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_STRING);
+$postload = filter_input(INPUT_POST, 'returnpage', FILTER_SANITIZE_SPECIAL_CHARS);
+$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_SPECIAL_CHARS);
 
-$regresar = filter_input(INPUT_POST, 'regresar', FILTER_SANITIZE_STRING);
-$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_STRING);
+$regresar = filter_input(INPUT_POST, 'regresar', FILTER_SANITIZE_SPECIAL_CHARS);
+$div = filter_input(INPUT_POST, 'div', FILTER_SANITIZE_SPECIAL_CHARS);
 
 ?>
 
