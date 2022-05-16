@@ -18,7 +18,7 @@ $cgrupos = $fn->cuentarray($grupos);
                 Grupos de usuarios
             </div>
             <div class="col-6 mright textright">
-                <button id="idtest" onclick="openPopup(this, 300, 250)" data-postload="0" data-returnpage="pr-grupos" data-valores="" data-form="" data-page="grupo-add" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
+                <button id="idtest" onclick="openPopup(this, 450, 350)" data-postload="0" data-returnpage="pr-grupos" data-valores="" data-form="" data-page="grupo-add" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                     <span class="letrablanca font14">Agregar Grupo</span>
                 </button> 
             </div>
@@ -28,12 +28,18 @@ $cgrupos = $fn->cuentarray($grupos);
                         <thead>
                             <tr>
                                 <th> Nombre </th>
+                                <?php if($_SESSION['nivel'] != 99){ ?>
+                                <th> Descripción </th>
+                                <?php } ?>
                             </tr>
                         </thead>
                         <tbody>
                         <?php for($i = 0; $i < $cgrupos; $i++){ ?>
-                            <tr onclick="openPopupEdit(this, 300, 250)" data-postload="0" data-returnpage="pr-grupos" data-form="" data-page="grupo-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $grupos["id"][$i]; ?>">
+                            <tr onclick="openPopupEdit(this, 450, 450)" data-postload="0" data-returnpage="pr-grupos" data-form="" data-page="grupo-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $grupos["id"][$i]; ?>">
                                 <td><?php echo $grupos['nombre'][$i]; ?></td>
+                                <?php if($_SESSION['nivel'] != 99){ ?>
+                                <td><?php echo $grupos['descripcion'][$i]; ?></td>
+                                <?php } ?>
                             </tr>
                         <?php } ?>    
                         </tbody>    

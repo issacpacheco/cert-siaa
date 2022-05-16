@@ -11,13 +11,13 @@ use nsfunciones\funciones;
 $info   = new usuarios();
 $fn     = new funciones();
 
-$grupo = $info->obtener_grupo($id);
+$grupo = $info->obtener_subarea($id);
 ?>
 
 
 
 <div class="popup-header left full">
-    <h1 class="left full titulopopup">Agregar categoria <?php echo $id ?></h1>
+    <h1 class="left full titulopopup">Agregar grupo o subarea <?php echo $grupo['nombre'][0] ?></h1>
 </div>
 <div class="popup-body left full">
     <form name="frmPopup" id="frmPopup">
@@ -25,6 +25,10 @@ $grupo = $info->obtener_grupo($id);
         <div class="left col12 small12 padding5">
             <label class="left full mtop">Nombre de la categoria</label>
             <input type="text" id="nombre" name="nombre" value="<?php echo $grupo['nombre'][0]; ?>" class="form-control left full validar">
+        </div>
+        <div class="left col12 small12 padding5">
+            <label class="left full mtop">Nombre de la categoria</label>
+            <textarea name="descripcion" id="descripcion" cols="55" rows="10"><?php echo $grupo['descripcion'][0]; ?></textarea>
         </div>
     </form>
 

@@ -34,6 +34,12 @@ class usuarios extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_subarea($id){
+        $qry = "SELECT * FROM inv_subareas WHERE id = $id";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
     public function obtener_usuarios_sistema(){
         $qry = "SELECT u.*, a.nombre as area FROM usuarios u
                 LEFT JOIN area a ON a.id = u.id_area
