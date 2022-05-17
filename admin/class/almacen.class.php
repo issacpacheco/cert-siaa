@@ -323,6 +323,18 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_materiales_sin_categorias(){
+        $qry = "SELECT * FROM inv_productos WHERE (id_categoria = 0 OR id_categoria IS NULL) AND id_area = {$_SESSION['area']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function material_asignado($id){
+        $qry = "SELECT * FROM inv_productos WHERE id_categoria = $id";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 

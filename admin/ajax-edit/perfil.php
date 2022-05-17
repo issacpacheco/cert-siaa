@@ -15,12 +15,6 @@ $fn     = new funciones();
 
 
 $usuario    = $info     -> obtener_usuario($id);
-$area       = $info     -> obtener_grupos();
-$subareas   = $info     -> obtener_subareas();
-$niveles    = $info     -> nivelesusuarios();
-$carea      = $fn       -> cuentarray($area);
-$cniveles   = $fn       -> cuentarray($niveles);
-$csubareas  = $fn       -> cuentarray($subareas);
 ?>
 
 <div class="col-sm-12">

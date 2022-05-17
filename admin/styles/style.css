@@ -379,6 +379,46 @@ body {
   min-height: calc(100vh - 145px);
 }
 
+#listadoopciones{
+  border: 1px solid #ccc;
+  height: 400px;
+  overflow-y: scroll;  
+  overflow-x: hidden;
+}
+#listadoopciones div{
+  border: 1px solid #ccc;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 4px;    
+}
+#cajareceptora div{
+  border: 1px solid #ccc;
+  height: 45px;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 4px;  
+  width: 250px !important;
+  float: left;
+  margin: 5px;    
+}
+#listadoopciones div:hover, #cajareceptora div:hover{
+  background: #DD4B39;
+  color: #fff;
+}
+#listadoopciones div:active, #cajareceptora div:active { 
+  background: #FFFFA5; 
+}
+#cajareceptora{
+  border: 1px solid #666;
+  padding: 10px;
+  height: 400px;    
+}
+
+.table {
+  display: table;
+}
+
 @media (max-width: 767px) {
   body.left-nav-minimized {
     overflow-x: hidden;

@@ -1,8 +1,8 @@
 <?php
 require('../class/allClass.php');
 error_reporting(0);
-$usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_STRING);
-$contra  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+$usuario = filter_input(INPUT_POST, 'usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+$contra  = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
 use nsnewsesion\newsesion;
 use nsfunciones\funciones;

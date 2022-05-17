@@ -104,6 +104,46 @@
             <?php } ?>
             <?php if($_SESSION['nivel'] == 2){ ?>
             <li>
+                <a href="#submenuAlmancen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Almacen</span>
+                </a>
+                <ul class="collapse nav primary essubmenu" id="submenuAlmancen">
+                    <li>
+                        <a onclick="getPageMenu('pr-categorias')">
+                            <i class="fas fa-cubes white"></i>
+                            <span class="white">Categorias</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-bodeguitas')">
+                            <i class="fas fa-warehouse-alt white"></i>
+                            <span class="white">Bodeguitas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-materiales')">
+                            <i class="fas fa-barcode-alt white"></i>
+                            <span class="white">Lista de materiales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-entradas-salidas')">
+                            <i class="fas fa-ballot-check white"></i>
+                            <span class="white">Entradas/Salidas</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-transferencia')">
+                            <i class="fas fa-exchange white"></i>
+                            <span class="white">Transferencias</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <?php } ?>
+            <?php if($_SESSION['nivel'] == 3){ ?>
+            <li>
                 <a onclick="getPageMenu('pr-solicitudes')">
                     <i class="fas fa-clipboard-list-check"></i>
                     <span>Solicitudes</span>

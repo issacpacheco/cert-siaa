@@ -235,3 +235,36 @@ function ConvertirStarImagen(idfoto, idrelacion, page){
         });
     }     
 }
+
+function filtrarportexto(texto){
+    var cant = texto.length;
+    if(cant >= 4){
+        $("#listadoopciones .opcionsitios").show();
+        $("#listadoopciones .opcionsitios:not([rel*='" + texto + "'])").hide();           
+    }else{
+        $("#listadoopciones .opcionsitios").show();
+    }
+
+}
+
+function agregarMaterial(idcategoria, idmaterial){
+    $.ajax({
+        type: "POST",
+        url: "ajax-save/material-categoria-add",
+        data: {idcategoria: idcategoria, idmaterial: idmaterial},
+        success: function () {
+            alertaVerde("Elemento agregado con éxito");
+        }
+    });    
+}
+
+function eliminarMaterial(idcategoria, idmaterial){
+    $.ajax({
+        type: "POST",
+        url: "ajax-delete/material-categoria-eliminar",
+        data: {idcategoria: idcategoria, idmaterial: idmaterial},
+        success: function () {
+            alertaVerde("Elemento eliminado con éxito");
+        }
+    });     
+}

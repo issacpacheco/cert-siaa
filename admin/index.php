@@ -97,6 +97,8 @@ include( "includes/config.php" );
 	</div>
 
 	<div class="scripts">
+		<!-- JQUERY -->
+		<script type="text/javascript" src="js/jquery.js"></script>
         <!-- Addons -->
         <script src="addons/jquery/jquery.min.js"></script>
         <script src="addons/jquery-ui/jquery-ui.min.js"></script>
@@ -105,6 +107,8 @@ include( "includes/config.php" );
         <script src="addons/pacejs/pace.min.js"></script>
         <!-- scripts -->
         <script src="addons/scripts.js"></script>
+		<!-- MULTISELECTS -->
+		<script src="scripts/multiselect/jquery.multiselect.js"></script> 
 		<!-- Funciones -->
 		<script src="js/generales.js"></script>
 		<script src="js/loads.js"></script>
@@ -137,7 +141,17 @@ include( "includes/config.php" );
 		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-audio.js"></script>
 		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-video.js"></script>
 		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-validate.js"></script>
-		<script src="plugins/jQuery-File-Upload-9.12.1/js/jquery.fileupload-ui.js"></script>
+		<!-- CALENDARIO -->
+		<link href='scripts/calendario/lib/main.css' rel='stylesheet' />
+		<script src='scripts/calendario/lib/main.js'></script>
+		<script src='scripts/calendario/lib/locales/es.js'></script>
+		
+		<!-- GRAFICAS -->
+		<script src="scripts/graficas/highcharts.js"></script>
+		<script src="scripts/graficas/modules/exporting.js"></script>
+		<script src="scripts/graficas/highcharts-more.js"></script>
+		<script src="scripts/graficas/modules/solid-gauge.js"></script>
+		<script src="scripts/dropzone-5.7.0/dist/dropzone.js"></script>
 		<!-- Current page scripts -->
         <div class="current-scripts">
 

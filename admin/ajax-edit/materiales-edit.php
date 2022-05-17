@@ -1,9 +1,9 @@
 <?php
 include('../class/allClass.php');
 
-$regresar   = filter_input(INPUT_POST, 'regresar',      FILTER_SANITIZE_STRING);
-$postload   = filter_input(INPUT_POST, 'returnpage',    FILTER_SANITIZE_STRING);
-$div        = filter_input(INPUT_POST, 'load',          FILTER_SANITIZE_STRING);
+$regresar   = filter_input(INPUT_POST, 'regresar',      FILTER_SANITIZE_SPECIAL_CHARS);
+$postload   = filter_input(INPUT_POST, 'returnpage',    FILTER_SANITIZE_SPECIAL_CHARS);
+$div        = filter_input(INPUT_POST, 'load',          FILTER_SANITIZE_SPECIAL_CHARS);
 $id         = filter_input(INPUT_POST, 'id',            FILTER_SANITIZE_NUMBER_INT);
 
 use nsalmacen\almacen;
