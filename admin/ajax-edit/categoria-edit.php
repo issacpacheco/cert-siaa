@@ -18,7 +18,6 @@ $cmaterialsincat        = $fn       -> cuentarray($materialsincat);
 
 $materialesasignados    = $info     -> material_asignado($id);
 $cmaterialesasignados   = $fn       -> cuentarray($materialesasignados);
-var_dump($cmaterialesasignados);
 
 ?>
 
@@ -29,22 +28,12 @@ var_dump($cmaterialesasignados);
         </div>
         <div class="panel-body">
             <form id="frmRegistro">
-                <input type="hidden" name="id_material" id="id_material" value="<?php echo $id; ?>">
+                <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $id; ?>">
                 <div class="row">
                     <div class="form-wrapper col-sm-4">
                         <label>Nombre</label>
                         <div class="form-group">
                             <input type="text" class="form-control validar" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $categoria['nombre'][0]; ?>">
-                        </div>
-                    </div>
-                    <div class="form-wrapper col-sm-4">
-                        <label>Estatus</label>
-                        <div class="form-group">
-                            <select name="estatus" id="estatus" class="form-control">
-                                <option value="2" selected>Selecciona un estatus</option>
-                                <option value="1" <?php if($material['estatus'][0] == 1){ echo "selected"; }?>>Activo</option>
-                                <option value="0" <?php if($material['estatus'][0] == 0){ echo "selected"; }?>>Inactivo</option>
-                            </select>
                         </div>
                     </div>
                 </div>
@@ -77,7 +66,7 @@ var_dump($cmaterialesasignados);
                     </div>
                 </div>
                 <div class="mright textright">
-                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('materiales-edit', 'pr-materiales', this);">
+                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('categoria-edit', 'pr-categorias', this);">
                         <span class="letrablanca font14">Guardar</span>
                     </button>
                 </div>
