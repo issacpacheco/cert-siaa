@@ -11,7 +11,7 @@
  Target Server Version : 100422
  File Encoding         : 65001
 
- Date: 10/05/2022 17:06:34
+ Date: 18/05/2022 16:54:30
 */
 
 SET NAMES utf8mb4;
@@ -263,7 +263,7 @@ CREATE TABLE `area`  (
   `estatus` int(11) NOT NULL,
   `sistema` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of area
@@ -273,6 +273,7 @@ INSERT INTO `area` VALUES (2, 'Docentes', 1, 1);
 INSERT INTO `area` VALUES (3, 'Bodega', 1, 2);
 INSERT INTO `area` VALUES (4, 'Choferes', 1, 2);
 INSERT INTO `area` VALUES (5, 'Enfermeria', 1, 2);
+INSERT INTO `area` VALUES (6, 'Construccion', 1, 2);
 
 -- ----------------------------
 -- Table structure for aspirantes
@@ -1733,13 +1734,16 @@ CREATE TABLE `inv_bodeguitas`  (
   `id_area` int(11) NULL DEFAULT NULL,
   `estatus` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_bodeguitas
 -- ----------------------------
 INSERT INTO `inv_bodeguitas` VALUES (1, 'bodega 1', 5, 1);
 INSERT INTO `inv_bodeguitas` VALUES (2, 'bodega 2 prueba', 5, 1);
+INSERT INTO `inv_bodeguitas` VALUES (3, 'bodega de polvos', 6, 1);
+INSERT INTO `inv_bodeguitas` VALUES (4, 'bodega de metales', 6, 1);
+INSERT INTO `inv_bodeguitas` VALUES (5, 'area programacion', 6, 1);
 
 -- ----------------------------
 -- Table structure for inv_campus_producto
@@ -1754,21 +1758,84 @@ CREATE TABLE `inv_campus_producto`  (
   `mod_hora_entrada` time(0) NULL DEFAULT NULL,
   `mod_fecha_salida` date NULL DEFAULT NULL,
   `mod_hora_salida` time(0) NULL DEFAULT NULL,
+  `mod_fecha_factura` date NULL DEFAULT NULL,
   `mod_id_usuario` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 71 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_campus_producto
 -- ----------------------------
-INSERT INTO `inv_campus_producto` VALUES (1, 1, 1, 40, '2022-05-10', '14:35:35', '2022-05-10', '14:35:07', 16);
-INSERT INTO `inv_campus_producto` VALUES (2, 1, 2, 0, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `inv_campus_producto` VALUES (3, 2, 1, 55, '2022-05-10', '14:36:40', '2022-05-10', '14:33:41', 16);
-INSERT INTO `inv_campus_producto` VALUES (4, 2, 2, 0, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `inv_campus_producto` VALUES (5, 3, 1, 0, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `inv_campus_producto` VALUES (6, 3, 2, 0, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `inv_campus_producto` VALUES (7, 4, 1, 0, NULL, NULL, NULL, NULL, NULL);
-INSERT INTO `inv_campus_producto` VALUES (8, 4, 2, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (1, 1, 1, 12512, '2022-05-18', '13:49:36', '2022-05-13', '11:09:10', '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (2, 1, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (3, 2, 1, 63, '2022-05-18', '13:57:48', '2022-05-14', '11:02:37', '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (4, 2, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (5, 3, 1, 11338, '2022-05-18', '13:47:01', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (6, 3, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (7, 4, 1, 8995, '2022-05-18', '13:15:49', '2022-05-13', '11:09:10', '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (8, 4, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (9, 5, 1, 10000, '2022-05-18', '13:59:08', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (10, 5, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (11, 6, 1, 10000, '2022-05-18', '10:44:23', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (12, 6, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (13, 7, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (14, 7, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (15, 8, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (16, 8, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (17, 9, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (18, 9, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (19, 10, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (20, 10, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (21, 11, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (22, 11, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (23, 12, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (24, 12, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (25, 13, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (26, 13, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (27, 14, 1, 10000, '2022-05-18', '11:22:25', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (28, 14, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (29, 15, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (30, 15, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (31, 16, 1, 10000, '2022-05-14', '10:53:11', '2022-05-16', '09:57:24', NULL, 21);
+INSERT INTO `inv_campus_producto` VALUES (32, 16, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (33, 17, 1, 10000, '2022-05-16', '12:37:14', '2022-05-16', '12:31:55', NULL, 21);
+INSERT INTO `inv_campus_producto` VALUES (34, 17, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (35, 18, 1, 10000, '2022-05-18', '10:49:57', '2022-05-14', '11:02:36', '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (36, 18, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (37, 19, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (38, 19, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (39, 20, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (40, 20, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (41, 21, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (42, 21, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (43, 22, 1, 10000, '2022-05-16', '12:47:22', '2022-05-16', '12:44:39', '2022-05-17', 21);
+INSERT INTO `inv_campus_producto` VALUES (44, 22, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (45, 23, 1, 10000, NULL, NULL, NULL, NULL, '2022-05-17', NULL);
+INSERT INTO `inv_campus_producto` VALUES (46, 23, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (47, 24, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (48, 24, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (49, 25, 1, 10000, NULL, NULL, NULL, NULL, '2022-05-17', NULL);
+INSERT INTO `inv_campus_producto` VALUES (50, 25, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (51, 26, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (52, 26, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (53, 27, 1, 10000, '2022-05-18', '10:49:57', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (54, 27, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (55, 28, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (56, 28, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (57, 29, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (58, 29, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (59, 30, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (60, 30, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (61, 31, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (62, 31, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (63, 32, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (64, 32, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (65, 33, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (66, 33, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (67, 34, 1, 10000, '2022-05-18', '10:49:57', NULL, NULL, '2022-05-18', 16);
+INSERT INTO `inv_campus_producto` VALUES (68, 34, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (69, 35, 1, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_campus_producto` VALUES (70, 35, 2, 10000, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for inv_categoria
@@ -1779,15 +1846,17 @@ CREATE TABLE `inv_categoria`  (
   `nombre` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `id_area` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_categoria
 -- ----------------------------
-INSERT INTO `inv_categoria` VALUES (1, 'Informatica', 5);
+INSERT INTO `inv_categoria` VALUES (1, 'Informatica prueba 2', 5);
 INSERT INTO `inv_categoria` VALUES (2, 'isaac pacheco perez', 1);
 INSERT INTO `inv_categoria` VALUES (3, 'pruebas', 5);
 INSERT INTO `inv_categoria` VALUES (4, 'producción', 5);
+INSERT INTO `inv_categoria` VALUES (5, 'Tornillos', 6);
+INSERT INTO `inv_categoria` VALUES (6, 'Pijas', 6);
 
 -- ----------------------------
 -- Table structure for inv_entrada_producto
@@ -1808,13 +1877,11 @@ CREATE TABLE `inv_entrada_producto`  (
   `factura` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `total` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 18 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 81 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_entrada_producto
 -- ----------------------------
-INSERT INTO `inv_entrada_producto` VALUES (1, 16, '2022-05-10', '10:28:01', 100, '1', NULL, 'Prueba de entrada 1', NULL, NULL, 1, '', 0);
-INSERT INTO `inv_entrada_producto` VALUES (2, 16, '2022-05-10', '10:28:25', 100, '2', NULL, 'prueba de entrada 1', NULL, NULL, 1, '', 0);
 INSERT INTO `inv_entrada_producto` VALUES (3, 16, '2022-05-10', '10:30:12', 50, '1', 1, 'Prueba de entrada 2', 3, 'C1-220510-pTRqj', 1, NULL, NULL);
 INSERT INTO `inv_entrada_producto` VALUES (4, 16, '2022-05-10', '10:30:12', 20, '2', 1, 'Prueba de entrada 2', 3, 'C1-220510-pTRqj', 1, NULL, NULL);
 INSERT INTO `inv_entrada_producto` VALUES (5, 16, '2022-05-10', '10:39:12', 50, '1', 1, 'prueba de entrada 2', 3, 'C1-220510-qhfPP', 1, NULL, NULL);
@@ -1830,6 +1897,22 @@ INSERT INTO `inv_entrada_producto` VALUES (14, 16, '2022-05-10', '14:35:35', 10,
 INSERT INTO `inv_entrada_producto` VALUES (15, 16, '2022-05-10', '14:35:49', 5, '2', 1, '', 3, 'C1-220510-HFhpk', 1, NULL, NULL);
 INSERT INTO `inv_entrada_producto` VALUES (16, 16, '2022-05-10', '14:36:01', 10, '2', 1, '', 3, 'C1-220510-zpnxw', 1, NULL, NULL);
 INSERT INTO `inv_entrada_producto` VALUES (17, 16, '2022-05-10', '14:36:40', 40, '2', 1, '', 3, 'C1-220510-pTRqj', 1, NULL, NULL);
+INSERT INTO `inv_entrada_producto` VALUES (29, 21, '2022-05-14', '10:53:11', 10, '16', NULL, 'Entradas  del dia de estos m ate', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (30, 21, '2022-05-14', '10:53:11', 20, '18', NULL, 'Entradas  del dia de estos m ate', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (31, 21, '2022-05-14', '10:53:11', 50, '17', NULL, 'Entradas  del dia de estos m ate', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (32, 21, '2022-05-14', '10:59:45', 10, '17', 1, 'devolucion completa por pancho', 22, 'C1-220514-lJqRr', 1, NULL, NULL);
+INSERT INTO `inv_entrada_producto` VALUES (33, 21, '2022-05-14', '11:13:48', 50, '1', NULL, 'factudsa aaed talud', NULL, NULL, 1, '', 450);
+INSERT INTO `inv_entrada_producto` VALUES (34, 21, '2022-05-14', '11:13:48', 20, '2', NULL, 'factudsa aaed talud', NULL, NULL, 1, '', 400);
+INSERT INTO `inv_entrada_producto` VALUES (35, 21, '2022-05-16', '12:23:20', 25, '22', NULL, 'se dan de altas los primero materiales', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (36, 21, '2022-05-16', '12:23:20', 100, '18', NULL, 'se dan de altas los primero materiales', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (37, 21, '2022-05-16', '12:36:46', 10, '22', 1, 'la pewejs devolvio 5 pzas de alambron quedan pendientes otros 5', 22, 'C1-220516-NavrJ', 1, NULL, NULL);
+INSERT INTO `inv_entrada_producto` VALUES (38, 21, '2022-05-16', '12:36:46', 5, '17', 1, 'la pewejs devolvio 5 pzas de alambron quedan pendientes otros 5', 22, 'C1-220516-NavrJ', 1, NULL, NULL);
+INSERT INTO `inv_entrada_producto` VALUES (39, 21, '2022-05-16', '12:37:14', 5, '17', 1, 'hb', 22, 'C1-220516-NavrJ', 1, NULL, NULL);
+INSERT INTO `inv_entrada_producto` VALUES (67, 16, '2022-05-18', '13:44:43', 13, '2', NULL, '', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (68, 16, '2022-05-18', '13:44:43', 1333, '3', NULL, '', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (69, 16, '2022-05-18', '13:45:18', 12412, '1', NULL, '', NULL, NULL, 1, '', 213);
+INSERT INTO `inv_entrada_producto` VALUES (71, 16, '2022-05-18', '13:47:01', 5, '3', NULL, '', NULL, NULL, 1, '', 0);
+INSERT INTO `inv_entrada_producto` VALUES (77, 16, '2022-05-18', '13:57:44', 500, '2', NULL, NULL, NULL, NULL, 1, 'FOL-15321', 50000);
 
 -- ----------------------------
 -- Table structure for inv_entrada_transferencia
@@ -1879,11 +1962,17 @@ CREATE TABLE `inv_producto_foto`  (
   `id_producto` int(11) NULL DEFAULT NULL,
   `favorito` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_producto_foto
 -- ----------------------------
+INSERT INTO `inv_producto_foto` VALUES (1, 'KcmB6_DaEh3O5UMAAVFXf.jpg', 1, 1);
+INSERT INTO `inv_producto_foto` VALUES (2, 'FzuUN_banner.jpg', 16, NULL);
+INSERT INTO `inv_producto_foto` VALUES (3, 'VCSfb_portada-imperio.jpg', 16, NULL);
+INSERT INTO `inv_producto_foto` VALUES (4, 'FjWJf_DaEh3O5UMAAVFXf.jpg', 16, NULL);
+INSERT INTO `inv_producto_foto` VALUES (5, 'DHk8L_portada-imperio.jpg', 21, NULL);
+INSERT INTO `inv_producto_foto` VALUES (6, 'xSCrp_banner.jpg', 21, NULL);
 
 -- ----------------------------
 -- Table structure for inv_productos
@@ -1904,15 +1993,46 @@ CREATE TABLE `inv_productos`  (
   `id_unidad` int(11) NULL DEFAULT NULL,
   `id_bodega` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 36 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_productos
 -- ----------------------------
-INSERT INTO `inv_productos` VALUES (1, 'Silla prueba 12', 'mesa 1', '98127msa-12AS', NULL, '2022-05-10', '10:27:05', 16, 1, 1, 5, 4, NULL);
-INSERT INTO `inv_productos` VALUES (2, 'Computadora', 'computadora 5v', '5165210s-650', NULL, '2022-05-10', '10:27:19', 16, 1, 1, 5, 4, NULL);
+INSERT INTO `inv_productos` VALUES (1, 'Silla prueba 12', 'mesa 1', '98127msa-12AS', NULL, '2022-05-10', '10:27:05', 16, 1, 1, 5, 4, 2);
+INSERT INTO `inv_productos` VALUES (2, 'Computadora', 'computadora 5v', '5165210s-650', NULL, '2022-05-10', '10:27:19', 16, 1, 1, 5, 4, 2);
 INSERT INTO `inv_productos` VALUES (3, 'producto bodega', 'prueba de bodega', '54981502', NULL, '2022-05-10', '15:12:30', 16, 3, 2, 5, 3, 2);
-INSERT INTO `inv_productos` VALUES (4, 'prueba_editable 1111111000', 'computadora 5v 1111100000', '98127msa-12 11111100000', NULL, '2022-05-10', '15:14:00', 16, 1, 1, 5, 2, 2);
+INSERT INTO `inv_productos` VALUES (4, 'prueba_editable ', 'computadora 5v ', '98127msa-12 ', NULL, '2022-05-10', '15:14:00', 16, 1, 1, 5, 2, 2);
+INSERT INTO `inv_productos` VALUES (5, 'prueba', 'prueba', '1', NULL, '2022-05-13', '12:11:57', 16, NULL, 1, 5, 1, 1);
+INSERT INTO `inv_productos` VALUES (6, 'prueba', 'prueba', '1', NULL, '2022-05-13', '12:13:05', 16, 3, 1, 5, 1, 2);
+INSERT INTO `inv_productos` VALUES (7, 'prueba', 'prueba', '1', NULL, '2022-05-13', '12:13:55', 16, NULL, 1, 5, 1, 2);
+INSERT INTO `inv_productos` VALUES (8, 'ALGODÓN', 'ALGODÓN', '1', NULL, '2022-05-13', '12:14:39', 16, NULL, 1, 5, 1, 1);
+INSERT INTO `inv_productos` VALUES (9, 'AGUA', 'AGUA', '0', NULL, '2022-05-13', '12:14:39', 16, 3, 1, 5, 2, 2);
+INSERT INTO `inv_productos` VALUES (10, 'ALGODÓN', 'ALGODÓN', '1', NULL, '2022-05-13', '12:14:52', 16, NULL, 1, 5, 1, 2);
+INSERT INTO `inv_productos` VALUES (11, 'AGUA', 'AGUA', '0', NULL, '2022-05-13', '12:14:52', 16, NULL, 1, 5, 2, 1);
+INSERT INTO `inv_productos` VALUES (12, 'ALGODÓN', 'ALGODÓN', '1', NULL, '2022-05-13', '12:15:03', 16, NULL, 1, 5, 1, 1);
+INSERT INTO `inv_productos` VALUES (13, 'AGUA', 'AGUA', '0', NULL, '2022-05-13', '12:15:03', 16, NULL, 1, 5, 2, 1);
+INSERT INTO `inv_productos` VALUES (14, 'ALGODÓN', 'ALGODÓN', '1', NULL, '2022-05-13', '12:15:20', 16, 3, 1, 5, 1, 1);
+INSERT INTO `inv_productos` VALUES (15, 'AGUA', 'AGUA', '0', NULL, '2022-05-13', '12:15:20', 16, NULL, 1, 5, 2, 2);
+INSERT INTO `inv_productos` VALUES (16, 'barilla 1/2', 'barilla de 3 pulgas', '0', NULL, '2022-05-14', '10:27:06', 21, NULL, 0, 5, 4, 4);
+INSERT INTO `inv_productos` VALUES (17, 'Alambron', 'Alambre de 3/8', '0', NULL, '2022-05-14', '10:27:06', 21, NULL, 1, 5, 6, 2);
+INSERT INTO `inv_productos` VALUES (18, 'BARILLAS 9 PULGADAS', 'BARILLA METALICA DE 9 PULGAS', '0', NULL, '2022-05-14', '10:30:32', 21, NULL, 1, 5, 4, 4);
+INSERT INTO `inv_productos` VALUES (19, 'barilla 3/8', 'barilla de 3 pulgas', '0', NULL, '2022-05-16', '12:10:40', 21, 3, 1, 5, 4, 1);
+INSERT INTO `inv_productos` VALUES (20, 'Alambron', 'Alambre de 3/8', '0', NULL, '2022-05-16', '12:10:40', 21, NULL, 1, 5, 6, 1);
+INSERT INTO `inv_productos` VALUES (21, 'computador de escritorio', 'computadora 5v', '5165206581', NULL, '2022-05-16', '12:10:40', 21, NULL, 1, 5, 4, 4);
+INSERT INTO `inv_productos` VALUES (22, 'Mouse', 'mouse', '5463201653', NULL, '2022-05-16', '12:10:40', 21, NULL, 1, 5, 4, 5);
+INSERT INTO `inv_productos` VALUES (23, 'switch', 'computadora 5v', '521651', NULL, '2022-05-16', '12:14:07', 21, 3, 1, 5, 4, 4);
+INSERT INTO `inv_productos` VALUES (24, 'Computadora', 'asdasd', '', NULL, '2022-05-17', '13:09:34', 18, NULL, 0, 5, 4, 2);
+INSERT INTO `inv_productos` VALUES (25, 'isaac alberto', 'asdasd', 'aaxdasx', NULL, '2022-05-17', '13:09:39', 18, NULL, 1, 5, 3, 1);
+INSERT INTO `inv_productos` VALUES (26, 'Informatica', 'asdasd&#60;ASDFASDGVFASDVsdvSDVsdv', '', NULL, '2022-05-17', '13:09:44', 18, NULL, 0, 5, 4, 1);
+INSERT INTO `inv_productos` VALUES (27, 'prueba_editable', 'SDVsdvSDFVwevc&#60;sdv&#60;sdv&#60;SDVsdvDV', '', NULL, '2022-05-17', '13:11:09', 18, NULL, 1, 5, 3, 1);
+INSERT INTO `inv_productos` VALUES (28, 'isaac alberto', 'ascfASCasdcADC', '', NULL, '2022-05-17', '13:13:09', 18, 3, 0, 5, 4, 1);
+INSERT INTO `inv_productos` VALUES (29, 'isaac alberto', 'ASFDasfASFasf', '', NULL, '2022-05-17', '13:13:14', 18, NULL, 0, 5, 3, 1);
+INSERT INTO `inv_productos` VALUES (30, 'Silla prueba 12', 'asfACSascQEFGwedfvSADVadvfDGVFdsvSDVsd', '', NULL, '2022-05-17', '13:13:19', 18, NULL, 0, 5, 3, 1);
+INSERT INTO `inv_productos` VALUES (31, 'Computadora', 'ASfcVAScAScASc', '', NULL, '2022-05-17', '13:13:34', 18, NULL, 0, 5, 2, 1);
+INSERT INTO `inv_productos` VALUES (32, 'prueba_editable', 'ASFASfvAScASc', '', NULL, '2022-05-17', '13:13:56', 18, 3, 0, 5, 5, 1);
+INSERT INTO `inv_productos` VALUES (33, 'asdasda', 'asdasdasd', 'asdasdasd', NULL, '2022-05-17', '13:20:48', 18, NULL, 0, 5, 3, 1);
+INSERT INTO `inv_productos` VALUES (34, '&#60;ASDFVsdvDV', 'mesa 1', '98127msa-12', NULL, '2022-05-17', '13:21:01', 18, 3, 0, 5, 4, 1);
+INSERT INTO `inv_productos` VALUES (35, 'vSDVadv', 'vadVDAVqedvWDVS&#60;DV&#60;sdvSDV', 'SADVSADVS', NULL, '2022-05-17', '13:21:21', 18, 3, 1, 5, 1, 2);
 
 -- ----------------------------
 -- Table structure for inv_salida_producto
@@ -1934,28 +2054,42 @@ CREATE TABLE `inv_salida_producto`  (
   `id_usuario_mod_pres` int(11) NULL DEFAULT NULL,
   `id_campus` int(11) NULL DEFAULT NULL,
   `proyecto` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `fch_ini` date NULL DEFAULT NULL,
+  `fch_fin` date NULL DEFAULT NULL,
+  `id_subarea` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 28 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_salida_producto
 -- ----------------------------
-INSERT INTO `inv_salida_producto` VALUES (1, 16, '2022-05-10', '10:28:52', 50, 50, '1', 3, 1, 5, 'C1-220510-pTRqj', 'prueba de salida 1', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (2, 16, '2022-05-10', '10:28:52', 40, 40, '2', 3, 1, 5, 'C1-220510-pTRqj', 'prueba de salida 1', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (3, 16, '2022-05-10', '10:38:34', 50, 50, '1', 3, 1, 5, 'C1-220510-qhfPP', 'prueba de salida 2', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (4, 16, '2022-05-10', '10:38:34', 30, 50, '2', 3, 1, 5, 'C1-220510-qhfPP', 'prueba de salida 2', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (5, 16, '2022-05-10', '10:47:38', 50, 50, '1', 3, 1, 5, 'C1-220510-5tTrK', 'prueba de salida 3', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (6, 16, '2022-05-10', '10:47:38', 15, 15, '2', 3, 1, 5, 'C1-220510-5tTrK', 'prueba de salida 3', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (7, 16, '2022-05-10', '10:53:00', 50, 50, '1', 3, 1, 5, 'C1-220510-jSsnZ', 'prueba de salida 5', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (8, 16, '2022-05-10', '10:53:00', 25, 50, '2', 3, 1, 5, 'C1-220510-jSsnZ', 'prueba de salida 5', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (9, 16, '2022-05-10', '11:10:20', 25, 25, '1', 3, 1, 5, 'C1-220510-z5AYo', 'prueba de salida 6', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (10, 16, '2022-05-10', '11:10:20', 10, 10, '2', 3, 1, 5, 'C1-220510-z5AYo', 'prueba de salida 6', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (11, 16, '2022-05-10', '12:08:19', 20, 20, '1', 3, 1, 5, 'C1-220510-HFhpk', 'Salida ultima prueba', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (12, 16, '2022-05-10', '12:08:19', 10, 10, '2', 3, 1, 5, 'C1-220510-HFhpk', 'Salida ultima prueba', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (13, 16, '2022-05-10', '14:33:41', 10, 10, '2', 3, 1, 5, 'C1-220510-zpnxw', '', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (14, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (15, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL);
-INSERT INTO `inv_salida_producto` VALUES (16, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL);
+INSERT INTO `inv_salida_producto` VALUES (1, 16, '2022-05-10', '10:28:52', 50, 50, '1', 3, 1, 5, 'C1-220510-pTRqj', 'prueba de salida 1', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (2, 16, '2022-05-10', '10:28:52', 40, 40, '2', 3, 1, 5, 'C1-220510-pTRqj', 'prueba de salida 1', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (3, 16, '2022-05-10', '10:38:34', 50, 50, '1', 3, 1, 5, 'C1-220510-qhfPP', 'prueba de salida 2', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (4, 16, '2022-05-10', '10:38:34', 30, 50, '2', 3, 1, 5, 'C1-220510-qhfPP', 'prueba de salida 2', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (5, 16, '2022-05-10', '10:47:38', 50, 50, '1', 3, 1, 5, 'C1-220510-5tTrK', 'prueba de salida 3', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (6, 16, '2022-05-10', '10:47:38', 15, 15, '2', 3, 1, 5, 'C1-220510-5tTrK', 'prueba de salida 3', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (7, 16, '2022-05-10', '10:53:00', 50, 50, '1', 3, 1, 5, 'C1-220510-jSsnZ', 'prueba de salida 5', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (8, 16, '2022-05-10', '10:53:00', 25, 50, '2', 3, 1, 5, 'C1-220510-jSsnZ', 'prueba de salida 5', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (9, 16, '2022-05-10', '11:10:20', 25, 25, '1', 3, 1, 5, 'C1-220510-z5AYo', 'prueba de salida 6', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (10, 16, '2022-05-10', '11:10:20', 10, 10, '2', 3, 1, 5, 'C1-220510-z5AYo', 'prueba de salida 6', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (11, 16, '2022-05-10', '12:08:19', 20, 20, '1', 3, 1, 5, 'C1-220510-HFhpk', 'Salida ultima prueba', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (12, 16, '2022-05-10', '12:08:19', 10, 10, '2', 3, 1, 5, 'C1-220510-HFhpk', 'Salida ultima prueba', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (13, 16, '2022-05-10', '14:33:41', 10, 10, '2', 3, 1, 5, 'C1-220510-zpnxw', '', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (14, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (15, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (16, 16, '2022-05-10', '14:35:07', 10, 10, '1', 3, 1, 5, 'C1-220510-hNSd3', '', 16, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (17, 16, '2022-05-11', '14:32:11', 10, NULL, '1', 0, NULL, 5, NULL, '', NULL, 1, '', '2022-05-13', '2022-05-16', NULL);
+INSERT INTO `inv_salida_producto` VALUES (18, 16, '2022-05-13', '10:44:00', 50, 50, '1', 3, 1, 3, 'C1-220513-U3BAR', 'Primera prueba de salida con rango de fechas', NULL, 1, NULL, '0000-00-00', '0000-00-00', NULL);
+INSERT INTO `inv_salida_producto` VALUES (19, 16, '2022-05-13', '11:01:53', 10, 10, '2', 13, 1, 3, 'C1-220513-tpAMB', 'prueba de rango de fechas', NULL, 1, NULL, '0000-00-00', '0000-00-00', NULL);
+INSERT INTO `inv_salida_producto` VALUES (20, 16, '2022-05-13', '11:09:10', 12, 12, '1', 5, 1, 3, 'C1-220513-Zp8UI', '', NULL, 1, NULL, '2022-05-14', '2022-05-15', NULL);
+INSERT INTO `inv_salida_producto` VALUES (21, 16, '2022-05-13', '11:09:10', 121, 121, '4', 5, 1, 3, 'C1-220513-Zp8UI', '', NULL, 1, NULL, '2022-05-17', '2022-05-28', NULL);
+INSERT INTO `inv_salida_producto` VALUES (22, 21, '2022-05-14', '10:55:36', 10, NULL, '17', 0, NULL, 0, NULL, 'salida de materiales para el grupo 1 emcr', NULL, 1, '', NULL, NULL, NULL);
+INSERT INTO `inv_salida_producto` VALUES (23, 21, '2022-05-14', '10:57:48', 10, 10, '17', 22, 1, 5, 'C1-220514-lJqRr', 'preste material a pancho del grupo 1 con encargo loeza', 21, 1, NULL, '2022-05-14', '2022-05-14', NULL);
+INSERT INTO `inv_salida_producto` VALUES (24, 21, '2022-05-16', '09:57:24', 10, NULL, '16', 0, NULL, 0, NULL, 'prueba con subareas', NULL, 1, '', NULL, NULL, 0);
+INSERT INTO `inv_salida_producto` VALUES (25, 21, '2022-05-16', '09:58:41', 20, NULL, '17', 0, NULL, 0, NULL, 'prueba de salida por grupos', NULL, 1, '', NULL, NULL, 6);
+INSERT INTO `inv_salida_producto` VALUES (26, 21, '2022-05-16', '12:31:55', 10, 10, '22', 22, 1, 5, 'C1-220516-NavrJ', 'se hace un prestamo', 21, 1, NULL, '2022-05-16', '2022-05-17', NULL);
+INSERT INTO `inv_salida_producto` VALUES (27, 21, '2022-05-16', '12:31:55', 10, 10, '17', 22, 1, 5, 'C1-220516-NavrJ', 'se hace un prestamo', 21, 1, NULL, '2022-05-16', '2022-05-16', NULL);
 
 -- ----------------------------
 -- Table structure for inv_salida_transferencia
@@ -1975,7 +2109,7 @@ CREATE TABLE `inv_salida_transferencia`  (
   `estatus` int(11) NULL DEFAULT NULL,
   `cantidad_enviada` double NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_salida_transferencia
@@ -1987,20 +2121,22 @@ CREATE TABLE `inv_salida_transferencia`  (
 DROP TABLE IF EXISTS `inv_subareas`;
 CREATE TABLE `inv_subareas`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
+  `descripcion` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `estatus` int(11) NULL DEFAULT NULL,
   `id_area` int(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of inv_subareas
 -- ----------------------------
-INSERT INTO `inv_subareas` VALUES (1, 'bodega', 1, 5);
-INSERT INTO `inv_subareas` VALUES (2, 'grupo prueba', 1, 5);
-INSERT INTO `inv_subareas` VALUES (3, 'grupo prueba', 1, 5);
-INSERT INTO `inv_subareas` VALUES (4, 'isaac alberto', 1, 5);
-INSERT INTO `inv_subareas` VALUES (5, 'isaac alberto', 1, 5);
+INSERT INTO `inv_subareas` VALUES (1, 'bodega', NULL, 1, 5);
+INSERT INTO `inv_subareas` VALUES (2, 'grupo prueba', NULL, 1, 5);
+INSERT INTO `inv_subareas` VALUES (3, 'grupo prueba', NULL, 1, 5);
+INSERT INTO `inv_subareas` VALUES (4, 'isaac alberto', NULL, 1, 5);
+INSERT INTO `inv_subareas` VALUES (5, 'isaac alberto', NULL, 1, 5);
+INSERT INTO `inv_subareas` VALUES (6, 'GRUPO 1', 'prueba de descripcion de sub area', 1, 6);
 
 -- ----------------------------
 -- Table structure for inv_unidades
@@ -3350,7 +3486,7 @@ CREATE TABLE `usuarios`  (
   `nombre` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
   `nivel` int(1) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = MyISAM AUTO_INCREMENT = 21 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = MyISAM AUTO_INCREMENT = 23 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of usuarios
@@ -3368,12 +3504,14 @@ INSERT INTO `usuarios` VALUES (10, 2, 2, NULL, 'claudia.saldana@cert.edu.mx', 't
 INSERT INTO `usuarios` VALUES (11, 2, 1, NULL, 'mercy.martinez@cert.edu.mx', 'ticul.22', 'Mercy Martínez', 2);
 INSERT INTO `usuarios` VALUES (12, 2, 1, NULL, 'alondra.dominguez@cert.edu.mx', 'ticul', 'Alondra Domínguez', 2);
 INSERT INTO `usuarios` VALUES (13, 1, 3, NULL, 'diana.salazar@cert.edu.mx', 'GeLu0713', 'DIANA SALAZAR ', 2);
-INSERT INTO `usuarios` VALUES (14, 1, 4, NULL, 'isaac.pacheco@cert.edu.mx', '123456', 'Issac Pacheco', 2);
+INSERT INTO `usuarios` VALUES (14, 1, 1, 1, 'isaac.pacheco@cert.edu.mx', '1111000', 'Issac Pacheco perez', 1);
 INSERT INTO `usuarios` VALUES (15, 1, 3, NULL, 'admin', '12345', 'Administrador', 99);
-INSERT INTO `usuarios` VALUES (16, 1, 5, NULL, 'isaac.pacheco@cert.edu.mx', '1111', 'Administrador', 1);
+INSERT INTO `usuarios` VALUES (16, 1, 5, 0, 'isaac.pacheco@cert.edu.mx', '111100', 'Administrador prueba de usuarios', 1);
 INSERT INTO `usuarios` VALUES (17, 1, 4, NULL, 'pacheco@gmail.com', '12345', 'isaac alberto', 2);
 INSERT INTO `usuarios` VALUES (18, 1, 5, NULL, 'karlos@gmal.com', '12345', 'karl campus', 2);
 INSERT INTO `usuarios` VALUES (19, 1, 1, NULL, 'pruebasdeusuario@cert.edu.mx', '1111', 'usuario de pruebas', 2);
-INSERT INTO `usuarios` VALUES (20, 1, 5, 1, 'prueba2@cert.edu.mx', '159753', 'prueba_editable', 2);
+INSERT INTO `usuarios` VALUES (20, 1, 5, 1, 'pruebas2@cert.edu.mx', '159753', 'Issac pruebas de usuario', 1);
+INSERT INTO `usuarios` VALUES (21, 1, 6, 0, 'julio.dorantes@cert.edu.mx', '12345', 'Julio Dorantes', 1);
+INSERT INTO `usuarios` VALUES (22, 1, 6, 6, 'loeza@cert.edu.mx', '12345', 'Loeza', 2);
 
 SET FOREIGN_KEY_CHECKS = 1;
