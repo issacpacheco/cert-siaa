@@ -60,7 +60,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     <div class="form-wrapper col-sm-4" id="factura" style="display: none;">
                         <label>Factura</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="factura" id="factura_precio" placeholder="Capturar la Factura" value="" autocomplete="FALSE">
+                            <input type="text" class="form-control validar" name="factura" id="factura_precio" placeholder="Capturar la Factura" value="" autocomplete="FALSE">
                         </div>
                     </div>
                 </div>

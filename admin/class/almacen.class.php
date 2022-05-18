@@ -324,7 +324,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, u.nombre AS usuario
                 FROM inv_entrada_producto f
                 LEFT JOIN usuarios u ON u.id = f.id_usuario
-                WHERE f.factura is not null AND u.id_area = {$_SESSION['area']} GROUP BY f.factura";
+                WHERE (f.factura is not null and f.factura != '') AND u.id_area = {$_SESSION['area']} GROUP BY f.factura";
         $res = $this->consulta($qry);
         return $res;
     }
