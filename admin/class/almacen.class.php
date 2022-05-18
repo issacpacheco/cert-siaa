@@ -55,7 +55,7 @@ class almacen extends mysqlconsultas{
         $qry = "SELECT p.*, c.nombre AS categoria, i.cantidad FROM inv_productos p 
                 LEFT JOIN inv_categoria c ON c.id = p.id_categoria 
                 LEFT JOIN inv_campus_producto i ON i.id_producto = p.id
-                WHERE p.id = '$id'";
+                WHERE p.id = '$id' AND i.id_campus = {$_SESSION['campus']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -97,7 +97,7 @@ class almacen extends mysqlconsultas{
                 LEFT JOIN usuarios u ON u.id = e.id_usuario
                 LEFT JOIN usuarios s ON s.id = e.id_solicitante
                 WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
-                AND e.estatus = 0 OR e.estatus >= 3
+                AND (e.estatus = 0 OR e.estatus >= 3)
                 ORDER BY e.fecha DESC, e.hora DESC";
         $res = $this->consulta($qry);
         return $res;
@@ -127,6 +127,12 @@ class almacen extends mysqlconsultas{
 
     public function obtener_cantidad_material($id){
         $qry = "SELECT cantidad FROM inv_campus_producto WHERE id_producto = '$id' AND id_campus = {$_SESSION['campus']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_material_nombre_id($id,$nombre){
+        $qry = "SELECT * FROM inv_productos WHERE id = $id AND nombre = '$nombre'";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -331,6 +337,21 @@ class almacen extends mysqlconsultas{
 
     public function material_asignado($id){
         $qry = "SELECT * FROM inv_productos WHERE id_categoria = $id";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_productos_por_factura($factura){
+        $qry = "SELECT e.*, p.nombre AS nombre_producto, p.descripcion AS descripcion 
+                FROM inv_entrada_producto e
+                LEFT JOIN inv_productos p ON p.id = e.id_producto
+                WHERE e.factura = '$factura'";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+    
+    public function obtener_columna_factura($id,$idproducto,$folio){
+        $qry = "SELECT * FROM inv_entrada_producto WHERE id = '$id' AND id_producto = '$idproducto' AND factura = '$folio'";
         $res = $this->consulta($qry);
         return $res;
     }

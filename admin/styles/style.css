@@ -410,9 +410,9 @@ body {
   background: #FFFFA5; 
 }
 #cajareceptora{
-  border: 1px solid #666;
-  padding: 10px;
-  height: 400px;    
+  border: 1px solid #000;
+  padding: 30px;
+  /* height: 400px;     */
 }
 
 .table {

@@ -16,12 +16,7 @@ $cfacturas    = $fn->cuentarray($facturas);
         <div class="panel">
             <div class="row panel-heading">
                 <div class="col-sm-6">
-                    Bodeguitas
-                </div>
-                <div class="col-6 mright textright">
-                    <button id="idtest" onclick="openPopup(this, 400, 350)" data-postload="0" data-returnpage="pr-bodeguitas" data-valores="" data-form="" data-page="bodeguitas-add" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
-                        <span class="letrablanca font14">Agregar</span>
-                    </button> 
+                    <h1>Facturas</h1>
                 </div>
             </div>
             <div class="panel-body">
@@ -40,7 +35,7 @@ $cfacturas    = $fn->cuentarray($facturas);
                         </thead>
                         <tbody>
                         <?php for($i = 0,$a=0; $i < $cfacturas; $i++){ $a = $a+1;?>
-                            <tr onclick="openPopupEdit(this, 300, 250)" data-postload="0" data-returnpage="pr-bodeguitas" data-form="" data-page="bodeguitas-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $facturas["id"][$i]; ?>">
+                            <tr onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-facturas" data-form="" data-page="facturas-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $facturas["factura"][$i]; ?>">
                                 <td><?php echo $a; ?></td>
                                 <td><?php echo $facturas['factura'][$i]; ?></td>
                                 <td><?php echo $facturas['fecha'][$i]; ?></td>

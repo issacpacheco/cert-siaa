@@ -49,6 +49,8 @@ include( "includes/config.php" );
 	<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload.css" rel="stylesheet" >
 	<link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui.css" rel="stylesheet" >
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css"/>
 	<!-- CSS adjustments for browsers with JavaScript disabled -->
     <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-noscript.css" rel="stylesheet" ></noscript>
     <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" ></noscript>
@@ -145,12 +147,11 @@ include( "includes/config.php" );
 		<link href='scripts/calendario/lib/main.css' rel='stylesheet' />
 		<script src='scripts/calendario/lib/main.js'></script>
 		<script src='scripts/calendario/lib/locales/es.js'></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.js"></script>
 		
 		<!-- GRAFICAS -->
-		<script src="scripts/graficas/highcharts.js"></script>
-		<script src="scripts/graficas/modules/exporting.js"></script>
-		<script src="scripts/graficas/highcharts-more.js"></script>
-		<script src="scripts/graficas/modules/solid-gauge.js"></script>
 		<script src="scripts/dropzone-5.7.0/dist/dropzone.js"></script>
 		<!-- Current page scripts -->
         <div class="current-scripts">

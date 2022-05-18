@@ -37,8 +37,8 @@ $cmaterialesasignados   = $fn       -> cuentarray($materialesasignados);
                         </div>
                     </div>
                 </div>
-                <div class="left full mtop paddingbottom15">
-                    <h1 class="left full">Productos/Materiales relacionado con esta categoria:</h1>  
+                <div class="left mtop panel-body">
+                    <h3 class="left full">Productos/Materiales relacionado con esta categoria:</h3>
                     <div class="let full mbottom10">
                         <label class="left full">Filtrar listado: </label>
                         <input type="text" name="" class="left col2 small12" onkeyup="filtrarportexto(value)" />
@@ -47,19 +47,19 @@ $cmaterialesasignados   = $fn       -> cuentarray($materialesasignados);
                     
                     <div class="left full mtop20">
                         <div class="col9 left">
-                            <p class="left full letraroja">Materiales disponibles:</p>
+                            <p class="left full letraroja">Materiales disponibles para asignar a esta categoria:</p>
                             <div class="left full" id="listadoopciones">
                                 <?php for($i=0; $i<$cmaterialsincat; $i++){ ?>
-                                    <div class="opcionsitios table full dragable" rel="<?php echo $materialsincat["nombre"][$i]; ?> <?php echo $materialsincat["id"][$i]; ?>" id="<?php echo $materialsincat["id"][$i]; ?>"><span class="tablecell"><b><?php echo $materialsincat["nombre"][$i]; ?></b><i>(<?php echo $materialsincat["id"][$i]; ?>)</i></span></div>
+                                    <div class="opcionsitios table full dragable" rel="<?php echo $materialsincat["nombre"][$i]; ?> <?php echo $materialsincat["id"][$i]; ?>" id="<?php echo $materialsincat["id"][$i]; ?>"><span class="tablecell"><b><?php echo $materialsincat["nombre"][$i]; ?></b><i>(<?php echo $materialsincat["descripcion"][$i]; ?>)</i></span></div>
                                 <?php } ?>
                             </div>
                         </div>
                         
                         <div class="col9 paddingleft15 left">
-                            <p class="left full letraroja">Arrastre aquí los materiales para asignarlo a esta categoria categoria:</p>
+                            <p class="left full letraroja">Arrastre aquí los materiales para asignarlo a esta categoria:</p>
                             <div class="left full" id="cajareceptora">
                                 <?php if($cmaterialesasignados > 0){ for($i=0; $i<$cmaterialesasignados; $i++){ ?>
-                                    <div class="table full dragable" id="<?php echo $materialesasignados["id"][$i]; ?>"><span class="tablecell"><b><?php echo $materialesasignados["nombre"][$i]; ?></b><i>(<?php echo $materialesasignados["id_categoria"][$i]; ?>)</i></span></div>
+                                    <div class="table full dragable" id="<?php echo $materialesasignados["id"][$i]; ?>"><span class="tablecell"><b><?php echo $materialesasignados["nombre"][$i]; ?></b><i>(<?php echo $materialesasignados["descripcion"][$i]; ?>)</i></span></div>
                                 <?php }} ?>
                             </div>
                         </div>                
