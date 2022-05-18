@@ -88,7 +88,7 @@ $cproductos = $fn ->  cuentarray($productos);
             </div>
             <div class="panel-body">
                 <div class="left full fondoblanco relative paddingtop15" id="content">
-                    <table class="display fullimportant margentabla" id="tabla">
+                    <table class="display fullimportant margentabla table table-bordered" id="">
                     <thead>
                         <tr>
                             <th>ID Producto</th>
@@ -143,7 +143,6 @@ $cproductos = $fn ->  cuentarray($productos);
         let idproducto  = document.getElementById("idproducto_"+num).value;
         let id          = document.getElementById("id_"+num).value;
         let folio       = document.getElementById("folio_"+num).value;
-        console.log(idproducto+" "+id+" "+folio);
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'btn btn-success',
@@ -167,7 +166,6 @@ $cproductos = $fn ->  cuentarray($productos);
                     url: "ajax-delete/eliminar-producto-factura",
                     data: {idproducto: idproducto, folio: folio, id: id},
                     success: function(response){
-                        console.log(response);
                         if(response == 1){
                             swalWithBootstrapButtons.fire(
                                 'Eliminado!',
@@ -201,7 +199,6 @@ $cproductos = $fn ->  cuentarray($productos);
                 )
             }
         })
-        console.log($(".list_cancel").length);
     }
     function addNewRow() {
         var template = $("tr.trow:first");

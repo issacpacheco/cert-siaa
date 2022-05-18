@@ -268,3 +268,25 @@ function eliminarMaterial(idcategoria, idmaterial){
         }
     });     
 }
+
+function agregarMaterialBod(idcategoria, idmaterial){
+    $.ajax({
+        type: "POST",
+        url: "ajax-save/material-bodega-add",
+        data: {idcategoria: idcategoria, idmaterial: idmaterial},
+        success: function () {
+            alertaVerde("Elemento agregado con éxito");
+        }
+    });    
+}
+
+function eliminarMaterialBod(idcategoria, idmaterial){
+    $.ajax({
+        type: "POST",
+        url: "ajax-delete/material-bodega-eliminar",
+        data: {idcategoria: idcategoria, idmaterial: idmaterial},
+        success: function () {
+            alertaVerde("Elemento eliminado con éxito");
+        }
+    });     
+}

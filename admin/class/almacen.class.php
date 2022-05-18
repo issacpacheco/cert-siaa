@@ -341,6 +341,18 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_material_sin_bodeguita(){
+        $qry = "SELECT * FROM inv_productos WHERE (id_bodega = 0 OR id_bodega IS NULL) AND id_area = {$_SESSION['area']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function material_con_bodega($id){
+        $qry = "SELECT * FROM inv_productos WHERE id_bodega = $id";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
     public function obtener_productos_por_factura($factura){
         $qry = "SELECT e.*, p.nombre AS nombre_producto, p.descripcion AS descripcion 
                 FROM inv_entrada_producto e

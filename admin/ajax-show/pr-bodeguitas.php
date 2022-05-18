@@ -35,7 +35,7 @@ $cbodeguitas    = $fn->cuentarray($bodeguitas);
                         </thead>
                         <tbody>
                         <?php for($i = 0,$a=0; $i < $cbodeguitas; $i++){ $a = $a+1;?>
-                            <tr onclick="openPopupEdit(this, 300, 250)" data-postload="0" data-returnpage="pr-bodeguitas" data-form="" data-page="bodeguitas-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $bodeguitas["id"][$i]; ?>">
+                            <tr onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-bodeguitas" data-form="" data-page="bodeguitas-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $bodeguitas["id"][$i]; ?>">
                                 <td><?php echo $a; ?></td>
                                 <td><?php echo $bodeguitas['nombre'][$i]; ?></td>
                             </tr>
