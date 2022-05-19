@@ -83,7 +83,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
                         </thead>
                         <tbody>
                         <?php for($i = 0,$a=0; $i < $csalidas; $i++){ $a = $a+1;?>
-                            <tr>
+                            <tr <?php if($salidas['clave_solicitud'][$i] !== ""){ ?> onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-entradas-salidas" data-form="" data-page="fotos-prestamos" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $salidas["clave_solicitud"][$i]; ?>" <?php } ?>>
                                 <td><?php echo $a; ?></td>
                                 <td><?php echo $salidas['producto'][$i]; ?></td>
                                 <td><?php echo $salidas['cantidad'][$i]; ?></td>

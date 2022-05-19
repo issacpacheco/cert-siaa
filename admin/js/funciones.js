@@ -290,3 +290,42 @@ function eliminarMaterialBod(idcategoria, idmaterial){
         }
     });     
 }
+
+function borrarArchivoPDF(folio,page,tipo,cont) {
+    if (confirm("¿Confirma que desea eliminar esta archivo? \n Los datos eliminados no podran ser recuperados.")) {
+        Pace.restart();
+        $("#oscuro").show();
+        Pace.track(function () {
+            Pace.start();
+            $.ajax({
+                type: "POST",
+                url: "ajax-delete/"+page,
+                data: "folio="+folio,
+                success: function (response) {
+                    Pace.stop();
+                    $("#oscuro").hide();
+                    $("#contenedordelogos").empty();
+                    $("#contenedoreliminar").empty();
+                    $("#portaimagenesupload").show();
+                    $("#subeimagenes").show();
+                    if(tipo == 0){
+                        $("#foto_"+cont).fadeOut("fast");
+                        alertaVerde("Elemento eliminado con éxito");
+                    }else{
+                        $("#factura_0").fadeOut("fast");
+                        $("#contenedoreliminarAnexo").fadeOut("fast");
+                        $("#subeimagenesAnexo").removeClass("oculto");
+                        alertaVerde("Elemento eliminado con éxito");
+                    }
+                    
+                },
+                failure: function (response) {
+                    //----some code here-----//
+                },
+                error: function (response) {
+                    //----some code here-----//
+                }
+            });
+        });
+    }
+}

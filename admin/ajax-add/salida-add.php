@@ -81,7 +81,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     </div>
                 </div>
                 <div class="mright textright">
-                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('salida-add', 'pr-entradas-salidas', this);">
+                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('salida-add', 'ajax-edit/fotos-prestamos', this);">
                         <span class="letrablanca font14">Guardar</span>
                     </button>
                 </div>

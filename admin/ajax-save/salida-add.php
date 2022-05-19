@@ -25,6 +25,7 @@ if($prestamo == 1){
     $idsolicitante  = filter_input(INPUT_POST, 'idusuario', FILTER_SANITIZE_NUMBER_INT);
     //Generamos una clave para el prestamo
     $claveprestamo  = "C".$_SESSION['campus']."-".date('ymd').'-'.$fn->generateRandomString(5);
+    $_SESSION['claveprestamo'] = $claveprestamo;
     $contador       = count($producto);
     for($i = 0; $i < $contador; $i++){
         $cantidad_actual        = $info -> obtener_cantidad_material($producto[$i]);

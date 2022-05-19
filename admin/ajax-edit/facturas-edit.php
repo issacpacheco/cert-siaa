@@ -12,8 +12,15 @@ use nsfunciones\funciones;
 $info   = new almacen();
 $fn     = new funciones();
 
-$productos = $info -> obtener_productos_por_factura($id);
+$productos  = $info -> obtener_productos_por_factura($id);
 $cproductos = $fn ->  cuentarray($productos);
+$factura      = $info  -> obtener_pdf_facturas('../pdf/facturas/'.$id);
+
+if($factura == "no existe"){
+    $cont = 0;
+}else{
+    $cont = count($factura['archivo']);
+}
 
 ?>
 <style>
@@ -123,15 +130,44 @@ $cproductos = $fn ->  cuentarray($productos);
                                 </td>
                             </tr>
                             <?php } ?>
-            
-                            <!-- <tr class="no_entries_row">
-                                <td colspan="7">No Student Record</td>
-                            </tr> -->
                         </tbody>    
                     </table>
                     <a href="#" class="list_add btn btn-danger"><span class="white">Agrega un producto</span></a>
                     <br class="clear" />
                 </div>
+                <form id="frmRegistro">
+                    <input type="hidden" name="folio" id="folio" value="<?php echo $id ?>">
+                    <div class="full" id="loadmoduleAnexo">
+                        <div class="left full mbottom">
+                            <div class="left full small12 mright" id="portaimagenesupload">
+                                <div class="left full <?php if (isset($factura['archivo'][0])) { ?> oculto <?php } ?>" id="subeimagenesAnexo">
+                                    <input type="file" name="file" id="fileAnexo" accept="image/x-png,image/gif,image/jpeg, .pdf">
+                                    <!-- Drag and Drop container-->
+                                    <div class="upload-area fullimportant nomtop" id="uploadfileAnexo">
+                                        <h1>Selecciona el archivo dando clic aquí</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="contenedordelogosAnexo" class="col3">
+                                <div id="factura_0" class="cajitathumblogo <?php if (!isset($factura['archivo'][0])) { ?> oculto <?php } ?> left mright full">
+                                    <?php if (isset($factura['archivo'][0])) { ?>
+                                    <div class="left full cajitafotothumb">
+                                        <a href="<?php echo $factura['archivo'][0]; ?>" target="_blank">
+                                            <span class="fas fa-file-pdf font100 letraroja"></span>
+                                        </a>
+                                    </div>
+                                    <?php } ?>
+                                </div>                                        
+                            </div>  
+                            
+                            <div id="contenedoreliminarAnexo" class="">
+                                <button type="button" class="btnCancelar btngral <?php if (!isset($factura['archivo'][0])) { ?> oculto <?php } ?>" id="btnSave" onclick="borrarArchivoPDF('<?php echo $factura['archivo'][0] ?>','eliminar-pdf-factura',1,'0')">
+                                    <span class="letrablanca font14">Eliminar PDF</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -255,4 +291,68 @@ $cproductos = $fn ->  cuentarray($productos);
             }
         });
     }
+
+    function uploadDataAnexo(formdata) {
+        $.ajax({
+            url: '../admin/ajax-save/upload-pdf-factura',
+            type: 'post',
+            data: formdata,
+            contentType: false,
+            processData: false,
+            dataType: 'json',
+            success: function (response) {
+                addThumbnailAnexo(response);
+            }
+        });
+    }
+
+    // Added thumbnail
+    function addThumbnailAnexo(data) {
+        $("#uploadfileAnexo h1").text("Archivo PDF con nombre: "+data.name+" fue cargado correctamente");
+        var len = $("#uploadfileAnexo div.thumbnail").length;
+
+        var num = Number(len);
+        num = num + 1;
+
+        var name = data.name;
+        var size = convertSizeAnexo(data.size);
+        var src = data.src;
+        var id = data.idfoto;
+        var ext = data.ext;
+
+        // Creating an thumbnail 
+        if(ext === 'jpg' || ext === 'jpeg' || ext === 'png'){
+            $("#contenedordelogosAnexo").html('<div class="cajitathumblogo left mright full"><div class="left full cajitafotothumb"><img src="' + src + '" class="responsive" /></div></div>');       
+        }else{
+            $("#contenedordelogosAnexo").html('<div class="cajitathumblogo left mright full"><div class="left full cajitafotothumb"><a href="' + src + '" target="_blank"><span class="fas fa-file-pdf font100 letraroja"></a></span></div></div>');       
+        }
+                            
+        /*<button id="idtest" class="btngral botonAzul mright"><span class="fas fa-trash-alt mright font16"></span><span class="letrablanca font14">btn azul</span></button>*/
+    }
+
+    function convertSizeAnexo(size) {
+        var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        if (size == 0)
+            return '0 Byte';
+        var i = parseInt(Math.floor(Math.log(size) / Math.log(1024)));
+        return Math.round(size / Math.pow(1024, i), 2) + ' ' + sizes[i];
+    }
+
+    // Open file selector on div click
+    $("#uploadfileAnexo").click(function () {
+        $("#fileAnexo").click();
+    });
+
+    // file selected
+    $("#fileAnexo").change(function () {
+        $("#uploadfileAnexo h1").text("Subiendo Archivo....");
+        var fd = new FormData();
+
+        var files = $("#fileAnexo")[0].files[0];
+        var folio = $("#folio").val();
+
+        fd.append('file', files);
+        fd.append('id', folio);
+        uploadDataAnexo(fd);
+    }); 
 </script>

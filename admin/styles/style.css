@@ -415,6 +415,48 @@ body {
   /* height: 400px;     */
 }
 
+.font100 {
+  font-size: 100px;
+}
+
+.cajitathumblogo{
+  border: 1px solid #00ACD6;
+  height: 154px;
+  padding: 5px;    
+}
+
+.oculto, .ocultopc {
+  display: none;
+}
+
+.cajitafotothumb{
+  height: 123px;
+  overflow: hidden;
+}
+
+.upload-area{
+  width: 40%;
+  height: 155px;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  /* margin: 0 auto; */
+  margin-top: 35px;
+  text-align: center;
+  overflow: auto;
+}
+
+.upload-area:hover{
+  cursor: pointer;
+}
+
+.upload-area h1{
+  text-align: center;
+  font-weight: normal;
+  font-family: sans-serif;
+  line-height: 50px;
+  color: darkslategray;
+}
+
 .table {
   display: table;
 }

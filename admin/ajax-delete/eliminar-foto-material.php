@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 $ejecucion = new mysqlconsultas();
 
 $idfoto = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-$fototour = filter_input(INPUT_POST, 'foto', FILTER_SANITIZE_STRING);
+$fototour = filter_input(INPUT_POST, 'foto', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $qry="delete from inv_producto_foto where id = '$idfoto'";
 $ejecucion->ejecuta($qry);
