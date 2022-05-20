@@ -181,6 +181,8 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             listausarios.children[0].remove(listausarios);
             $("#rango_fechas").css({ display: "none" });
             $("#nombre_proyecto").css({ display: "block" });
+            $('#formularionuevousuario').addClass("oculto");
+            $('#estudiantes').addClass("oculto");
         }
     }
 
