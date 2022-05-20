@@ -30,7 +30,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             </select>
                         </div>
                     </div>
-                    <div class="form-wrapper col-sm-4" id="listausarios">
+                    <div class="row form-wrapper col-sm-6" id="listausarios">
                         
                     </div>
                 </div>
@@ -147,6 +147,22 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                 data: {tipo: 1},
                 success: function(response){
                     $('#listausarios').html(response);
+                    $(document).ready(function () {
+                        $('#listavacia').click(function () {
+                            if ($('#listavacia').is(':checked')) {
+                                $('#formularionuevousuario').removeClass("oculto");
+                            } else {
+                                $('#formularionuevousuario').addClass("oculto")
+                            }
+                        });
+                        $('#validacionadmin').click(function () {
+                            if ($('#validacionadmin').is(':checked')) {
+                                $('#estudiantes').addClass("oculto")
+                            } else {
+                                $('#estudiantes').removeClass("oculto");
+                            }
+                        });
+                    });
                 }
             });
         }else if(valor == 0 || valor == 2){

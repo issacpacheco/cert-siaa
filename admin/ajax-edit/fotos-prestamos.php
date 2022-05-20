@@ -5,8 +5,10 @@ $idsalida = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 if(isset($idsalida)){
     $_SESSION['claveprestamo'] = $idsalida;
     $id = $_SESSION['claveprestamo'];
-}else{
+}else if(isset($_SESSION['claveprestamo'])){
     $id = $_SESSION['claveprestamo'];
+}else{
+    header('location: ../index.php');
 }
 
 

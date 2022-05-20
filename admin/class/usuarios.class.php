@@ -14,9 +14,11 @@ class usuarios extends mysqlconsultas{
     }
 
     public function obtener_usuarios(){
-        $qry = "SELECT * FROM usuarios WHERE id_campus = {$_SESSION['campus']}";
+        // $qry = "SELECT * FROM inv_usuarios WHERE id_campus = {$_SESSION['campus']}";
         if($_SESSION['area'] == 6){
-            $qry .= " AND id_area = {$_SESSION['area']}";
+            $qry = "SELECT * FROM usuarios WHERE id_campus = {$_SESSION['campus']} AND id_area = {$_SESSION['area']}";
+        }else{
+            $qry = "SELECT * FROM inv_usuario WHERE id_campus = {$_SESSION['campus']}";
         }
         $res = $this->consulta($qry);
         return $res;

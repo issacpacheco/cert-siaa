@@ -32,7 +32,7 @@ $cmateriales    = $fn->cuentarray($materiales);
                     <table class="display fullimportant" id="tabla">
                         <thead>
                             <tr>
-                                <th> # </th>
+                                <th> ID Material </th>
                                 <th> Nombre </th>
                                 <th> Descripción </th>
                                 <th> Cantidad </th>
@@ -43,7 +43,7 @@ $cmateriales    = $fn->cuentarray($materiales);
                         <tbody>
                         <?php for($i = 0,$a=0; $i < $cmateriales; $i++){ $a = $a+1;?>
                             <tr onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-materiales" data-form="" data-page="materiales-edit" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $materiales["id"][$i]; ?>">
-                                <td><?php echo $a; ?></td>
+                                <td><?php echo $materiales['id'][$i]; ?></td>
                                 <td><?php echo $materiales['nombre'][$i]; ?></td>
                                 <td><?php echo $materiales['descripcion'][$i]; ?></td>
                                 <td><?php echo $materiales['cantidad'][$i]; ?> - <?php echo $materiales['unidad'][$i] ?></td>

@@ -356,6 +356,24 @@ include( "includes/config.php" );
 			})
 		}
 	</script>
+	<script type="text/javascript">
+		function e(q) {
+			document.body.appendChild( document.createTextNode(q) );
+			document.body.appendChild( document.createElement("BR") );
+		}
+		function inactividad() {
+			// e("Inactivo!!");
+			window.location.href = "../logout.php";
+		}
+		var t=null;
+		function contadorInactividad() {
+			t=setTimeout("inactividad()",600000);
+		}
+		window.onblur=window.onmousemove=function() {
+			if(t) clearTimeout(t);
+			contadorInactividad();
+		}
+	</script>
 </body>
 
 </html>

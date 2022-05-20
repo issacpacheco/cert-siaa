@@ -25,8 +25,25 @@ if($prestamo == 1){
     $idsolicitante  = filter_input(INPUT_POST, 'idusuario', FILTER_SANITIZE_NUMBER_INT);
     //Generamos una clave para el prestamo
     $claveprestamo  = "C".$_SESSION['campus']."-".date('ymd').'-'.$fn->generateRandomString(5);
+    $check          = filter_input(INPUT_POST, 'listavacia', FILTER_SANITIZE_NUMBER_FLOAT);
     $_SESSION['claveprestamo'] = $claveprestamo;
     $contador       = count($producto);
+    if($idsolicitante < 1){
+        if(isset($check)){
+            $nuevoNombre    = filter_input(INPUT_POST, 'nombrenuevousuario', FILTER_SANITIZE_SPECIAL_CHARS);
+            $grado          = filter_input(INPUT_POST, 'grado', FILTER_SANITIZE_SPECIAL_CHARS);
+            $grupo          = filter_input(INPUT_POST, 'grupo', FILTER_SANITIZE_SPECIAL_CHARS);
+            $carrera        = filter_input(INPUT_POST, 'carrera', FILTER_SANITIZE_SPECIAL_CHARS);
+            $docente        = filter_input(INPUT_POST, 'validacionadmin', FILTER_SANITIZE_NUMBER_FLOAT);
+            if($docente == 1){
+                $tip = $docente;
+            }else{
+                $tip = 0;
+            }
+            $qryNuevoUsuario = "INSERT INTO inv_usuario (nombre, grado, grupo, carrera, docente, id_campus) VALUES ('$nuevoNombre','$grado','$grupo','$carrera','$tip', '{$_SESSION['campus']}')";
+            $idsolicitante = $ejecucion->ejecuta($qryNuevoUsuario);
+        }
+    }
     for($i = 0; $i < $contador; $i++){
         $cantidad_actual        = $info -> obtener_cantidad_material($producto[$i]);
         $resta                  = $cantidad_actual['cantidad'][0] - $cantidad[$i];
