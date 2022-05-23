@@ -294,7 +294,7 @@ if($factura == "no existe"){
 
     function uploadDataAnexo(formdata) {
         $.ajax({
-            url: '../admin/ajax-save/upload-pdf-factura',
+            url: '../ajax-save/upload-pdf-factura',
             type: 'post',
             data: formdata,
             contentType: false,

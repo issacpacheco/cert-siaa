@@ -30,16 +30,18 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             </select>
                         </div>
                     </div>
-                    <div class="form-wrapper col-sm-4" id="folio" style="display: none;">
-                        <label>Clave de prestamo</label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="folio" id="clave" placeholder="Capturar clave" value="" autocomplete="FALSE">
+                    <div class="row" class="" id="folio" style="display: none;">
+                        <div class="col-sm-6">
+                            <label>Clave de prestamo ó nombre al que prestamos</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="folio" id="clave" placeholder="Capturar clave o nombre del usuario" value="" autocomplete="FALSE">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-wrapper col-sm-4" id="botonbus" style="display: none;">
-                        <label></label>
-                        <div class="form-group">
-                            <input type="button" class="btn btn-info buscarPrestamos letrablanca" value="Buscar" id="buscarPrestamos" onclick="obtenerprestamos();" readonly>
+                        <div class="col-sm-1">
+                            <label for=""></label>
+                            <div class="form-group">
+                                <input type="button" class="btn btn-info buscarPrestamos letrablanca" value="Buscar" id="buscarPrestamos" onclick="obtenerprestamos();" readonly>
+                            </div>
                         </div>
                     </div>
                 </div>

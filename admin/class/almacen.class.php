@@ -140,7 +140,8 @@ class almacen extends mysqlconsultas{
     public function obtener_prestamos($folio){
         $qry = "SELECT s.*, p.nombre AS producto FROM inv_salida_producto s
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
-                WHERE clave_solicitud = '$folio' AND s.estatus != 5";
+                LEFT JOIN inv_usuario u ON u.id = s.id_solicitante
+                WHERE (clave_solicitud = '$folio' OR u.nombre = '$folio') AND s.estatus != 5";
         $res = $this->consulta($qry);
         return $res;
     }

@@ -196,7 +196,7 @@ $chistorialSalida = $fn   ->  cuentarray($historialSalida);
 
 function uploadData(formdata) {
         $.ajax({
-            url: '../admin/ajax-save/upload-materiales',
+            url: 'ajax-save/upload-materiales',
             type: 'post',
             data: formdata,
             contentType: false,
