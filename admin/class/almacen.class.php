@@ -425,6 +425,34 @@ class almacen extends mysqlconsultas{
         }
     }
 
+    public function obtener_fotos_productos($ruta){
+        if(file_exists($ruta)){
+            $nuevo["ruta"]=[];
+            $nuevo["archivo"]=[];
+            $gestor = opendir($ruta."/");
+            while (($archivo = readdir($gestor)) !== false)  {
+                $ruta_completa = $ruta .'/'. $archivo;
+                if ($archivo != "." && $archivo != ".." && $archivo != 'Thumbs.db') {
+                    if (is_dir($ruta_completa)) {
+                        $nuevo["ruta"][] = $ruta;
+                        $nuevo["archivo"][] = $ruta_completa;
+                        $vowels = "../";
+                        $nuevo["archivo"] = str_replace($vowels, "", $nuevo["archivo"]);
+                    } else {
+                        $nuevo["ruta"][] = $ruta;
+                        $nuevo["archivo"][] = $ruta_completa;
+                        $vowels = "../";
+                        $nuevo["archivo"] = str_replace($vowels, "", $nuevo["archivo"]);
+                    }
+                }
+            }
+            closedir($gestor);
+            return $nuevo;
+        }else{
+            return "no existe";
+        }
+    }
+
 }
 
 

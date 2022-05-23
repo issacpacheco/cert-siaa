@@ -1,13 +1,8 @@
 <?php
-include_once("../class/allClass.php");
 
-use conexionbd\mysqlconsultas;
-$ejecucion = new mysqlconsultas();
+$folio = filter_input(INPUT_POST, 'folio', FILTER_SANITIZE_SPECIAL_CHARS);
 
-$idfoto = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
-$fototour = filter_input(INPUT_POST, 'foto', FILTER_SANITIZE_SPECIAL_CHARS);
+$vowels = "upload/materiales/";
+$folio = str_replace($vowels, "", $folio);
 
-$qry="delete from inv_producto_foto where id = '$idfoto'";
-$ejecucion->ejecuta($qry);
-
-unlink('../upload/materiales/'.$fototour);
+unlink('../upload/materiales/'.$folio);

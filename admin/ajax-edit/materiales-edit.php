@@ -14,8 +14,12 @@ $fn     = new funciones();
 
 
 $material       = $info -> obtener_material($id);
-$fotos          = $info -> obtener_fotos_materiales($id);
-$cfotos         = $fn   -> cuentarray($fotos);
+$fotos          = $info -> obtener_fotos_prestamo('../upload/materiales/'.$id);
+if($fotos == "no existe"){
+    $cont = 0;
+}else{
+    $cont = count($fotos['archivo']);
+}
 $categorias     = $info -> obtener_categorias();
 $ccategorias    = $fn   -> cuentarray($categorias);
 $bodegas        = $info -> mis_bodeguitas();
@@ -96,18 +100,11 @@ $chistorialSalida = $fn   ->  cuentarray($historialSalida);
                     </div>
                 </div>
                 <div id="cajongaleria" class="left full border-gris h180 mtop20">
-                    <?php for ($i = 0; $i < $cfotos; $i++) { 
-                        if($fotos["favorito"][$i]==0){
-                            $clasecolor = "letrablanca";
-                        }else{
-                            $clasecolor = "letramarilla";
-                        }
-                        ?>
-                        <div class="thumbnail relative" id="foto_<?php echo $fotos["id"][$i] ?>" title="<?php echo $fotos["foto"][$i]; ?>">                        
-                            <img src="upload/materiales/<?php echo $fotos["foto"][$i]; ?>" class="responsive" />
+                    <?php for ($i = 0; $i < $cont; $i++) { ?>
+                        <div class="thumbnail relative" id="foto_<?php echo $i ?>" title="<?php echo $fotos["foto"][$i]; ?>">                        
+                            <img src="<?php echo $fotos["archivo"][$i]; ?>"  class="responsive" />
                             <div class="portaelimina">
-                                <i class="borrarimagen fas fa-trash-alt letraroja font18 pointer" onclick="eliminarImagen('<?php echo $fotos['id'][$i]; ?>', '<?php echo $fotos['foto'][$i]; ?>','eliminar-foto-material')" title="Eliminar imagen"></i>
-                                <i class="starimg far fa-star <?php echo $clasecolor; ?> pointer" id="star_<?php echo $fotos["id"][$i]; ?>" onclick="ConvertirStarImagen('<?php echo $fotos['id'][$i]; ?>', '<?php echo $material['id'][0]; ?>','foto-favorita-materiales')" title="Hacer favorito"></i>
+                                <i class="borrarimagen fas fa-trash-alt letraroja font18 pointer" onclick="borrarArchivoPDF('<?php echo $fotos['archivo'][$i]; ?>','eliminar-foto-material',0,'<?php echo $i; ?>')" title="Eliminar imagen"></i>
                             </div>
                         </div>
                     <?php } ?>               
@@ -223,7 +220,7 @@ function uploadData(formdata) {
 
         // Creating an thumbnail 
         var thumb = '<div class="thumbnail relative" id="foto_' + id + '">\n\
-                     <img src="upload/materiales/' + name + '" class="responsive" />\n\
+                     <img src="upload/materiales/<?php echo $id; ?>/' + name + '" class="responsive" />\n\
                       <div class="portaelimina">\n\
                         <span onclick="eliminarImagen(\'' + id + '\', \'' + name + '\')" class="borrarimagen fas fa-trash-alt letraroja font18 pointer tooltip" title="Eliminar imagen"></span>\n\
                         <i class="borrarimagen fas fa-trash-alt letraroja font18 pointer" onclick="eliminarImagen(\'' + id + '\', \'' + name + '\',\'' + page + '\')" title="Eliminar imagen"></i>\n\
