@@ -406,62 +406,6 @@ include( "includes/config.php" );
 			contadorInactividad();
 		}
 	</script>
-
-	<!-- scripts para graficas -->
-	<script>
-		Highcharts.chart('container', {
-			chart: {
-				zoomType: 'xy'
-			},
-			title: {
-				text: 'Grafica de gastos mensuales'
-			},
-			subtitle: {
-				text: 'Area: <?php echo $_SESSION['area']; ?>'
-			},
-			xAxis: [{
-				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-				'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-				crosshair: true
-			}],
-			yAxis: [{ // Primary yAxis
-				labels: {
-				format: '${value}',
-				style: {
-					color: Highcharts.getOptions().colors[1]
-				}
-				},
-				title: {
-				text: 'Gasto',
-				style: {
-					color: Highcharts.getOptions().colors[1]
-				}
-				}
-			}],
-			tooltip: {
-				shared: true
-			},
-			legend: {
-				layout: 'vertical',
-				align: 'left',
-				x: 120,
-				verticalAlign: 'top',
-				y: 100,
-				floating: true,
-				backgroundColor:
-				Highcharts.defaultOptions.legend.backgroundColor || // theme
-				'rgba(255,255,255,0.25)'
-			},
-			series: [{
-				name: 'Total',
-				type: 'column',
-				tooltip: {
-					valueSuffix: '$'
-				},
-				data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-			}]
-		});
-	</script>
 </body>
 
 </html>

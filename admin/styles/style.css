@@ -39,14 +39,14 @@ body.hold-transition >* {
   transition: none !important;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
+/* body {
+  font-family: 'Roboto', sans-serif;
   color: #4a4d56;
   font-size: 14px;
   background-color: #f6f9fd;
   overflow-x: hidden;
   -webkit-overflow-scrolling:touch;
-}
+} */
 
 #grid-example .row > * {
   background-color: #fff;

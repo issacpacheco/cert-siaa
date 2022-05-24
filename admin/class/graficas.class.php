@@ -30,6 +30,20 @@ class graficas extends mysqlconsultas{
         $res = $this->consulta($qry);
         return $res;
     }
+
+    public function grafica_gasto_año(){
+        $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, MONTHNAME(f.fecha) Mes,
+                SUM(f.total) as subtotal,
+                SUM(CASE 
+                                WHEN f.iva = 1 THEN ((f.total * 0.16) + f.total) 
+                                WHEN f.iva = 0 or f.iva = null THEN f.total END) AS total, 
+                u.nombre AS usuario
+                FROM inv_entrada_producto f
+                LEFT JOIN usuarios u ON u.id = f.id_usuario
+                WHERE (f.factura is not null and f.factura != '') AND u.id_area = {$_SESSION['area']} GROUP BY MONTH(f.fecha) ORDER BY f.fecha";
+        $res = $this->consulta($qry);
+        return $res;
+    }
 }
 
 

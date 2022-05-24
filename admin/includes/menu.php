@@ -160,7 +160,7 @@
 		
 
         <div class="time text-center">
-            <h5 class="current-time2">&nbsp;</h5>
-            <h5 class="current-time">&nbsp;</h5>
+            <h5 class="current-time2 white">&nbsp;</h5>
+            <h5 class="current-time white">&nbsp;</h5>
         </div>
     </div>

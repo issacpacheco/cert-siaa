@@ -34,13 +34,17 @@ $cmisenviosfin  = $fn->cuentarray($misenviosfin);
 $top6           = $graficas -> top6_mas_solicitados();
 $activos        = $graficas -> productos_activos();
 $gatosdelmes    = $graficas -> gastos_del_mes();
+$grafia_anio    = $graficas -> grafica_gasto_año();
+$cgrafia_anio   = $fn       -> cuentarray($grafia_anio);
+
+
+
 $gasto = 0;
 for($i = 0;$i < count($gatosdelmes); $i++){
     $gasto = $gasto + $gatosdelmes['total'][$i];
 }
 
 ?>
-
 <div class="content-wrap">
         <div class="main">
             <div class="container-fluid">
@@ -417,3 +421,58 @@ for($i = 0;$i < count($gatosdelmes); $i++){
             </div>
         </div>
     </div>
+
+    <!-- scripts para graficas -->
+	<script>
+		Highcharts.chart('container', {
+			chart: {
+				zoomType: 'xy'
+			},
+			title: {
+				text: 'Grafica de gastos mensuales'
+			},
+			subtitle: {
+				text: 'Area: <?php echo $_SESSION['area']; ?>'
+			},
+			xAxis: [{
+                categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>],
+				crosshair: true
+			}],
+			yAxis: [{ // Primary yAxis
+				labels: {
+                    format: '{value}',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+				},
+				title: {
+                    text: 'Gasto',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+				}
+			}],
+			tooltip: {
+				shared: true
+			},
+			legend: {
+				layout: 'vertical',
+				align: 'left',
+				x: 120,
+				verticalAlign: 'top',
+				y: 100,
+				floating: true,
+				backgroundColor:
+				Highcharts.defaultOptions.legend.backgroundColor || // theme
+				'rgba(255,255,255,0.25)'
+			},
+			series: [{
+				name: 'Total',
+				type: 'column',
+				tooltip: {
+					valueSuffix: '$'
+				},
+				data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
+			}]
+		});
+	</script>

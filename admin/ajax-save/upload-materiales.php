@@ -9,7 +9,7 @@ $fn = new funciones();
 
 $filesize = $_FILES['file']['size'];
 $filename = $_FILES['file']['name'];
-$filenameb = $fn->replace_filename($filenamec);
+$filenameb = $fn->replace_filename($filename);
 $filename = $filenameb; 
 
 $folio = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);

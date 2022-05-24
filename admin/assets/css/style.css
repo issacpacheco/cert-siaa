@@ -111,7 +111,7 @@
 .card-header-right-icon li {
   float: right;
   padding-left: 14px;
-  color: #868e96;
+  color: #000000;
   cursor: pointer;
   vertical-align: middle;
   transition: all 0.5s ease-in-out;
@@ -784,7 +784,7 @@ a.dt-button.active:not(.disabled) {
 .dropdown-content-body li a.active,
 .dropdown-content-body li a:focus,
 .dropdown-content-body li a:hover {
-  color: #868e96;
+  color: #000000;
 }
 .dropdown-content-body li:last-child {
   padding: 5px 15px;
@@ -1533,7 +1533,7 @@ footer p {
 }
 .stat-widget-one .stat-text {
   font-size: 14px;
-  color: #868e96;
+  color: #000000;
 }
 .stat-widget-one .stat-digit {
   font-size: 24px;
@@ -1556,7 +1556,7 @@ footer p {
 .stat-widget-two .stat-text {
   font-size: 16px;
   margin-bottom: 5px;
-  color: #868e96;
+  color: #000000;
 }
 .stat-widget-two .progress {
   height: 8px;
@@ -1856,7 +1856,7 @@ footer p {
 .recent-comment .media-body p {
   margin-bottom: 5px;
   line-height: 16px;
-  color: #868e96;
+  color: #000000;
 }
 .recent-comment .comment-date {
   position: absolute;
@@ -2608,7 +2608,7 @@ ul {
 .tdl-holder li {
   background-color: transparent;
   border-bottom: 1px solid #e7e7e7;
-  color: #868e96;
+  color: #000000;
   list-style: outside none none;
   margin: 0;
   padding: 0;
@@ -2632,14 +2632,14 @@ ul {
 }
 .tdl-holder label:hover {
   background-color: #eef5f9;
-  color: #868e96;
+  color: #000000;
 }
 .tdl-holder label:hover a {
   display: block;
 }
 .tdl-holder label a {
   border-radius: 50%;
-  color: #868e96;
+  color: #000000;
   display: none;
   float: right;
   font-weight: bold;
@@ -2679,7 +2679,7 @@ ul {
   z-index: 2;
 }
 .tdl-holder input[type="checkbox"]:checked ~ span {
-  color: #868e96;
+  color: #000000;
   text-decoration: line-through;
 }
 .tdl-holder input[type="text"] {
@@ -2712,7 +2712,7 @@ tbody tr th {
 }
 tbody tr td {
   font-family: 'Roboto', sans-serif;
-  color: #868e96;
+  color: #000000;
 }
 tbody tr td:last-child {
   text-align: right;
@@ -2966,7 +2966,7 @@ tbody tr td:last-child {
   padding-bottom: 15px;
   width: 170px;
   font-size: 16px;
-  color: #868e96;
+  color: #000000;
 }
 .phone-number,
 .mail-address,
@@ -3413,7 +3413,7 @@ tbody tr td:last-child {
   color: #5873fe;
 }
 .media-body p {
-  color: #868e96;
+  color: #000000;
   line-height: 15px;
 }
 .example {
@@ -3667,14 +3667,14 @@ tbody tr td:last-child {
 body {
   font-family: 'Roboto', sans-serif;
   background: rgba(88, 115, 254, 0.04);
-  color: #868e96;
+  color: #000000;
   font-size: 14px;
 }
 a,
 button {
   outline: none!important;
   text-decoration: none!important;
-  color: #868e96;
+  color: #000000;
   transition: all 0.2s ease 0s;
 }
 a.active,
@@ -3696,7 +3696,7 @@ li {
 }
 p {
   font-family: 'Roboto', sans-serif;
-  color: #868e96;
+  color: #000000;
 }
 .h2,
 .h3,
