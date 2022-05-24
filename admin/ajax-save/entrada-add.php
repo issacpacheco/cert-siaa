@@ -59,6 +59,14 @@ if($prestamo == 1){
 
     $factura     = filter_input(INPUT_POST, 'factura', FILTER_SANITIZE_SPECIAL_CHARS);
     $comentarios = filter_input(INPUT_POST, 'comentarios', FILTER_SANITIZE_SPECIAL_CHARS);
+    $iva         = filter_input(INPUT_POST, 'iva', FILTER_SANITIZE_SPECIAL_CHARS);
+
+    if($iva == 1){
+        $iva = 1;
+    }else{
+        $iva = 0;
+    }
+
     $producto    = $_REQUEST['producto'];
     $cantidad    = $_REQUEST['cantidad'];
     $precio      = $_REQUEST['precio'];
@@ -71,7 +79,7 @@ if($prestamo == 1){
         $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$suma', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion -> ejecuta($qryActualizarCantidad);
     
-        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total,comentarios) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$precio[$i]','$comentarios')";
+        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total,comentarios,iva) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$precio[$i]','$comentarios','$iva')";
         $ejecucion -> ejecuta($qryAgregaEntrada);
     }
 

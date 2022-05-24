@@ -70,7 +70,7 @@ if($fotos == "no existe"){
 
 function uploadData(formdata) {
         $.ajax({
-            url: '../ajax-save/upload-materiales-prestamo',
+            url: 'ajax-save/upload-materiales-prestamo',
             type: 'post',
             data: formdata,
             contentType: false,

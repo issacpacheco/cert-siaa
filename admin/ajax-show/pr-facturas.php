@@ -30,6 +30,8 @@ $cfacturas    = $fn->cuentarray($facturas);
                                 <th> Hora </th>
                                 <th> Comentarios </th>
                                 <th> Quien realizo la acción </th>
+                                <th> Subtotal </th>
+                                <th> Total (+ iva si lo incluye) </th>
 
                             </tr>
                         </thead>
@@ -42,6 +44,8 @@ $cfacturas    = $fn->cuentarray($facturas);
                                 <td><?php echo $facturas['hora'][$i]; ?></td>
                                 <td><?php echo $facturas['comentarios'][$i]; ?></td>
                                 <td><?php echo $facturas['usuario'][$i]; ?></td>
+                                <td>$<?php echo number_format($facturas['subtotal'][$i],2,'.',','); ?></td>
+                                <td>$<?php echo number_format($facturas['total'][$i],2,'.',','); ?></td>
                             </tr>
                         <?php } ?>    
                         </tbody>    

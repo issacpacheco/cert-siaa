@@ -9,7 +9,8 @@ $fn = new funciones();
 
 $filesize = $_FILES['file']['size'];
 $filename = $_FILES['file']['name'];
-
+$filenameb = $fn->replace_filename($filenamec);
+$filename = $filenameb; 
 
 $folio = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 if (!file_exists('../upload/materiales/'.$folio))

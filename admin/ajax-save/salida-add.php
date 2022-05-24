@@ -40,7 +40,7 @@ if($prestamo == 1){
             }else{
                 $tip = 0;
             }
-            $qryNuevoUsuario = "INSERT INTO inv_usuario (nombre, grado, grupo, carrera, docente, id_campus) VALUES ('$nuevoNombre','$grado','$grupo','$carrera','$tip', '{$_SESSION['campus']}')";
+            $qryNuevoUsuario = "INSERT INTO inv_usuario (nombre, grado, grupo, carrera, docente, id_campus, id_area) VALUES ('$nuevoNombre','$grado','$grupo','$carrera','$tip', '{$_SESSION['campus']}','{$_SESSION['area']}')";
             $idsolicitante = $ejecucion->ejecuta($qryNuevoUsuario);
         }
     }

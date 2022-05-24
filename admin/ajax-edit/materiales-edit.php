@@ -24,6 +24,8 @@ $categorias     = $info -> obtener_categorias();
 $ccategorias    = $fn   -> cuentarray($categorias);
 $bodegas        = $info -> mis_bodeguitas();
 $cbodegas       = $fn   -> cuentarray($bodegas);
+$medidas        = $info -> obtener_unidades_de_medida();
+$cmedidas       = $fn   -> cuentarray($medidas);
 
 //Consulta para el historial del material
 $historialEntrada   = $info ->  historial_material_entrada($id);
@@ -61,7 +63,7 @@ $chistorialSalida = $fn   ->  cuentarray($historialSalida);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">
-                        <label>Codigo de barras</label>
+                        <label>Numero de serie</label>
                         <div class="form-group">
                             <input type="text" class="form-control" name="codigo" id="codigo" placeholder="Codigo de barras" value="<?php echo $material['numero_serie'][0]; ?>">
                         </div>
@@ -84,6 +86,17 @@ $chistorialSalida = $fn   ->  cuentarray($historialSalida);
                                 <option value="2" selected>Selecciona un estatus</option>
                                 <option value="1" <?php if($material['estatus'][0] == 1){ echo "selected"; }?>>Activo</option>
                                 <option value="0" <?php if($material['estatus'][0] == 0){ echo "selected"; }?>>Inactivo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-wrapper col-sm-4">
+                        <label>Unidad de medida</label>
+                        <div class="form-group">
+                            <select name="id_unidad" id="id_unidad" class="form-control">
+                                <option value="0" selected>Selecciona una unidad de medida</option>
+                                <?php for($i = 0; $i < $cmedidas; $i++){ ?>
+                                <option value="<?php echo $medidas['id'][$i]; ?>" <?php if($material['id_unidad'][0] == $medidas['id'][$i]){ echo  'Selected'; } ?>><?php echo $medidas['nombre'][$i] ?></option>
+                                <?php } ?>
                             </select>
                         </div>
                     </div>

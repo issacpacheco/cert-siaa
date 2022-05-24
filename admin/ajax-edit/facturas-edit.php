@@ -101,7 +101,7 @@ if($factura == "no existe"){
                             <th>ID Producto</th>
                             <th>Producto</th>
                             <th>Cantidad</th>
-                            <th>Costo</th>
+                            <th>Costo total del producto</th>
                             <th>Elliminar</th>
                         </tr>
                     </thead>
@@ -294,7 +294,7 @@ if($factura == "no existe"){
 
     function uploadDataAnexo(formdata) {
         $.ajax({
-            url: '../ajax-save/upload-pdf-factura',
+            url: 'ajax-save/upload-pdf-factura',
             type: 'post',
             data: formdata,
             contentType: false,

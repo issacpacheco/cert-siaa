@@ -85,9 +85,9 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4" id="preciofactura" style="display: none;">
-                        <label>Precio del material (emitido en la factura)</label>
+                        <label>Precio total del material (emitido en la factura)</label>
                         <div class="form-group">
-                            <input type="text" class="form-control esnumero" name="precio[]" id="precio" placeholder="precio" value="" autocomplete="FALSE">
+                            <input type="text" class="form-control esprecio" name="precio[]" id="precio" placeholder="precio" value="" autocomplete="FALSE" onchange="suma(this.value);">
                         </div>
                     </div>
                 </div>
@@ -95,6 +95,27 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                 <div class="row" id="clon">
                     <div class="col-3">
                         <input class="btn btn-success clonadorboton letrablanca" placeholder="Agregar entrada +" id="clonador_1" onclick="ClonarDIV();" readonly>
+                    </div>
+                </div>
+                <div class="row" id="subtotales" style="display: none;">
+                    <div class="col-sm-8">
+
+                    </div>
+                    <div class="col-sm-4 form-group">
+                        <div class="row form-group">
+                            <div class="col-sm-12">
+                                <label for="">Subtotal</label>
+                                <input type="text" value="" class="form-control" name="subtotal" id="subtotal">
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="">Incluye IVA</label>
+                                <input type="checkbox" value="1" class="" name="iva" id="iva" onclick="incluye_iva();"> 16%
+                            </div>
+                            <div class="col-sm-12">
+                                <label for="">Total</label>
+                                <input type="text" value="" class="form-control" name="total" id="total">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -141,6 +162,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             $("#entrada_add").css({ display: "none" });
             $("#clon").css({ display: "none" });
             $("#validar_factura").css({display: "none" });
+            
         }else if(valor == 0 || valor == 2){
             $("#entrada_add").css({ display: "block" });
             $("#clon").css({ display: "block" });
@@ -148,6 +170,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
             $("#botonbus").css({ display: "none" });
             $("#listadoprestamos").css({ display: "none" });
             $("#validar_factura").css({display: "block" });
+            
         }
     }
 
@@ -156,9 +179,11 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         if(valor == 1){
             $("#factura").css({ display: "block" });
             $("#preciofactura").css({ display: "block" });
+            $("#subtotales").css({display: "block" });
         }else if(valor == 0 || valor == 2){
             $("#factura").css({ display: "none" });
             $("#preciofactura").css({ display: "none" });
+            $("#subtotales").css({display: "none" });
         }
     }
 
@@ -197,5 +222,46 @@ $cmateriales    = $fn   -> cuentarray($materiales);
     function eliminar(event,clon){
         event.target.parentElement.removeChild(event.target);
         clon.parentElement.removeChild(clon);
+    }
+
+    function suma (valor) {
+        var total = 0;	
+        valor = parseFloat(valor); // Convertir el valor a un entero (número).
+        
+        total = document.getElementById('subtotal').value;
+        
+        // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
+        total = (total == null || total == undefined || total == "") ? 0 : total;
+        
+        /* Esta es la suma. */
+        total = (parseFloat(total) + parseFloat(valor));
+        
+        // Colocar el resultado de la suma en el control "span".
+        document.getElementById('subtotal').value = total;
+
+        document.getElementById('total').value = total;
+
+        console.log(total);
+    }
+
+    function incluye_iva(){
+        if ($('#iva').is(':checked')){
+            var subtotal = document.getElementById("subtotal").value;
+
+            var iva = parseFloat(subtotal * 0.16);
+
+            var total = (parseFloat(subtotal) + parseFloat(iva));
+
+            document.getElementById("total").value = total;
+        }else{
+            var subtotal = document.getElementById("subtotal").value;
+
+            // var iva = parseFloat(subtotal * 0.16);
+
+            // var total = (parseFloat(subtotal) + parseFloat(iva));
+
+            document.getElementById("total").value = subtotal;
+        }
+        
     }
 </script>

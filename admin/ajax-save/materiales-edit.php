@@ -11,8 +11,9 @@ $categoria      = filter_input(INPUT_POST, 'categoria',     FILTER_SANITIZE_NUMB
 $estatus        = filter_input(INPUT_POST, 'estatus',       FILTER_SANITIZE_NUMBER_INT);
 $id             = filter_input(INPUT_POST, 'id_material',   FILTER_SANITIZE_NUMBER_INT);
 $id_bodega      = filter_input(INPUT_POST, 'id_bodega',     FILTER_SANITIZE_NUMBER_INT);
+$id_unidad      = filter_input(INPUT_POST, 'id_unidad',     FILTER_SANITIZE_NUMBER_INT);
 
-$qry = "UPDATE inv_productos SET nombre = '$nombre', id_bodega = '$id_bodega',descripcion = '$descripcion', numero_serie = '$codigo', id_categoria = '$categoria', estatus = '$estatus' WHERE id = '$id'";
+$qry = "UPDATE inv_productos SET nombre = '$nombre', id_bodega = '$id_bodega',descripcion = '$descripcion', numero_serie = '$codigo', id_categoria = '$categoria', estatus = '$estatus', id_unidad = '$id_unidad' WHERE id = '$id'";
 
 $ejecucion->ejecuta($qry);
 

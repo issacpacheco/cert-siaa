@@ -50,6 +50,18 @@ include( "includes/config.php" );
     <link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload.css" rel="stylesheet" >
 	<link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui.css" rel="stylesheet" >
 
+	<link href="assets/css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <!-- <link href="assets/css/lib/chartist/chartist.min.css" rel="stylesheet"> -->
+    <link href="assets/css/lib/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/lib/themify-icons.css" rel="stylesheet">
+    <link href="assets/css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="assets/css/lib/weather-icons.css" rel="stylesheet" />
+    <!-- <link href="assets/css/lib/menubar/sidebar.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/lib/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="assets/css/lib/helper.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.0/sweetalert2.css"/>
 	<!-- CSS adjustments for browsers with JavaScript disabled -->
     <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-noscript.css" rel="stylesheet" ></noscript>
@@ -153,6 +165,26 @@ include( "includes/config.php" );
 		
 		<!-- GRAFICAS -->
 		<script src="scripts/dropzone-5.7.0/dist/dropzone.js"></script>
+		<script src="assets/js/lib/calendar-2/moment.latest.min.js"></script>
+		<script src="assets/js/lib/calendar-2/pignose.calendar.min.js"></script>
+		<script src="assets/js/lib/calendar-2/pignose.init.js"></script>
+
+
+		<script src="assets/js/lib/weather/jquery.simpleWeather.min.js"></script>
+		<script src="assets/js/lib/weather/weather-init.js"></script>
+		<script src="assets/js/lib/circle-progress/circle-progress.min.js"></script>
+		<script src="assets/js/lib/circle-progress/circle-progress-init.js"></script>
+		<script src="assets/js/lib/owl-carousel/owl.carousel.min.js"></script>
+		<script src="assets/js/lib/owl-carousel/owl.carousel-init.js"></script>
+
+		<!-- highcharts -->
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+		<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+		<!-- scripit init-->
+		<script src="assets/js/dashboard2.js"></script>
+
 		<!-- Current page scripts -->
         <div class="current-scripts">
 
@@ -373,6 +405,62 @@ include( "includes/config.php" );
 			if(t) clearTimeout(t);
 			contadorInactividad();
 		}
+	</script>
+
+	<!-- scripts para graficas -->
+	<script>
+		Highcharts.chart('container', {
+			chart: {
+				zoomType: 'xy'
+			},
+			title: {
+				text: 'Grafica de gastos mensuales'
+			},
+			subtitle: {
+				text: 'Area: <?php echo $_SESSION['area']; ?>'
+			},
+			xAxis: [{
+				categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+				'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				crosshair: true
+			}],
+			yAxis: [{ // Primary yAxis
+				labels: {
+				format: '${value}',
+				style: {
+					color: Highcharts.getOptions().colors[1]
+				}
+				},
+				title: {
+				text: 'Gasto',
+				style: {
+					color: Highcharts.getOptions().colors[1]
+				}
+				}
+			}],
+			tooltip: {
+				shared: true
+			},
+			legend: {
+				layout: 'vertical',
+				align: 'left',
+				x: 120,
+				verticalAlign: 'top',
+				y: 100,
+				floating: true,
+				backgroundColor:
+				Highcharts.defaultOptions.legend.backgroundColor || // theme
+				'rgba(255,255,255,0.25)'
+			},
+			series: [{
+				name: 'Total',
+				type: 'column',
+				tooltip: {
+					valueSuffix: '$'
+				},
+				data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+			}]
+		});
 	</script>
 </body>
 
