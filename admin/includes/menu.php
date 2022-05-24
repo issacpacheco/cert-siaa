@@ -26,6 +26,7 @@
                     <span>Panel administrativo</span>
                 </a>
             </li>
+            <?php if($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 99){ ?>
             <?php if($_SESSION['nivel'] == 1){ ?>
 			<li>
                 <a href="#submenuAccessos" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -33,14 +34,12 @@
                     <span>Accesos</span>
                 </a>
                 <ul class="collapse nav primary essubmenu" id="submenuAccessos">
-                    <?php if($_SESSION['nivel'] == 99 || $_SESSION['nivel'] == 1){ ?>
                     <li>
                         <a onclick="getPageMenu('pr-grupos')">
                         <i class="fas fa-users-class white"></i>
                             <span class="white">Grupos</span>
                         </a>
                     </li>
-                    <?php } ?>
                     <li>
                         <a onclick="getPageMenu('pr-usuarios')">
                             <i class="fas fa-users white"></i>
@@ -49,12 +48,14 @@
                     </li>
                 </ul>
             </li>
+            <?php } ?>
             <li>
                 <a href="#submenuAlmancen" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-warehouse"></i>
                     <span>Almacen</span>
                 </a>
                 <ul class="collapse nav primary essubmenu" id="submenuAlmancen">
+                    <?php if($_SESSION['nivel'] == 1){ ?>
                     <li>
                         <a onclick="getPageMenu('pr-categorias')">
                             <i class="fas fa-cubes white"></i>
@@ -67,6 +68,7 @@
                             <span class="white">Bodeguitas</span>
                         </a>
                     </li>
+                    <?php } ?>
                     <li>
                         <a onclick="getPageMenu('pr-materiales')">
                             <i class="fas fa-barcode-alt white"></i>

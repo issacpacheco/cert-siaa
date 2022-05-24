@@ -228,12 +228,12 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                         </div>
                     </div>
                     <div class="main-content">
-                        <?php if($_SESSION['nivel'] == 1){ ?>
+                        <?php if($_SESSION['nivel'] == 1 || $_SESSION['nivel'] == 99){ ?>
                         <div class="row ">
                             <div class="col-sm-12 card">
                                 <h3 class="text-center">Listado de solicitudes</h3>
                                 <div class="card-body">
-                                    <div class="table-responsive" id="content">
+                                    <div class="table-responsive" id="content"> 
                                         <table class="table student-data-table m-t-20" id="tabla1">
                                             <thead>
                                                 <tr>

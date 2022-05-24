@@ -47,14 +47,26 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_materiales_categorias(){
-        $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
+                LEFT JOIN inv_categoria c ON c.id = m.id_categoria
+                LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
+                LEFT JOIN campus cam ON cam.id = cp.id_campus
+                LEFT JOIN inv_unidades u ON u.id = m.id_unidad 
+                WHERE cam.id = {$_SESSION['campus']}";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
                 LEFT JOIN inv_categoria c ON c.id = m.id_categoria
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
                 LEFT JOIN campus cam ON cam.id = cp.id_campus
                 LEFT JOIN inv_unidades u ON u.id = m.id_unidad 
                 WHERE cam.id = {$_SESSION['campus']} AND m.id_area = {$_SESSION['area']}";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
+        
     }
 
     public function obtener_material($id){
@@ -86,18 +98,42 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_entradas(){
-        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
-                FROM inv_entrada_producto e
-                LEFT JOIN inv_productos p ON p.id = e.id_producto
-                LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
-                ORDER BY e.fecha DESC, e.hora DESC";
-        $res = $this->consulta($qry);
-        return $res;
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_entrada_producto e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} 
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_entrada_producto e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }
+        
     }
 
     public function obtener_salidas(){
-        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre, s.nombre AS solicitante
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre, s.nombre AS solicitante
+                    FROM inv_salida_producto e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    LEFT JOIN inv_usuario s ON s.id = e.id_solicitante
+                    WHERE e.id_campus = {$_SESSION['campus']}
+                    AND (e.estatus = 0 OR e.estatus >= 3)
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre, s.nombre AS solicitante
                 FROM inv_salida_producto e
                 LEFT JOIN inv_productos p ON p.id = e.id_producto
                 LEFT JOIN inv_usuario u ON u.id = e.id_usuario
@@ -105,30 +141,56 @@ class almacen extends mysqlconsultas{
                 WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
                 AND (e.estatus = 0 OR e.estatus >= 3)
                 ORDER BY e.fecha DESC, e.hora DESC";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
+        
     }
 
     public function obtener_entradas_transferencia(){
-        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
-                FROM inv_entrada_transferencia e
-                LEFT JOIN inv_productos p ON p.id = e.id_producto
-                LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
-                ORDER BY e.fecha DESC, e.hora DESC";
-        $res = $this->consulta($qry);
-        return $res;
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_entrada_transferencia e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} 
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_entrada_transferencia e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }
+        
     }
 
     public function obtener_salidas_transferencia(){
-        $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
-                FROM inv_salida_transferencia e
-                LEFT JOIN inv_productos p ON p.id = e.id_producto
-                LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
-                ORDER BY e.fecha DESC, e.hora DESC";
-        $res = $this->consulta($qry);
-        return $res;
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_salida_transferencia e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} 
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT e.*, p.nombre AS producto, u.nombre AS nombre
+                    FROM inv_salida_transferencia e
+                    LEFT JOIN inv_productos p ON p.id = e.id_producto
+                    LEFT JOIN inv_usuario u ON u.id = e.id_usuario
+                    WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
+                    ORDER BY e.fecha DESC, e.hora DESC";
+            $res = $this->consulta($qry);
+            return $res;
+        }
+        
     }
 
     public function obtener_cantidad_material($id){
@@ -207,31 +269,59 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_solicitudes(){
-        $qry = "SELECT s.id, s.fecha, s.hora, s.clave_solicitud, u.nombre
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT s.id, s.fecha, s.hora, s.clave_solicitud, u.nombre
+                FROM inv_salida_producto s
+                LEFT JOIN inv_usuario u ON u.id = s.id_solicitante
+                WHERE s.estatus = 1 AND s.id_campus = {$_SESSION['campus']}
+                GROUP BY s.clave_solicitud";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT s.id, s.fecha, s.hora, s.clave_solicitud, u.nombre
                 FROM inv_salida_producto s
                 LEFT JOIN inv_usuario u ON u.id = s.id_solicitante
                 WHERE s.estatus = 1 AND s.id_campus = {$_SESSION['campus']} AND u.id_area = {$_SESSION['area']}
                 GROUP BY s.clave_solicitud";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
     }
 
     public function obtener_materiales_por_agotarse(){
-        $qry = "SELECT p.id, p.nombre, c.cantidad FROM inv_productos p
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT p.id, p.nombre, c.cantidad FROM inv_productos p
+                LEFT JOIN inv_campus_producto c ON c.id_producto = p.id
+                WHERE c.cantidad <= 10 and c.id_campus = {$_SESSION['campus']}";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT p.id, p.nombre, c.cantidad FROM inv_productos p
                 LEFT JOIN inv_campus_producto c ON c.id_producto = p.id
                 WHERE c.cantidad <= 10 and c.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
     }
 
     public function obtener_materiales_prestados(){
-        $qry = "SELECT s.id, s.cantidad_prestada, s.clave_solicitud, s.fecha, s.hora, p.nombre, u.nombre AS usuario
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT s.id, s.cantidad_prestada, s.clave_solicitud, s.fecha, s.hora, p.nombre, u.nombre AS usuario
+                FROM inv_salida_producto s
+                LEFT JOIN inv_productos p ON p.id = s.id_producto
+                LEFT JOIN inv_usuario u ON u.id = s.id_solicitante
+                WHERE s.estatus = 3";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT s.id, s.cantidad_prestada, s.clave_solicitud, s.fecha, s.hora, p.nombre, u.nombre AS usuario
                 FROM inv_salida_producto s
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
                 LEFT JOIN inv_usuario u ON u.id = s.id_solicitante
                 WHERE s.estatus = 3 AND p.id_area = {$_SESSION['area']}";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
     }
 
     public function obtener_mis_envios(){
@@ -267,14 +357,25 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_transferencias_en_curso(){
-        $qry = "SELECT s.id, s.codigo_transfer, c.nombre AS campus_origen, a.nombre AS campus_destino
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT s.id, s.codigo_transfer, c.nombre AS campus_origen, a.nombre AS campus_destino
+                FROM inv_salida_transferencia s
+                LEFT JOIN campus c ON c.id = s.id_campus
+                LEFT JOIN campus a ON a.id = s.id_campus_destino
+                LEFT JOIN inv_productos p ON p.id = s.id_producto
+                WHERE s.estatus < 3 GROUP BY s.codigo_transfer";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT s.id, s.codigo_transfer, c.nombre AS campus_origen, a.nombre AS campus_destino
                 FROM inv_salida_transferencia s
                 LEFT JOIN campus c ON c.id = s.id_campus
                 LEFT JOIN campus a ON a.id = s.id_campus_destino
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
                 WHERE s.estatus < 3 AND p.id_area = {$_SESSION['area']} GROUP BY s.codigo_transfer";
-        $res = $this->consulta($qry);
-        return $res;
+            $res = $this->consulta($qry);
+            return $res;
+        }
     }
 
     public function subareas(){
@@ -328,17 +429,31 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_facturas(){
-        $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, 
-                        SUM(f.total) as subtotal,
-                        SUM(CASE 
-                                WHEN f.iva = 1 THEN ((f.total * 0.16) + f.total) 
-                                WHEN f.iva = 0 or f.iva = null THEN f.total END) AS total, 
-                        u.nombre AS usuario
-                        FROM inv_entrada_producto f
-                        LEFT JOIN usuarios u ON u.id = f.id_usuario
-                        WHERE (f.factura is not null and f.factura != '') AND u.id_area = {$_SESSION['area']} GROUP BY f.factura";
-        $res = $this->consulta($qry);
-        return $res;
+        if($_SESSION['nivel'] == 99){
+            $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, 
+                    SUM(f.total) as subtotal,
+                    SUM(CASE 
+                            WHEN f.iva = 1 THEN ((f.total * 0.16) + f.total) 
+                            WHEN f.iva = 0 or f.iva = null THEN f.total END) AS total, 
+                    u.nombre AS usuario
+                    FROM inv_entrada_producto f
+                    LEFT JOIN usuarios u ON u.id = f.id_usuario
+                    WHERE (f.factura is not null and f.factura != '') GROUP BY f.factura";
+            $res = $this->consulta($qry);
+            return $res;
+        }else{
+            $qry = "SELECT f.id, f.fecha, f.hora, f.comentarios, f.factura, 
+                    SUM(f.total) as subtotal,
+                    SUM(CASE 
+                            WHEN f.iva = 1 THEN ((f.total * 0.16) + f.total) 
+                            WHEN f.iva = 0 or f.iva = null THEN f.total END) AS total, 
+                    u.nombre AS usuario
+                    FROM inv_entrada_producto f
+                    LEFT JOIN usuarios u ON u.id = f.id_usuario
+                    WHERE (f.factura is not null and f.factura != '') AND u.id_area = {$_SESSION['area']} GROUP BY f.factura";
+            $res = $this->consulta($qry);
+            return $res;
+        }
     }
 
     public function obtener_materiales_sin_categorias(){
