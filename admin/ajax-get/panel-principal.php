@@ -64,7 +64,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                         <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
                             <option value="0" selected>Seleccione un area</option>
                             <?php for($i = 0; $i < $careas; $i++){ ?>
-                                <option value="<?php echo $areas['id'][$i] ?>" <?php echo $id_area == $areas['id'][$i] ? 'selected' : ''; ?>><?php echo $areas['nombre'][$i] ?></option>
+                                <option value="<?php echo $areas['id'][$i] ?>" <?php echo $id_area == $areas['id'][$i] ? 'selected' : ''; ?>><?php echo utf8_decode($areas['nombre'][$i]); ?></option>
                             <?php } ?>
                         </select>
                     </div>
@@ -78,8 +78,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][0]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][0]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][0]) ? $top6['total'][0] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][0]) ? $top6['nombre'][0] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -92,8 +92,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][1]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][1]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][1]) ? $top6['total'][1] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][1]) ? $top6['nombre'][1] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -106,8 +106,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][2]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][2]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][2]) ? $top6['total'][2] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][2]) ? $top6['nombre'][2] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -120,8 +120,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][3]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][3]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][3]) ? $top6['total'][3] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][3]) ? $top6['nombre'][3] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -134,8 +134,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][4]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][4]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][4]) ? $top6['total'][4] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][4]) ? $top6['nombre'][4] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -148,8 +148,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo $top6['total'][5]; ?></div>
-                                        <div class="stat-text"><?php echo $top6['nombre'][5]; ?></div>
+                                        <div class="stat-digit"><?php echo isset($top6['total'][5]) ? $top6['total'][5] : 'Sin información'; ?></div>
+                                        <div class="stat-text"><?php echo isset($top6['nombre'][5]) ? $top6['nombre'][5] : 'Sin información'; ?></div>
                                     </div>
                                 </div>
                             </div>
