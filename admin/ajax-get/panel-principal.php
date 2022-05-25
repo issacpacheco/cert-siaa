@@ -1,46 +1,37 @@
 <?php
-include("class/allClass.php");
+error_reporting(0);
+include("../class/allClass.php");
 
-use nsalmacen\almacen;
+$id_area = filter_input(INPUT_POST, 'id_area', FILTER_SANITIZE_NUMBER_INT);
+
+
+use nsroot\root;
 use nsfunciones\funciones;
-use nsgraficas\graficas;
+use nsalmacen\almacen;
 
-$infoAlmacen    = new almacen();
-$graficas       = new graficas();
+$infofotos      = new almacen();
+$infoAlmacen    = new root();
 $fn             = new funciones();
 
 //Esta es información para usuarios administradores
-$solicitudes    = $infoAlmacen->obtener_solicitudes();
+$solicitudes    = $infoAlmacen->obtener_solicitudes($id_area);
 $csolicitudes   = $fn->cuentarray($solicitudes);
 
-$stock          = $infoAlmacen->obtener_materiales_por_agotarse();
+$stock          = $infoAlmacen->obtener_materiales_por_agotarse($id_area);
 $cstock         = $fn->cuentarray($stock);
 
-$prestamos      = $infoAlmacen->obtener_materiales_prestados();
+$prestamos      = $infoAlmacen->obtener_materiales_prestados($id_area);
 $cprestamos     = $fn->cuentarray($prestamos);
 
-$transfers      = $infoAlmacen->obtener_transferencias_en_curso();
+$transfers      = $infoAlmacen->obtener_transferencias_en_curso($id_area);
 $ctransfers     = $fn->cuentarray($transfers);
 
-$areas          = $infoAlmacen -> obtener_areas();
-$careas         = $fn -> cuentarray($areas);
-
-//Esta es informacion para los usuarios chofer
-
-$misenvios      = $infoAlmacen->obtener_mis_envios();
-$cmisenvios     = $fn->cuentarray($misenvios);
-
-$misenviosfin   = $infoAlmacen->obtener_mis_envios_finalizados();
-$cmisenviosfin  = $fn->cuentarray($misenviosfin);
-
 //Consulta de graficas
-$top6           = $graficas -> top6_mas_solicitados();
-$activos        = $graficas -> productos_activos();
-$gatosdelmes    = $graficas -> gastos_del_mes();
-$grafia_anio    = $graficas -> grafica_gasto_año();
-$cgrafia_anio   = $fn       -> cuentarray($grafia_anio);
-
-
+$top6           = $infoAlmacen -> top6_mas_solicitados($id_area);
+$activos        = $infoAlmacen -> productos_activos($id_area);
+$gatosdelmes    = $infoAlmacen -> gastos_del_mes($id_area);
+$grafia_anio    = $infoAlmacen -> grafica_gasto_año($id_area);
+$cgrafia_anio   = $fn          -> cuentarray($grafia_anio);
 
 $gasto = 0;
 for($i = 0;$i < count($gatosdelmes); $i++){
@@ -66,20 +57,12 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                 <section id="main-content">
                     <!-- /# row -->
                     <div class="row card">
-                        <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
-                        <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
-                            <?php for($i = 0; $i < $careas; $i++){ ?>
-                                <option value="<?php echo $areas['id'][$i] ?>"><?php echo $areas['nombre'][$i] ?></option>
-                            <?php } ?>
-                        </select>
-                    </div>
-                    <div class="row card">
                         <h4>Top 6 materiales mas solicitados</h4>
                         <div class="col-lg-2">
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][0]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][0]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -93,7 +76,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][1]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][1]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -107,7 +90,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][2]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][2]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -121,7 +104,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][3]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][3]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -135,7 +118,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][4]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][4]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -149,7 +132,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="card p-0">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][5]); ?>
+                                        <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][5]); ?>
                                         <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
@@ -487,16 +470,3 @@ for($i = 0;$i < count($gatosdelmes); $i++){
 			}]
 		});
 	</script>
-    <script>
-        function obtener_info_area(value){
-            var id = value;
-            $.ajax({
-                type: 'POST',
-                url: 'ajax-get/panel-principal',
-                data: {id_area: id},
-                success: function(response){
-                    $('#contenedor').html(response);
-                }
-            })
-        }
-    </script>

@@ -579,6 +579,12 @@ class almacen extends mysqlconsultas{
         }
     }
 
+    public function obtener_areas(){
+        $qry = "SELECT * FROM area";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 

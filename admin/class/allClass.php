@@ -13,4 +13,5 @@ include_once("crearsesion.class.php");
 include_once("usuarios.class.php");
 include_once("almacen.class.php");
 include_once("graficas.class.php");
+include_once("root.class.php");
 include_once("PHPExcel.php");
