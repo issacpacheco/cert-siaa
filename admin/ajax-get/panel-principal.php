@@ -75,7 +75,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][0]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][0]; ?></div>
@@ -89,7 +89,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][1]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][1]; ?></div>
@@ -103,7 +103,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][2]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][2]; ?></div>
@@ -117,7 +117,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][3]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][3]; ?></div>
@@ -131,7 +131,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][4]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][4]; ?></div>
@@ -145,7 +145,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
                                         <?php $fototop1 = $infofotos -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][5]); ?>
-                                        <img src="<?php echo $fototop1["archivo"][0]; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
                                         <div class="stat-digit"><?php echo $top6['total'][5]; ?></div>
