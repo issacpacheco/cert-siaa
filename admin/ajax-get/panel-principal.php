@@ -26,6 +26,9 @@ $cprestamos     = $fn->cuentarray($prestamos);
 $transfers      = $infoAlmacen->obtener_transferencias_en_curso($id_area);
 $ctransfers     = $fn->cuentarray($transfers);
 
+$areas          = $infofotos-> obtener_areas();
+$careas         = $fn -> cuentarray($areas);
+
 //Consulta de graficas
 $top6           = $infoAlmacen -> top6_mas_solicitados($id_area);
 $activos        = $infoAlmacen -> productos_activos($id_area);
@@ -56,6 +59,15 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                 <!-- /# row -->
                 <section id="main-content">
                     <!-- /# row -->
+                    <div class="row card">
+                        <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
+                        <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
+                            <option value="0" selected>Seleccione un area</option>
+                            <?php for($i = 0; $i < $careas; $i++){ ?>
+                                <option value="<?php echo $areas['id'][$i] ?>" <?php echo $id_area == $areas['id'][$i] ? 'selected' : ''; ?>><?php echo $areas['nombre'][$i] ?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
                     <div class="row card">
                         <h4>Top 6 materiales mas solicitados</h4>
                         <div class="col-lg-2">
@@ -470,3 +482,16 @@ for($i = 0;$i < count($gatosdelmes); $i++){
 			}]
 		});
 	</script>
+    <script>
+        function obtener_info_area(value){
+            var id = value;
+            $.ajax({
+                type: 'POST',
+                url: 'ajax-get/panel-principal',
+                data: {id_area: id},
+                success: function(response){
+                    $('#contenedor').html(response);
+                }
+            })
+        }
+    </script>
