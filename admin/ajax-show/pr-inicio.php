@@ -65,6 +65,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                 <!-- /# row -->
                 <section id="main-content">
                     <!-- /# row -->
+                    <?php if($_SESSION['nivel'] == 99){ ?>
                     <div class="row card">
                         <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
                         <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
@@ -73,6 +74,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <?php } ?>
                         </select>
                     </div>
+                    <?php } ?>
                     <div class="row card">
                         <h4>Top 6 materiales mas solicitados</h4>
                         <div class="col-lg-2">
