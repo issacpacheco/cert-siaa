@@ -580,7 +580,7 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_areas(){
-        $qry = "SELECT * FROM area";
+        $qry = "SELECT * FROM area WHERE estatus = 1 AND sistema = 2";
         $res = $this->consulta($qry);
         return $res;
     }
