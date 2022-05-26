@@ -4,9 +4,11 @@ include("class/allClass.php");
 use nsalmacen\almacen;
 use nsfunciones\funciones;
 use nsgraficas\graficas;
+use nsroot\root;
 
 $infoAlmacen    = new almacen();
 $graficas       = new graficas();
+$root           = new root();
 $fn             = new funciones();
 
 //Esta es información para usuarios administradores
@@ -24,6 +26,9 @@ $ctransfers     = $fn->cuentarray($transfers);
 
 $areas          = $infoAlmacen -> obtener_areas();
 $careas         = $fn -> cuentarray($areas);
+
+$campus         = $infoAlmacen -> obtener_todos_almacenes();
+$ccampus        = $fn -> cuentarray($campus);
 
 //Esta es informacion para los usuarios chofer
 
@@ -67,13 +72,26 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                     <!-- /# row -->
                     <?php if($_SESSION['nivel'] == 99){ ?>
                     <div class="row card">
-                        <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
-                        <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
-                            <option value="0" selected>Seleccione un area</option>
-                            <?php for($i = 0; $i < $careas; $i++){ ?>
-                            <option value="<?php echo $areas['id'][$i] ?>"><?php echo utf8_decode($areas['nombre'][$i]); ?></option>
-                            <?php } ?>
-                        </select>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label> ¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
+                                <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
+                                    <option value="0" selected>Seleccione un area</option>
+                                    <?php for($i = 0; $i < $careas; $i++){ ?>
+                                    <option value="<?php echo $areas['id'][$i] ?>"><?php echo utf8_decode($areas['nombre'][$i]); ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label> Selecciona un campus </label>
+                                <select name="id_campus" class="form-control" id="id_campus" onchange="obtener_info_area(this.value);">
+                                    <option value="0" selected>Seleccione un area</option>
+                                    <?php for($i = 0; $i < $ccampus; $i++){ ?>
+                                    <option value="<?php echo $campus['id'][$i] ?>"><?php echo utf8_decode($campus['nombre'][$i]); ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <?php } ?>
                     <div class="row card">
@@ -438,57 +456,102 @@ for($i = 0;$i < count($gatosdelmes); $i++){
 
     <!-- scripts para graficas -->
 	<script>
-		Highcharts.chart('container', {
-			chart: {
-				zoomType: 'xy'
-			},
-			title: {
-				text: 'Grafica de gastos mensuales'
-			},
-			subtitle: {
-				text: 'Area: <?php echo $_SESSION['area']; ?>'
-			},
-			xAxis: [{
-                categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>],
-				crosshair: true
-			}],
-			yAxis: [{ // Primary yAxis
-				labels: {
-                    format: '{value}',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-				},
-				title: {
-                    text: 'Gasto',
-                    style: {
-                        color: Highcharts.getOptions().colors[1]
-                    }
-				}
-			}],
-			tooltip: {
-				shared: true
-			},
-			legend: {
-				layout: 'vertical',
-				align: 'left',
-				x: 120,
-				verticalAlign: 'top',
-				y: 100,
-				floating: true,
-				backgroundColor:
-				Highcharts.defaultOptions.legend.backgroundColor || // theme
-				'rgba(255,255,255,0.25)'
-			},
-			series: [{
-				name: 'Total',
-				type: 'column',
-				tooltip: {
-					valueSuffix: '$'
-				},
-				data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
-			}]
-		});
+		// Highcharts.chart('container', {
+		// 	chart: {
+		// 		zoomType: 'xy'
+		// 	},
+		// 	title: {
+		// 		text: 'Grafica de gastos mensuales'
+		// 	},
+		// 	subtitle: {
+		// 		text: 'Area: <?php echo $_SESSION['area']; ?>'
+		// 	},
+		// 	xAxis: [{
+        //         categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>],
+		// 		crosshair: true
+		// 	}],
+		// 	yAxis: [{ // Primary yAxis
+		// 		labels: {
+        //             format: '{value}',
+        //             style: {
+        //                 color: Highcharts.getOptions().colors[1]
+        //             }
+		// 		},
+		// 		title: {
+        //             text: 'Gasto',
+        //             style: {
+        //                 color: Highcharts.getOptions().colors[1]
+        //             }
+		// 		}
+		// 	}],
+		// 	tooltip: {
+		// 		shared: true
+		// 	},
+		// 	legend: {
+		// 		layout: 'vertical',
+		// 		align: 'left',
+		// 		x: 120,
+		// 		verticalAlign: 'top',
+		// 		y: 100,
+		// 		floating: true,
+		// 		backgroundColor:
+		// 		Highcharts.defaultOptions.legend.backgroundColor || // theme
+		// 		'rgba(255,255,255,0.25)'
+		// 	},
+		// 	series: [{
+		// 		name: 'Total',
+		// 		type: 'column',
+		// 		tooltip: {
+		// 			valueSuffix: '$'
+		// 		},
+		// 		data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>],
+        //         data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
+		// 	}]
+		// });
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+
+            title: {
+                text: 'Total fruit consumption, grouped by gender'
+            },
+
+            xAxis: {
+                categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>]
+            },
+
+            yAxis: {
+                allowDecimals: false,
+                min: 0,
+                title: {
+                    text: 'Number of fruits'
+                }
+            },
+
+            tooltip: {
+                formatter: function () {
+                    return '<b>' + this.x + '</b><br/>' +
+                    this.series.name + ': ' + this.y + '<br/>' +
+                    'Total: ' + this.point.stackTotal;
+                }
+            },
+
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+
+            series: [<?php for($i = 0; $i < $careas; $i++){ ?>{
+                <?php 
+                    $grafia_anio    = $root -> grafica_gasto_año($areas['id'][$i]);
+                    $cgrafia_anio   = $fn   -> cuentarray($grafia_anio);
+                ?>
+                name: '<?php echo $areas['nombre'][$i]; ?>',
+                data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
+            },<?php } ?>]
+        });
 	</script>
     <script>
         function obtener_info_area(value){
