@@ -518,7 +518,20 @@ for($i = 0;$i < count($gatosdelmes); $i++){
             },
 
             xAxis: {
-                categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>]
+                categories: [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Septiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ]
             },
 
             yAxis: {
@@ -543,14 +556,34 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                 }
             },
 
-            series: [<?php for($i = 0; $i < $careas; $i++){ ?>{
-                <?php 
-                    $grafia_anio    = $root -> grafica_gasto_año($areas['id'][$i]);
-                    $cgrafia_anio   = $fn   -> cuentarray($grafia_anio);
-                ?>
-                name: '<?php echo $areas['nombre'][$i]; ?>',
-                data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
-            },<?php } ?>]
+            series: [
+                    <?php for($i = 0; $i < $careas; $i++){ ?>{
+                        <?php 
+                            $grafia_anio    = $root -> grafica_gasto_año($areas['id'][$i]);
+                            $cgrafia_anio   = $fn   -> cuentarray($grafia_anio);
+                        ?>
+                            name: '<?php echo $areas['nombre'][$i]; ?>',
+                            data: [
+                                    <?php for($g = 0; $g < $cgrafia_anio; $g++){ 
+                                        $valor = $grafia_anio['mes'][$g] == 'January' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'February' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'March' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'April' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'May' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'June' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'July' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'August' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'September' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'October' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'November' ? $grafia_anio['mes'][$g] : 0;
+                                        $valor = $grafia_anio['mes'][$g] == 'December' ? $grafia_anio['mes'][$g] : 0;
+                                    ?>
+                                        Number(<?php echo number_format($valor,2,'.',''); ?>),
+                                        
+                                    <?php } ?>
+                                ]
+                            },<?php } ?>
+                    ]
         });
 	</script>
     <script>
