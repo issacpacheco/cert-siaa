@@ -456,58 +456,6 @@ for($i = 0;$i < count($gatosdelmes); $i++){
 
     <!-- scripts para graficas -->
 	<script>
-		// Highcharts.chart('container', {
-		// 	chart: {
-		// 		zoomType: 'xy'
-		// 	},
-		// 	title: {
-		// 		text: 'Grafica de gastos mensuales'
-		// 	},
-		// 	subtitle: {
-		// 		text: 'Area: <?php echo $_SESSION['area']; ?>'
-		// 	},
-		// 	xAxis: [{
-        //         categories: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>"<?php echo $grafia_anio['Mes'][$g] ?>",<?php } ?>],
-		// 		crosshair: true
-		// 	}],
-		// 	yAxis: [{ // Primary yAxis
-		// 		labels: {
-        //             format: '{value}',
-        //             style: {
-        //                 color: Highcharts.getOptions().colors[1]
-        //             }
-		// 		},
-		// 		title: {
-        //             text: 'Gasto',
-        //             style: {
-        //                 color: Highcharts.getOptions().colors[1]
-        //             }
-		// 		}
-		// 	}],
-		// 	tooltip: {
-		// 		shared: true
-		// 	},
-		// 	legend: {
-		// 		layout: 'vertical',
-		// 		align: 'left',
-		// 		x: 120,
-		// 		verticalAlign: 'top',
-		// 		y: 100,
-		// 		floating: true,
-		// 		backgroundColor:
-		// 		Highcharts.defaultOptions.legend.backgroundColor || // theme
-		// 		'rgba(255,255,255,0.25)'
-		// 	},
-		// 	series: [{
-		// 		name: 'Total',
-		// 		type: 'column',
-		// 		tooltip: {
-		// 			valueSuffix: '$'
-		// 		},
-		// 		data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>],
-        //         data: [<?php for($g = 0; $g < $cgrafia_anio; $g++){ ?>Number(<?php echo number_format($grafia_anio['total'][$g],2,'.',''); ?>),<?php } ?>]
-		// 	}]
-		// });
         Highcharts.chart('container', {
             chart: {
                 type: 'column'
@@ -557,31 +505,114 @@ for($i = 0;$i < count($gatosdelmes); $i++){
             },
 
             series: [
-                    <?php for($i = 0; $i < $careas; $i++){ ?>{
+                    <?php 
+                            for($i = 0; $i < $careas; $i++){ ?>{
                         <?php 
                             $grafia_anio    = $root -> grafica_gasto_año($areas['id'][$i]);
                             $cgrafia_anio   = $fn   -> cuentarray($grafia_anio);
                         ?>
                             name: '<?php echo $areas['nombre'][$i]; ?>',
+                            <?php for($g = 0; $g < $cgrafia_anio; $g++){  ?>
                             data: [
-                                    <?php for($g = 0; $g < $cgrafia_anio; $g++){ 
-                                        $valor = $grafia_anio['mes'][$g] == 'January' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'February' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'March' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'April' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'May' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'June' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'July' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'August' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'September' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'October' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'November' ? $grafia_anio['mes'][$g] : 0;
-                                        $valor = $grafia_anio['mes'][$g] == 'December' ? $grafia_anio['mes'][$g] : 0;
-                                    ?>
-                                        Number(<?php echo number_format($valor,2,'.',''); ?>),
+                                    <?php
+                                            
+                                                for($a = 0; $a < 12; $a++){
+                                                    
+                                                    switch($a){
+                                                        case 0:
+                                                            if($grafia_anio['Mes'][$g] == 'January'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 1:
+                                                            if($grafia_anio['Mes'][$g] == 'February'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 2:
+                                                            if($grafia_anio['Mes'][$g] == 'March'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 3:
+                                                            if($grafia_anio['Mes'][$g] == 'April'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 4:
+                                                            if($grafia_anio['Mes'][$g] == 'May'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 5:
+                                                            if($grafia_anio['Mes'][$g] == 'June'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 6:
+                                                            if($grafia_anio['Mes'][$g] == 'July'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 7:
+                                                            if($grafia_anio['Mes'][$g] == 'August'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 8:
+                                                            if($grafia_anio['Mes'][$g] == 'September'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 9:
+                                                            if($grafia_anio['Mes'][$g] == 'October'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 10:
+                                                            if($grafia_anio['Mes'][$g] == 'November'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                        case 11:
+                                                            if($grafia_anio['Mes'][$g] == 'December'){
+                                                                $valor = $grafia_anio['total'][$g];
+                                                            }else{
+                                                                $valor = '0';
+                                                            }
+                                                        break;
+                                                    } ?>
+                                                    
+                                                    <?php echo $valor; ?>, <?php
+                                                } ?>
+                                            
+                                    
                                         
-                                    <?php } ?>
-                                ]
+                                    
+                                ],
+                                <?php } ?>
                             },<?php } ?>
                     ]
         });
