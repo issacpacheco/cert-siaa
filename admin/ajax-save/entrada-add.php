@@ -70,16 +70,17 @@ if($prestamo == 1){
     $producto    = $_REQUEST['producto'];
     $cantidad    = $_REQUEST['cantidad'];
     $precio      = $_REQUEST['precio'];
+    $preciototal = $_REQUEST['preciototal'];
     $contador    = count($producto);
     
     for($i = 0; $i < $contador; $i++){
         $cantidad_actual = $info -> obtener_cantidad_material($producto[$i]);
         $suma = $cantidad_actual['cantidad'][0] + $cantidad[$i];
     
-        $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$suma', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
+        $qryActualizarCantidad = "UPDATE inv_campus_producto SET cantidad = '$suma', precio = '$precio[$i]', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime(), mod_id_usuario = '$idusuario' WHERE id_producto = '$producto[$i]' AND id_campus = '$idcampus'";
         $ejecucion -> ejecuta($qryActualizarCantidad);
     
-        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total,comentarios,iva) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$precio[$i]','$comentarios','$iva')";
+        $qryAgregaEntrada = "INSERT INTO inv_entrada_producto (id_usuario, fecha, hora, cantidad, id_producto,id_campus,factura,total,comentarios,iva) VALUES ('$idusuario',curdate(),curtime(),'$cantidad[$i]','$producto[$i]','$idcampus','$factura','$preciototal[$i]','$comentarios','$iva')";
         $ejecucion -> ejecuta($qryAgregaEntrada);
     }
 

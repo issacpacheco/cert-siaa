@@ -67,7 +67,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     </div>
                 </div>
                 <div class="row" id="entrada_add">
-                    <div class="form-wrapper col-sm-4">
+                    <div class="form-wrapper col-sm-3">
                         <label>Selecciona material/producto</label>
                         <div class="form-group">
                             <select name="producto[]" id="" class="form-control js-example-basic-single">
@@ -78,16 +78,22 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             </select>
                         </div>
                     </div>
-                    <div class="form-wrapper col-sm-4">
+                    <div class="form-wrapper col-sm-3">
                         <label>Cantidad de entrada</label>
                         <div class="form-group">
                             <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
                         </div>
                     </div>
-                    <div class="form-wrapper col-sm-4" id="preciofactura" style="display: none;">
-                        <label>Precio total del material (emitido en la factura)</label>
+                    <div class="form-wrapper col-sm-3" id="preciofactura" style="display: none;">
+                        <label>Precio unitario del material (emitido en la factura)</label>
                         <div class="form-group">
-                            <input type="text" class="form-control esprecio" name="precio[]" id="precio" placeholder="precio" value="" autocomplete="FALSE" onchange="suma(this.value);">
+                            <input type="text" class="form-control esprecio" name="precio[]" id="precio" placeholder="precio" value="" autocomplete="FALSE" >
+                        </div>
+                    </div>
+                    <div class="form-wrapper col-sm-3" id="totalprecio" style="display: none;">
+                        <label>Total del material</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control esprecio" name="preciototal[]" id="preciototal" placeholder="total precio" value="" autocomplete="FALSE" onchange="suma(this.value);">
                         </div>
                     </div>
                 </div>
@@ -98,10 +104,10 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                     </div>
                 </div>
                 <div class="row" id="subtotales" style="display: none;">
-                    <div class="col-sm-8">
+                    <div class="col-sm-9">
 
                     </div>
-                    <div class="col-sm-4 form-group">
+                    <div class="col-sm-3 form-group">
                         <div class="row form-group">
                             <div class="col-sm-12">
                                 <label for="">Subtotal</label>
@@ -179,42 +185,68 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         if(valor == 1){
             $("#factura").css({ display: "block" });
             $("#preciofactura").css({ display: "block" });
+            $("#totalprecio").css({ display: "block" });
             $("#subtotales").css({display: "block" });
         }else if(valor == 0 || valor == 2){
             $("#factura").css({ display: "none" });
             $("#preciofactura").css({ display: "none" });
+            $("#totalprecio").css({ display: "none" });
             $("#subtotales").css({display: "none" });
         }
     }
 
     function ClonarDIV(){
-        var original = document.getElementById("entrada_add");
-        var clon = original.cloneNode(original);
-        // clon.id = infoPax;
-        var destino = document.getElementById("nueva_entrada");
+        var original        = document.getElementById("entrada_add");
+        var clon            = original.cloneNode(original);
+        // clon.id            = infoPax;
+        var destino         = document.getElementById("nueva_entrada");
+
         destino.appendChild(clon);
-        var documento = document.getElementById("nueva_entrada");
-        var contador = documento.childElementCount;
+
+        var documento       = document.getElementById("nueva_entrada");
+        var contador        = documento.childElementCount;
+
         if(contador == 1){
-            var cambio = destino.appendChild(clon);
-            var num = Number(contador + 1);
-            var cambioselector = cambio.children[0].children[1].children[0];
-            cambioselector.className = "js-example-basic-single_"+num;
-            cambioselector.id = "producto_"+num;
+
+            var cambio                  = destino.appendChild(clon);
+            var num                     = Number(contador + 1);
+            var cambioselector          = cambio.children[0].children[1].children[0];
+            var cantidad                = cambio.children[1].children[1].children[0];
+            var preciounitario          = cambio.children[2].children[1].children[0];
+            var totalprecio             = cambio.children[3].children[1].children[0];
+            
+            //modificacion de id's
+            preciounitario.id           = 'totalprecio_'+num;
+            totalprecio.id              = 'totalprecio_'+num;
+            cantidad.id                 = 'cantidad_'+num;
+            cambioselector.className    = "js-example-basic-single_"+num;
+            cambioselector.id           = "producto_"+num;
+
             $('.js-example-basic-single_'+num).select2();
-            var span = documento.children[0].children[0].children[1].children[2];
+            
+            var span                    = documento.children[0].children[0].children[1].children[2];
+            
             span.parentElement.removeChild(span)
         }else{
-            var cambio = destino.appendChild(clon);
-            var num = Number(contador + 1);
-            var cambioselector = cambio.children[0].children[1].children[0];
-            cambioselector.className = "js-example-basic-single_"+num;
-            cambioselector.id = "producto_"+num;
+            var cambio                  = destino.appendChild(clon);
+            var num                     = Number(contador + 1);
+            var cambioselector          = cambio.children[0].children[1].children[0];
+            var cantidad                = cambio.children[1].children[1].children[0];
+            var preciounitario          = cambio.children[2].children[1].children[0];
+            var totalprecio             = cambio.children[3].children[1].children[0];
+            
+            //modificacion de id's
+            preciounitario.id           = 'totalprecio_'+num;
+            totalprecio.id              = 'totalprecio_'+num;
+            cantidad.id                 = 'cantidad_'+num;
+            cambioselector.className    = "js-example-basic-single_"+num;
+            cambioselector.id           = "producto_"+num;
+
             $('.js-example-basic-single_'+num).select2();
         }
-        var botonelim = document.createElement('button');
-        botonelim.textContent = 'Eliminar entrada -';
-        botonelim.classList = 'btn btn-danger mbottom20 mleft20';
+        var botonelim           = document.createElement('button');
+        botonelim.textContent   = 'Eliminar entrada -';
+        botonelim.classList     = 'btn btn-danger mbottom20 mleft20';
         botonelim.addEventListener('click', ()=>{eliminar(event,clon)});
         document.getElementById('nueva_entrada').appendChild(botonelim);
     }
@@ -232,7 +264,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
         
         // Aquí valido si hay un valor previo, si no hay datos, le pongo un cero "0".
         total = (total == null || total == undefined || total == "") ? 0 : total;
-        
+
         /* Esta es la suma. */
         total = (parseFloat(total) + parseFloat(valor));
         

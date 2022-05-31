@@ -7,6 +7,7 @@ $nombre         = filter_input(INPUT_POST, 'nombre',        FILTER_SANITIZE_SPEC
 $cantidad       = filter_input(INPUT_POST, 'cantidad',      FILTER_SANITIZE_SPECIAL_CHARS);
 $descripcion    = filter_input(INPUT_POST, 'descripcion',   FILTER_SANITIZE_SPECIAL_CHARS);
 $codigo         = filter_input(INPUT_POST, 'codigo',        FILTER_SANITIZE_SPECIAL_CHARS);
+$precio         = filter_input(INPUT_POST, 'precio',        FILTER_SANITIZE_SPECIAL_CHARS);
 $categoria      = filter_input(INPUT_POST, 'categoria',     FILTER_SANITIZE_NUMBER_INT);
 $estatus        = filter_input(INPUT_POST, 'estatus',       FILTER_SANITIZE_NUMBER_INT);
 $id             = filter_input(INPUT_POST, 'id_material',   FILTER_SANITIZE_NUMBER_INT);
@@ -17,5 +18,5 @@ $qry = "UPDATE inv_productos SET nombre = '$nombre', id_bodega = '$id_bodega',de
 
 $ejecucion->ejecuta($qry);
 
-$qryRelacion = "UPDATE inv_campus_producto SET cantidad = '$cantidad', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime() WHERE id_producto = '$id' AND id_campus = '{$_SESSION['campus']}'";
+$qryRelacion = "UPDATE inv_campus_producto SET cantidad = '$cantidad', precio = '$precio', mod_fecha_entrada = curdate(), mod_hora_entrada = curtime() WHERE id_producto = '$id' AND id_campus = '{$_SESSION['campus']}'";
 $ejecucion->ejecuta($qryRelacion);

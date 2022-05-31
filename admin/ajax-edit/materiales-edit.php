@@ -31,8 +31,10 @@ $cmedidas       = $fn   -> cuentarray($medidas);
 $historialEntrada   = $info ->  historial_material_entrada($id);
 $chistorialEntrada  = $fn   ->  cuentarray($historialEntrada);
 
-$historialSalida  = $info ->  historial_material_salida($id);
-$chistorialSalida = $fn   ->  cuentarray($historialSalida);
+$historialSalida    = $info ->  historial_material_salida($id);
+$chistorialSalida   = $fn   ->  cuentarray($historialSalida);
+
+$precio             = $info ->  obtener_precio($id);
 ?>
 
 <div class="col-sm-12">
@@ -109,6 +111,12 @@ $chistorialSalida = $fn   ->  cuentarray($historialSalida);
                                 <option value="<?php echo $bodegas['id'][$i]; ?>" <?php if($material['id_bodega'][0] == $bodegas['id'][$i]){ echo  'Selected'; } ?>><?php echo $bodegas['nombre'][$i] ?></option>
                                 <?php } ?>
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-wrapper col-sm-4">
+                        <label>Precio de este material</label>
+                        <div class="form-group">
+                            <input type="text" name="precio" id="precio" class="form-control esprecio" value="<?php echo $precio['precio'][0]; ?>">
                         </div>
                     </div>
                 </div>

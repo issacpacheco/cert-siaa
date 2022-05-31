@@ -585,6 +585,12 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_precio($id){
+        $qry = "SELECT precio FROM inv_campus_producto WHERE id_producto = $id AND id_campus = {$_SESSION['campus']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 
