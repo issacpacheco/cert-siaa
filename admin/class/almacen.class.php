@@ -591,6 +591,24 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function editar_campus_producto($idcampus, $id_producto){
+        $qry = "SELECT * FROM inv_campus_producto WHERE id_campus = $idcampus AND id_producto = $id_producto";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function editar_entradas_productos($idcampus, $id_producto){
+        $qry = "SELECT * FROM inv_entrada_producto WHERE id_campus = $idcampus AND id_producto = $id_producto";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function editar_salida_productos($idcampus, $id_producto){
+        $qry = "SELECT * FROM inv_salida_producto WHERE id_campus = $idcampus AND id_producto = $id_producto";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
 }
 
 
