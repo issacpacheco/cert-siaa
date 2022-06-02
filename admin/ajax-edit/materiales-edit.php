@@ -55,7 +55,7 @@ $precio             = $info ->  obtener_precio($id);
                     <div class="form-wrapper col-sm-4">
                         <label>Cantidad</label>
                         <div class="form-group">
-                            <input type="text" class="form-control esnumero" name="cantidad" id="cantidad" placeholder="<?php echo $material['cantidad'][0]; ?>" value="<?php echo $material['cantidad'][0]; ?>" <?php if($_SESSION['area'] == 5 && $_SESSION['nivel'] == 1){}else{ ?> readonly <?php } ?>>
+                            <input type="text" class="form-control esnumero" name="cantidad" id="cantidad" placeholder="<?php echo $material['cantidad'][0]; ?>" value="<?php echo $material['cantidad'][0]; ?>" <?php if($_SESSION['nivel'] == 1){}else{ ?> readonly <?php } ?>>
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">

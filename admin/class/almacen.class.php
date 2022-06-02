@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 class almacen extends mysqlconsultas{
     
     public function obtener_categorias(){
-        $qry = "SELECT * FROM inv_categoria WHERE id_area = {$_SESSION['area']}";
+        $qry = "SELECT * FROM inv_categoria WHERE id_area = {$_SESSION['area']} AND id_campus = {$_SESSION['campus']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -398,7 +398,7 @@ class almacen extends mysqlconsultas{
     }
 
     public function mis_bodeguitas(){
-        $qry = "SELECT * FROM inv_bodeguitas WHERE id_area = {$_SESSION['area']}";
+        $qry = "SELECT * FROM inv_bodeguitas WHERE id_area = {$_SESSION['area']} AND id_campus = {$_SESSION['campus']}";
         $res = $this->consulta($qry);
         return $res;
     }
