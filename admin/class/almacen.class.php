@@ -48,7 +48,7 @@ class almacen extends mysqlconsultas{
 
     public function obtener_materiales_categorias(){
         if($_SESSION['nivel'] == 99){
-            $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
+            $qry = "SELECT m.id, m.nombre, cp.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
                 LEFT JOIN inv_categoria c ON c.id = m.id_categoria
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
                 LEFT JOIN campus cam ON cam.id = cp.id_campus
@@ -57,9 +57,10 @@ class almacen extends mysqlconsultas{
             $res = $this->consulta($qry);
             return $res;
         }else{
-            $qry = "SELECT m.id, m.nombre, m.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, u.nombre AS unidad FROM inv_productos m 
-                LEFT JOIN inv_categoria c ON c.id = m.id_categoria
+            $qry = "SELECT m.id, m.nombre, cp.numero_serie, m.descripcion, cp.cantidad, c.nombre AS categoria, b.nombre AS bodega, u.nombre AS unidad FROM inv_productos m 
                 LEFT JOIN inv_campus_producto cp ON cp.id_producto = m.id
+                LEFT JOIN inv_categoria c ON c.id = cp.id_categoria
+                LEFT JOIN inv_bodeguitas b ON b.id = cp.id_bodega
                 LEFT JOIN campus cam ON cam.id = cp.id_campus
                 LEFT JOIN inv_unidades u ON u.id = m.id_unidad 
                 WHERE cam.id = {$_SESSION['campus']} AND m.id_area = {$_SESSION['area']}";
@@ -70,9 +71,9 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_material($id){
-        $qry = "SELECT p.*, c.nombre AS categoria, i.cantidad FROM inv_productos p 
-                LEFT JOIN inv_categoria c ON c.id = p.id_categoria 
+        $qry = "SELECT p.*, c.nombre AS categoria, i.cantidad, i.id_categoria, i.id_bodega, i.id_estatus, i.numero_serie FROM inv_productos p 
                 LEFT JOIN inv_campus_producto i ON i.id_producto = p.id
+                LEFT JOIN inv_categoria c ON c.id = i.id_categoria 
                 WHERE p.id = '$id' AND i.id_campus = {$_SESSION['campus']}";
         $res = $this->consulta($qry);
         return $res;
@@ -457,25 +458,33 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_materiales_sin_categorias(){
-        $qry = "SELECT * FROM inv_productos WHERE (id_categoria = 0 OR id_categoria IS NULL) AND id_area = {$_SESSION['area']}";
+        $qry = "SELECT p.* FROM inv_productos p
+                LEFT JOIN inv_campus_producto cp ON cp.id_producto = p.id
+                WHERE (cp.id_categoria = 0 OR cp.id_categoria IS NULL) AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
 
     public function material_asignado($id){
-        $qry = "SELECT * FROM inv_productos WHERE id_categoria = $id";
+        $qry = "SELECT p.* FROM inv_productos p
+                LEFT JOIN inv_campus_producto cp ON cp.id_producto = p.id
+                WHERE cp.id_categoria = $id AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
 
     public function obtener_material_sin_bodeguita(){
-        $qry = "SELECT * FROM inv_productos WHERE (id_bodega = 0 OR id_bodega IS NULL) AND id_area = {$_SESSION['area']}";
+        $qry = "SELECT p.* FROM inv_productos p
+                LEFT JOIN inv_campus_producto cp ON cp.id_producto = p.id
+                WHERE (cp.id_bodega = 0 OR cp.id_bodega IS NULL) AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
 
     public function material_con_bodega($id){
-        $qry = "SELECT * FROM inv_productos WHERE id_bodega = $id";
+        $qry = "SELECT p.* FROM inv_productos p
+                LEFT JOIN inv_campus_producto cp ON cp.id_producto = p.id
+                WHERE cp.id_bodega = $id AND p.id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }

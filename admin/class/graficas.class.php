@@ -21,11 +21,13 @@ class graficas extends mysqlconsultas{
 
     public function productos_activos(){
         if($_SESSION['nivel'] == 99){
-            $qry = "SELECT COUNT(estatus) as disponibles FROM inv_productos WHERE estatus = 1";
+            $qry = "SELECT COUNT(id_estatus) as disponibles FROM inv_campus_producto WHERE id_estatus = 1";
             $res = $this->consulta($qry);
             return $res;
         }else{
-            $qry = "SELECT COUNT(estatus) as disponibles FROM inv_productos WHERE estatus = 1 AND id_area = {$_SESSION['area']}";
+            $qry = "SELECT COUNT(cp.id_estatus) as disponibles FROM inv_campus_producto cp
+                    LEFT JOIN inv_productos p ON p.id = cp.id_producto 
+                    WHERE id_estatus = 1 AND id_area = {$_SESSION['area']}";
             $res = $this->consulta($qry);
             return $res;
         }

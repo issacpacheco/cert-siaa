@@ -19,9 +19,9 @@ $cmateriales    = $fn->cuentarray($materiales);
                     Lista de Materiales/Equipos/etc...
                 </div>
                 <div class="col-6 mright textright">
-                    <button id="idtest" onclick="openPopup(this, 450, 450)" data-postload="0" data-returnpage="pr-materiales" data-valores="" data-form="" data-page="importacion-productos" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
+                    <!-- <button id="idtest" onclick="openPopup(this, 450, 450)" data-postload="0" data-returnpage="pr-materiales" data-valores="" data-form="" data-page="importacion-productos" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                         <span class="letrablanca font14">Importar Lista</span>
-                    </button>
+                    </button> -->
                     <button id="idtest" onclick="universalLoad(this)" data-postload="0" data-regresar="pr-materiales" data-valores="" data-form="" data-page="materiales-add" data-carpeta="ajax-add" data-load="contenedor" data-id="" class="btngral botonVerde mright"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                         <span class="letrablanca font14">Agregar</span>
                     </button>
@@ -38,6 +38,7 @@ $cmateriales    = $fn->cuentarray($materiales);
                                 <th> Cantidad </th>
                                 <th> Codigo </th>
                                 <th> Categoria </th>
+                                <th> Ubicación </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,6 +50,7 @@ $cmateriales    = $fn->cuentarray($materiales);
                                 <td><?php echo $materiales['cantidad'][$i]; ?> - <?php echo $materiales['unidad'][$i] ?></td>
                                 <td><?php echo $materiales['numero_serie'][$i]; ?></td>
                                 <td><?php echo $materiales['categoria'][$i]; ?></td>
+                                <td><?php echo $materiales['bodega'][$i]; ?></td>
                             </tr>
                         <?php } ?>    
                         </tbody>    

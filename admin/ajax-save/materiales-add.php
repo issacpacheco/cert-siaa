@@ -1,8 +1,8 @@
 <?php
-error_reporting(E_ALL);
+error_reporting(0);
 include_once("../class/allClass.php");
-require('UploadHandler.php');
-$upload_handler = new UploadHandler();
+// require('UploadHandler.php');
+// $upload_handler = new UploadHandler();
 use conexionbd\mysqlconsultas;
 use nsalmacen\almacen;
 use nsfunciones\funciones;
@@ -24,19 +24,19 @@ $idcampus       = $_SESSION['campus'];
 $area           = $_SESSION['area'];
 
 
-$qry = "INSERT INTO inv_productos (nombre,descripcion,numero_serie,fecha_registro,hora_registro,id_usuario_alta,id_categoria,estatus,id_area,id_unidad,id_bodega) 
-        VALUES ('$nombre','$descripcion','$codigo',curdate(),curtime(),'$idusuario','$categoria','$estatus','$area','$unidad','$bodega')";
+$qry = "INSERT INTO inv_productos (nombre,descripcion,fecha_registro,hora_registro,id_usuario_alta,id_area,id_unidad) 
+        VALUES ('$nombre','$descripcion',curdate(),curtime(),'$idusuario','$area','$unidad')";
 
 $id = $ejecucion->ejecuta($qry);
 //Crear carpeta
-rename("../images/productos/temp_bak","../images/productos/".$id);
-rename("../images/productos/temp_bak/medium","../images/productos/".$id."/medium");
-rename("../images/productos/temp_bak/thumb","../images/productos/".$id."/thumb");
+// rename("../images/productos/temp_bak","../images/productos/".$id);
+// rename("../images/productos/temp_bak/medium","../images/productos/".$id."/medium");
+// rename("../images/productos/temp_bak/thumb","../images/productos/".$id."/thumb");
 
 $campus = $info->obtener_todos_almacenes();
 $ccampus = $fn->cuentarray($campus);
 
 for($i = 0; $i < $ccampus; $i++){
-        $qry = "INSERT INTO inv_campus_producto (id_producto, id_campus, cantidad) VALUES ('$id', '{$campus['id'][$i]}','0')";
+        $qry = "INSERT INTO inv_campus_producto (id_producto, id_campus, cantidad, id_categoria, id_estatus, id_bodega, numero_serie) VALUES ('$id', '{$campus['id'][$i]}','0','$categoria','$estatus','$bodega', '$codigo')";
         $ejecucion->ejecuta($qry);
 }

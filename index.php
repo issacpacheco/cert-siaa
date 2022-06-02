@@ -29,6 +29,14 @@
 	<div class="content" id="login-page">
 		<div class="container-fluid">
 			<div class="panel" id="login-panel">
+				<!-- <div class="panel-heading">
+					<i class="fa fa-lock vcentered"></i>
+					<div class="vcentered">
+						<h3> Disculpa la molestia </h3>
+						<h4> El sistema estara en mantenimiento por un lapso de 24 horas, apenas regrese en funcion se les notificara:</h4>
+						<h5> Cualquier duda comunicate al 999-141-6887. Gracias!</h5>
+					</div>
+				</div> -->
 				<div class="panel-heading">
 					<i class="fa fa-unlock-alt vcentered"></i>
 					<div class="vcentered">
