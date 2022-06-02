@@ -149,7 +149,7 @@ $precio             = $info ->  obtener_precio($id);
                 <div class="col-sm-6">
                     <label for="">Historial de entrada</label>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover fullimportant" id="tabla1">
                             <thead>
                                 <tr>
                                     <th>Cantidad</th>
@@ -179,7 +179,7 @@ $precio             = $info ->  obtener_precio($id);
                 <div class="col-sm-6">
                     <label for="">Historial de salida</label>
                     <div class="table-responsive">
-                        <table class="table table-bordered table-hover">
+                        <table class="table table-bordered table-hover fullimportant" id="tabla2">
                             <thead>
                                 <tr>
                                     <th>Cantidad</th>
@@ -323,5 +323,39 @@ function uploadData(formdata) {
         uploadData(fd);
     });
 
+    $(document).ready(function () {
+        var t = $('#tabla1').DataTable({
+            "scrollX": true,
+            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todo"]],
+            "language": {
+                "lengthMenu": "Mostrar _MENU_ registros por página",
+                "zeroRecords": "No se encontró ningún registro",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros",
+                "search": "Buscar",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            }
+        });
+        var t = $('#tabla2').DataTable({
+            "scrollX": true,
+            "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todo"]],
+            "language": {
+                "lengthMenu": "Mostrar _MENU_ registros por página",
+                "zeroRecords": "No se encontró ningún registro",
+                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "infoEmpty": "No hay registros",
+                "search": "Buscar",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Siguiente"
+                }
+            }
+        });
+    }); 
 
 </script>

@@ -11,9 +11,9 @@ class graficas extends mysqlconsultas{
             $res = $this->consulta($qry);
             return $res;
         }else{
-            $qry = "SELECT COUNT(s.id_producto) as total, s.id_producto, p.nombre FROM inv_salida_producto s
+            $qry = "SELECT p.id, COUNT(s.id_producto) as total, s.id_producto, p.nombre FROM inv_salida_producto s
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
-                WHERE p.id_area = {$_SESSION['area']} GROUP BY s.id_producto ORDER BY total desc LIMIT 6";
+                WHERE p.id_area = {$_SESSION['area']} AND s.id_campus = {$_SESSION['campus']} GROUP BY s.id_producto ORDER BY total desc LIMIT 6";
             $res = $this->consulta($qry);
             return $res;
         }

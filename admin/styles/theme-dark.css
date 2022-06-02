@@ -35,4 +35,36 @@ body.no-bg-img .navigation:after {
     		border-radius: 4px;
 			height: 34px;
     		padding: 2px 2px;
-	}
+}
+
+.content{
+  background-color: rgba(38,51,64,0.9);
+}
+
+.card{
+  background-color: rgba(38,51,64,0.9) !important;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,a{
+  color: #fff !important;
+}
+
+td,th,table,tbody{
+  color: #fff !important;
+}
+
+nav{
+  background-color: #3a4653 !important;
+}
+
+.navbar-nav {
+  background-color: #3a4653 !important;
+}
+
+li{
+  color: #fff !important;
+}
+
+.footer {
+  background-color: rgba(38,51,64,0.9) !important;
+}

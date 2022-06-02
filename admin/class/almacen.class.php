@@ -414,7 +414,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_entrada_producto e 
                 LEFT JOIN inv_productos m ON m.id = e.id_producto
                 LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                WHERE  e.id_producto = $id ORDER BY e.id DESC";
+                WHERE  e.id_producto = $id AND e.id_campus = {$_SESSION['campus']} ORDER BY e.id DESC";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -424,7 +424,7 @@ class almacen extends mysqlconsultas{
                 FROM inv_salida_producto e 
                 LEFT JOIN inv_productos m ON m.id = e.id_producto
                 LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                WHERE  e.id_producto = $id ORDER BY e.id DESC";
+                WHERE  e.id_producto = $id AND e.id_campus = {$_SESSION['campus']} ORDER BY e.id DESC";
         $res = $this->consulta($qry);
         return $res;
     }

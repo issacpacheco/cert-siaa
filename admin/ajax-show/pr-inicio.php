@@ -44,7 +44,7 @@ $activos        = $graficas -> productos_activos();
 $gatosdelmes    = $graficas -> gastos_del_mes();
 $grafia_anio    = $graficas -> grafica_gasto_año();
 $cgrafia_anio   = $fn       -> cuentarray($grafia_anio);
-
+$ctop           = $fn       -> cuentarray($top6);
 
 
 $gasto = 0;
@@ -96,90 +96,22 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                     <?php } ?>
                     <div class="row card">
                         <h4>Top 6 materiales mas solicitados</h4>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
+                        <?php for($i = 0; $i < $ctop; $i++){ ?>
+                        <div class="col-lg-2 tajetatop">
+                            <div class="card p-0 maxwidth">
                                 <div class="stat-widget-three home-widget-three">
                                     <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][0]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
+                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][$i]); ?>
+                                        <img src="<?php echo file_get_contents($fototop1["archivo"][$i]) ? $fototop1["archivo"][$i] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
                                     </div>
                                     <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][0]) ? $top6['total'][0] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][0]) ? $top6['nombre'][0] : 'Sin información';; ?></div>
+                                        <div class="stat-digit"><p><?php echo isset($top6['total'][$i]) ? $top6['total'][$i] : 'Sin información'; ?></p></div>
+                                        <div class="stat-text"><p><?php echo isset($top6['nombre'][$i]) ? $top6['nombre'][$i] : 'Sin información'; ?></p></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
-                                <div class="stat-widget-three home-widget-three">
-                                    <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][1]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][1]) ? $top6['total'][1] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][1]) ? $top6['nombre'][1] : 'Sin información';; ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
-                                <div class="stat-widget-three home-widget-three">
-                                    <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][2]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][2]) ? $top6['total'][2] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][2]) ? $top6['nombre'][2] : 'Sin información';; ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
-                                <div class="stat-widget-three home-widget-three">
-                                    <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][3]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][3]) ? $top6['total'][3] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][3]) ? $top6['nombre'][3] : 'Sin información';; ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
-                                <div class="stat-widget-three home-widget-three">
-                                    <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][4]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][4]) ? $top6['total'][4] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][4]) ? $top6['nombre'][4] : 'Sin información';; ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2">
-                            <div class="card p-0">
-                                <div class="stat-widget-three home-widget-three">
-                                    <div class="stat-icon bg-danger" style="padding: 0;">
-                                        <?php $fototop1 = $infoAlmacen -> obtener_fotos_prestamo('upload/materiales/'.$top6['id_producto'][5]); ?>
-                                        <img src="<?php echo file_get_contents($fototop1["archivo"][0]) ? $fototop1["archivo"][0] : 'upload/generales/not-found-img.png'; ?>"  class="responsive" style="width: 100px;height: 85px;" />
-                                    </div>
-                                    <div class="stat-content">
-                                        <div class="stat-digit"><?php echo isset($top6['total'][5]) ? $top6['total'][5] : 'Sin información'; ?></div>
-                                        <div class="stat-text"><?php echo isset($top6['nombre'][5]) ? $top6['nombre'][5] : 'Sin información';; ?></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <?php } ?>
                     </div>
                     <div class="row card">
                         <div class="col-lg-8">
@@ -189,8 +121,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <div class="stat-icon dib"><i class="ti-money color-success border-success"></i>
                                         </div>
                                         <div class="stat-content dib">
-                                            <div class="stat-text">Total gasto del mes</div>
-                                            <div class="stat-digit">$<?php echo number_format($gasto,2,'.',','); ?></div>
+                                            <div class="stat-text"><p>Total gasto del mes</p></div>
+                                            <div class="stat-digit"><p>$<?php echo number_format($gasto,2,'.',','); ?></p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -213,8 +145,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                         <div class="stat-icon dib"><i class="ti-layout-grid2 color-pink border-pink"></i>
                                         </div>
                                         <div class="stat-content dib">
-                                            <div class="stat-text">Materiales activos</div>
-                                            <div class="stat-digit"><?php echo $activos['disponibles'][0] ?></div>
+                                            <div class="stat-text"><p>Materiales activos</p></div>
+                                            <div class="stat-digit"><p><?php echo $activos['disponibles'][0] ?></p></div>
                                         </div>
                                     </div>
                                 </div>

@@ -126,6 +126,14 @@ body.hold-transition >* {
   display: none;
 }
 
+.tajetatop{
+  width: 30%;
+}
+
+.maxwidth{
+  max-width: 100%;
+}
+
 .content {
   margin-top: 60px;
   margin-left: 245px;
@@ -492,6 +500,10 @@ body.hold-transition >* {
 
   body.left-nav-minimized .content {
     margin-left: 60px !important;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -1473,12 +1485,20 @@ input.form-control {
   .search-form .form-control:focus {
       width: calc(100vw - 150px);
   }
+
+  .tajetatop{
+    width: 100%;
+  }
 }
 
 @media (max-width: 600px) {
   .search-form .form-control:hover,
   .search-form .form-control:focus {
       width: calc(100vw - 130px);
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -1930,6 +1950,10 @@ body.no-bg-img .navigation:after {
   .navbar-brand .logo, .navbar-brand span {
     display: none !important;
   }
+
+  .tajetatop{
+    width: 100%;
+  }
 }
 
 /* Breadcrumb */
@@ -1992,6 +2016,10 @@ body.no-bg-img .navigation:after {
 @media (max-width: 767px) {
   .breadcrumb {
       display: none;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -3443,6 +3471,10 @@ a.bg-danger:focus {
   .nav-justified + .tab-content {
     border: 1px solid #dce2e9;
   }
+
+  .tajetatop{
+    width: 100%;
+  }
 }
 
 
@@ -4667,6 +4699,10 @@ table th[class*="col-"] {
   .contacts-add {
     display: none;
   }
+
+  .tajetatop{
+    width: 100%;
+  }
 }
 
 /* Profile page */
@@ -4741,6 +4777,10 @@ table th[class*="col-"] {
   .profile-main .profile-info .profile-posts,
   .profile-main .profile-info .profile-date {
     display: none;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -5011,6 +5051,12 @@ table th[class*="col-"] {
 }
 
 .footer p {
+  margin-top: -10px !important;
+  padding: 15px;
+  text-align: left;
+}
+
+.footer p {
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -5020,6 +5066,10 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .footer {
     display: none;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -5100,6 +5150,10 @@ table th[class*="col-"] {
   #login-panel.register {
     height: 620px;
   }
+
+  .tajetatop{
+    width: 100%;
+  }
 }
 
 /* Page 404 */
@@ -5136,6 +5190,10 @@ table th[class*="col-"] {
   .page-404-outer {
     width: calc(100vw - 20px);
     height: calc(100vh - 60px);
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -5251,6 +5309,10 @@ table th[class*="col-"] {
     width: 100%;
     margin: 5px 0;
     max-width: none;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
@@ -5402,6 +5464,10 @@ table th[class*="col-"] {
 @media screen and (max-width: 767px) {
   .pace {
     left: 0;
+  }
+
+  .tajetatop{
+    width: 100%;
   }
 }
 
