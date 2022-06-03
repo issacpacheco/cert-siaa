@@ -42,14 +42,27 @@ body.no-bg-img .navigation:after {
 }
 
 .card{
-  background-color: rgba(38,51,64,0.9) !important;
+  background-color: #3a4653 !important;
+  border: 1px solid #686868 !important;
 }
 
 h1,h2,h3,h4,h5,h6,p,span,a{
   color: #fff !important;
 }
 
-td,th,table,tbody{
+table,tbody,tr{
+  background-color: #3a4653 !important;
+}
+
+.sorting_1{
+  background-color: #3a4653 !important;
+}
+
+div{
+  color: #fff !important;
+}
+
+td,th{
   color: #fff !important;
 }
 
@@ -66,5 +79,20 @@ li{
 }
 
 .footer {
-  background-color: rgba(38,51,64,0.9) !important;
+  background-color: #3a4653 !important;
+  border: 1px solid #686868 !important;
+}
+
+.colorboton{
+  background-color: #3a4653 !important;
+  border: none !important;
+  margin: 0 !important;
+}
+
+.panel{
+  background-color: #3a4653 !important;
+}
+
+.fondoblanco {
+  background-color: #3a4653 !important;
 }

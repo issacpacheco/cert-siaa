@@ -1,10 +1,28 @@
 	<nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <div id="navbar" class="navbar-collapse">
-            	<ul class="breadcrumb">
+                <ul class="breadcrumb">
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn dropdown-toggle colorboton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             <p><i class="fas fa-cog"></i> Cambio de color</p>
+                        </button>
+                        <div class="dropdown-menu colorboton">
+                            <ul>
+                                <li><a href="index.php?color=theme-dark.css">Oscuro</a></li>
+                                <li><a href="index.php?color=theme-green.css">Verde</a></li>
+                                <li><a href="index.php?color=theme-red.css">Rojo</a></li>
+                                <li><a href="index.php?color=theme-purple.css">Purpura</a></li>
+                                <li><a href="index.php?color=theme-blue.css">Azul</a></li>
+                                <li><a href="index.php?color=theme-orange.css">Naranja</a></li>
+                                <li><a href="index.php?color=theme-white-dark.css">Oscuro y blanco</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        		</ul>
+            	<!-- <ul class="breadcrumb">
         			<li class="breadcrumb-home"><a href="./"><i class="fas fa-home"></i></a></li>
 					<li><?php echo $_SESSION['campus']==1?'Mérida':'Ticul';?></li>
-        		</ul>
+        		</ul> -->
                 <ul class="nav navbar-nav navbar-right">
 					<li>
                     	<a href="#">

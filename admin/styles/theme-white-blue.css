@@ -87,3 +87,9 @@ body.left-nav-minimized .navigation .nav li a {
 .search-form span.form-control-feedback:focus {
   color: #2da9e9;
 }
+
+.colorboton{
+	background-color: #fff !important;
+	border: 0 #fff !important;
+	margin: 0 !important;
+  }

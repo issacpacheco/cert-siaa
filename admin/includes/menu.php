@@ -84,7 +84,7 @@
                     <li>
                         <a onclick="getPageMenu('pr-transferencia')">
                             <i class="fas fa-exchange white"></i>
-                            <span class="white">Transferencias</span>
+                            <span class="white"> Transferencias</span>
                         </a>
                     </li>
                 </ul>
@@ -98,13 +98,27 @@
                     <li>
                         <a onclick="getPageMenu('pr-facturas')">
                             <i class="fas fa-abacus white"></i>
-                            <span class="white">Facturas</span>
+                            <span class="white"> Facturas</span>
                         </a>
                     </li>
                     <li>
                         <a onclick="getPageMenu('pr-facturas')">
                             <i class="fas fa-abacus white"></i>
-                            <span class="white">Proyectos</span>
+                            <span class="white"> Proyectos</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#submenuSeptup" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-cog"></i>
+                    <span>Configuración</span>
+                </a>
+                <ul class="collapse nav primary essubmenu" id="submenuSeptup">
+                    <li>
+                        <a onclick="universalLoad(this)" data-postload="0" data-returnpage="pr-inicio" data-form="" data-page="perfil" data-carpeta="ajax-edit" data-load="contenedor" data-valores="" data-id="<?php echo $_SESSION['id_admin']; ?>">
+                            <i class="fas fa-user-cog white"></i>
+                            <span class="white"> Preferencias</span>
                         </a>
                     </li>
                 </ul>

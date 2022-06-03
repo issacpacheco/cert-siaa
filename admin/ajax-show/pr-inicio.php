@@ -182,9 +182,9 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                         </div>
                         <div class="col-lg-4">
                             <div class="col-lg-12">
-                                <div class="card" style="height: 66.5rem;">
-                                    <div class="card-body">
-                                        <div class="year-calendar"></div>
+                                <div class="card" style="height: 68.5rem;">
+                                    <div class="calendariogoogle">
+                                        <?php echo $_SESSION['calendario'] ?>
                                     </div>
                                 </div>
                                 <!-- /# card -->

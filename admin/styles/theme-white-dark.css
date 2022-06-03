@@ -87,3 +87,17 @@ body.left-nav-minimized .navigation .nav li a {
 .search-form span.form-control-feedback:focus {
   color: #314557;
 }
+
+.colorboton{
+	background-color: rgba(49,69,87,0.85) !important;
+	border: 0 rgba(49,69,87,0.85) !important;
+	margin: 0 !important;
+}
+
+.colorboton p{
+	color: #fff !important;
+}
+
+.colorboton ul > li > a {
+	color: #fff !important;
+}

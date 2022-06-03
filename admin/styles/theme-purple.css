@@ -28,3 +28,9 @@ body.no-bg-img .navigation:after {
   background: #6400b4;
   background: linear-gradient(to right, rgba(100,0,180,0) 5%, rgba(100, 0, 230, 0.9) 100%);
 }
+
+.colorboton{
+  background-color: #fff !important;
+  border: 0 #fff !important;
+  margin: 0 !important;
+}

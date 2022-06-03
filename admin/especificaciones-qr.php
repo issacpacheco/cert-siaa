@@ -1,5 +1,22 @@
 <?php
 include( "includes/config.php" );
+include("class/allClass.php");
+$codigo = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+use nsalmacen\almacen;
+use nsfunciones\funciones;
+
+$fn = new funciones();
+$almacen = new almacen();
+
+
+$info 			= $almacen -> obtener_material($codigo);
+$fotos          = $almacen -> obtener_fotos_prestamo('upload/materiales/'.$codigo);
+if($fotos == "no existe"){
+    $cont = 0;
+}else{
+    $cont = count($fotos['archivo']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -48,7 +65,7 @@ include( "includes/config.php" );
     <noscript><link href="plugins/jQuery-File-Upload-9.12.1/css/jquery.fileupload-ui-noscript.css" rel="stylesheet" ></noscript>
 </head>
 
-<body class="hold-transition"  onload="nobackbutton();">
+<body class="hold-transition">
 
 	<!-- Header -->
 	<?php include("includes/header.php");?>
@@ -72,65 +89,48 @@ include( "includes/config.php" );
                             <h2 class="text-center">Información del codigo QR</h2>
                         </div>
                         <div class="panel-body">
-                            <h1 class="text-center"><?php ?></h1>
+                            <h1 class="text-center"><?php echo $info['nombre'][0] ?></h1>
                             <hr />
                             <div class="panel-heading">
                                 <div class="profile-avatar-container">
                                     <div  id="crop-avatar" class="profile-avatar">
                                         <!-- Current avatar -->
-                                        <div class="avatar-view" title="Cambiar imagen de perfil">
-                                            <div class="ih-item square  from_top_and_bottom" style="width: 165px; height: 204px; margin: 0 auto;border:0;box-shadow: none">			
-                                                <a href="javascript: void(0)">
-                                                    <div class="img">
-                                                        <?php 
-                                                        if (file_exists('../images/usuarios/'.$usuario['id'][0].'/foto.jpg')){
-                                                            $img = 'images/usuarios/'.$usuario['id'][0].'/foto.jpg?v='.rand();
-                                                        }else{
-                                                            $img = 'images/avatar.png';
-                                                        }
-                                                        ?>
-                                                        <img src="<?php echo $img ?>" title="imagen del material" >
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>		
+                                        <div class="demo-gallery">
+											<div class="container-fluid">
+												<div class="row text-center justify-content-center nopadding">
+													<div class="row text-center justify-content-center nopadding">
+														<?php for($i = 0; $i < $cont; $i++){ ?>
+														<div class="col-md-2 col-12 text-start mbottom10 bg-naranja nopadding">
+															<a data-fancybox="gallery" data-src="" data-caption="" >
+																<img src="<?php echo $fotos["archivo"][$i]; ?>" class="img-fluid zoom" alt="" title="" width="300" height="300"/>
+															</a>
+														</div>
+														<?php } ?>
+													</div>
+												</div>
+											</div>
+										</div>		
                                         <br>
                                         <!-- Loading state -->
                                         <div class="loading" aria-label="Cargando..." role="img" tabindex="-1"></div>
                                     </div>
                             </div>
                             <div class="row panel-body">
-                                <table class="table">
+                                <table class="table table-bordered">
                                     <thead>
                                         <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nombre</th>
-                                        <th scope="col">Cantidad en Existencia</th>
-                                        <th scope="col">Ultimo Prestamo</th>
-                                        <th scope="col">Ultima Actualización</th>
+											<th scope="col">ID Material</th>
+											<th scope="col">Nombre</th>
+											<th scope="col">Descripcion</th>
+											<th scope="col">Cantidad</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
-                                            <td>@mdo</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
-                                            <td>@fat</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
-                                            <td>@twitter</td>
+                                            <th scope="row"><?php echo $info['id'][0]; ?></th>
+                                            <td><?php echo $info['nombre'][0]; ?></td>
+                                            <td><?php echo $info['descripcion'][0]; ?></td>
+                                            <td><?php echo $info['cantidad'][0]; ?></td>
                                         </tr>
                                     </tbody>
                                 </table>

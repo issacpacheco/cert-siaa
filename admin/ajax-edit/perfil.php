@@ -120,6 +120,46 @@ $usuario    = $info     -> obtener_usuario($id);
                             &nbsp;&nbsp;Mostrar Contraseñas
                         </div>
                     </div>
+
+                    <div class="form-wrapper col-sm-4">
+                        <label>iFrame GOOGLE Calendar </label> <i class="fas fa-info btn btn-info""  data-toggle="modal" data-target="#exampleModalCenter"></i>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="iframegoogle" id="iframegoogle" value="<?php echo $usuario['iframe_google'][0]; ?>" placeholder="Iframe Google Calendar">
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Launch demo modal
+                    </button> -->
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2 class="modal-title" id="exampleModalLongTitle">Calendario Google</h2>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3>En este apartado agregaremos nuestro calendario de Google si es que lo deseamos. <br>
+                                    Si deseas continuar, haz clic en el boton "Ir a google" y seguir las instrucciones que nos da el soporte de google,
+                                    una vez hecho los pasos, google nos dice que copiemos una linea que tiene como titulo "Incorporar código", 
+                                    nosotros le daremos clic al boton que dice "Personalizar", este nos llevara a otra pagina donde podemos seleccionar el color que queramos<br>
+                                    Los unicos importantes a modificar son "width" al cual le daremos un valor 500 y "height" le daremos un valor 625, lo demas queda a gusto suyo.
+                                    Luego de ello hasta la parte de arriba esta el codigo que debemos copiar; ya copiado lo pegaremos en el campo que dice "iFrame Google Calendar" <br>
+
+                                    Gracias!</h3>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                                    <button type="button" class="btn btn-primary" onclick="window.open('https://support.google.com/calendar/answer/41207?hl=es-419','_blank')">Ir a google</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="mright textright">
                     <button type="button" class="btnRegresar right btngral" onclick="saveInfo('usuario-edit', 'pr-usuarios', this);">

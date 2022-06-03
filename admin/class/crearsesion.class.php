@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 
 class newsesion extends mysqlconsultas{
 
-    public function crearsesion($id, $id_campus, $id_area, $nombre, $nivel){
+    public function crearsesion($id, $id_campus, $id_area, $nombre, $nivel, $calendario, $color){
 
         if (session_status() == PHP_SESSION_NONE) {
             ini_set("session.cookie_lifetime","86400");
@@ -20,6 +20,8 @@ class newsesion extends mysqlconsultas{
 		$_SESSION['area'] = $id_area;
 		$_SESSION['nombre'] = $nombre;
 		$_SESSION['nivel'] = $nivel;
+        $_SESSION['color'] = $color;
+        $_SESSION['calendario'] = $calendario;
 
     }
 

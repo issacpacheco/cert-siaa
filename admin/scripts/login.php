@@ -20,7 +20,9 @@ if($inicio > 0){
     $id_area        = $logeo['id_area'][0];
     $nombre         = $logeo['nombre'][0];
     $nivel          = $logeo['nivel'][0];
-    $nueva_sesion   = $get->crearsesion($id, $id_campus, $id_area, $nombre, $nivel);
+    $calendario     = $logeo['iframe_google'][0];
+    $color          = $logeo['tema_color'][0];
+    $nueva_sesion   = $get->crearsesion($id, $id_campus, $id_area, $nombre, $nivel,$calendario,$color);
     echo "1";
 }else{
     echo "0";

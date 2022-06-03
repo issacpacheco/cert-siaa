@@ -28,7 +28,7 @@ $cmaterialesasignados   = $fn       -> cuentarray($materialesasignados);
         </div>
         <div class="panel-body">
             <form id="frmRegistro">
-                <input type="hidden" name="id_categoria" id="id_categoria" value="<?php echo $id; ?>">
+                <input type="hidden" name="id" id="id" value="<?php echo $id; ?>">
                 <div class="row">
                     <div class="form-wrapper col-sm-4">
                         <label>Nombre</label>
@@ -66,7 +66,7 @@ $cmaterialesasignados   = $fn       -> cuentarray($materialesasignados);
                     </div>
                 </div>
                 <div class="mright textright">
-                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('categoria-edit', 'pr-categorias', this);">
+                    <button type="button" class="btnRegresar right btngral" onclick="saveInfo('bodeguita-edit', 'pr-bodeguitas', this);">
                         <span class="letrablanca font14">Guardar</span>
                     </button>
                 </div>
