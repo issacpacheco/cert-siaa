@@ -19,9 +19,11 @@ $cmateriales    = $fn->cuentarray($materiales);
                     Lista de Materiales/Equipos/etc...
                 </div>
                 <div class="col-6 mright textright">
-                    <!-- <button id="idtest" onclick="openPopup(this, 450, 450)" data-postload="0" data-returnpage="pr-materiales" data-valores="" data-form="" data-page="importacion-productos" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
+                    <?php if($_SESSION['area'] == 6){ ?>
+                    <button id="idtest" onclick="openPopup(this, 450, 450)" data-postload="0" data-returnpage="pr-materiales" data-valores="" data-form="" data-page="importacion-productos" data-carpeta="ajax-popup" data-load="board" data-id="" class="btngral botonVerde"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                         <span class="letrablanca font14">Importar Lista</span>
-                    </button> -->
+                    </button>
+                    <?php } ?>
                     <button id="idtest" onclick="universalLoad(this)" data-postload="0" data-regresar="pr-materiales" data-valores="" data-form="" data-page="materiales-add" data-carpeta="ajax-add" data-load="contenedor" data-id="" class="btngral botonVerde mright"><span class="fas fa-plus-circle font16"></span><span class="letrablanca font14">
                         <span class="letrablanca font14">Agregar</span>
                     </button>

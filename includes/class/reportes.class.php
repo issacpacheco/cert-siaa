@@ -93,19 +93,19 @@ class reportes extends mysqlconsultas{
 
     public function obtener_graficas_medios_prospectos($campus, $fecha_ini, $fecha_fin){
         $qry = "SELECT 
-                COUNT(CASE WHEN p.medio = 'Facebook' THEN 1 END) facebook,
-                COUNT(CASE WHEN p.medio = 'Google' THEN 1 END) google,
-                COUNT(CASE WHEN p.medio = 'Instagram' THEN 1 END) instagram,
-                COUNT(CASE WHEN p.medio = 'Whatsapp' THEN 1 END) whatsapp,
-                COUNT(CASE WHEN p.medio = 'Periódico' THEN 1 END) periodico,
-                COUNT(CASE WHEN p.medio = 'Ferias vocacionales' THEN 1 END) ferias_vocacionales,
-                COUNT(CASE WHEN p.medio = 'Espectaculares' THEN 1 END) espectaculares,
-                COUNT(CASE WHEN p.medio = 'Visita al plantel' THEN 1 END) visita_plantel,
-                COUNT(CASE WHEN p.medio = 'Publicidad en transporte público' THEN 1 END) publicidad_transporte_publico,
-                COUNT(CASE WHEN p.medio = 'Televisión' THEN 1 END) television,
-                COUNT(CASE WHEN p.medio = 'Recomendación' THEN 1 END) recomendacion,
-                COUNT(CASE WHEN p.medio = 'Otros' THEN 1 END) otros
-                FROM prospectos p WHERE p.id_campus = '".$campus."' AND p.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY p.fecha_registro";
+                COUNT(CASE WHEN p.medio = 1 THEN 1 END) facebook,
+                COUNT(CASE WHEN p.medio = 2 THEN 1 END) google,
+                COUNT(CASE WHEN p.medio = 3 THEN 1 END) instagram,
+                COUNT(CASE WHEN p.medio = 4 THEN 1 END) whatsapp,
+                COUNT(CASE WHEN p.medio = 5 THEN 1 END) periodico,
+                COUNT(CASE WHEN p.medio = 6 THEN 1 END) ferias_vocacionales,
+                COUNT(CASE WHEN p.medio = 7 THEN 1 END) espectaculares,
+                COUNT(CASE WHEN p.medio = 8 THEN 1 END) visita_plantel,
+                COUNT(CASE WHEN p.medio = 9 THEN 1 END) publicidad_transporte_publico,
+                COUNT(CASE WHEN p.medio = 10 THEN 1 END) television,
+                COUNT(CASE WHEN p.medio = 11 THEN 1 END) recomendacion,
+                COUNT(CASE WHEN p.medio = 12 THEN 1 END) otros
+                FROM prospectos p WHERE p.id_campus = '$campus' AND p.fecha_registro BETWEEN '$fecha_ini' AND '$fecha_fin' ORDER BY p.fecha_registro";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -130,7 +130,7 @@ class reportes extends mysqlconsultas{
                 COUNT(CASE WHEN p.id_oferta = 16 THEN 1 END) doctorado_educacion,
                 COUNT(CASE WHEN p.id_oferta = 22 THEN 1 END) medico_cirujano,
                 COUNT(CASE WHEN p.id_oferta = 25 THEN 1 END) turismo
-                FROM prospectos p WHERE p.id_campus = '".$campus."' AND p.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY p.fecha_registro";
+                FROM prospectos p WHERE p.id_campus = '$campus' AND p.fecha_registro BETWEEN '$fecha_ini' AND '$fecha_fin' ORDER BY p.fecha_registro";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -149,7 +149,7 @@ class reportes extends mysqlconsultas{
                 COUNT(CASE WHEN a.medio = 10 THEN 1 END) television,
                 COUNT(CASE WHEN a.medio = 11 THEN 1 END) recomendacion,
                 COUNT(CASE WHEN a.medio = 12 THEN 1 END) otros
-                FROM aspirantes a WHERE a.id_campus = '".$campus."' AND a.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY a.fecha_registro";
+                FROM aspirantes a WHERE a.id_campus = '$campus' AND a.fecha_registro BETWEEN '$fecha_ini' AND '$fecha_fin' ORDER BY a.fecha_registro";
         $res = $this->consulta($qry);
         return $res;
     }
