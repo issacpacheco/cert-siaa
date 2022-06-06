@@ -10,6 +10,9 @@ $fn     = new funciones();
 
 $materiales     = $info -> obtener_materiales_salida();
 $cmateriales    = $fn   -> cuentarray($materiales);
+
+$proyectos      = $info -> obtener_proyectos();
+$cproyectos     = $fn   -> cuentarray($proyectos);
 ?>
 
 <div class="col-sm-12">
@@ -52,12 +55,19 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                             <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
                         </div>
                     </div>
-                    <div class="form-wrapper col-sm-4" id="nombre_proyecto" style="display: none;">
+                    <?php if($_SESSION['area'] == 6){ ?>
+                    <div class="form-wrapper col-sm-4" id="nombre_proyecto"">
                         <label>Proyecto donde se usara</label>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="proyecto[]" id="proyecto" placeholder="proyecto" value="" autocomplete="FALSE">
+                            <select name="id_proyecto[]" id="id_proyecto" class="form-control">
+                                <option value="0">Seleccione un proyecto</option>
+                                <?php for($i = 0; $i < $cproyectos; $i++){ ?>
+                                <option value="<?php echo $proyectos['id'][$i]; ?>"><?php echo $proyectos['nombre'][$i] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>
                     </div>
+                    <?php } ?>
                     <div class="row" id="rango_fechas" style="display: none;">
                         <label for="">Selecciona un rango de fecha del prestamo</label>
                         <div class="input-group">

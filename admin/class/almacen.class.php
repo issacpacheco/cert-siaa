@@ -618,6 +618,23 @@ class almacen extends mysqlconsultas{
         return $res;
     }
 
+    public function obtener_proyectos(){
+        $qry = "SELECT * FROM inv_proyectos";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_proyecto($id){
+        $qry = "SELECT s.id, m.id AS idmaterial, SUM(s.cantidad) AS total, p.nombre, m.nombre AS nombrematerial, (SUM(s.cantidad) * c.precio) AS totalxmaterial, c.precio
+                FROM inv_salida_producto s 
+                LEFT JOIN inv_proyectos p ON p.id = s.proyecto 
+                LEFT JOIN inv_productos m ON m.id = s.id_producto 
+                LEFT JOIN inv_campus_producto c ON c.id_producto = m.id 
+                WHERE s.proyecto = $id AND c.id_campus = {$_SESSION['campus']} GROUP BY s.id_producto";
+        $res = $this -> consulta($qry);
+        return $res;
+    }
+
 }
 
 

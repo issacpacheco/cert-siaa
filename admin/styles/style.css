@@ -5641,3 +5641,9 @@ body.no-pace .pace, body.no-pace .pace .pace-progress {
 	visibility: hidden;
 	cursor: pointer;
 }
+
+/* Importants */
+
+.select2-container {
+  width: 100% !important;
+}

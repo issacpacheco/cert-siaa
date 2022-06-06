@@ -87,6 +87,14 @@
                             <span class="white"> Transferencias</span>
                         </a>
                     </li>
+                    <?php if($_SESSION['area'] == 6){ ?>
+                    <li>
+                        <a onclick="getPageMenu('pr-proyectos')"> 
+                            <i class="fas fa-project-diagram white"></i>
+                            <span class="white"> Proyectos</span>
+                        </a>
+                    </li>  
+                    <?php } ?>
                 </ul>
             </li>
             <li>

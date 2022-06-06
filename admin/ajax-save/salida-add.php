@@ -13,7 +13,7 @@ $ejecucion = new mysqlconsultas();
 
 $producto    = $_REQUEST['producto'];
 $cantidad    = $_REQUEST['cantidad'];
-$proyecto    = $_REQUEST['proyecto'];
+$proyecto    = $_REQUEST['id_proyecto'];
 $idusuario   = $_SESSION['id_admin'];
 $idcampus    = $_SESSION['campus'];
 $prestamo    = filter_input(INPUT_POST, 'prestamo', FILTER_SANITIZE_NUMBER_INT);
