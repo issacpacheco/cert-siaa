@@ -179,7 +179,7 @@ class reportes extends mysqlconsultas{
         return $res;
     }
 
-    public function obtener_graficas_instituciones($campus, $fecha_ini, $fecha_fin){
+    public function obtener_graficas_instituciones_prospectos($campus, $fecha_ini, $fecha_fin){
         $qry ="SELECT id, COUNT(case when institucion = institucion THEN 1 end) as total, institucion 
                 FROM prospectos 
                 WHERE id_campus = '".$campus."'  AND fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."'  GROUP BY institucion ORDER BY total DESC LIMIT 10";
@@ -187,7 +187,7 @@ class reportes extends mysqlconsultas{
         return $res;
     }
 
-    public function obtener_horario_preferencia($campus, $fecha_ini, $fecha_fin){
+    public function obtener_horario_preferencia_prospectos($campus, $fecha_ini, $fecha_fin){
         $qry = "SELECT 
                 COUNT(CASE WHEN p.horario = 'Mañana' THEN 1 END) Matutino,
                 COUNT(CASE WHEN p.horario = 'Tarde' THEN 1 END) Vespertino,
