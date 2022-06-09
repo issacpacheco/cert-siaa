@@ -130,7 +130,7 @@ class reportes extends mysqlconsultas{
                 COUNT(CASE WHEN p.id_oferta = 16 THEN 1 END) doctorado_educacion,
                 COUNT(CASE WHEN p.id_oferta = 22 THEN 1 END) medico_cirujano,
                 COUNT(CASE WHEN p.id_oferta = 25 THEN 1 END) turismo
-                FROM prospectos p WHERE p.id_campus = '$campus' AND p.fecha_registro BETWEEN '$fecha_ini' AND '$fecha_fin' ORDER BY p.fecha_registro";
+                FROM prospectos p WHERE p.id_campus = '".$campus."' AND p.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY p.fecha_registro";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -149,7 +149,7 @@ class reportes extends mysqlconsultas{
                 COUNT(CASE WHEN a.medio = 10 THEN 1 END) television,
                 COUNT(CASE WHEN a.medio = 11 THEN 1 END) recomendacion,
                 COUNT(CASE WHEN a.medio = 12 THEN 1 END) otros
-                FROM aspirantes a WHERE a.id_campus = '$campus' AND a.fecha_registro BETWEEN '$fecha_ini' AND '$fecha_fin' ORDER BY a.fecha_registro";
+                FROM aspirantes a WHERE a.id_campus = '".$campus."' AND a.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY a.fecha_registro";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -175,6 +175,24 @@ class reportes extends mysqlconsultas{
                 COUNT(CASE WHEN a.id_oferta = 22 THEN 1 END) medico_cirujano,
                 COUNT(CASE WHEN a.id_oferta = 25 THEN 1 END) turismo
                 FROM aspirantes a WHERE a.id_campus = '".$campus."' AND a.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."' ORDER BY a.fecha_registro";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_graficas_instituciones($campus, $fecha_ini, $fecha_fin){
+        $qry ="SELECT id, COUNT(case when institucion = institucion THEN 1 end) as total, institucion 
+                FROM prospectos 
+                WHERE id_campus = '".$campus."'  AND fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."'  GROUP BY institucion ORDER BY total DESC LIMIT 10";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_horario_preferencia($campus, $fecha_ini, $fecha_fin){
+        $qry = "SELECT 
+                COUNT(CASE WHEN p.horario = 'Mañana' THEN 1 END) Matutino,
+                COUNT(CASE WHEN p.horario = 'Tarde' THEN 1 END) Vespertino,
+                COUNT(CASE WHEN p.horario = 'Indistinto' THEN 1 END) Indistinto
+                FROM prospectos p WHERE p.id_campus = '".$campus."' AND p.fecha_registro BETWEEN '".$fecha_ini."' AND '".$fecha_fin."'";
         $res = $this->consulta($qry);
         return $res;
     }

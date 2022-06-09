@@ -58,19 +58,16 @@ $ejecucion 	= new mysqlconsultas();
 
 			$_DATOS_EXCEL[$i]['nombre'] 			= $objPHPExcel->getActiveSheet()->getCell('A'.$i)->getCalculatedValue();
 			$_DATOS_EXCEL[$i]['descripcion'] 		= $objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
-			$_DATOS_EXCEL[$i]['numero_serie'] 		= $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
-			$_DATOS_EXCEL[$i]['unidad']      		= $objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
+			$_DATOS_EXCEL[$i]['unidad']      		= $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
 			$_DATOS_EXCEL[$i]['id_usuario_alta']	= $_SESSION['id_admin'];
 			$_DATOS_EXCEL[$i]['fecha_registro']		= date('Y-m-d');
 			$_DATOS_EXCEL[$i]['hora_registro']		= $hora;
-			$_DATOS_EXCEL[$i]['id_categoria'] 		= 0;
-			$_DATOS_EXCEL[$i]['estatus'] 			= 1;
 			$_DATOS_EXCEL[$i]['id_area'] 			= $_SESSION['area'];
 		}		
 		$errores=0;
 
 		foreach($_DATOS_EXCEL as $campo => $valor){
-			$sql = "INSERT INTO inv_productos  (nombre,descripcion,numero_serie,id_unidad,id_usuario_alta,fecha_registro,hora_registro,id_categoria,estatus,id_area)  VALUES ('";
+			$sql = "INSERT INTO inv_productos  (nombre,descripcion,id_unidad,id_usuario_alta,fecha_registro,hora_registro,id_area)  VALUES ('";
 			foreach ($valor as $campo2 => $valor2){
 				if($campo2 == "unidad"){
 					$unidad = $info -> obtener_unidad($valor2);
