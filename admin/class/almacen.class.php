@@ -186,7 +186,7 @@ class almacen extends mysqlconsultas{
                     FROM inv_salida_transferencia e
                     LEFT JOIN inv_productos p ON p.id = e.id_producto
                     LEFT JOIN inv_usuario u ON u.id = e.id_usuario
-                    WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']}
+                    WHERE e.id_campus = {$_SESSION['campus']} AND p.id_area = {$_SESSION['area']} GROUP BY e.codigo_transfer
                     ORDER BY e.fecha DESC, e.hora DESC";
             $res = $this->consulta($qry);
             return $res;

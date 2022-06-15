@@ -1115,6 +1115,19 @@ figure {
 img {
   vertical-align: middle;
 }
+
+.logo-position{
+  position: relative !important;
+  margin-left: -85px !important;
+  margin-top: 10px !important;
+}
+
+.texto-position{
+  position: relative !important;
+  margin-left: -150px !important;
+  margin-top: 10px !important;
+}
+
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,

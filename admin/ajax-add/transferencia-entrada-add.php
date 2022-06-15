@@ -33,7 +33,7 @@ $cmateriales    = $fn   -> cuentarray($materiales);
                         </div>
                     </div>
                 </div>
-                <div class="row" id="listadoprestamos">
+                <div id="listadoprestamos">
 
                 </div>
                 <div class="mright textright">

@@ -1,5 +1,6 @@
 <?php
 include("../../class/allClass.php");
+header('Content-Type: text/html; charset=utf-8');
 use nsalmacen\almacen;
 use nsfunciones\funciones;
 
@@ -14,7 +15,7 @@ $clista     = $fn   ->cuentarray($lista);
 $origen = $lista['campus_origen'][0];
 $destino = $lista['campus_destino'][0];
 // $web = "https://parzibyte.me/blog";
-$mensajePie = "CENTRO EDUCATIVO RODRIGUEZ TAMAYO";
+$mensajePie = "Centro de Estudios Rodríguez Tamayo";
 
 
 
@@ -39,33 +40,36 @@ $html = "<!DOCTYPE html>
 <body>
     <div class='container-fluid'>
         <div class='row'>
-            <div class='col-xs-10 '>
-                <h1>Transferencia</h1>
-            </div>
-            <div class='col-xs-2'>
-                <img class='img img-responsive' src='../../images/backgrounds/logo.png' alt='Logotipo'>
-            </div>
-        </div>
-        <hr>
-        <div class='row'>
             <div class='col-xs-10'>
-                <h1 class='h5'><strong>Responsable de envio: </strong>".$lista['nombre'][0]."</h1>
-                <h1 class='h5'><strong>Viaje: </strong>".$origen."-".$destino."</h1>
-                <h1 class='h5'><strong>Fecha: </strong>".$fecha."</h1>
-                <h1 class='h5'><strong>Codigo de transferencia: </strong>".$clave."</h1>
+                <h1>Transferencia</h1>
+                <div class='row'>
+                    <div class='col-xs-10'>
+                        <h1 class='h5'><strong>Responsable de envio: </strong>".$lista['nombre'][0]."</h1>
+                        <h1 class='h5'><strong>Viaje: </strong>".utf8_encode(html_entity_decode($origen))."-".utf8_encode(html_entity_decode($destino))."</h1>
+                        <h1 class='h5'><strong>Fecha: </strong>".$fecha."</h1>
+                        <h1 class='h5'><strong>Codigo de transferencia: </strong>".$clave."</h1>
+                    </div>
+                    <div class='col-xs-2 text-center'>
+                    </div>
+                </div>
             </div>
-            <div class='col-xs-2 text-center'>
+            <div class='col-xs-10'>
+                <img class='img img-responsive logo-position' src='../../images/backgrounds/logo.png' alt='Logotipo'>
+                <h1 class='h5 texto-position'>".$mensajePie."</h1>
             </div>
         </div>
-        <hr>
+        <br>
+        
+        <br>
+
         <div class='row text-center' style='margin-bottom: 2rem;'>
             <div class='col-xs-6'>
                 <h1 class='h2'>Almacen de origen</h1>
-                <strong class='h3'>".$origen."</strong>
+                <strong class='h3'>".utf8_encode(html_entity_decode($origen))."</strong>
             </div>
             <div class='col-xs-6'>
                 <h1 class='h2'>Almacen de destino</h1>
-                <strong class='h3'>".$destino."</strong>
+                <strong class='h3'>".utf8_encode(html_entity_decode($destino))."</strong>
             </div>
         </div>
         <div class='row'>
@@ -80,7 +84,7 @@ $html = "<!DOCTYPE html>
                     <tbody>";
                     for($i = 0; $i < $clista; $i++){
                         $html .= "<tr>
-                            <td>".$lista["producto"][$i]."</td>
+                            <td>".utf8_encode(html_entity_decode($lista["producto"][$i]))."</td>
                             <td>".$lista["cantidad"][$i]."</td>
                         </tr>";
                     }
@@ -95,12 +99,12 @@ $html = "<!DOCTYPE html>
             </div>
             <div class='col-xs-6'>
                 <p>____________________________________</p>
-                <h6 class='text-center'>Firma de entregado</h6>
+                <h6 class='text-center'>Firma de recibido</h6>
             </div>
         </div>
         <div class='row'>
             <div class='col-xs-12 text-center'>
-                <p class='h5'>".$mensajePie."</p>
+                
             </div>
         </div>
     </div>
