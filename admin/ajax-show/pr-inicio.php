@@ -60,7 +60,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                     <div class="col-lg-8 p-r-0 title-margin-right">
                         <div class="page-header">
                             <div class="page-title">
-                                <h1>Hola <?php echo $_SESSION['nombre']; ?>, <span>Bienvenid@ de nuevo al sistema de inventario</span></h1>
+                                <h1>Hola <?php echo utf8_encode(html_entity_decode($_SESSION['nombre'])); ?>, <span>Bienvenid@ de nuevo al sistema de inventario</span></h1>
                             </div>
                         </div>
                     </div>
@@ -297,7 +297,7 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                             <?php for($i = 0,$a=0; $i < $ctransfers; $i++){ $a = $a+1;  ?>
                                                 <tr>
                                                     <td class="btn-success"><?php echo $a; ?></td>
-                                                    <td class="btn-success"><?php echo $transfers['campus_origen'][$i]; ?></td>
+                                                    <td class="btn-success"><?php echo utf8_encode(html_entity_decode($transfers['campus_origen'][$i])); ?></td>
                                                     <td class="btn-success"><?php echo $transfers['campus_destino'][$i]; ?></td>
                                                     <td class="btn-success"><?php echo $transfers['codigo_transfer'][$i]; ?></td>
                                                     <td class="text-center btn-success"><i class="btn btn-danger fas fa-file-pdf" onclick="generarreporte('<?php echo $transfers['codigo_transfer'][$i]; ?>');"></i></td>

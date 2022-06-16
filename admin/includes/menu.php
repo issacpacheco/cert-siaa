@@ -109,12 +109,12 @@
                             <span class="white"> Facturas</span>
                         </a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a onclick="getPageMenu('pr-facturas')">
                             <i class="fas fa-abacus white"></i>
                             <span class="white"> Proyectos</span>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </li>
             <li>

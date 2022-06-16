@@ -15,6 +15,12 @@ $csalidas    = $fn    -> cuentarray($salidas);
 
 
 ?>
+<style>
+    .swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{
+            margin: auto;
+            width: 50%;
+        }
+</style>
 <div class="row">
     <div class="col-sm-12">
         <div class="panel">
@@ -143,14 +149,33 @@ $csalidas    = $fn    -> cuentarray($salidas);
     }
     function cancelartransferencia(clave){
         var postpagina = "pr-transferencia";
-        $.ajax({
-            type: 'post',
-            url: 'ajax-delete/cancelartransferencia',
-            data: {folio:clave},
-            success: function(response){
-                alertaVerde('Se elimino la transferencia con exito!');
-                simpleload('contenedor', postpagina);
+        Swal.fire({
+            title: '¿Estas seguro de cancelar la transferencia?',
+            text: "Esta acción no se podra corregir",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, estoy seguro',
+            cancelButtonText: 'No, cancela la acción'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'post',
+                    url: 'ajax-delete/cancelartransferencia',
+                    data: {folio:clave},
+                    success: function(response){
+                        alertaVerde('Se elimino la transferencia con exito!');
+                        simpleload('contenedor', postpagina);
+                    }
+                });
+                Swal.fire(
+                'Eliminado!',
+                'La transferencia ha sido cancelado con exito!',
+                'success'
+                )
             }
         })
+        
     }
 </script>

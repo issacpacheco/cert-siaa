@@ -373,7 +373,7 @@ class almacen extends mysqlconsultas{
                 LEFT JOIN campus c ON c.id = s.id_campus
                 LEFT JOIN campus a ON a.id = s.id_campus_destino
                 LEFT JOIN inv_productos p ON p.id = s.id_producto
-                WHERE s.estatus < 3 AND p.id_area = {$_SESSION['area']} GROUP BY s.codigo_transfer";
+                WHERE s.estatus < 3 AND p.id_area = {$_SESSION['area']} AND s.id_campus = {$_SESSION['campus']} GROUP BY s.codigo_transfer";
             $res = $this->consulta($qry);
             return $res;
         }
@@ -619,7 +619,7 @@ class almacen extends mysqlconsultas{
     }
 
     public function obtener_proyectos(){
-        $qry = "SELECT * FROM inv_proyectos";
+        $qry = "SELECT * FROM inv_proyectos WHERE id_campus = {$_SESSION['campus']}";
         $res = $this->consulta($qry);
         return $res;
     }
