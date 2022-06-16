@@ -52,7 +52,9 @@ class root extends mysqlconsultas{
     }
 
     public function productos_activos($id_area){
-        $qry = "SELECT COUNT(estatus) as disponibles FROM inv_productos WHERE estatus = 1 AND id_area = '$id_area'";
+        $qry = "SELECT COUNT(p.id_estatus) as disponibles FROM inv_campus_producto p
+                LEFT JOIN inv_productos i ON i.id = p.id_producto
+                WHERE p.id_estatus = 1 AND i.id_area = '$id_area'";
         $res = $this->consulta($qry);
         return $res;
     }

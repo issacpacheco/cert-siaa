@@ -82,15 +82,15 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                                     <?php } ?>
                                 </select>
                             </div>
-                            <div class="col-sm-6">
+                            <!-- <div class="col-sm-6">
                                 <label> Selecciona un campus </label>
                                 <select name="id_campus" class="form-control" id="id_campus" onchange="obtener_info_area(this.value);">
                                     <option value="0" selected>Seleccione un area</option>
-                                    <?php for($i = 0; $i < $ccampus; $i++){ ?>
-                                    <option value="<?php echo $campus['id'][$i] ?>"><?php echo utf8_decode($campus['nombre'][$i]); ?></option>
-                                    <?php } ?>
+                                    <?php //for($i = 0; $i < $ccampus; $i++){ ?>
+                                    <option value="<?php //echo $campus['id'][$i] ?>"><?php //echo utf8_decode($campus['nombre'][$i]); ?></option>
+                                    <?php //} ?>
                                 </select>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <?php } ?>

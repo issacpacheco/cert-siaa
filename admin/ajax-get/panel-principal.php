@@ -60,13 +60,17 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                 <section id="main-content">
                     <!-- /# row -->
                     <div class="row card">
-                        <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
-                        <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
-                            <option value="0" selected>Seleccione un area</option>
-                            <?php for($i = 0; $i < $careas; $i++){ ?>
-                                <option value="<?php echo $areas['id'][$i] ?>" <?php echo $id_area == $areas['id'][$i] ? 'selected' : ''; ?>><?php echo utf8_decode($areas['nombre'][$i]); ?></option>
-                            <?php } ?>
-                        </select>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>¿Necesita ver toda esta información de un area en especifico? Solo seleccione el area en el siguiente listado </label>
+                                <select name="id_area" class="form-control" id="id_area" onchange="obtener_info_area(this.value);">
+                                    <option value="0" selected>Seleccione un area</option>
+                                    <?php for($i = 0; $i < $careas; $i++){ ?>
+                                        <option value="<?php echo $areas['id'][$i] ?>" <?php echo $id_area == $areas['id'][$i] ? 'selected' : ''; ?>><?php echo utf8_decode($areas['nombre'][$i]); ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                     <div class="row card">
                         <h4>Top 6 materiales mas solicitados</h4>
