@@ -184,7 +184,8 @@ for($i = 0;$i < count($gatosdelmes); $i++){
                             <div class="col-lg-12">
                                 <div class="card" style="height: 68.5rem;">
                                     <div class="calendariogoogle">
-                                        <?php echo $_SESSION['calendario'] ?>
+                                        <?php 
+                                        echo html_entity_decode(str_replace("'", '"',$_SESSION['calendario'])); ?>
                                     </div>
                                 </div>
                                 <!-- /# card -->

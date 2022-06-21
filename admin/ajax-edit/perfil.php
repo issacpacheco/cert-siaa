@@ -124,7 +124,23 @@ $usuario    = $info     -> obtener_usuario($id);
                     <div class="form-wrapper col-sm-4">
                         <label>iFrame GOOGLE Calendar </label> <i class="fas fa-info btn btn-info""  data-toggle="modal" data-target="#exampleModalCenter"></i>
                         <div class="form-group">
-                            <input type="text" class="form-control" name="iframegoogle" id="iframegoogle" value="<?php echo $usuario['iframe_google'][0]; ?>" placeholder="Iframe Google Calendar">
+                            <input type="text" class="form-control" name="iframe" id="iframegoogle" value="<?php echo $usuario['iframe_google'][0]; ?>" placeholder="Iframe Google Calendar">
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper col-sm-4">
+                        <label>Preferencia de aspecto (color) </label>
+                        <div class="form-group">
+                            <select name="color" id="colores" class="form-control">
+                                <option value="" selected>Selecciona un aspecto</option>
+                                <option value="theme-dark.css" <?php if($usuario['tema_color'][0] == "theme-dark.css"){ echo "selected"; } ?>>Oscuro</option>
+                                <option value="theme-green.css" <?php if($usuario['tema_color'][0] == "theme-green.css"){ echo "selected"; } ?>>Verde</option>
+                                <option value="theme-red.css" <?php if($usuario['tema_color'][0] == "theme-red.css"){ echo "selected"; } ?>>Rojo</option>
+                                <option value="theme-purple.css" <?php if($usuario['tema_color'][0] == "theme-purple.css"){ echo "selected"; } ?>>Purpura</option>
+                                <option value="theme-blue.css" <?php if($usuario['tema_color'][0] == "theme-blue.css"){ echo "selected"; } ?>>Azul</option>
+                                <option value="theme-orange.css" <?php if($usuario['tema_color'][0] == "theme-orange.css"){ echo "selected"; } ?>>Naranja</option>
+                                <option value="theme-white-dark.css" <?php if($usuario['tema_color'][0] == "theme-white-dark.css"){ echo "selected"; } ?>>Oscuro y blanco</option>
+                            </select>
                         </div>
                     </div>
 

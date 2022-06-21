@@ -1,7 +1,7 @@
 <?php
 include( "includes/config.php");
 $color = filter_input(INPUT_GET, 'color', FILTER_SANITIZE_SPECIAL_CHARS);
-isset($color) ? $_SESSION['color'] = $color : $_SESSION['color'] = "theme-green.css";
+isset($color) ? $_SESSION['color'] = $color : $_SESSION['color'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
