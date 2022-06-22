@@ -223,7 +223,12 @@ $cproyectos     = $fn   -> cuentarray($proyectos);
         if(contador == 1){
             var cambio = destino.appendChild(clon);
             var num = Number(contador + 1);
+            <?php if($_SESSION['area'] !== 6){ ?>
             var cambiofechas = cambio.children[2].children[1].children[1];
+            <?php } ?>
+            <?php if($_SESSION['area'] == 6){ ?>
+            var cambiofechas = cambio.children[3].children[1].children[1];
+            <?php } ?>
             cambiofechas.id = "fechas_"+num;
             $('#fechas_'+num).daterangepicker({
                 "minDate": today,
