@@ -108,3 +108,57 @@ li{
 .fondoblanco {
   background-color: #3a4653 !important;
 }
+
+.swal2-icon .swal2-icon-content {
+  display: flex;
+  align-items: center;
+  font-size: 3.75em;
+  color: #facea8!important;
+}
+
+.swal2-modal .swal2-title {
+  color: #000 !important;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: none;
+  position: relative;
+  margin: 0 0 0.4em;
+  padding: 0;
+  display: block;
+  word-wrap: break-word;
+}
+
+[class^=swal2] {
+  -webkit-tap-highlight-color: transparent;
+  color: black !important;
+}
+
+.swal2-styled.swal2-confirm {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #2778c4 !important;
+  color: #fff !important;
+  font-size: 1em;
+}
+
+.swal2-styled.swal2-cancel {
+  border: 0;
+  border-radius: 0.25em;
+  background: initial;
+  background-color: #757575;
+  color: #fff !important;
+  font-size: 1em;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444 !important;
+  line-height: 28px;
+}
+
+.daterangepicker td.off, .daterangepicker td.off.in-range, .daterangepicker td.off.start-date, .daterangepicker td.off.end-date {
+  background-color: transparent !important;
+  border-color: transparent;
+  color: #997;
+}

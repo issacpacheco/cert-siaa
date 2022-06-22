@@ -50,7 +50,7 @@ $cproyectos     = $fn   -> cuentarray($proyectos);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">
-                        <label>Cantidad de salida(<strong id="cantidad_dispo">10</strong> disponibles de este material)</label>
+                        <label>Cantidad de salida</label>
                         <div class="form-group">
                             <input type="text" class="form-control esnumero" name="cantidad[]" id="cantidad" placeholder="Cantidad" value="" autocomplete="FALSE">
                         </div>
@@ -223,7 +223,7 @@ $cproyectos     = $fn   -> cuentarray($proyectos);
         if(contador == 1){
             var cambio = destino.appendChild(clon);
             var num = Number(contador + 1);
-            var cambiofechas = cambio.children[3].children[1].children[1];
+            var cambiofechas = cambio.children[2].children[1].children[1];
             cambiofechas.id = "fechas_"+num;
             $('#fechas_'+num).daterangepicker({
                 "minDate": today,
