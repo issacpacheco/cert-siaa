@@ -51,6 +51,7 @@ $ccategorias    = $fn->cuentarray($categorias);
     $(document).ready(function () {
         var t = $('#tabla').DataTable({
             "scrollX": true,
+            "stateSave": true,
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
                 "zeroRecords": "No se encontró ningún registro",

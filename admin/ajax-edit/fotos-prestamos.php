@@ -36,6 +36,7 @@ if($fotos == "no existe"){
             <p class="letraroja">*NOTA: Toma las fotos previamente para poder subirlo a este modulo</p>
         </div>
         <div class="panel-body">
+            <h1>FOLIO DE PRESTAMO <labe class="letraroja"><?php echo $id ?></labe></h1>
             <form id="frmRegistro">
                 <input type="hidden" name="claveprestamo" id="claveprestamo" value="<?php echo $id; ?>">
                 <div class="row" id="entrada_add">

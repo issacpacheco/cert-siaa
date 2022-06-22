@@ -113,6 +113,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
     $(document).ready(function () {
         var t = $('#tablaentradas').DataTable({
             "scrollX": true,
+            "stateSave": true,
             "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todo"]],
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
@@ -129,6 +130,7 @@ $csalidas    = $fn    -> cuentarray($salidas);
         });
         var t = $('#tablasalidas').DataTable({
             "scrollX": true,
+            "stateSave": true,
             "lengthMenu": [[5, 10, 25, 50, -1], [5, 10, 25, 50, "Todo"]],
             "language": {
                 "lengthMenu": "Mostrar _MENU_ registros por página",
