@@ -80,8 +80,8 @@ $cbodegas               = $fn   ->  cuentarray($bodegas);
                         <label>Estatus</label>
                         <div class="form-group">
                             <select name="estatus" id="estatus" class="form-control">
-                                <option value="0">Inactivo</option>
-                                <option value="1">Activo</option>
+                                <option value="0">No disponible</option>
+                                <option value="1">Disponible</option>
                             </select>
                         </div>
                     </div>

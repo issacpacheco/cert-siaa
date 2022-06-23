@@ -86,8 +86,8 @@ $precio             = $info ->  obtener_precio($id);
                         <div class="form-group">
                             <select name="estatus" id="estatus" class="form-control">
                                 <option value="2" selected>Selecciona un estatus</option>
-                                <option value="1" <?php if($material['id_estatus'][0] == 1){ echo "selected"; }?>>Activo</option>
-                                <option value="0" <?php if($material['id_estatus'][0] == 0){ echo "selected"; }?>>Inactivo</option>
+                                <option value="1" <?php if($material['id_estatus'][0] == 1){ echo "selected"; }?>>Disponible</option>
+                                <option value="0" <?php if($material['id_estatus'][0] == 0){ echo "selected"; }?>>No disponible</option>
                             </select>
                         </div>
                     </div>
