@@ -118,6 +118,56 @@
                 </ul>
             </li>
             <li>
+                <a href="#submenuAdmonVehicular" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <i class="fas fa-cabinet-filing"></i>
+                    <span>Administración vrhicular</span>
+                </a>
+                <ul class="collapse nav primary essubmenu" id="submenuAdmonVehicular">
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-combustibles')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Combustible</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-gastos-adicionales')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Gastos adicionales</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-incidentes')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Incidentes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-mantenimento')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Manteninmiento</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-panel-vehicular')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Panel vehicular</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a onclick="getPageMenu('pr-tr-vehiculo')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Vehiculos</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a onclick="getPageMenu('pr-facturas')">
+                            <i class="fas fa-abacus white"></i>
+                            <span class="white"> Proyectos</span>
+                        </a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
                 <a href="#submenuSeptup" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-cog"></i>
                     <span>Configuración</span>
