@@ -39,8 +39,13 @@ $precio             = $info ->  obtener_precio($id);
 
 <div class="col-sm-12">
     <div class="panel">
-        <div class="panel-heading">
-            Agregar Material/Producto/Equipo/Etc...
+        <div class="panel-heading row">
+            <div class="col-sm-10">
+                Agregar Material/Producto/Equipo/Etc...
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-warning" onclick="">Imprimir codigo</button>
+            </div>
         </div>
         <div class="panel-body">
             <form id="frmRegistro">
