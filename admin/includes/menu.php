@@ -95,6 +95,14 @@
                         </a>
                     </li>  
                     <?php } ?>
+                    <?php if($_SESSION['area'] == 3){ ?>
+                    <li>
+                        <a onclick="getPageMenu('pr-departamentos')"> 
+                            <i class="fas fa-project-diagram white"></i>
+                            <span class="white"> Aulas/Departamentos</span>
+                        </a>
+                    </li>  
+                    <?php } ?>
                 </ul>
             </li>
             <li>
@@ -117,7 +125,7 @@
                     </li> -->
                 </ul>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#submenuAdmonVehicular" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-cabinet-filing"></i>
                     <span>Administración vrhicular</span>
@@ -166,7 +174,7 @@
                         </a>
                     </li> -->
                 </ul>
-            </li>
+            </li> -->
             <li>
                 <a href="#submenuSeptup" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <i class="fas fa-cog"></i>

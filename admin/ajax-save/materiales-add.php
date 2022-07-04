@@ -19,6 +19,7 @@ $categoria      = filter_input(INPUT_POST, 'categoria',     FILTER_SANITIZE_NUMB
 $estatus        = filter_input(INPUT_POST, 'estatus',       FILTER_SANITIZE_NUMBER_INT);
 $unidad         = filter_input(INPUT_POST, 'unidad',        FILTER_SANITIZE_NUMBER_INT);
 $bodega         = filter_input(INPUT_POST, 'bodega',        FILTER_SANITIZE_NUMBER_INT);
+$sku            = filter_input(INPUT_POST, 'sku',           FILTER_SANITIZE_SPECIAL_CHARS);
 $idusuario      = $_SESSION['id_admin'];
 $idcampus       = $_SESSION['campus'];
 $area           = $_SESSION['area'];
@@ -37,6 +38,6 @@ $campus = $info->obtener_todos_almacenes();
 $ccampus = $fn->cuentarray($campus);
 
 for($i = 0; $i < $ccampus; $i++){
-        $qry = "INSERT INTO inv_campus_producto (id_producto, id_campus, cantidad, id_categoria, id_estatus, id_bodega, numero_serie) VALUES ('$id', '{$campus['id'][$i]}','0','$categoria','$estatus','$bodega', '$codigo')";
+        $qry = "INSERT INTO inv_campus_producto (id_producto, id_campus, cantidad, id_categoria, id_estatus, id_bodega, numero_serie, sku) VALUES ('$id', '{$campus['id'][$i]}','0','$categoria','$estatus','$bodega', '$codigo', '$sku')";
         $ejecucion->ejecuta($qry);
 }

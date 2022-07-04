@@ -55,6 +55,12 @@ $cbodegas               = $fn   ->  cuentarray($bodegas);
                         </div>
                     </div>
                     <div class="form-wrapper col-sm-4">
+                        <label>Sku (Codigo de la escuela)</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="sku" id="sku" placeholder="SKU" value="">
+                        </div>
+                    </div>
+                    <div class="form-wrapper col-sm-4">
                         <label>Categoria</label>
                         <div class="form-group">
                             <select name="categoria" id="categoria" class="form-control validar">

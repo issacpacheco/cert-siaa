@@ -5,7 +5,7 @@ use conexionbd\mysqlconsultas;
 class almacen extends mysqlconsultas{
     
     public function obtener_categorias(){
-        $qry = "SELECT * FROM inv_categoria WHERE id_area = {$_SESSION['area']} AND id_campus = {$_SESSION['campus']}";
+        $qry = "SELECT * FROM inv_categoria WHERE id_area = {$_SESSION['area']}";
         $res = $this->consulta($qry);
         return $res;
     }
@@ -632,6 +632,23 @@ class almacen extends mysqlconsultas{
                 LEFT JOIN inv_campus_producto c ON c.id_producto = m.id 
                 WHERE s.proyecto = $id AND c.id_campus = {$_SESSION['campus']} GROUP BY s.id_producto";
         $res = $this -> consulta($qry);
+        return $res;
+    }
+
+    public function obtener_departamentos(){
+        $qry = "SELECT * FROM inv_departamentos WHERE id_campus = {$_SESSION['campus']}";
+        $res = $this->consulta($qry);
+        return $res;
+    }
+
+    public function obtener_materiales_departamento($id){
+        $qry = "SELECT s.id, m.id AS idmaterial, SUM(s.cantidad) AS total, p.nombre, m.nombre AS nombrematerial
+                FROM inv_salida_producto s 
+                LEFT JOIN inv_departamentos p ON p.id = s.id_departamento 
+                LEFT JOIN inv_productos m ON m.id = s.id_producto 
+                LEFT JOIN inv_campus_producto c ON c.id_producto = m.id 
+                WHERE s.id_departamento = $id AND c.id_campus = {$_SESSION['campus']} GROUP BY s.id_producto";
+        $res = $this->consulta($qry);
         return $res;
     }
 

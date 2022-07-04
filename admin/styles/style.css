@@ -5646,4 +5646,5 @@ body.no-pace .pace, body.no-pace .pace .pace-progress {
 
 .select2-container {
   width: 100% !important;
+  z-index: 10000;
 }
