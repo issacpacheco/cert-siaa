@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-07-2022 a las 17:58:03
+-- Tiempo de generación: 06-07-2022 a las 16:56:26
 -- Versión del servidor: 10.2.38-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -61,7 +61,6 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (2, 1, 7, '010722049', 'ANGELY GUADALUPE ', 'EROSA', 'TZUC', '2003-11-01', 'Femenino', 'Soltera', 'erosaangeli44@gmail.com', 'Tzuc200301', '', '', '9889573416', 'C 17 ENTRE 24 Y 26 #105 ', 'EOTA031101MYNRZNA0', 'ROSEMY MANUELITA DE JESUS TZUC DZIB', '9992497449', 'COBAY KINCHIL', '', '2022-03-02'),
 (3, 1, 5, '01\n05\n22064\n', 'KARINA ISABEL ', 'KOYOC ', 'TAX', '2001-11-18', 'Femenino', 'Soltera', 'koyoctaxkarina@gmail.com', '142022', '', '', '9991066967', 'C 21 X 16 SN CHALMUCH ', 'KOTK011118MYNYXRA3', 'SILVIA MARÍA TAX ', '9995101506', 'COBAY ', '', '2022-03-02'),
 (4, 1, 11, '011122282', 'KIMBERLY ESTEFANIA ', 'MARIN ', 'EVIA ', '1994-09-21', 'Femenino', 'Soltera', 'mawii2194@gmail.com', '1234', '', '', '9995513738', 'CALLE 21A #40 POR 4 Y 6 COL. CAUCEL ', 'MAEK940921MYNRVM01', 'IGALY AREMY EVIA CASTRO ', '9991292926', 'CERT MERIDA', '', '2022-03-05'),
-(5, 1, 6, '01\n06\n22016\n', 'CESAR ABRAHAM', 'DURAN', 'MAY', '2003-06-05', 'Masculino', 'Soltero', 'duranmayc382@gmail.com', 'Abraham6814299', '', '', '9971008506', 'CALLE 55 B #428 ENTRE 58 Y 60 COL. FRANCISCO DE MONTEJO', 'DUMC030605HYNRYSA1', 'MIRNA FELIPA MAY ZAPATA', '9971050717', 'ESCUELA PREPARATORIA TICUL', '', '2022-03-05'),
 (6, 1, 9, '01\n09\n22293\n', 'WILLIAN FERNANDO', 'PINZON ', 'ORTIZ ', '1990-04-20', 'Femenino', 'Soltera', 'pinzonwillian767@gmail.com', '1234', '', '', '9981154652', 'CALLE 20 #98 POR  9 Y 7 UMAN ', 'PIOW900420HYNNRL02', 'MARIA GUADALUPE ORTIZ MAY ', '9984184083', 'INSTITUTO UNIVERISTARIO DEL SURESTE ', 'HOSPITAL GENERAL DE CHETUMAL ', '2022-03-05'),
 (7, 1, 9, '01\n09\n22213\n', 'ANA CRISTINA ', 'ALVARADO', 'CONTRERAS', '1994-10-22', 'Femenino', 'Soltera', 'cristi_alvaradoc@outlook.com', 'cristi', '', '', '9995444491', 'CALLE 3B #311 X 20 Y 22 JUAN PABLO NORA', 'AACA941022MYNLNN05', 'MARIA DE LAS NIEVES CONTRERAS SÁNCHEZ', '9991496965', 'CERT MÉRIDA', 'Star Médica', '2022-03-05'),
 (8, 1, 9, '01\n09\n22253\n', 'ROXANA DEL CARMEN ', 'CHIN', 'PAAT', '1995-10-09', 'Femenino', 'Soltera', 'roxana-cpaat@hotmail.com', 'liebredemarzo', '', '', '9811338894', 'CALLE 10 X 5 Y 7 COLONIA LÁZARO CÁRDENAS', 'CIPR951009MCCHTX09', 'JOSEFA DE LOS ÁNGELES PAAT ESTRELLA', '9811072436', 'UAC', 'HOSPITAL DR. MANUEL CAMPOS (SECRETARÍA)', '2022-03-05'),
@@ -205,9 +204,9 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (152, 1, 9, '01\n09\n22422\n', 'GEEDER DEMETRIO ', 'NOH ', 'PUC', '1997-07-27', 'Masculino', 'Soltero', 'geeder.demetrio8@gmail.com', '1234', '', '', '9851146391', 'CALLE 26 POR 41 Y 43 COL. SANTA ANA VALLADOLID ', 'NOPG970727HYNHCD07', 'MARIA MERCEDES UH PUC ', '9851112825', 'ICEST', 'HOSPITAL GENERAL DE VALLADOLID', '2022-03-22'),
 (153, 1, 9, '01\n09\n22047\n', 'VICTOR MANUEL', 'MARTINEZ', 'REYES', '1994-05-02', 'Femenino', 'Soltera', 'rotcivmartinezz@gmail.com', '1234', '', '', '9993326501', 'C. 77 #506 C X 62 Y 64, CENTRO, ', 'MARV940502HVZRYC03', 'VICTOR MARTINEZ', '9971086418', 'IUNIS', 'HOSPITAL FARO', '2022-03-22'),
 (154, 1, 9, '01\n09\n22453\n', 'ANGELA GABRIELA ', 'CHAN ', 'CHAN ', '1994-12-17', 'Femenino', 'Soltera', 'a17g12194@gmail.com', '1234', '', '', '9971519458', 'CALLE 23 POR 10 Y 12 COL. BENITO JUAREZ ', 'CXCA941217MYNHHN08', 'MIREYA CHAN CHABLE ', '9979739184', 'CERT TICUL ', 'HOSPITAL GENERAL DE TEKAX ', '2022-03-22'),
-(155, 1, 9, '01\n09\n22176\n', 'RICARDO ANTONIO ', 'SALAS', 'MEDINA', '1996-05-26', 'Masculino', 'Casado', 'richard96.rsm@gmail.com', 'Robin05', '', '', '9992065544', 'CALLE 31A/ #370 X 24 Y 26B POLIGONO 108', 'SAMR960526HYNLDC01', 'YAZMIN CARRANZA ', '9991750500', 'ICEST', 'Star Médica', '2022-03-22');
+(155, 1, 9, '01\n09\n22176\n', 'RICARDO ANTONIO ', 'SALAS', 'MEDINA', '1996-05-26', 'Masculino', 'Casado', 'richard96.rsm@gmail.com', 'Robin05', '', '', '9992065544', 'CALLE 31A/ #370 X 24 Y 26B POLIGONO 108', 'SAMR960526HYNLDC01', 'YAZMIN CARRANZA ', '9991750500', 'ICEST', 'Star Médica', '2022-03-22'),
+(156, 1, 9, '01\n09\n22451\n', 'LUIS ALFREDO', 'VARGUEZ ', 'CHI', '1988-12-15', 'Masculino', 'Soltero', 'punk_varguez456963@hotmail.com', '1234', '', '', '9971155071', 'CALLE 35 #190 POR 22A Y 22 COL. SANTIAGO', 'VACL881215HYNRHS08', 'WENDY NOEMI ESPAÑA TAX ', '9971178274', 'CERT TICUL ', 'HOSPITAL GENERAL DE TEKAX ', '2022-03-22');
 INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `correo_institucional`, `pass_institucional`, `telefono`, `direccion`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `fecha_registro`) VALUES
-(156, 1, 9, '01\n09\n22451\n', 'LUIS ALFREDO', 'VARGUEZ ', 'CHI', '1988-12-15', 'Masculino', 'Soltero', 'punk_varguez456963@hotmail.com', '1234', '', '', '9971155071', 'CALLE 35 #190 POR 22A Y 22 COL. SANTIAGO', 'VACL881215HYNRHS08', 'WENDY NOEMI ESPAÑA TAX ', '9971178274', 'CERT TICUL ', 'HOSPITAL GENERAL DE TEKAX ', '2022-03-22'),
 (157, 1, 9, '01\n09\n22452\n', 'EDGAR EFREN ', 'MARTIN ', 'MENDEZ ', '1991-03-15', 'Masculino', 'Soltero', 'edgar15martin@hotmail.com', '1234', '', '', '9861200993', 'CALLE 75 #419A POR 54B Y 54D COL. SANTA ROSA LIMA ', 'MXME910315HYNRND07', 'GONZALO MARTIN CAAMAL', '9861055488', 'CENTRO UNIVERSITARIO DE VALLADOLID ', 'HOSPITAL GENERAL DE TEKAX ', '2022-03-22'),
 (158, 1, 9, '01\n09\n22031\n', 'ABIGAIL YOLANDA ', 'MARTINEZ', 'REYNERO', '1996-06-20', 'Femenino', 'Soltera', 'abireynero@gmail.com', 'CEVICHITO', '', '', '9993233370', 'C.26 SN X 23 Y 28 CHICHI SUAREZ', 'MARA960620MYNRYB04', 'SARA REYNERO HERNANDEZ', '9991011486', 'INSTITUTO MEXICANO DEL SEGURO SOCIAL', '', '2022-03-22'),
 (161, 1, 9, '01\n09\n22455\n', 'MIRZA JOANNA', 'ESCALANTE ', 'ARCEO', '1989-09-06', 'Femenino', 'Casada', 'arceo_89@hotmail.com', '1234', '', '', '9992621346', 'CALLE 89 #808 POR 102 Y 104 REAL CAUCEL ', 'EAAM890906MYNSRR06', 'JOSE IVAN MEDINA REJON ', '9992358727', 'UADY', 'CENTRO DE SALUD DE PROGRESO ', '2022-03-22'),
@@ -353,9 +352,9 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (303, 1, 7, '01\n07\n22353\n', 'ANGEL ELI', 'GRANADOS', 'COB ', '2004-08-09', 'Masculino', 'Soltero', 'angel118cob@gmail.com', 'Angel09', 'correo@cert.edu.mx', '12345', '9994379366', 'CALLE 23 #118A POR 28 Y 30 SISAL ', 'GACA040809HYNRBNA7', 'MARIA DE LOS ANGELES COB UH', '9991534811', 'COBAY HUNUCMA ', '', '2022-04-19'),
 (304, 1, 2, '01\n02\n22257\n', 'JESUS MARCELINO ', 'CANCHE ', 'CIH ', '2003-01-08', 'Masculino', 'Soltero', 'marcelinocanchecanche@gmail.com', 'marcelino08', 'correo@cert.edu.mx', '12345', '9999082636', 'CALLE 25 #146 POR 26 Y 28 MAXCANU YUCATAN ', 'CACJ030108HQRNHSA2', 'MARIA LEONARDA CIH ARGAEZ ', '9971163188', 'MARIA GONZALES PALMA ', '', '2022-04-19'),
 (305, 1, 8, '01\n08\n22328\n', 'ERIKA PATRICIA', 'ROSADO', 'BENITES', '1998-01-05', 'Femenino', 'Soltera', 'rosadoerika591@gmail.com', 'rihanna5', 'correo@cert.edu.mx', '12345', '9991435475', 'CALLE 59 C 498 F X 94 FRACCIONAMIENTO PRUVADA DEL CARMEN BOJORQUEZ', 'RXBE980105MYNSNR06', 'SUSANA PATRICIA BENITES PECH', '9991260477', 'UNIVERSIDAD MARISTA', '', '2022-04-19'),
-(306, 1, 8, '01\n08\n22376\n', 'CLAUDIA SHARLYN', 'TRUJEQUE', 'MAGAÑA', '2004-06-02', 'Femenino', 'Soltera', 'trujequemagana.claudia0206@prepaestatal10.edu.mx', 's06c04mt', 'correo@cert.edu.mx', '12345', '9996028904', 'CALLE:120 ×81 Y 87 NO.735 COLONIA: VILLA CAUCEL III', 'TUMC040206MYNRGLA7', 'JUAN BAUTISTA TRUJEQUE CHAN', '9992505062', 'PREPA ESTATAL 10 ', '', '2022-04-19');
+(306, 1, 8, '01\n08\n22376\n', 'CLAUDIA SHARLYN', 'TRUJEQUE', 'MAGAÑA', '2004-06-02', 'Femenino', 'Soltera', 'trujequemagana.claudia0206@prepaestatal10.edu.mx', 's06c04mt', 'correo@cert.edu.mx', '12345', '9996028904', 'CALLE:120 ×81 Y 87 NO.735 COLONIA: VILLA CAUCEL III', 'TUMC040206MYNRGLA7', 'JUAN BAUTISTA TRUJEQUE CHAN', '9992505062', 'PREPA ESTATAL 10 ', '', '2022-04-19'),
+(307, 1, 5, '01\n05\n22510\n', 'JESSY MARGARITA ', 'BACELIS ', 'EUAN ', '2000-11-16', 'Femenino', 'Soltera', 'jessybacelis116@gmail.com', 'Jesba1845', 'correo@cert.edu.mx', '12345', '9992458835', 'CALLE 22 POR 43 CAMINO SANTA CRUZ MOTUL ', 'BAEJ001116MYNCNSA8', 'ELOINA MARGARITA EUAN KUK', '9992049522', 'CBETIS 80', '', '2022-04-19');
 INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `correo_institucional`, `pass_institucional`, `telefono`, `direccion`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `fecha_registro`) VALUES
-(307, 1, 5, '01\n05\n22510\n', 'JESSY MARGARITA ', 'BACELIS ', 'EUAN ', '2000-11-16', 'Femenino', 'Soltera', 'jessybacelis116@gmail.com', 'Jesba1845', 'correo@cert.edu.mx', '12345', '9992458835', 'CALLE 22 POR 43 CAMINO SANTA CRUZ MOTUL ', 'BAEJ001116MYNCNSA8', 'ELOINA MARGARITA EUAN KUK', '9992049522', 'CBETIS 80', '', '2022-04-19'),
 (310, 1, 9, '01\n09\n22580\n', 'REYES ILEANA ', 'CAAMAL ', 'CANCHE ', '1998-08-27', 'Femenino', 'Soltera', 'ileanacaamal23@gmail.com', '1234', 'correo@cert.edu.mx', '12345', '9995121057', 'CALLE 24 #96 POR 15 Y 17 COL. CENTRO UMAN ', 'CACR980827MYNMNY05', 'YARA SILVIA CANCHE MOO', '9991924912', 'ICEST', 'HOSPITAL GENERAL DE TEKAX ', '2022-04-19'),
 (311, 1, 9, '01\n09\n22583\n', 'SILVIA GUADALUPE ', 'CAAMAL ', 'CANCHE ', '1993-09-25', 'Femenino', 'Soltera', 'silviacaamal25@gmail.com', '1234', 'correo@cert.edu.mx', '12345', '9991205235', 'CALLE 24#96 ENTRE 15 Y 17 CENTRO UMAN ', 'CACS930925MYNMNL04', 'YARA SILVIA CANCHE MOO', '9991924912', 'ICEST', '', '2022-04-19'),
 (312, 1, 9, '01\n09\n22582\n', 'CESAR BENJAMÍN', 'DZUL ', 'MAGAÑA', '1993-06-15', 'Masculino', 'Soltero', 'dzul-halo@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9993658776', 'CALLE 62A #504 X 103 PRIVADA DELIO MORENO CANTON ', 'DUMC930615HYNZGS01', 'LAURA RUBI DZUL MAGAÑA', '9996430511', 'ICEST', 'HOSPITAL GENERAL DE TEKAX ', '2022-04-19'),
@@ -498,9 +497,9 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (452, 1, 5, '01\n05\n22696\n', 'DANIELA MARIFER ', 'ECHEVERRÍA', 'TZAB', '2003-02-13', 'Femenino', 'Soltera', 'echeverriatzab13@gmail.com', 'franciabb', 'correo@cert.edu.mx', '12345', '9995134392', 'CALLE 20 # 110 POR 21 Y 23', 'EETD030213MYNCZNA5', 'MILDRET CELENE TZAB OY', '9993344985', 'COBAY PLANTEL HOMÚN', '', '2022-05-24'),
 (453, 1, 5, '01\n05\n22709\n', 'JAZMIN GUADALUPE', 'ESTRELLA', 'GOMEZ', '2003-10-06', 'Femenino', 'Soltera', 'jazminestrellagome@gmail.com', 'Gomez1234', 'correo@cert.edu.mx', '12345', '9824354272', 'DIVISIÓN DEL NORTE, ESCÁRCEGA, CAMPECHE', 'EEGJ031006MCCSMZA1', 'GUADALUPE GÓMEZ CRUZ', '9828225885', 'COBACAM PLANTEL 03 ESCÁRCEGA ', '', '2022-05-24'),
 (454, 1, 5, '01\n05\n22586\n', 'MARIEL GUADALUPE ', 'PECH ', 'DZUL ', '2004-06-21', 'Femenino', '', 'marielguadalupepechdzul@gmail.com', 'Marielg', 'correo@cert.edu.mx', '12345', '9993804666', 'CALLE 21 X 30 Y 32 126', 'PEDM040621MYNCZRA2', 'MARÍA FRANCISCA DZUL NAH', '9995477612', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN, COBAY CACALCHÉN ', '', '2022-05-24'),
-(455, 1, 5, '01\n05\n22610\n', 'KARLA PATRICIA ', 'OSUNA ', 'HERNÁNDEZ ', '2004-07-12', 'Femenino', 'Soltera', 'Karlapatriosu07@outlook.es', 'Karlyy07', 'correo@cert.edu.mx', '12345', '9512346621', 'XOCHILT 1214', 'OUHK041207MOCSRRA8', 'REYNA PATRICIA HERNÁNDEZ ALVAREZ ', '9511114931', 'EULOGIO GILLOW ', '', '2022-05-24');
+(455, 1, 5, '01\n05\n22610\n', 'KARLA PATRICIA ', 'OSUNA ', 'HERNÁNDEZ ', '2004-07-12', 'Femenino', 'Soltera', 'Karlapatriosu07@outlook.es', 'Karlyy07', 'correo@cert.edu.mx', '12345', '9512346621', 'XOCHILT 1214', 'OUHK041207MOCSRRA8', 'REYNA PATRICIA HERNÁNDEZ ALVAREZ ', '9511114931', 'EULOGIO GILLOW ', '', '2022-05-24'),
+(456, 1, 5, '01\n05\n22743\n', 'SULEMY DEL ROSARIO', 'CHUC', 'CAB', '2004-03-12', 'Femenino', 'Soltera', 'sulemy.chuc1203@gmail.com', 'SR15CB2', 'correo@cert.edu.mx', '12345', '9889670294', 'C.31 264A X 36 Y 38 COL. SANTIAGUITO ', 'CUCS040312MYNHBLB4', 'MARÍA TERESA DE JESÚS CAB HOIL', '9991053863', 'COBAY HUNUCMÁ ', '', '2022-05-24');
 INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `correo_institucional`, `pass_institucional`, `telefono`, `direccion`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `fecha_registro`) VALUES
-(456, 1, 5, '01\n05\n22743\n', 'SULEMY DEL ROSARIO', 'CHUC', 'CAB', '2004-03-12', 'Femenino', 'Soltera', 'sulemy.chuc1203@gmail.com', 'SR15CB2', 'correo@cert.edu.mx', '12345', '9889670294', 'C.31 264A X 36 Y 38 COL. SANTIAGUITO ', 'CUCS040312MYNHBLB4', 'MARÍA TERESA DE JESÚS CAB HOIL', '9991053863', 'COBAY HUNUCMÁ ', '', '2022-05-24'),
 (457, 1, 5, '01\n05\n22802\n', 'JOEL ALBERTO', 'FALCÓN', 'ADRA', '1996-03-20', 'Masculino', 'Soltero', 'joelfalcon154@gmail.com', 'Guitarra123', 'correo@cert.edu.mx', '12345', '9994559666', 'CALLE 57 #314 POR 128 Y 130 COL. EL PORVENIR ', 'FAAJ960320HYNLDL09', 'LAURA FALCON ', '9995486147', 'CBTIS 120', '', '2022-05-24'),
 (458, 1, 5, '01\n05\n22564\n', 'JOHANA GUADALUPE ', 'DUARTE ', 'SALAS', '2000-12-08', 'Femenino', '', 'joanaduartesalas54054@gmail.com', 'J0h4n420', 'correo@cert.edu.mx', '12345', '9995030827', 'CALLE 113 #763 X 64K Y 64L CASTILLA CÁMARA ', 'DUSJ001208MYNRLHA0', 'SAYDI DEL SOCORRO SALAS VIDAL ', '9999075238', 'CBTIS N. 95', '', '2022-05-24'),
 (459, 1, 5, '01\n05\n22794\n', 'SHERLYN YULIET', 'ARJONA', 'MARTIN', '2004-03-10', 'Femenino', 'Soltera', 'arjonasherlyn@gmail.com', 'sherlyn2004', 'correo@cert.edu.mx', '12345', '9997473432', 'C. 25 #87 X 54 Y 56, ISMAEL GARCIA', 'AOMS040310MYNRRHA1', 'YULIANA MARTIN ACOSTA', '9992635086', 'COBAY PROGRESO', '', '2022-05-24'),
@@ -644,9 +643,9 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (600, 1, 9, '01\n09\n221068\n', 'TANIA GUADALUPE ', 'KOB', 'LLANES', '1995-02-13', 'Femenino', 'Casada', 't.ami.aa@hotmail.com', 'roko123', 'correo@cert.edu.mx', '12345', '9994181031', 'CALLE 72 #636A X 39A Y 41 JARDINES DE CAUCEL', 'KOLT950213MYNBLN02', 'ALEJANDRO NEGROE BURGOS', '9995533094', 'CERT MÉRIDA', 'CENTRO MÉDICO PENSIONES', '2022-06-20'),
 (601, 1, 9, '01\n09\n221092\n', 'DIANA DEL ROCIO ', 'GARMA ', 'CASTRO ', '1989-10-29', 'Femenino', 'Soltera', 'dian28.garma@gmail.com', '1234', 'correo@cert.edu.mx', '12345', '9999188967', 'CALLE 57 46 Y 48 CENTRO TEKAX ', 'GACD891029MYNRSN09', 'CELIA GARMA CASTRO ', '9971057502', 'INCIH ', 'HOSPITAL GENERAL DE TEKAX ', '2022-06-20'),
 (602, 1, 9, '01\n09\n221096\n', 'JORGE CRESCENCIO ', 'CHI', 'GONGORA', '1999-01-29', 'Masculino', 'Soltero', 'cres129@gmail.com', '123456', 'correo@cert.edu.mx', '12345', '9992556505', 'CALLE 11 X 26 Y 28 COL. SAN SEBASTIÁN', 'CIGJ990129HYNHNR02', 'LEIDY MERCEDES GONGORA DOMINGUEZ', '9971406043', 'CERT TICUL', 'HOSPITAL GENERAL DE TEKAX', '2022-06-20'),
-(603, 1, 9, '01\n09\n221097\n', 'MARTIN JOAQUIN ', 'HERNANDEZ ', 'ECHANOVE', '1996-07-07', 'Femenino', 'Soltera', 'maartin_bs@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9992519242', 'CALLE 33 #782 POR 138 Y 140 COL. NUEVA YUCALPETEN ', 'HEEM960707HYNRCR07', 'MARIA PERLA YESENIA ECHANOVE MALDONADO ', '9994506258', 'CERT MERIDA', 'PARTICULAR', '2022-06-20');
+(603, 1, 9, '01\n09\n221097\n', 'MARTIN JOAQUIN ', 'HERNANDEZ ', 'ECHANOVE', '1996-07-07', 'Femenino', 'Soltera', 'maartin_bs@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9992519242', 'CALLE 33 #782 POR 138 Y 140 COL. NUEVA YUCALPETEN ', 'HEEM960707HYNRCR07', 'MARIA PERLA YESENIA ECHANOVE MALDONADO ', '9994506258', 'CERT MERIDA', 'PARTICULAR', '2022-06-20'),
+(604, 1, 9, '01\n09\n221113\n', 'VALERIA ALEJANDRA ', 'SEGOVIA ', 'CUEVAS ', '1997-04-14', 'Femenino', 'Soltera', 'valeria_cert@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9992459957', 'CALLE 47A #347 POR 18 Y 20 JUAN PABLO', 'SECV970414MTCGVL02', 'LUCIA DEL ALBA CUEVAS PEÑATE', '9999026745', 'CERT MERIDA', 'SALUD DIGNA ', '2022-06-20');
 INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `correo_institucional`, `pass_institucional`, `telefono`, `direccion`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `fecha_registro`) VALUES
-(604, 1, 9, '01\n09\n221113\n', 'VALERIA ALEJANDRA ', 'SEGOVIA ', 'CUEVAS ', '1997-04-14', 'Femenino', 'Soltera', 'valeria_cert@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9992459957', 'CALLE 47A #347 POR 18 Y 20 JUAN PABLO', 'SECV970414MTCGVL02', 'LUCIA DEL ALBA CUEVAS PEÑATE', '9999026745', 'CERT MERIDA', 'SALUD DIGNA ', '2022-06-20'),
 (605, 1, 9, '01\n09\n22989\n', 'GERSON NOÉ ', 'KU', 'CANUL', '1988-01-13', 'Masculino', 'Divorciado', 'noekc.1388@gmail.com', 'CertNoe. ', 'correo@cert.edu.mx', '12345', '9984088319', '28 CALLE CONIL PRIVADAS TURQUESA ', 'KUCG880113HYNXNR02', 'NANCY MENA MARTÍNEZ ', '9981906874', 'UADY', 'Hospital General dr Jesús Cumate Rodriguez ', '2022-06-20'),
 (606, 1, 11, '01\n11\n221070\n', 'MARIELA CAROLINA ', 'GONZALEZ ', 'MAY', '1992-09-02', 'Femenino', 'Casada', 'gom_zal_25@hotmail.com', '1234', 'correo@cert.edu.mx', '12345', '9971138834', 'CALLE 42 X 43 Y 45 CO FELIPE CARRILLO PUERTO ', 'GOMM920902MYNNYR08', 'WENDY CARVAJAL ', '9979779115', 'CERT TICUL', 'HOSPITAL GENERAL DE TEKAX ', '2022-06-20'),
 (607, 1, 11, '0111221075', 'ERICK ENRIQUE', 'ESPINOZA', 'BRICEÑO', '1994-11-02', 'Masculino', 'Soltero', 'erickenrique.espinoza@gmail.com', 'enfermería1', 'correo@cert.edu.mx', '12345', '9831146962', 'TULÚN QUINTANA ROO COL. LA VELETA CALLE 7 X 8 Y 10', 'EIBE941102HQRSRR03', 'MARGARITA BRICEÑO', '9831857776', 'UVY', '', '2022-06-20'),
@@ -789,7 +788,8 @@ INSERT INTO `alumnos` (`id`, `id_campus`, `id_oferta`, `matricula`, `nombre`, `p
 (745, 2, 22, '02\n22\n22132\n', 'RICARDO ADRIAN ', 'COCOM', 'ORTIZ', '2003-07-13', 'Masculino', 'Soltero', 'ricardoadrianco@gmail.com', 'raco030713', 'correo@cert.edu.mx', '12345', '9831120695', 'HERIBERTO FRIAS ESQUINA JUAN SARABIA #285 COLONIA AARON MERINO FERNANDEZ', 'COOR030713HQRCRCA5', 'EDWIN ARIEL COCOM AGUAYO', '9831821093', 'COLEGIO DE BACHILLERES PLANTEL CHETUMAL DOS', '', '2022-07-04'),
 (746, 2, 22, '02\n22\n22736\n', 'CARLOS ALEJANDRO', 'ARGAEZ', 'HERRERA', '2004-08-02', 'Masculino', 'Soltero', 'argaezalex75@gmail.com', 'Elpapi01', 'correo@cert.edu.mx', '12345', '9993669897', 'CALLE 193A POR 92 Y 94 LOTE 16 COL. SAN LUIS SUR DZUNUNCAN ', 'AAHC040802HYNRRRA5', 'KAREN ARLET HERRERA SÁNCHEZ ', '9993311913', 'UABIC', '', '2022-07-05'),
 (747, 2, 22, '02\n22\n22008\n', 'AMÉRICA NOELI', 'LÓPEZ', 'HERNÁNDEZ', '2001-09-02', 'Femenino', 'Soltera', 'loha010209@gmail.com', 'Tortugabenito', 'correo@cert.edu.mx', '12345', '9961053160', 'CALLE 35 SIN NÚMERO SAN MARTIN CALKINI, CAMPECHE', 'LOHA010902MCCPRMA5', 'SUSANA HERNÁNDEZ ORDOÑEZ', '9961109874', 'COBACAM PLANTEL 13 CALKINI', '', '2022-07-05'),
-(748, 2, 22, '02\n22\n22858\n', 'VICTOR JOSE', 'BARBIS', 'PALOMO', '2004-05-03', 'Masculino', 'Soltero', 'barbispalomov@gmail.com', 'tamayo1234', 'correo@cert.edu.mx', '12345', '9991025403', 'CALLE 34 ENTRE 15 Y 17', 'BAPV040503HYNRLCA3', 'NELY DEL CARME PALOMO', '9971241797', 'PREPARATORIA CERT', '', '2022-07-05');
+(748, 2, 22, '02\n22\n22858\n', 'VICTOR JOSE', 'BARBIS', 'PALOMO', '2004-05-03', 'Masculino', 'Soltero', 'barbispalomov@gmail.com', 'tamayo1234', 'correo@cert.edu.mx', '12345', '9991025403', 'CALLE 34 ENTRE 15 Y 17', 'BAPV040503HYNRLCA3', 'NELY DEL CARME PALOMO', '9971241797', 'PREPARATORIA CERT', '', '2022-07-05'),
+(749, 2, 22, '02\n22\n22838\n', 'DANIELA LIZBETH', 'GUTIÉRREZ', 'ESPEJO', '2004-06-30', 'Femenino', 'Soltera', 'danielalizgtz@gmail.com', 'ladanieluchis', 'correo@cert.edu.mx', '12345', '9841463193', 'PLAYA DEL CARMEN, COL. EJIDAL, CALLE 24, LT. 14, MZ. 152.', 'GUED040630MQRTSNA0', 'AIDA JAZMÍN ESPEJO HERNÁNDEZ', '9841466207', 'INSTITUTO VITTORIO MONTEVERDI', '', '2022-07-06');
 
 -- --------------------------------------------------------
 
@@ -867,7 +867,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (13, 1, 5, 'MARÍA FERNANDA ', 'BALAM', 'TEC', '2003-08-23', 'Femenino', 'null', 'fernandatec23@gmail.com', 'Ferchus23', '9991732426', 'CALLE 1 X10 Y 12 S/N TAMCHEN', 'KINCHIL ', '97360', 'BATF030823MYNLCRA7', 'FERNANDO BALAM COB', '9995340175', 'COBAY KINCHIL', '', '', '2022-02-09'),
 (14, 1, 9, 'KEMBLY MILU', 'OJEDA', 'ROSADO', '1997-05-14', 'Femenino', 'Soltera', 'ojedakembly14@gmail.com', 'noraojeda14', '9994111355', 'CALLE 29 #461 POR 44 Y 46 AMAPOLITA', 'MÉRIDA', '97219', 'OERK970514MYNJSM00', 'NORA MILU OJEDA ROSADO', '9992768642', 'ESCUELA DE ENFERMERÍA DEL IMSS', 'IMSS', '', '2022-02-09'),
 (15, 1, 4, 'ANEL DEL SOCORRO', 'BAÑOS', 'CARRILLO', '2002-08-11', 'Femenino', 'Casada', 'carrilloanel23@gmail.com', 'Angieesperanza23', '9995631252', 'C 60 POR 51 Y 55 NUM 389 AMPLIACION GRANJAS ', 'MERIDA', '', 'BXCA020811MYNXRNA9', 'RICARDO ESCRIBANO POOT', '9999293578', 'PREPA EN LÍNEA SEP', '', '', '2022-02-11'),
-(16, 1, 6, 'CESAR ABRAHAM', 'DURAN', 'MAY', '2003-06-05', 'Masculino', 'Soltero', 'duranmayc382@gmail.com', 'Abraham6814299', '9971008506', 'CALLE 55 B #428 ENTRE 58 Y 60 COL. FRANCISCO DE MONTEJO', '', '', 'DUMC030605HYNRYSA1', 'MIRNA FELIPA MAY ZAPATA', '9971050717', 'ESCUELA PREPARATORIA TICUL', '', '', '2022-02-11'),
+(16, 2, 6, 'CESAR ABRAHAM', 'DURAN', 'MAY', '2003-06-05', 'Masculino', 'Soltero', 'duranmayc382@gmail.com', 'Abraham6814299', '9971008506', 'CALLE 55 B #428 ENTRE 58 Y 60 COL. FRANCISCO DE MONTEJO', '', '', 'DUMC030605HYNRYSA1', 'MIRNA FELIPA MAY ZAPATA', '9971050717', 'ESCUELA PREPARATORIA TICUL', '', '', '2022-02-11'),
 (17, 1, 5, 'JESSICA ALEJANDRA ', 'CHAN ', 'CANCHE ', '2003-12-28', 'Femenino', 'Soltera', 'chancanchealejandra28@gmail.com', '12345', '9994566608', 'CALLE 17 #388 X 28 Y 30 JUAN PABLO ', '', '', 'CACJ031228MYNHNSA9', 'MANUEL JESUS CHAN ', '9991929163', 'COBAY CHENKU ', '', '', '2022-02-11'),
 (19, 1, 6, 'ALEXANDRA YAQUELIN ', 'UC', 'EK', '2004-11-12', 'Femenino', 'Soltera', 'alexandraucek@gmail.com', 'Alexandra23', '9911162437', 'CALLE 38 X 29 Y 31 SANTA ÚRSULA ', 'TEMAX ', '97510', 'UXEA041112MYNCKLA5', 'MANUELA JESUS UC EK ', '9911090825', 'COBAY PLANTEL TEMAX ', '', '', '2022-02-12'),
 (20, 1, 4, 'CHRISTHIAN FROILAN', 'SOSA', 'CEBALLOS', '1981-04-24', 'Masculino', 'Casado', 'froilan.sosa@cert.edu.mx', '1', '9991023158', 'CALLE 15I # 230A X 8B Y 8C', 'MÉRIDA', '97273', 'SOCC810424HYNSBH07', 'ILEANA SOLÍS MAY', '9991023158', 'CBTIS 95', '', '', '2022-02-13'),
@@ -1073,7 +1073,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (248, 2, 22, 'PABLO ALONSO', 'MORENO', 'KANTÚN', '2003-01-11', 'Masculino', 'Soltero', 'pablomorenokantun@gmail.com', 'Alum1875e', '9993236753', 'CALLE 67 # 790 X 100, COLONIA MULSAY', 'MÉRIDA', '97249', 'MOKP030111HYNRNBA6', 'MARÍA CRISTINA KANTÚN BARÓN', '9991851713', 'UADY - PREPARATORIA # 2', '', '', '2022-03-01'),
 (249, 2, 22, 'GAEL ARMANDO ', 'CHAN ', 'ARGUELLO ', '2003-12-16', 'Masculino', 'Soltero', 'gac281530@gmail.com', 'Licmedic2815', '9971657438', '112 50 X 57 Y 59 ', ' OXKUTZCAB', '97880 ', 'CAAG031216HYNHRLA8', 'JORGE ARMANDO CHAN ', '9971165400', 'VICTOR MANUEL CERVERA PACHECO ', '', '', '2022-03-01'),
 (250, 1, 10, 'JULIO CESAR', 'FLORES', 'PALACIOS', '2096-07-10', 'Masculino', 'Soltero', 'pala_cios_959@hotmail.com', '1234', '9983699240', 'SM 96 MZ 24 LT. 1 C. 18 ED 1430 INFONAVIT 14', 'CANCUN', '77535', 'FOPJ960710HTLLLL09', 'FRANCISCO FLORES FLORES', '2461661999', 'UNIVERSIDAD AUTONOMA DE TLAXCALA', 'SECRETARIA DE SALUD BENITO JUAREZ', '', '2022-03-02'),
-(251, 1, 7, 'HEYDI YAJAIRA', 'LIEVANO', 'CANUL', '2002-01-12', 'Femenino', 'Soltera', 'lievanoheydi@gmail.com', 'Heydi12', '9996183352', 'C.28A, #97 POR 13 Y 15 97800 MAXCANÚ, YUC., MÉXICO', 'MAXCANÚ', '97800', 'LICH020112MCSVNYA3', 'MARÍA DEL CARMEN CANUL HUCHIM', '9971182875', 'CBTA', '', '', '2022-03-02'),
+(251, 1, 3, 'HEYDI YAJAIRA', 'LIEVANO', 'CANUL', '2002-01-12', 'Femenino', 'Soltera', 'lievanoheydi@gmail.com', 'Heydi12', '9996183352', 'C.28A, #97 POR 13 Y 15 97800 MAXCANÚ, YUC., MÉXICO', 'MAXCANÚ', '97800', 'LICH020112MCSVNYA3', 'MARÍA DEL CARMEN CANUL HUCHIM', '9971182875', 'CBTA', '', '', '2022-03-02'),
 (252, 1, 8, 'DANA PAOLA', 'MANZANERO', 'SANCHEZ', '2003-12-27', 'Femenino', 'Soltera', 'danapaola27sanchez@gmail.com', '25032020v', '9995519874', 'C 39A X 90 Y 92 #696G SOL CAUCEL', 'MÉRIDA YUCATÁN', '97314', 'MASD031227MYNNNNA4', 'JOSÉ SANCHEZ', '9992626572', 'PREPARATORIA ESTATAL #10  RUBÉN H. RODRÍGUEZ MOGUEL', '', '', '2022-03-02'),
 (253, 1, 9, 'ROXANA DEL CARMEN ', 'CHIN', 'PAAT', '1995-10-09', 'Femenino', 'Soltera', 'roxana-cpaat@hotmail.com', 'liebredemarzo', '9811338894', 'CALLE 10 X 5 Y 7 COLONIA LÁZARO CÁRDENAS', 'CAMPECHE', '24095', 'CIPR951009MCCHTX09', 'JOSEFA DE LOS ÁNGELES PAAT ESTRELLA', '9811072436', 'UAC', 'HOSPITAL DR. MANUEL CAMPOS (SECRETARÍA)', '', '2022-03-02'),
 (254, 1, 5, 'CITLALI ', 'PEREZ ', 'TORAL', '2003-03-29', 'Femenino', 'Soltera', 'pereztoralcitlali@gmail.com', 'Perez29', '9971403767', 'CALLE 35 ENTRE 44 Y 46 COLONIA ESPERANZA ', 'PETO', '97930', 'PETC030329MQRRRTA6', 'TERESA ARROYO ', '9971382152', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN PLANTEL PETO ', '', '', '2022-03-02'),
@@ -1107,7 +1107,6 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (283, 2, 22, 'JONATHAN ALEXANDER', 'SALAZAR ', 'QUEVEDO ', '2004-04-06', 'Masculino', 'Soltero', 'jonathanalexander088@gmail.com', 'Alex1234', '9995054281', 'CALLE 41 #1707 × 22 Y 24', 'IZAMAL', '97540', 'SAQJ040406HYNLVNA0', 'DARLING MARIA QUEVEDO NIC', '9991978910', 'CBTA #165', '', '', '2022-03-04'),
 (284, 1, 5, 'YSARELL OLIVE ', 'BARAJAS ', 'CARRILLO', '2003-03-22', 'Femenino', 'Soltera', 'ysapoot@gmail.com', '220403ysa', '9996352275', 'CALLE 19 POR 10 Y 8 SISAL ', 'SISAL ', '97356', 'BACY030422MVZRRSA9', 'LINA PATRICIA MEDINA BARRERA ', '9992452656', 'COBAY HUNUCMA ', '', '', '2022-03-04'),
 (285, 2, 18, 'MARCELA YOHANA', 'VERA', 'MARTIN', '2004-05-20', 'Femenino', 'Soltera', 'marcelavera912@gmail.com', 'tamayo1234', '9971519607', 'C. 37 #96 X 44 Y 46 COL. ARCADIO SANTOYO ', 'OXKUTZCAB', '', 'VEMM040520MYNRRRA2', 'LILIANA ESPERANZA MARTIN COLONIA', '9971452443', 'PREPARATORIA OXKUTZCAB', '', '', '2022-03-04'),
-(286, 2, 22, 'DANIEL ALEXANDER', 'CEBALLOS ', 'TORRES', '2004-11-27', 'Masculino', 'Soltero', 'danielalexanderceballostorres@gmail.com', 'Danielceb89', '9971112747', 'CALLE 30X 29 Y 31', 'TICUL ', '97860', 'CETD041127HYNBRNA8', 'JUAN DANIEL CEBALLOS CALDERON', '9971184224', 'JOSE DOLORES RODRIGUEZ TAMAYO ', '', '', '2022-03-04'),
 (287, 2, 20, 'JOSE JULIAN', 'TUZ', 'EK', '2004-01-30', 'Masculino', 'Soltero', 'josejuliantuzek@gmail.com', 'tamayo1234', '9971458281', 'CALLE 31 S/N X 34 Y 36 COL. CENTRO', 'TEABO', '', 'TUEJ040130HYNZKLA9', 'YAZMIN TUZ EK', '9971204612', 'COBAY TEABO', '', '', '2022-03-04'),
 (288, 1, 7, 'GEYLI NIRAN', 'CUA', 'CANUL', '2002-10-11', 'Femenino', 'Soltera', 'cuanairan@gmail.com', 'Nairan11', '9993891719', 'CALLE 20 # 81A × 13 Y 15', 'TETIZ', '97364', 'CUCG021011MYNXNYA2', 'MARIA ELIDE CANUL KOYOC', '9999651092', 'COLEGIO DE ESTUDIOS CIENTÍFICOS Y TECNOLÓGICOS DEL ESTADO DE YUCATÁN', '', '', '2022-03-04'),
 (289, 2, 22, 'JOSÉ ISRAEL ', 'UCÁN ', 'SEGURA', '2004-04-27', 'Masculino', 'Soltero', 'israelucansegura@gmail.com', 'Calamardo27', '9971140307', 'C18 X 11 Y 13', 'TICUL', '97860', 'UASI040427HYNCGSA9', 'RIGOBERTO UCÁN BASTO', '9971019337', 'CENTRO EDUCATIVO RODRÍGUEZ TAMAYO ', '', '12', '2022-03-04'),
@@ -1169,9 +1168,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (345, 2, 22, 'RODRIGO ISMAEL', 'DZIB', 'RODRIGUEZ', '2004-02-01', 'Masculino', 'Soltero', 'gomezrodrigo384@gmail.com', 'Rod010204', '9995434951', 'C.19 #127 X 24 Y 26', 'MAXCANU', '97800', 'DIRR040201HYNZDDA9', 'MARIA MARICELA RODRIGUEZ PECH', '9992722891', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN PLANTEL HALACHO', '', '', '2022-03-09'),
 (347, 1, 5, 'ELIZABETH YACIRE', 'MOO', 'CHAN', '2004-04-12', 'Femenino', '', 'eliza124544moochan@gmail.com', '13061318', '9995107031', 'CALLE 41 POR 34 Y 34A COLONIA ÁLVARO OBREGÓN', 'HUNUCMÁ', '97350', 'MOCE040412MYNXHLA3', 'JOSÉ FRANCISCO MOO CHAN', '9992627385', 'COBAY', '', '11', '2022-03-09'),
 (348, 2, 24, 'SAMANTHA LILÍ', 'LEÓN', 'PACHECO', '2004-01-26', 'Femenino', 'Soltera', 'samanthaleonpacheco26@gmail.com', 'samanthaleon260104', '9971416767', 'CALLE 40 ENTRE 53 Y 55, CASA NARANJA CON AMARILLO DE DOS PISOS', 'OXKUTZCAB', '97880', 'LEPS040126MYNNCMA8', 'LILIANA PACHECO RAIGOZA', '9971075809', 'ESCUELA PREPARATORIA ESTATAL NO.9, VÍCTOR MANUEL CERVERA PACHECO', '', '', '2022-03-09'),
-(349, 2, 22, 'DANIELA MARGARITA', 'MARFIL', 'MEZQUITA', '2003-03-01', 'Femenino', 'Soltera', 'danielamarfilmezquita@gmail.com', 'Tomomi17', '9994397154', '25B DIAGONAL N°337 X 26C Y 26D FRACCIONAMIENTO POLIGONO 108 ITZIMNA', 'MERIDA', '97143', 'MAMD030301MYNRZNA4', 'CARLA YARELY MEZQUITA ARGAEZ', '9991427676', 'ESCUELA PREPARATORIA N°1 UADY', '', '6', '2022-03-09');
+(349, 2, 22, 'DANIELA MARGARITA', 'MARFIL', 'MEZQUITA', '2003-03-01', 'Femenino', 'Soltera', 'danielamarfilmezquita@gmail.com', 'Tomomi17', '9994397154', '25B DIAGONAL N°337 X 26C Y 26D FRACCIONAMIENTO POLIGONO 108 ITZIMNA', 'MERIDA', '97143', 'MAMD030301MYNRZNA4', 'CARLA YARELY MEZQUITA ARGAEZ', '9991427676', 'ESCUELA PREPARATORIA N°1 UADY', '', '6', '2022-03-09'),
+(350, 2, 22, 'ABRAHAM EMMANUEL ', 'ESTRADA', 'ALVAREZ', '2004-05-23', 'Masculino', 'Soltero', 'abrahamestrada422@gmail.com', 'Monito2328', '9858587810', 'CALLE 64A #210 ENTRE 35A Y 37 COLONOS(ZACI)', 'VALLADOLID', '97784', 'EAAA040523HYNSLBA3', 'ALBA MARIA ALVAREZ ALCOCER', '9851005614', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN ', '', '', '2022-03-09');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(350, 2, 22, 'ABRAHAM EMMANUEL ', 'ESTRADA', 'ALVAREZ', '2004-05-23', 'Masculino', 'Soltero', 'abrahamestrada422@gmail.com', 'Monito2328', '9858587810', 'CALLE 64A #210 ENTRE 35A Y 37 COLONOS(ZACI)', 'VALLADOLID', '97784', 'EAAA040523HYNSLBA3', 'ALBA MARIA ALVAREZ ALCOCER', '9851005614', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN ', '', '', '2022-03-09'),
 (351, 1, 5, 'NORMA NAYELLI', 'RAVELL', 'PEREZ', '1987-10-09', 'Femenino', 'Casada', 'risaal03@hotmail.com', 'Sanchez@1972', '9383859578', 'CALLE CONSTELACION GEMINIZ NUMERO 8 ENTRE HERCULES Y LEO', 'CD. DEL CARMEN , CAMPECHE', '24158', 'RAPN861009MCCVRR20', 'RICARDO SANCHEZ ALVAREZ', '9381003234', 'ITECHD', '', '', '2022-03-09'),
 (352, 1, 5, 'MARIANA GUADALUPE', 'BORGES ', 'MAY', '2004-02-14', 'Femenino', 'Soltera', 'marianaborgesmay28@gmail.com', '14152004', '9994412620', 'CALLE 65 H NO. 333 ENTRE 8 Y 10 FRACC VILLAS DE OTE.', 'KANASIN', '97306', 'BOMM040214MYNRYRA2', 'SONIA GUADALUPE MAY CASTRO', '9992084119', 'PREPARATORIA ESTATAL 3 CTM ', '', '', '2022-03-09'),
 (353, 1, 7, 'ANGEL ELI', 'GRANADOS', 'COB ', '2004-08-09', 'Masculino', 'Soltero', 'angel118cob@gmail.com', 'Angel09', '9994379366', 'CALLE 23 #118A POR 28 Y 30 SISAL ', 'SISAL ', '97356', 'GACA040809HYNRBNA7', 'MARIA DE LOS ANGELES COB UH', '9991534811', 'COBAY HUNUCMA ', '', '', '2022-03-10'),
@@ -1326,9 +1325,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (513, 1, 1, 'JESSICA ', 'PEDRO ', 'ANDRADE ', '2004-01-18', 'Femenino', 'Soltera', 'jessicapedroandrade@gmail.com', 'juniorjess1810', '9993450248', 'CALLE 63A #270 POR 124D Y 128 FRAC. YUCALPETEN ', 'MERIDA ', '97238', 'PEAJ041018MQRDNSA6', 'KARINA DEL ROCIO ANDRADE CERVERA ', '9993703191', 'PREPA ESTATAL 8', '', '6', '2022-03-26'),
 (514, 2, 21, 'JONATHAN MISAEL ', 'VENTURA ', 'PALOMO ', '1999-08-31', 'Masculino', 'Soltero', 'venturapalomoj@gmail.com', 'palomo1.', '9996153499', '37 X 24 Y 26 SANTIAGO ', 'TICUL , YUCATAN ', '97864', 'VEPJ990831HYNNLN08', 'GEOVANNY DANIEL VENTURA PALOMO ', '9993215547', 'COBAY', '', '', '2022-03-26'),
 (515, 1, 8, 'ANGEL MIZRAIM', 'AKE', 'CANUL', '2001-09-06', 'Masculino', 'Soltero', 'angel.ake321@gmail.com', 'mizraimake123', '9994535538', 'CALLE 22X11A Y 11B PUERTAS DEL SOL', 'MOTUL', '97430', 'AECA010906HYNKNNA4', 'ROBERT AKE POOT', '9911089574', 'ELEVA EDUCACION', '', '', '2022-03-27'),
-(516, 2, 22, 'ETHAN ENRIQUE', 'GURUBEL ', 'MARTINEZ ', '2002-04-01', 'Masculino', 'Soltero', 'nova-phantom@hotmail.com', '18567910a', '9991383066', '61-A 239 120 122', 'MERIDA', '97238', 'GUME020201HYNRRTA3', 'JOSE ENRIQUE GURUBEL ECHEVERRÍA ', '9991975301', 'COLEGIO SAN AGUSTÍN ', '', '', '2022-03-27');
+(516, 2, 22, 'ETHAN ENRIQUE', 'GURUBEL ', 'MARTINEZ ', '2002-04-01', 'Masculino', 'Soltero', 'nova-phantom@hotmail.com', '18567910a', '9991383066', '61-A 239 120 122', 'MERIDA', '97238', 'GUME020201HYNRRTA3', 'JOSE ENRIQUE GURUBEL ECHEVERRÍA ', '9991975301', 'COLEGIO SAN AGUSTÍN ', '', '', '2022-03-27'),
+(517, 1, 2, 'LUZ TAMARA ', 'SANTOS ', 'MORENO', '1998-12-19', 'Femenino', 'Soltera', 'mrhp23@hotmail.com', 'perlapug', '9381157422', 'CALLE 63 #685A X 86 Y 88 ALMENDROS ', 'MERIDA', '97314', 'SAML981219MCCNRZ09', 'MARIO RENÉ HERNÁNDEZ PINZON ', '9993272175', 'UNIVERSIDAD CNCI', '', '', '2022-03-28');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(517, 1, 2, 'LUZ TAMARA ', 'SANTOS ', 'MORENO', '1998-12-19', 'Femenino', 'Soltera', 'mrhp23@hotmail.com', 'perlapug', '9381157422', 'CALLE 63 #685A X 86 Y 88 ALMENDROS ', 'MERIDA', '97314', 'SAML981219MCCNRZ09', 'MARIO RENÉ HERNÁNDEZ PINZON ', '9993272175', 'UNIVERSIDAD CNCI', '', '', '2022-03-28'),
 (518, 1, 9, 'ANA PATRICIA', 'DZIB', 'COUOH', '1984-01-11', 'Femenino', 'Soltera', 'patriciadzib86@gmail.com', '1234', '9851084354', 'C. 16 #32 X 21 Y 23 FLOR CAMPESTRE', 'VALLADOLID', '97780', 'DICA840111MYNZHN08', 'LUIS ALBERTO DZIB CUPUL', '9851012474', 'UNIVERSIDAD DE GUANAJUATO', 'SSY', '11', '2022-03-28'),
 (519, 1, 5, 'PAULINA VICTORIA', 'EUAN ', 'KEB ', '2001-01-25', 'Femenino', 'Soltera', 'euankebpau@gmail.com', '200219Pau', '9995338661', 'CALLE 39 #435 X 30 Y 32 JUAN PABLO II', 'MERIDA', '97246', 'EUKP010125MYNNBLA1', 'MARIA VICTORIA KEB BACAB ', '9991525769', 'COBAY XOCLAN ', '', '', '2022-03-28'),
 (520, 1, 5, 'ARLETE GABRIELA ', 'AGUILAR ', 'SOSA', '2004-05-26', 'Femenino', 'Soltera', 'aguilararlet2004@gmail.com', 'aguilarsosa26', '9992792226', 'CALLE 73D #1096 POR 134A Y 136 COL. SUSULA XOCLAN ', 'MERIDA ', '97246', 'AUSA040526MYNGSRA9', 'JOSE AGUILAR PACHECO ', '9991186260', 'COBAY XOCLAN ', '', '11', '2022-03-28'),
@@ -1482,9 +1481,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (675, 2, 22, 'MARIANA GUADALUPE', 'AYALA', 'CHI', '2004-02-21', 'Femenino', 'Soltera', 'ayalamariana021@gmail.com', 'tamayo1234', '9992791762', 'CALLE 90 NO. 153 X 31 Y 33', 'PROGRESO', '97320', 'AACM040221MYNYHRA9', 'JOSÉ ARMANDO AYALA LAVADORES', '9994117792', 'PABLO MORENO TRIAY', 'TORNERO', '12', '2022-04-25'),
 (676, 2, 22, 'VIVIANA LUISA', 'CHAN', 'DZUL', '2004-05-08', 'Femenino', 'Soltera', 'vivianachan057@gmail.com', 'viviana123', '9982196922', 'COSTA AZUL 2, CALLE TECALI, SM 202 MZ 53 LT 10 CASA 14', 'BENITO JUÁREZ', '77539', 'CADV040508MQRHZVA9', 'BIBIANA INÉS DZUL ALCOCER', '9981526206', 'COLEGIO BOSTON', '', '', '2022-04-25'),
 (677, 1, 5, 'CELESTE PAMELA', 'MARTÍN', 'NOH', '2004-09-01', 'Femenino', 'Soltera', 'celestemartinnoh3@gmail.com', 'CELESTE01', '9911056217', 'CALLE 21×12 Y 14 COLONIA SANTA CRUZ', 'DZILAM GÓNZALES', '97600', 'MANC040901MYNRHLA6', 'MERLY NOH KINI', '9911151712', 'PREPARATORIA ESTATAL NÚM#4 VICTOR JESUS MANZANILLA JIMENEZ', '', '', '2022-04-25'),
-(678, 1, 11, 'YESENIA ANDREA', 'BALAM', 'PUC', '1996-11-02', 'Femenino', 'Soltera', 'andreaa0215@gmail.com', '02Novi.', '9851220659', 'CALLE 35 ENTRE 70 Y 72 NUMERO 325, COL. EMILIANO ZAPATA', 'VALLADOLID', '97784', 'BAPY961102MYNLCS07', 'ALMA ROSA PUC HOIL ', '9851223075', 'UNIVERSIDAD AUTONOMA DE YUCATAN', 'CLINICA PRIVADA, CENTRO MEDICO SAN LUCAS ', '', '2022-04-25');
+(678, 1, 11, 'YESENIA ANDREA', 'BALAM', 'PUC', '1996-11-02', 'Femenino', 'Soltera', 'andreaa0215@gmail.com', '02Novi.', '9851220659', 'CALLE 35 ENTRE 70 Y 72 NUMERO 325, COL. EMILIANO ZAPATA', 'VALLADOLID', '97784', 'BAPY961102MYNLCS07', 'ALMA ROSA PUC HOIL ', '9851223075', 'UNIVERSIDAD AUTONOMA DE YUCATAN', 'CLINICA PRIVADA, CENTRO MEDICO SAN LUCAS ', '', '2022-04-25'),
+(679, 1, 8, 'JESUS ELISEO', 'UICAB', 'CETINA', '2001-08-09', 'Masculino', 'Soltero', 'jeliseouicab@gmail.com', 'Eliseo2022', '9971323478', 'CALLE 18 X 19 Y 21, TEKIT, YUC.', 'TEKIT', '97680', 'UICJ010809HYNCTSA1', 'IRMA ESTHER CETINA NARVAEZ', '9971518770', 'PREPARATORIA YUCATÁN MONS. LUIS MIGUEL CANTÓN MARÍN.', '', '6', '2022-04-26');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(679, 1, 8, 'JESUS ELISEO', 'UICAB', 'CETINA', '2001-08-09', 'Masculino', 'Soltero', 'jeliseouicab@gmail.com', 'Eliseo2022', '9971323478', 'CALLE 18 X 19 Y 21, TEKIT, YUC.', 'TEKIT', '97680', 'UICJ010809HYNCTSA1', 'IRMA ESTHER CETINA NARVAEZ', '9971518770', 'PREPARATORIA YUCATÁN MONS. LUIS MIGUEL CANTÓN MARÍN.', '', '6', '2022-04-26'),
 (681, 1, 11, 'MARIA ELIZABETH', 'CASTRO ', 'RAMIREZ ', '1996-12-02', 'Femenino', 'Soltera', 'mariacastror2013@gmail.com', '1234', '9994210158', 'CALLE 55 #185 POR 40 Y 42 FRANCISCO DE MONTEJO ', 'MERIDA ', '97203', 'CARE961202MYNSML05', 'MARIA DELFINA RAMIREZ ESTRELLA', '9994585809', 'INSY', 'ISSSTE SUSULA ', '11', '2022-04-26'),
 (682, 1, 11, 'ADRIANA', 'RUIZ ', 'BURGOS ', '1997-08-13', 'Femenino', 'Soltera', 'adriana.ruizb13@gmail.com', '1234', '9993386266', 'CALLE 55A #398 POR 56 Y 58 FRANCISCO DE MONTEJO ', 'MERIDA ', '97203', 'RUBA970813MYNZRD01', 'JOSEFINA DEL ROSARIO BURGOS CALDERON', '9999565971', 'INSY', 'CEM ', '11', '2022-04-26'),
 (683, 2, 22, 'BERENICE ABIGAIL', 'BURGOS', 'BARRERA', '2004-05-03', 'Femenino', 'Soltera', 'bereburgos04@gmail.com', 'G@lois22', '9992968675', 'CALLE 81ª INT.630 X 90 Y 92 PRIV LAS PALMERAS 1', 'MÉRIDA', '97260', 'BUBB040503MYNRRRA5', 'LUIS DANIEL BURGOS CANUL', '9997388250', 'UADY PREPARATORIA 2', '', '', '2022-04-26'),
@@ -1639,9 +1638,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (834, 1, 4, 'VANESSA GUADALUPE ', 'HERRERA', 'CONTRERAS', '2004-04-05', 'Femenino', '', 'vaneherreracx@gmail.com', '14021805', '9995147009', '21 X 34 Y 36 #132', 'BUCTZOTZ', '97620', 'HECV040405MYNRNNA3', 'COLUMBA AURORA HERRERA CONTRERAS', '9911065928', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN PLANTEL BUCTZOTZ ', '', '11', '2022-05-12'),
 (835, 2, 22, 'ANA KAREN', 'RODRIGUEZ ', 'BLANCO', '2002-11-09', 'Femenino', 'Soltera', '180222.anakaren.rodriguez@gmail.com', 'plumones08', '9984960658', 'RESIDENCIAL LAS AMERICAS PRIVADA PARAGUAY', 'BENITO JUAREZ', '77533', 'RXBA021109MQRDLNA1', 'ANABEL BLANCO FERNANDEZ', '9981529124', 'UNIVERSIDAD LA SALLE CANCUN', '', '', '2022-05-12'),
 (836, 2, 22, 'ITAÍ MOSERÁ ', 'CAUICH', 'PÉREZ ', '2003-02-25', 'Femenino', 'Soltera', 'itaimcp@gmail.com', 'jann1els1to', '9995543541', 'C. 77 POR 92 Y 94 #732A FRACC. LOS ALMENDROS ', 'MÉRIDA ', '97314', 'CAPI030225MYNCRTA1', 'MIRLA PÉREZ ', '9992696663', 'ESCUELA PREPARATORIA ESTATAL #3, CTM ', '', '', '2022-05-12'),
-(837, 1, 4, 'BRAULIO GAEL', 'HUCHIN', 'ARAGON', '2004-11-10', 'Masculino', 'Soltero', 'brauliogael67@gmail.com', 'BraulioHuchin10', '9961445017', 'CALLE 20 207', 'CALKINI', '24935', 'HUAB041110HCCCRRA9', 'FELICIANA ARAGON FLORES', '9961092506', 'COLEGIO DE BACHILLERES DEL ESTADO DE CAMPECHE', '', '', '2022-05-12');
+(837, 1, 4, 'BRAULIO GAEL', 'HUCHIN', 'ARAGON', '2004-11-10', 'Masculino', 'Soltero', 'brauliogael67@gmail.com', 'BraulioHuchin10', '9961445017', 'CALLE 20 207', 'CALKINI', '24935', 'HUAB041110HCCCRRA9', 'FELICIANA ARAGON FLORES', '9961092506', 'COLEGIO DE BACHILLERES DEL ESTADO DE CAMPECHE', '', '', '2022-05-12'),
+(838, 2, 22, 'DANIELA LIZBETH', 'GUTIÉRREZ', 'ESPEJO', '2004-06-30', 'Femenino', 'Soltera', 'danielalizgtz@gmail.com', 'ladanieluchis', '9841463193', 'PLAYA DEL CARMEN, COL. EJIDAL, CALLE 24, LT. 14, MZ. 152.', 'SOLIDARIDAD', '77712', 'GUED040630MQRTSNA0', 'AIDA JAZMÍN ESPEJO HERNÁNDEZ', '9841466207', 'INSTITUTO VITTORIO MONTEVERDI', '', '11', '2022-05-12');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(838, 2, 22, 'DANIELA LIZBETH', 'GUTIÉRREZ', 'ESPEJO', '2004-06-30', 'Femenino', 'Soltera', 'danielalizgtz@gmail.com', 'ladanieluchis', '9841463193', 'PLAYA DEL CARMEN, COL. EJIDAL, CALLE 24, LT. 14, MZ. 152.', 'SOLIDARIDAD', '77712', 'GUED040630MQRTSNA0', 'AIDA JAZMÍN ESPEJO HERNÁNDEZ', '9841466207', 'INSTITUTO VITTORIO MONTEVERDI', '', '', '2022-05-12'),
 (839, 2, 22, 'MARÍA FERNANDA ', 'MANZANERO', 'TELLO ', '2000-09-30', 'Femenino', 'Soltera', 'fernandamanzanerotello@gmail.com', 'Freddiechurch3009', '9991854197', '15B NO.251A X 30 MIRAFLORES ', 'MÉRIDA', '97179', 'MATF000930MYNNLRA7', 'GUADALUPE EUNICE TELLO REQUENA ', '9993542905', 'ESCUELA PREPARATORIA NÚMERO UNO UADY ', '', '', '2022-05-12'),
 (840, 1, 7, 'CLAUDIA REBECA ', 'ZUÑIGA', 'CASTILLO', '1999-09-07', 'Femenino', 'Soltera', 'clau.rzcas@gmail.com', '1234', '4423154785', 'CALLE 37D POR 110B Y 110C #898-27 FRACC. CIUDAD CAUCEL  MÉRIDA, YUCATÁN', 'MÉRIDA', '97134', 'ZUCC990907MMNXSL01', 'ERIKA ZÚÑIGA TOSCANO', '9999109471', 'INSTITUTO MEXICANO DE ESTUDIOS INTEGRALES', '', '1', '2022-05-12'),
 (841, 1, 5, 'DIANA FERNANDA', 'CANCHE ', 'FLORES', '2004-02-01', 'Femenino', 'Soltera', 'canchediana0@gmail.com', 'diana0104', '9999934059', 'CALLE 30 1405 X55B Y 57 FIDEL VELÁZQUEZ ', 'MÉRIDA ', '97166', 'CAFD040201MYNNLNA9', 'CARLOS EZEQUIEL LIZAMA PERAZA', '9992612550', 'ESCUELA PREPARATORIA ESTATAL NO.3 CTM', '', '6', '2022-05-12'),
@@ -1798,9 +1797,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (995, 1, 5, 'ESTEFANY GUADALUPE ', 'DZUL', 'CORDOVA ', '2003-10-02', 'Femenino', '', 'estefanydzul4@gmail.com', 'Dzul.0210', '9992511425', 'CALLE 25X 22 Y 24 #104F', 'IXIL ', '97343', 'DUCE031002MYNZRSA0', 'TERESA DE JESÚS CÓRDOVA CHAN ', '9998991596', 'COBAY CHICXULUB PUEBLO ', '', '', '2022-06-03'),
 (996, 1, 5, 'JESÚS EDUARDO ', 'CEN', 'KEB', '2003-04-19', 'Masculino', 'Soltero', 'jesuskeb4@gmail.com', 'JESÚS0419', '9971407584', 'CALLE 17 POR 12 COLONIA SANTA ANA ', 'HALACHÓ', '97830', 'CEKJ030419HYNNBSA2', 'JOSÉ BERNARDINO CEN TÚN', '9971293934', 'COLEGIO DE BACHILLERES DEL ESTADO DE HALACHÓ YUCATÁN', '', '11', '2022-06-03'),
 (997, 1, 2, 'EDUARDO', 'AVILA', 'BECERRIL', '2001-04-09', 'Masculino', 'Soltero', 'eduardoab45@gmail.com', 'Pachucarg14', '5530166811', 'CALLE 83# 690 X 86 Y 88 ALMENDROS ', 'CAUCEL', '97314', 'AIBE010409HDFVCDA6', 'GENARO AVILA ALCOZER ', '5518506991', 'NUEVA ESCUELA TECNOLOGICA IXTAPALUCA', '', '', '2022-06-03'),
-(998, 1, 1, 'KATIA GUADALUPE ', 'LIZARRAGA ', 'VALENCIA ', '2003-11-13', 'Femenino', 'Soltera', 'katializarraga1311@gmail.com', 'Gupi98', '9994956672', 'CALLE 99 #373 X 44 Y 46 SANTA ROSA ', 'MERIDA ', '97279', 'LIVK031113MYNZLTA2', 'MERCEDES VALENCIA', '9993280789', 'REPÚBLICA DE MÉXICO ', '', '', '2022-06-04');
+(998, 1, 1, 'KATIA GUADALUPE ', 'LIZARRAGA ', 'VALENCIA ', '2003-11-13', 'Femenino', 'Soltera', 'katializarraga1311@gmail.com', 'Gupi98', '9994956672', 'CALLE 99 #373 X 44 Y 46 SANTA ROSA ', 'MERIDA ', '97279', 'LIVK031113MYNZLTA2', 'MERCEDES VALENCIA', '9993280789', 'REPÚBLICA DE MÉXICO ', '', '', '2022-06-04'),
+(999, 2, 20, 'JOSE HERNAN ', 'CRUZ ', 'CHEL ', '2004-08-14', 'Masculino', 'Soltero', 'hernancruzbmw@gmail.com', 'tamayo1234', '9971185435', 'C. 18 S/N X 37 Y 39 COL. MIGUEL HIDALGO ', 'AKIL ', '', 'CUCH040814HYNRHRA3', 'PAULINA CHEL CHAN ', '9971416383', 'COBAY PLANTEL AKIL', '', '', '2022-06-04');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(999, 2, 20, 'JOSE HERNAN ', 'CRUZ ', 'CHEL ', '2004-08-14', 'Masculino', 'Soltero', 'hernancruzbmw@gmail.com', 'tamayo1234', '9971185435', 'C. 18 S/N X 37 Y 39 COL. MIGUEL HIDALGO ', 'AKIL ', '', 'CUCH040814HYNRHRA3', 'PAULINA CHEL CHAN ', '9971416383', 'COBAY PLANTEL AKIL', '', '', '2022-06-04'),
 (1000, 1, 5, 'RAMSÉS ALEXANDER', 'PAT ', 'CAUICH ', '2003-03-19', 'Masculino', 'Soltero', 'ramsespat35@gmail.com', 'Ramses192003', '9991139107', 'CALLE 20 ENTRE 11 Y 13', 'MAXCANÚ', '97800', 'PACR030319HYNTCMA4', 'CAROLINA CAUICH AMAYA ', '9971322960', 'CECYTE PLANTEL 03 MAXCANÚ', '', '', '2022-06-04'),
 (1002, 2, 20, 'MARÍA ISABEL', 'MENA ', 'MEDINA ', '2003-03-16', 'Femenino', 'Soltera', 'isa.med316@gmail.com', '200316Mi', '9999911725', 'CALLE 24 #204 X 25 Y 27', 'SACALUM', '97845', 'MEMI030316MYNNDSA5', 'SILVIA YASMIN MEDINA CRUZ', '9971203392', 'COBAY ', '', '', '2022-06-05'),
 (1003, 1, 5, 'MELANY ISABEL ', 'LEPE', 'LOPEZ', '2002-05-11', 'Femenino', 'Soltera', 'melany.isa.1105@gmail.com', 'Violeta1105', '6442547801', '97 597 60 Y 62A', 'MERIDA CD CAUCEL', '97314', 'LELM020511MSLPPLA6', 'ROLANDO CHE ', '9995342119', 'COBASH', '', '', '2022-06-05'),
@@ -1956,9 +1955,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1154, 1, 6, 'HERNÁN ALFONSO ', 'CABRERA', 'NAHUAT', '2001-09-10', 'Masculino', 'Soltero', 'hacabrera1009@gmail.com', '20010910', '9991263121', 'CALLE 13 X 26 Y 26A', 'TEKIT', '97680', 'CANH010910HYNBHRA3', 'SILVIA ADELA NAHUAT AKE', '9971656316', 'COBAY TEKIT', '', '', '2022-06-22'),
 (1155, 1, 11, 'NELDA ', 'FRANCISCO', 'GUERRA', '1986-04-21', 'Femenino', 'Soltera', 'neldafg04@gmail.com', 'nelda2104', '9811134208', 'CALLE 1  167 MZ 93 ', 'CAMPECHE', '24073', 'FAGN860421MCCRRL09', 'OLGA LIDIA FRANCISCO GUERRA ', '9811823592', 'UNIVERSIDAD AUTONOMA DE CAMPECHE', 'HOSPITAL GENERAL DE ESPECIALIDADES JAVIER BUENFIL OSORIO', '', '2022-06-22'),
 (1156, 1, 5, 'TANIA VALENTINA ', 'CHIQUINI', 'SANDOVAL', '2003-11-22', 'Femenino', 'Soltera', 'taniasantdoval14@gmail.com', 'valentinaCERT2022', '9969638159', 'CALLE 37-A NO. 634 A X 66-A Y 68 MÉRIDA, YUCATÁN FRACC RESIDENCIAL HACIENDA CD. CAUCEL', 'MÉRIDA', '97314', 'CIST031122MCCHNNA6', 'ROSA GUADALUPE SANDOVAL GOMEZ', '9811041927', 'COLEGIO DE ESTUDIOS CIENTIFICIOS Y TECNOLOGICOS ', '', '', '2022-06-23'),
-(1157, 1, 5, 'MARISOL', 'TRUJILLO  ', 'TORRES ', '2003-01-31', 'Femenino', 'Soltera', 'trujillomarisoltorres@gmail.com', 'machisoltru', '9996106736', 'CALLE 16 Nº252-A X 43 Y 45 LEANDRO VALLE ', 'MÉRIDA ', '97143', 'TUTM030131MYNRRRA9', 'ORALIA TORRES MORALES ', '9996106443', 'CONALEP MÉRIDA 1 ', '', '', '2022-06-23');
+(1157, 1, 5, 'MARISOL', 'TRUJILLO  ', 'TORRES ', '2003-01-31', 'Femenino', 'Soltera', 'trujillomarisoltorres@gmail.com', 'machisoltru', '9996106736', 'CALLE 16 Nº252-A X 43 Y 45 LEANDRO VALLE ', 'MÉRIDA ', '97143', 'TUTM030131MYNRRRA9', 'ORALIA TORRES MORALES ', '9996106443', 'CONALEP MÉRIDA 1 ', '', '', '2022-06-23'),
+(1158, 1, 5, 'LISSETH JOANA', 'CALAN', 'RUIZ', '2004-03-17', 'Femenino', 'Soltera', 'Lissethcalan@gmail.com', 'Alum1914d', '9971272344', 'CALLE 13K #848, CERRADA LAS VIOLETAS, GRAN SANTA FE NORTE', 'MÉRIDA', '97314', 'CARL040317MYNLZSA8', 'MAGDIEL JOSIAS CALAN RAMOS', '9971234719', 'PREPARATORIA DOS UADY', '', '', '2022-06-23');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(1158, 1, 5, 'LISSETH JOANA', 'CALAN', 'RUIZ', '2004-03-17', 'Femenino', 'Soltera', 'Lissethcalan@gmail.com', 'Alum1914d', '9971272344', 'CALLE 13K #848, CERRADA LAS VIOLETAS, GRAN SANTA FE NORTE', 'MÉRIDA', '97314', 'CARL040317MYNLZSA8', 'MAGDIEL JOSIAS CALAN RAMOS', '9971234719', 'PREPARATORIA DOS UADY', '', '', '2022-06-23'),
 (1159, 1, 5, 'ALEJANDRA CAROLINA ', 'SERRALTA ', 'BUENFIL', '1997-01-16', 'Femenino', 'Soltera', 'Keimil0904@gmail.com', 'Keimil0904', '9996452886', 'CALLE 90A #664 POR 81A Y 81B FRAC. LOS REYES', 'MERIDA ', '97000', 'SEBA970116MYNRNL08', 'GUADALUPE ALFONSO SERRALTA RAMIREZ ', '9992467579', 'TELEBACHILLERATO ', '', '11', '2022-06-23'),
 (1160, 1, 1, 'JOSE FRANCISCO', 'TZAB', 'LIMON', '2004-06-22', 'Masculino', 'Soltero', 'tzablimon@gmail.com', '22460000', '2351125159', 'CALLE 59 X 94 ALMENDROS 2,', 'CAUCEL', '97314', 'TALF040622HQRZMRA8', 'MARIBEL LIMON HERNANDEZ', '9994383491', 'CBTA 13 XMATKUIL', '', '', '2022-06-23'),
 (1161, 2, 20, 'MARITZA GUADALUPE', 'SALAZAR', 'RAMIREZ', '2003-03-28', 'Femenino', 'Soltera', 'maritza.guadalupe.salazar.ramirez@gmail.com', 'tamayo1234', '9971036937', 'CALLE 62B #97 ENTRE 45 Y 47 RASTRO', 'OXKUTZKAB', '97880', 'SARM030329MYNLMRA1', 'DIANELA RAMÍREZ', '9971032855', 'VICTOR CERVERA PACHECO', '', '', '2022-06-23'),
@@ -1997,7 +1996,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1194, 1, 5, 'RENATA MONSERRAT', 'PÉREZ', 'DORANTES', '2003-08-16', 'Femenino', 'Soltera', 'renapd2003@gmail.com', 'Sebastian19062017', '9992158574', 'C.61 NO. 514 X 50B Y 50E. HERRADURA II', 'MÉRIDA', '97314', 'PEDR030816MYNRRNA5', 'ABIGAIL DEL SOCORRO DORANTES ZUÑIGA', '9992430509', 'ESCUELA PREPARATORIA 2 UADY', '', '', '2022-06-27'),
 (1195, 1, 5, 'ALEXIA GRETTEL ', 'BARRERA ', 'CHALE ', '2004-01-06', 'Femenino', 'Soltera', 'alexiagre31@gmail.com', 'Alexia2004*', '9871112633', 'AV. JAGUAR CALLE TORTUGA CAREY', 'COZUMEL ', '77645', 'BXCA040106MQRRHLA1', 'MIGUEL ALEJANDRO BARRERA CARRILLO ', '9871060193', 'CENTRO DE ESTUDIOS TECNOLÓGICOS DEL MAR 33 ', '', '', '2022-06-27'),
 (1196, 1, 7, 'YARA NAILEA ', 'PÉREZ ', 'GONZÁLEZ ', '2001-03-14', 'Femenino', 'Soltera', 'yaraperez1714@gmail.com', '2082006', '9992766453', 'AV. 31 #717A X86 Y 88, FRACC. VIVA CAUCEL II', 'MÉRIDA ', '97314', 'PEGY010314MYNRNRA6', 'BERNARDINA GONZÁLEZ LÓPEZ ', '9995439985', 'REPÚBLICA DE MÉXICO ', '', '', '2022-06-27'),
-(1197, 1, 5, 'MANUEL JESUS ', 'GONGORA', 'RUIZ ', '2004-05-08', 'Masculino', 'Soltero', 'gongoraruizmanueljesus@gmail.com', 'Manuelgongora16', '9997701316', '46X19A Y 19B', 'PETO ', '97930', 'GORM040508HYNNZNA3', 'DENISSE LUCELY RUIZ GONZALEZ', '9971142772', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN ', '', '', '2022-06-27'),
+(1197, 1, 5, 'MANUEL JESUS ', 'GONGORA', 'RUIZ ', '2004-05-08', 'Masculino', 'Soltero', 'gongoraruizmanueljesus@gmail.com', 'Manuelgongora16', '9997701316', 'CALLE 46 X19A Y 19B PETO ', 'PETO ', '97930', 'GORM040508HYNNZNA3', 'DENISSE LUCELY RUIZ GONZALEZ', '9971142772', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN ', '', '', '2022-06-27'),
 (1198, 1, 5, 'ASHANTTI CITLALI', 'PECH', 'HERRERA', '2004-11-28', 'Femenino', 'Soltera', 'ashanttipech@gmail.com', 'Herrera28', '9994109041', 'CALLE 22 X 13 Y 15 ', 'SUMA DE HIDALGO', '97527', 'PEHA041128MYNCRSA7', 'LUCIA ASUNCION HERRERA MENDEZ ', '9911085857', 'FELIPE CARRILLO PUERTO DE MOTUL', '', '6', '2022-06-27'),
 (1199, 1, 5, 'GUADALUPE ANAHÍ ', 'AGUILAR ', 'CANCHE ', '2004-09-17', 'Femenino', 'Soltera', 'anaaguuilar4@gmail.com', '1217ana09', '9996401204', '159 28', 'UMAN', '97390', 'AUCG040917MYNGNDA7', 'WILBERTH MANUEL AGUILAR GUTIÉRREZ ', '9994139740', 'COBAY UMAN ', '', '', '2022-06-27'),
 (1200, 1, 5, 'ANGEL EDUARDO ', 'PERERA ', 'BALAM ', '2004-12-11', 'Masculino', 'Soltero', 'eduardoperera21@gmail.com', 'Ninja2022', '9992097928', 'CALLE 77 #107 138 Y 138A VILLA MAGNA ', 'MÉRIDA ', '97249', 'PEBA041211HYNRLNA1', 'ROSARIO ELISEO PERERA DZIB ', '9999492097', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN PLANTEL XOCLAN ', '', '', '2022-06-27'),
@@ -2026,7 +2025,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1225, 1, 5, 'VICTORIA DEL CARMEN', 'VARGAS', 'SOLIS', '2002-10-11', 'Femenino', 'Soltera', 'victoriavargassolis@gmail.com', 'shawnmendes', '9996013499', 'CALLE 17C #368 X 48 Y 48D FRACC. ACIM', 'UMAN,YUCATAN', '97390', 'VASV021011MYNRLCA4', 'VICTOR OSCAR VARGAS CANTO', '9996013499', 'ESCUELA PREPARATORIA MESOAMERICANA', '', '', '2022-06-27'),
 (1226, 1, 5, 'MARIA JOSE', 'CELIS', 'MANZANERO', '2004-11-12', 'Femenino', 'Soltera', 'celis.manzanero.maria.jose.p6@gmail.com', 'aaronymajoporsiempre', '9995019456', 'CALLE 97 #528 X 64A Y 64B', 'MERIDA', '97268', 'CEMJ041112MYNLNSA3', 'GEORGINA GUADALUPE', '9995019456', 'ALIANZA DE CAMIONEROS', '', '', '2022-06-27'),
 (1227, 1, 10, 'IRMA DEL ROSARIO', 'HERNANDEZ', 'PECH', '1994-03-17', 'Femenino', 'Soltera', 'irmahernandez1794@gmail.com', 'AMRI', '9995296862', 'CALLE 7 X 26 Y 26 A S/N COL. FLORES MAGON', 'HUNUCMÁ', '97350', 'HEPI940317MYNRCR05', 'IRENE PECH ALVAREZ', '9994997170', 'CERT CAUCEL', '', '12', '2022-06-27'),
-(1228, 1, 5, 'NAYDELI BIRZAYIT', 'SALINAS', 'POOT', '2003-01-02', 'Femenino', 'Soltera', 'naydelisalinas46@gmail.com', 'b1r2@y1t', '9911106378', 'C 26 ENTRE 21 Y 23 S/N', 'YAXKUKUL', '97348', 'SAPN030102MYNLTYA0', 'MARIA DE LOURDES POOT JIMENEZ ', '9911165354', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN, PLANTEL TIXKOKOB', '', '', '2022-06-27'),
+(1228, 1, 5, 'NAYDELI BIRZAYIT', 'SALINAS', 'POOT', '2003-01-02', 'Femenino', 'Soltera', 'naydelisalinas46@gmail.com', 'b1r2@y1t', '9911106378', 'CALLE 26 ENTRE 21 Y 23 S/N YAXKUKUL', 'YAXKUKUL', '97348', 'SAPN030102MYNLTYA0', 'MARIA DE LOURDES POOT JIMENEZ ', '9911165354', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN, PLANTEL TIXKOKOB', '', '', '2022-06-27'),
 (1229, 1, 4, 'JESUS ALBERTO ', 'CEBALLOS ', 'VENTURA ', '2002-06-07', 'Masculino', 'Soltero', 'jesusalcv714@gmail.com', '1234', '9994916975', 'CALLE 20 ENTRE 29 Y 31 COL. BALTZAR CEBALLOS ', 'HUNUCMA ', '97350', 'CEVJ020605HYNBNSA9', 'MARIA ELMA JESUS VENTURA SOLIS ', '9992341697', 'COBAY HUNUCMA ', '', '11', '2022-06-27'),
 (1230, 2, 20, 'MEZTLI ARLETH', 'RIVERA ', 'PERALTA ', '2003-10-17', 'Femenino', 'Soltera', 'meztlirivera03@gmail.com', 'nico08', '9812280594', 'CALLE17 MNZA 4 LOTE 2 ', 'HOPELCHEN ', '24600', 'RIPM031017MCCVRZA8', 'LUISA ARACELY PERALTA GAMBOA ', '9961025570', 'CECYTEC ', '', '', '2022-06-27'),
 (1231, 1, 5, 'EDGAR RAMSES ', 'MAAS', 'CABALLERO ', '2003-07-10', 'Masculino', 'Soltero', 'edgarmaas1236@gmail.com', 'Ramgeosi123', '9961098840', 'CALLE 22 S/N COLONIA CENTRO', 'CALKINI, CAMPECHE', '24900', 'MACE030710HYNSBDA9', 'GEOVANNI FRANSISCO MAAS BLANQUETO ', '9961114445', 'COBACAM PLANTEL 13 CALKINI ', '', '', '2022-06-27'),
@@ -2088,7 +2087,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1287, 1, 5, 'CARLOS URIEL ', 'ALVAREZ', 'RUIZ', '2000-05-14', 'Masculino', 'Soltero', 'noosbin16@gmail.com', 'OMANAYTE9999', '9995791880', 'C 37 #316 SAN MARCOS NOCOH', 'MERIDA', '97296', 'AARC000514HYNLZRA9', 'LUCIA NOEMI', '9992206081', 'PREPA 2', '', '', '2022-06-28'),
 (1288, 1, 6, 'MIGUEL', 'URBIZU', 'LAVALLE', '2002-07-22', 'Masculino', 'Soltero', 'miguelurbizulavalle@gmail.com', '220702.mul', '9991152568', 'CALLE 37 #230 POR 74 Y 78 PROGRESO', 'PROGRESO', '97320', 'UILM020722HYNRVGA4', 'MARICELA LAVALLE DUARTE ', '9999086716', 'COBAY, PLANTEL PROGRESO', '', '', '2022-06-28'),
 (1289, 2, 20, 'FATIMA GUADALUPE', 'EK', 'TZUC', '2004-08-09', 'Femenino', 'Soltera', 'ekfatima191@gmail.com', 'tamayo1234', '9961029293', 'CALLE 19 NO. 100 X 15 Y 16 COL. SAN MIGUEL', 'CALKINI, CAMPECHE', '', 'EXTF040809MCCKZTA8', 'NORMA FLORECITA TZUC COLLI', '9967309586', 'CBTIS NO. 126 CALKINI', 'AMA DE CASA', '', '2022-06-28'),
-(1290, 1, 5, 'ANDRÉS ENRIQUE', 'POOT ', 'MIJANGOS', '2004-09-02', 'Masculino', 'Soltero', 'andrespoot123@gmail.com', 'andrespoot123', '9995148212', 'CALLLE 63A #214B X 120 FRACCIONAMIENTO YUCALPETÉN ', 'MÉRIDA', '97238', 'POMA040902HYNTJNA2', 'DIAZMÍN PATRICIA MIJANGOS RODRÍGUEZ ', '9992473758', 'CENDRO EDUCATIVO REPUBLICA DE MÉXICO', '', '', '2022-06-28'),
+(1290, 1, 5, 'ANDRÉS ENRIQUE', 'POOT ', 'MIJANGOS', '2004-09-02', 'Masculino', 'Soltero', 'andrespoot123@gmail.com', 'andrespoot123', '9995148212', 'CALLLE 63A #214B X 120 FRACCIONAMIENTO YUCALPETÉN ', 'MÉRIDA', '97238', 'POMA040902HYNTJNA2', 'DIAZMÍN PATRICIA MIJANGOS RODRÍGUEZ ', '9992473758', 'CENDRO EDUCATIVO REPUBLICA DE MÉXICO', '', '11', '2022-06-28'),
 (1291, 1, 7, 'JADE MONSERRATH', 'CANUL', 'SOBERANIS ', '2004-05-21', 'Femenino', 'Soltera', 'jdeecs00@gmail.com', 'jade.canul.05', '9994919571', 'CALLE 59 # 674 X 100 Y 102 COLONIA: BOJORQUEZ', 'MÉRIDA', '97230', 'CASJ040521MYNNBDA2', 'RAQUEL DEL CARMEN SOBERANIS CARDENAS ', '9994401045', 'REPÚBLICA DE MÉXICO', '', '', '2022-06-28'),
 (1292, 1, 5, 'BELEM GUADALUPE', 'FLORES', 'POOL', '2004-11-16', 'Femenino', 'Soltera', 'belemfp_16@hotmail.com', 'belemflores16', '9841836702', 'KANTUNILKIN, QUINTANA ROO', 'LÁZARO CÁRDENAS', '77302', 'FOPB041116MYNLLLA4', 'ALFREDO FLORES RODRIGUEZ ', '9985786392', 'COLEGIO DE BACHILLERES PLANTEL ', '', '', '2022-06-28'),
 (1293, 1, 5, 'AYLIN BRILLANTE', 'SANCHEZ', 'CASTILLO', '2003-09-06', 'Femenino', 'Soltera', 'asanchezcastillo2003@gmail.com', 'Sanchez2020', '9991404475', 'CALLE 113 NUM. 335 X 46 Y 46 A, CINCO COLONIAS ', 'MERIDA', '97280', 'SACA030906MYNNSYA9', 'ELIZABETH CASTILLO PERAZA', '9993261153', 'CBTIS 95', '', '11', '2022-06-28'),
@@ -2111,10 +2110,10 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1310, 1, 2, 'ANGELA NOEMI ', 'MORALES ', 'BENITEZ', '2004-11-03', 'Femenino', 'Soltera', 'angelanoemimorales@gmail.com', '20A04G', '9991938210', 'CALLE 55A #244 POR 44 Y 46 FRANCISCO DE MONTEJO ', 'MERIDA', '97203', 'MOBA041103MYNRNNA1', 'JOSE MORALES GARCIA ', '9991938210', 'PREPA ESTATAL #11', '', '6', '2022-06-29'),
 (1311, 1, 1, 'ARIANNY SARAHI  ', 'MORALES', 'BENITEZ ', '2004-10-03', 'Femenino', 'Soltera', 'arysaramorales@gmail.com', 'sarahi03', '9996366406', 'CALLE 55A #244 X 44 Y 46 FRANCISCO DE MONTEJO', 'MERIDA ', '97203', 'MOBA041103MYNRNRA6', 'JOSE MORALES GARCIA ', '9991938210', 'PREPARATORIA N°11 ESTATAL LAS AMERICAS ', '', '6', '2022-06-29'),
 (1312, 1, 5, 'JUAN JOSE', 'CANUL', 'PIÑA', '2002-07-13', 'Masculino', 'Soltero', 'juanjosecanulpina@gmail.com', 'Jujocapi130207', '9993705108', 'CALLE 45 NUM 564 X 82 Y 84 CENTRO', 'MÉRIDA', '97000', 'CAPJ020713HYNNXNA4', 'JOSE ANTONIO CANUL CASTRO', '9991279804', 'BANCARIOS', '', '11', '2022-06-29'),
-(1313, 1, 7, 'HEIDY ', 'GUERRERO', 'CARVALLO', '2004-10-31', 'Femenino', 'Soltera', 'heidyguec@gmail.com', '31102204hsmgc', '9992239370', 'CALLE 132X51, NUM. 810', 'MERIDA', '97245', 'GUCH041031MVZRRDA8', 'DEISY CARVALLO SANCHEZ', '2949447558', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN PLANTEL XOCLAN ', '', '', '2022-06-29'),
-(1314, 1, 5, 'ZURISADAI', 'PACHECO ', 'FLORES', '2004-11-02', 'Femenino', 'Soltera', 'zuripacheco2004@gmail.com', 'Zuri1518', '9991973940', 'CALLE 99F #559A POR 64H Y 64I MELITON SALAZAR ', 'MERIDA ', '97269', 'PAFZ041102MYNCLRA2', 'SUEMY FLORES ', '9992211607', 'COLEGIO SAN AGUSTIN ', '', '6', '2022-06-29');
+(1313, 1, 7, 'HEIDY ', 'GUERRERO', 'CARVALLO', '2004-10-31', 'Femenino', 'Soltera', 'heidyguec@gmail.com', '31102204hsmgc', '9992239370', 'CALLE 132X51, NUM. 810 XOCLAN', 'MERIDA', '97245', 'GUCH041031MVZRRDA8', 'DEISY CARVALLO SANCHEZ', '2949447558', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN PLANTEL XOCLAN ', '', '2', '2022-06-29'),
+(1314, 1, 5, 'ZURISADAI', 'PACHECO ', 'FLORES', '2004-11-02', 'Femenino', 'Soltera', 'zuripacheco2004@gmail.com', 'Zuri1518', '9991973940', 'CALLE 99F #559A POR 64H Y 64I MELITON SALAZAR ', 'MERIDA ', '97269', 'PAFZ041102MYNCLRA2', 'SUEMY FLORES ', '9992211607', 'COLEGIO SAN AGUSTIN ', '', '6', '2022-06-29'),
+(1315, 1, 5, 'GABRIEL ANTONIO ', 'ZAPATA ', 'GONGORA ', '2004-11-22', 'Masculino', 'Soltero', 'gabrielzapata160@gmail.com', 'gabriel11220', '9191063656', 'CALLE 39 C #280 X 36 Y 40  COL FRANCISCO DE MONTEJO ', 'MERIDA', '97203', 'ZAGG041122HCSPNBA4', 'CARLOS SOSA ', '9994213389', 'INSTITUTO FELTON', '', '11', '2022-06-29');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(1315, 1, 5, 'GABRIEL ANTONIO ', 'ZAPATA ', 'GONGORA ', '2004-11-22', 'Masculino', 'Soltero', 'gabrielzapata160@gmail.com', 'gabriel11220', '9191063656', 'CALLE 39 C #280 X 36 Y 40  COL FRANCISCO DE MONTEJO ', 'MERIDA', '97203', 'ZAGG041122HCSPNBA4', 'CARLOS SOSA ', '9994213389', 'INSTITUTO FELTON', '', '11', '2022-06-29'),
 (1316, 1, 5, 'NARCIZA BEATRIZ ', 'SUAREZ', 'UCAN', '2002-11-10', 'Femenino', 'Soltera', 'suarezucannarcizabeatriz@gmail.com', '1011826NOPA', '9971158768', '21 X 26 ENTRE 28 COLONIA MEJORADA', 'TEKIT', '97680', 'SUUN021110MYNRCRA0', 'JOEL SUAREZ DOMINGUEZ', '9971391697', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN PLANTEL TEKIT', '', '', '2022-06-29'),
 (1317, 2, 20, 'EVELYN SUZETE', 'CARRILLO', 'SANTAMARIA', '2004-03-15', 'Femenino', 'Soltera', 'evelyncarrillo1526@gmail.com', 'tamayo1234', '9971115331', 'CALLE 30 #218 POR 29 Y 31 SAN ROMAN', 'TICUL', '97860', 'CASE040315MYNRNVA3', 'OLIVIA RUBI SANTAMARIA', '9971008734', 'COBAY', '', '', '2022-06-29'),
 (1318, 1, 4, 'DENIS EMIR ', 'MENA ', 'GUZMAN ', '2004-12-27', 'Masculino', 'Soltero', 'emirguz8@gmail.com', 'EmirGuz27', '9999604487', 'CALLE 55 #697M POR 90 Y 92 ALMENDROS ', 'MERIDA', '97314', 'MEGD011227HYNNZNA9', 'ALFREDO GUZMAN SOTELO', '9992239696', 'COBAY CAUCEL ', '', '6', '2022-06-29'),
@@ -2149,23 +2148,23 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1349, 1, 5, 'IRIDIAN MAYTE ', 'GONZALEZ ', 'GAMBOA ', '2000-12-14', 'Femenino', 'Soltera', 'iridianmayte19@gmail.com', 'Iridian1231', '9995822992', 'CALLE 26 #316 POR 11 Y 13 JUAN PABLO II ', 'MÉRIDA ', '97246', 'GOGI001214MYNNMRA5', 'ELSY DEANELA GAMBOA GUTIÉRREZ ', '9993270547', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN ( COBAY XOCLAN)', '', '', '2022-06-30'),
 (1350, 1, 7, 'BLANCA DANIELA ', 'CAAMAL', 'CHAC', '2004-06-16', 'Femenino', 'Soltera', 'chacblanca60@gmail.com', 'Luke2004', '9994332191', 'CALLE 18 15 Y 15A', 'HUNUCMÁ', '97353', 'CACB040616MYNMHLA5', 'LEYLA', '9992651489', 'TELEBACHILLERATO COMUNITARIO', '', '', '2022-06-30'),
 (1351, 1, 5, 'MAYTE GUADALUPE ', 'SABIDO', 'OSORIO', '2003-02-14', 'Femenino', 'null', 'maykoparis@gmail.com', 'MYI1425', '9911022007', 'CALLE 22 ENTRE 17 Y 19', 'CANSAHCAB ', '97410', 'SAOM030214MYNBSYA6', 'JUAN ALBINO SABIDO PERAZA', '9911113170', 'NO. 4 VICTOR JESUS MANZANILLA JIMÉNEZ ', '', '', '2022-06-30'),
-(1352, 1, 5, 'MEIBELYN MERARI ', 'CRUZ ', 'ALPUCHE ', '2004-04-29', 'Femenino', 'Soltera', 'cruzmeibelyn723@gmail.com', 'Meiby004', '9911081041', 'CALLE 14X21 Y 23 COLONIA SAN FRANCISCO ', 'DZIDZANTUN ', '97506', 'CUAM040429MYNRLBA4', 'REINA ISABEL ALPUCHE CAUICH ', '9911008432', 'COBAY DZIDZANTUN ', '', '', '2022-06-30'),
+(1352, 1, 5, 'MEIBELYN MERARI ', 'CRUZ ', 'ALPUCHE ', '2004-04-29', 'Femenino', 'Soltera', 'cruzmeibelyn723@gmail.com', 'Meiby004', '9911081041', 'CALLE 14X21 Y 23 COLONIA SAN FRANCISCO ', 'DZIDZANTUN ', '97506', 'CUAM040429MYNRLBA4', 'REINA ISABEL ALPUCHE CAUICH ', '9911008432', 'COBAY DZIDZANTUN ', '', '11', '2022-06-30'),
 (1353, 1, 2, 'ANGELES LIDETH', 'MEJIA', 'HEREDIA', '2004-06-13', 'Femenino', 'Soltera', 'angelesmejia.1306@gmail.com', 'Flaqu1ta04', '9995011130', 'C.61-A N.340 C X C.68 MULCHECHEN IV', 'KANASIN', '97370', 'MEHA040613MYNJRNA4', 'FATIMA DE GUADALUPE HEREDIA ', '9994452152', 'COBAY SANTA ROSA', '', '', '2022-06-30'),
-(1354, 1, 5, 'GIMEL LORENZO ', 'MEX', 'DÍAZ ', '2004-07-28', 'Masculino', 'Soltero', 'gimelmex@gmail.com', 'Gimel1210', '9991421051', 'C15 X 8 Y 10 S/N COL. BARBACIANA ', 'HOCABA', '97560', 'MEDG040728HYNXZMA8', 'MARÍA LUISA DÍAZ CARDOS ', '9995432411', 'CBTA 283 HOCABA ', '', '', '2022-06-30'),
+(1354, 1, 5, 'GIMEL LORENZO ', 'MEX', 'DÍAZ ', '2004-07-28', 'Masculino', 'Soltero', 'gimelmex@gmail.com', 'Gimel1210', '9991421051', 'C15 X 8 Y 10 S/N COL. BARBACIANA ', 'HOCABA', '97560', 'MEDG040728HYNXZMA8', 'MARÍA LUISA DÍAZ CARDOS ', '9995432411', 'CBTA 283 HOCABA ', '', '11', '2022-06-30'),
 (1356, 1, 6, 'MAYTE ESMERALDA', 'CANCHE', 'PACHECO', '2002-12-20', 'Femenino', 'Soltera', 'maytepacheco2002@gmail.com', 'Etyam20', '9992682751', 'CALLE 84 X 165 Y 165 A S/N EMILIANO ZAPATA SUR 3', 'MÉRIDA', '97297', 'CAPM021220MYNNCYA1', 'CLARA MARIA PACHECO ROJAS', '9991046637', 'UADY PREPA 3', '', '11', '2022-06-30'),
 (1357, 1, 5, 'SAIR IVAN', 'VAZQUEZ', 'ARCOS', '2002-01-25', 'Masculino', 'Soltero', 'arcossair74@gmail.coma', 'Sair6425', '9994532164', 'CD CAUCEL CALLE 31 AV. ZIRICOTE', 'MERIDA YUCATAN', '97300', 'VAAS021025HCCZRRA8', 'CANDELARIA DEL CARMEN ARCOS CHAN', '9991518871', 'C.D DEL CARMEN CAMPECHE', '', '', '2022-06-30'),
 (1358, 1, 5, 'LESLY ISABEL', 'NAH', 'SOLIS', '2004-01-05', 'Femenino', 'Soltera', 'nahlesisa@gmail.com', 'Les050104', '9991434437', '49 #778, SOL CAUCEL 3ETA', 'MERIDA', '97314', 'NASL040105MYNHLSA4', 'JOSE MATILDE NAH CANUL', '9992620706', 'ESCUELA PREPARATORIA DOS ', '', '', '2022-06-30'),
 (1359, 1, 5, 'TERESITA MARIBEL ', 'KÚ', 'SÁNCHEZ ', '2004-10-02', 'Femenino', 'Soltera', 'teresitaku934@gmail.com', 'Teresitaks_2004', '9971391823', 'CALLE 28 NÚMERO 94A ENTRE 17 Y 19 COLONIA GUADALUPE ', 'MAXCANU ', '97800', 'KUST041002MYNXNRA2', 'VERÓNICA ESMERALDA SÁNCHEZ VERGARA ', '9971183098', 'COBAY HALACHO ', '', '', '2022-06-30'),
 (1360, 1, 6, 'PAOLA CAROLINA ', 'NOGUERA ', 'IX', '2001-11-20', 'Femenino', 'Soltera', 'paola20noguera@gmail.com', 'carolina#20', '9997461124', 'CALLE 25 #97C POR 18 Y 20 CHOLUL ', 'MERIDA ', '97305', 'NOIP011120MYNGXLA9', 'CAROLINA IX BATUN', '9997433245', 'PREPA ABIERTA ', '', '11', '2022-06-30'),
 (1361, 1, 7, 'ALEXA GUADALUPE ', 'GARCÍA ', 'SANCHEZ', '2004-01-28', 'Femenino', 'Soltera', 'ale28gs@gmail.com', '280104Ale', '9818213358', 'CALLE 11 #766 GRAN SANTA FE NORTE PRIVADA LIRRIOS ', 'MERIDA', '97130', 'GASA040128MCCRNLA6', 'ELEAZAR GARCIA MENDEZ ', '9811077484', 'COBAY CHENKU ', '', '11', '2022-06-30'),
-(1362, 1, 5, 'JOHANNY GUADALUPE ', 'DZIB ', 'MEX ', '2003-11-30', 'Femenino', 'Soltera', 'johannyguadalupemex@gmail.com', 'Djmg2003', '9991362136', 'C 23 X 16 Y 18 90', 'HOCABA ', '97560', 'DIMJ031130MYNZXHA5', 'SUGELY GUADALUPE MEX CERVANTES', '5299950725', 'CENTRO DE BACHILLERATO TECNOLÓGICO AGROPECUARIO ', '', '', '2022-06-30'),
+(1362, 1, 5, 'JOHANNY GUADALUPE ', 'DZIB ', 'MEX ', '2003-11-30', 'Femenino', 'Soltera', 'johannyguadalupemex@gmail.com', 'Djmg2003', '9991362136', 'C 23 X 16 Y 18 90', 'HOCABA ', '97560', 'DIMJ031130MYNZXHA5', 'SUGELY GUADALUPE MEX CERVANTES', '5299950725', 'CENTRO DE BACHILLERATO TECNOLÓGICO AGROPECUARIO ', '', '11', '2022-06-30'),
 (1363, 2, 20, 'JUAN ARMANDO', 'CAAMAL', 'CHAN', '2004-10-27', 'Masculino', 'Soltero', 'juanarmando892@gmail.com', 'familia345A', '9971650267', 'CALLE 24 X 27 Y 29 COL.CENTRO', 'PETO', '97930', 'CACJ041027HYNMHNA4', 'MIRNA CHAN CHI', '9979770349', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN PLANTEL PETO', '', '', '2022-06-30'),
 (1364, 1, 5, 'CHRISTIAN DARIANA', 'PÉREZ', 'GÓMEZ', '2004-05-29', 'Femenino', 'Soltera', 'tianagope@gmail.com', 'Polly29g', '9995560642', 'C.46 NUM.347 X 27A,27B Y 31 DIAGONAL', 'UMÁN', '97392', 'PEGC040529MYNRMHA2', 'MARCOS DARIO PÉREZ MARTÍNEZ', '9993441343', 'PREPA 2 UADY', '', '', '2022-06-30'),
 (1365, 1, 7, 'ANGELES ESPERANZA ', 'KOYOC', 'IUIT ', '2004-06-18', 'Femenino', 'null', 'esperanzakoyoc411@gmail.com', 'Angeles18', '9995505336', 'NUEVA AMPLIACIÓN ', 'HUNUCMÁ ', '97353', 'KOIA040618MYNYTNA4', 'REYNA ISABEL ', '9991436931', 'TEXAN ', '', '11', '2022-06-30'),
 (1366, 1, 9, 'LUIS RUBEN', 'VIANA', 'BENCOMO', '1998-01-24', 'Masculino', 'Soltero', 'luiisviian@gmail.com', '1234', '9993513161', 'CALLE 117 DIAG. NUM 782 X 96 Y 98 GRAN HERRADURA', 'MÉRIDA', '97314', 'VIBL980124HYNNNS07', 'LUIS RUBEN VIANA VENTURA', '9991782150', 'CERT CAUCEL', 'privado', '12', '2022-06-30'),
 (1367, 1, 7, 'RAQUEL ABIGAIL', 'TINAL', 'ORTIZ', '2001-06-02', 'Femenino', 'Soltera', 'raqueltinal15@gmail.com', 'Raquelortiz02', '9991546878', 'CALLE 9A #129 X26 Y 28 COL. SAN FRANCISCO', 'UMAN', '97390', 'TIOR010602MYNNRQA0', 'BLANCA ELENA ORTIZ DURAN', '9993225793', 'UNIVERSIDAD AUTÓNOMA DE YUCATÁN ', '', '', '2022-06-30'),
 (1368, 1, 5, 'ANGEL MANUEL ', 'YAM ', 'VARGUEZ ', '2002-08-05', 'Masculino', 'Soltero', 'angelyamvarguez@gmail.com', '24082020NA', '9992987588', 'CALLE 117 A DIAGONAL POR 106A Y 106C #907 ALMENDROS 3', 'MERIDA ', '97314', 'YAVA020805HYNMRNA9', 'NAUM NASARIAS YAM CAB ', '9992582389', 'PREPA ESTATAL  #12', '', '11', '2022-06-30'),
-(1370, 1, 5, 'ELIAS NATHANAEL ', 'CANUL', 'ITZA', '2003-01-10', 'Masculino', 'Soltero', 'eliasnathanaelc@gmail.com', 'Elias1001', '9991203739', 'C.15  #101C X 20 Y 22. CAUCEL PUEBLO', 'MÉRIDA', '97314', 'CAIE030110HYNNTLA9', 'JUAN BAUTISTA CANUL EUAN', '5578586094', 'PREPARATORIA 2 U.A.D.Y.', '', '', '2022-06-30'),
+(1370, 1, 5, 'ELIAS NATHANAEL ', 'CANUL', 'ITZA', '2003-01-10', 'Masculino', 'Soltero', 'eliasnathanaelc@gmail.com', 'Elias1001', '9991203739', 'C.15  #101C X 20 Y 22. CAUCEL PUEBLO', 'MÉRIDA', '97314', 'CAIE030110HYNNTLA9', 'JUAN BAUTISTA CANUL EUAN', '5578586094', 'PREPARATORIA 2 U.A.D.Y.', '', '11', '2022-06-30'),
 (1371, 1, 5, 'EDUARD', 'KOO', 'PECH', '1991-04-11', 'Masculino', 'Soltero', 'edu_kp11@live.com.mx', '57051133', '9991273497', '8 NO 22A X 7 Y 9', 'TIXKOKOB', '97474', 'KOPE910411HYNXCD01', 'ELSY TOMASA PECH MATU', '9911111340', 'CENTRO EDUCATIVO FELIPE CARRILLO PUERTO', '', '', '2022-06-30'),
 (1372, 1, 5, 'ASTRID GABRIELA', 'MONTERO', 'MEDINA', '2003-01-24', 'Femenino', 'Soltera', 'astridmontero949024@gmail.com', 'hunhan9490', '9994077759', 'CALLE 4 ORIENTE #115 POR 2 Y 3 NORTE, UNIDAD MORELOS', 'MÉRIDA', '97190', 'MOMA030124MYNNDSA8', 'FREDDY EULALIO MONTERO HAU', '9995291646', 'ESCUELA PREPARATORIA UNO UADY', '', '', '2022-06-30'),
 (1373, 1, 5, 'JAVIER JOAQUÍN ', 'CHINO', 'CASTILLO', '2004-10-01', 'Masculino', 'Soltero', 'javierchinocastillo@gmail.com', 'JJCCast26', '9994519454', 'C. 90A #670 X81B Y 81C FRACC. LOS REYES', 'MÉRIDA', '97156', 'CICJ041001HMCHSVA9', 'JAVIER CHINO SERRANO', '9991900790', 'PREPARATORIA ESTATAL NO. 6', '', '', '2022-06-30'),
@@ -2206,7 +2205,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1408, 1, 5, 'VICTOR JOAQUIN ', 'MANZANERO', 'RODRIGUEZ ', '2004-06-16', 'Masculino', 'Soltero', 'vmanzanero06@gmail.com', 'vic16manro', '9995011614', 'CALLE79 #461A POR 32 Y 34 VICENTE SOLIS', 'MERIDA', '97180', 'MARV040616HYNNDCA2', 'CARMEN DE JESUS RODRIGUEZ COLLI', '9995160821', 'CESMAC', '', '11', '2022-07-01'),
 (1409, 1, 7, 'LIBNY MARIA', 'CHI', 'MARTIN', '2003-02-16', 'Femenino', 'Soltera', 'libmari.17@gmail.com', 'Shaylo1718', '9997938637', 'CALLE 19A X 10 Y 12 SAN FCO, HALACHO', 'HALACHO', '97830', 'CIML030217MYNHRBA8', 'LENY MARTIN ', '9971414118', 'CBTA 169', '', '11', '2022-07-01'),
 (1410, 1, 5, 'JOSE EMMANUEL ', 'LOPEZ', 'TELLO', '2004-01-20', 'Masculino', 'Soltero', 'joselopeztello2004@gmail.com', 'Tello1234', '9994563998', 'C 31 #314 X 20 Y 22 JUANPABLO II', 'MERIDA', '97246', 'LOTE040120HYNPLMA5', 'CRISTINA GUADALUPE TELLO SANDOVAL', '9994563998', 'COBAY XOCLAN', '', '', '2022-07-01'),
-(1411, 1, 7, 'LIZZIE BEATRICE', 'CARBALLO', 'ALCOCER', '2004-01-18', 'Femenino', 'Soltera', 'lizzie1d04@gmail.com', 'Teodoro06', '9971289969', 'C. 69 A #323 BOSQUES DEL PONIENTE', 'MÉRIDA', '97246', 'CAAL040118MYNRLZA3', 'LISSIE ALCOCER', '9971116691', 'PREPA 2', '', '', '2022-07-01'),
+(1411, 1, 5, 'LIZZIE BEATRICE', 'CARBALLO', 'ALCOCER', '2004-01-18', 'Femenino', 'Soltera', 'lizzie1d04@gmail.com', 'Teodoro06', '9971289969', 'C. 69 A #323 BOSQUES DEL PONIENTE', 'MÉRIDA', '97246', 'CAAL040118MYNRLZA3', 'LISSIE ALCOCER', '9971116691', 'PREPA 2', '', '', '2022-07-01'),
 (1412, 1, 5, 'ISAIAS ISAAC ', 'REJON ', 'ROSADO', '2002-04-22', 'Masculino', 'Soltero', 'isaacrejon840@gmail.com', 'Isaac2230', '9995078200', 'CALLE 19 #310 POR 4B Y 6 VERGEL 4', 'MERIDA ', '97173', 'RERI020422HYNJSSA5', 'MARIA JOSE REJON ROSADO', '9995055533', 'LUIS ALVAREZ BARRET', '', '11', '2022-07-01'),
 (1413, 1, 5, 'DENISSE GUADALUPE ', 'TUN', 'CASTILLO', '2002-02-23', 'Femenino', 'Soltera', 'denisse.guad.02@gmail.com', '123Lionel', '9993565704', 'CALLE 77 #572A X 80 Y 82 COL. CENTRO', 'MERIDA ', '97000', 'TUCD020223MYNNSNA2', 'ANDREA CASTILLO REYES', '9992592707', 'VIZCAYA DE LAS AMERICAS ', '', '', '2022-07-01'),
 (1414, 1, 5, 'SANDRA DAYAN', 'AYUSO', 'GONZÁLEZ', '2003-08-21', 'Femenino', 'Soltera', 'sandragonzalez2805@gmail.com', 'Cantaros123', '9991181377', 'CALLE 34 #340 POR 7 Y 9 SAN PEDRO UXMAL', 'MÉRIDA', '97203', 'AUGS030821MYNYNNA1', 'AURELIA GONZÁLEZ  TORRES', '9993529485', 'ESCUELA PREPARATORIA ESTATAL N°8 ', '', '', '2022-07-01'),
@@ -2270,9 +2269,9 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1472, 2, 20, 'MANUEL HUMBERTO', 'MAGAÑA', 'CONTRERAS', '2002-12-27', 'Masculino', 'Soltero', 'humbertogman27@gmail.com', 'tamayo1234', '9993154661', 'CALLE 35 S/N X 30 Y 32 COL. SAN ROMÁN', 'TICUL', '97860', 'MACM021227HYNGNNA9', 'MIGUEL ANGEL MAGAÑA EUAN', '9971032571', 'COBAY TICUL', 'CARNICERO', '11', '2022-07-04'),
 (1473, 2, 19, 'CINDY PAOLA ', 'FARFÁN ', 'PECH ', '2004-03-27', 'Femenino', 'Soltera', 'cindypaolafarfanpech@gmail.com', 'tamayo1234', '9971419440', 'C. 18 #205 X 25 Y 27 COL. SANTA MARÍA ', 'MUNA ', '', 'FAPC040327MYNRCNA0', 'YURIDIA GLORICELY PECH DIAZ ', '9971024040', 'COBAY PLANTEL MUNA ', '', '', '2022-07-04'),
 (1474, 2, 20, 'MANUEL JESUS ', 'YAM', 'KUK', '2008-10-08', 'Masculino', 'Soltero', 'manuelyam98@gmail.com', 'tamayo1234', '9979736890', 'C.16 # 203 X 27 Y 29 COL. SAN JUAN ', 'TICUL ', '', 'YAKM041008HYNMKNA6', 'HILARIA BEATRIZ KUK CANUL', '9971345926', 'COBAY PLANTEL TICUL ', '', '', '2022-07-04'),
-(1475, 2, 18, 'JOSELIN', 'KUMUL', 'RODRIGUEZ ', '2004-09-22', 'Femenino', 'Soltera', 'hollywood22jkr@gmail.com', 'tamayo1234', '9971238413', 'C. 49 # 197-B X 46 Y 48 ', 'TEKAX ', '', 'KURJ040922MYNMDSA3', 'FABIO ENRIQUE MUKUL SOSA', '9971256221', 'COBAY PLANTEL TEKAX ', '', '', '2022-07-04');
+(1475, 2, 18, 'JOSELIN', 'KUMUL', 'RODRIGUEZ ', '2004-09-22', 'Femenino', 'Soltera', 'hollywood22jkr@gmail.com', 'tamayo1234', '9971238413', 'C. 49 # 197-B X 46 Y 48 ', 'TEKAX ', '', 'KURJ040922MYNMDSA3', 'FABIO ENRIQUE MUKUL SOSA', '9971256221', 'COBAY PLANTEL TEKAX ', '', '', '2022-07-04'),
+(1476, 2, 20, 'EDWIN ELISEO ', 'GONGORA ', 'CAUICH', '2004-01-22', 'Masculino', 'Soltero', 'wawisgongora@gmail.com', 'tamayo1234', '9971147421', 'C. 19 # 205 X 32 Y 34 COL. PRES', 'PETO', '', 'GOCE040122HYNNCDA3', 'LOYDA MARLENE CAUICH CAAMAL ', '9971215608', 'COBAY PLANTEL PETO', '', '', '2022-07-04');
 INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `materno`, `fecha_nac`, `genero`, `estado_civil`, `correo`, `pass`, `telefono`, `direccion`, `municipio`, `cp`, `curp`, `emergencia_nombre`, `emergencia_telefono`, `institucion`, `lugar_trabajo`, `medio`, `fecha_registro`) VALUES
-(1476, 2, 20, 'EDWIN ELISEO ', 'GONGORA ', 'CAUICH', '2004-01-22', 'Masculino', 'Soltero', 'wawiagongora@gmail.com', 'tamayo1234', '9971147421', 'C. 19 # 205 X 32 Y 34 COL. PRES', 'PETO', '', 'GOCE040122HYNNCDA3', 'LOYDA MARLENE CAUICH CAAMAL ', '9971215608', 'COBAY PLANTEL PETO', '', '', '2022-07-04'),
 (1477, 2, 20, 'WILBERTH ORLANDO ', 'CHAN ', 'BALAM', '2004-10-25', 'Masculino', 'Soltero', 'chanwilberth72@gmail.com', 'tamayo1234', '9971125046', 'C. 23 # 209 X 30 Y 32 ', 'PUSTUNICH, TICUL ', '', 'CABW041025HYNHLLA3', 'JOSE AUGUSTO CHAN UC ', '9971397857', 'COBAY PLANTEL TICUL ', '', '', '2022-07-04'),
 (1478, 2, 19, 'ZAZIL ADLAÍ ', 'SOBERANIS ', 'POOL', '2004-11-06', 'Femenino', 'Soltera', 'zazilsp2004@gmail.com', 'tamayo1234', '9994734007', 'C.19 # 124-E X 24 Y 26 ', 'HOMUN', '', 'SOPZ041106MYNBLZA2', 'BERTHA MARÍA POOL KÚ ', '9993514721', 'COBAY PLANTEL HOMUN', '', '', '2022-07-04'),
 (1479, 2, 20, 'YOANA VIANNEY ', ' NEGRON ', 'LARA', '2004-07-23', 'Femenino', 'Soltera', 'negronvianney@gmail.com', 'tamayo1234', '9971419327', 'C. 28 S/N X 29 Y 31 COL.CHULOB ', 'MUNA ', '', 'NELY040723MYNGRNA1', 'ELIZABET NEGRON LARA', '9971329933', 'PREPARATORIA MUNA ', '', '', '2022-07-04'),
@@ -2284,7 +2283,7 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1485, 1, 5, 'EDWIN GABRIEL ', 'CAB ', 'DE LA CRUZ ', '2004-02-09', 'Masculino', 'Soltero', 'edwincab271@gmail.com', 'Debatable021', '9991380717', 'CALLE 28 #175 X 26E Y 26F', 'UMÁN', '97390', 'CACE040209HYNBRDA2', 'JUAN GABRIEL CAB PECH ', '9991694410', 'COBAY, UMÁN', '', '', '2022-07-04'),
 (1486, 1, 6, 'ISABELLA MARGARITA', 'IUIT', 'PERAZA', '2004-04-03', 'Femenino', 'Soltera', 'margaritaperaza128@gmail.com', 'Vela2004', '9971289613', 'CALLE 90, #296 X 59E, FRACCIONAMIENTO LAS AMÉRICAS', 'MERIDA ', '97302', 'IUPI040403MYNTRSB0', 'MARGARITA ROSA PERAZA MEDINA', '9971127517', 'ESCUELA MODELO', '', '', '2022-07-04'),
 (1487, 1, 5, 'CARLOS ADRIÁN ', 'SOLÍS ', 'CONTRERAS ', '2003-01-20', 'Masculino', 'Soltero', 'carlosadrians89@gmail.com', 'CarlosAdrianSc20', '9994550356', 'CALLE 45 #648 X 66A Y 68 RESIDENCIAL HACIENDA ', 'MÉRIDA ', '97314', 'SOCC030120HYNLNRA1', 'CARLOS ALBERTO SOLÍS SALAZAR ', '9994471762', 'PREPA 2 UADY', '', '', '2022-07-04'),
-(1488, 1, 5, 'YAHIR ALEJANDRO', 'HERRERA', 'HERRERA', '2003-09-29', 'Masculino', 'Soltero', 'yahiralejandroherreraherrera@gmail.com', 'sicario29', '9996421227', 'CALLE 21 #119 POR 26 Y 28 KANASIN ', 'MERIDA ', '97300', 'HEHY030929HYNRRHA8', 'MANUEL EMILIO HERRERA SANCHEZ', '9999914837', 'CONRADO MENENDEZ DÍAZ', '', '11', '2022-07-05'),
+(1488, 1, 5, 'YAHIR ALEJANDRO', 'HERRERA', 'HERRERA', '2003-09-29', 'Masculino', 'Soltero', 'yahirherreraherrera@gmail.com', 'sicario29', '9996421227', 'CALLE 21 #119 POR 26 Y 28 KANASIN ', 'MERIDA ', '97300', 'HEHY030929HYNRRHA8', 'MANUEL EMILIO HERRERA SANCHEZ', '9999914837', 'CONRADO MENENDEZ DÍAZ', '', '11', '2022-07-05'),
 (1489, 1, 5, 'DAVID ALEJANDRO ', 'AVILA ', 'BAUTISTA ', '2002-12-15', 'Masculino', 'Soltero', 'chiquimamif50@gmail.com', '.2002dic', '9991750851', 'CALLE 24 X 29 Y 31', 'PETO, YUCATÁN ', '97930', 'AIBD021215HYNVTVA3', 'HÉCTOR HUMBERTO AVILA  ESQUIVEL ', '9971014019', 'COBAY PLANTEL PETO ', '', '', '2022-07-05'),
 (1490, 1, 3, 'ANDREA GABRIELA ', 'RAMIREZ', ' PACHECO ', '2002-09-16', 'Femenino', 'Soltera', 'andrearamirez160902@gmail.com', '1234', '9995729263', 'CALLE 51 #786 X 8 Y 10 PASEOS DE MÉRIDA TIXCACAL ', 'MERIDA', '97312', 'RAPA020916MYNMCNA5', 'LAURA PATRICIA PACHECO CABALLERO ', '9994715787', 'PREPARATORIA YUCATAN ', '', '11', '2022-07-05'),
 (1491, 2, 23, 'JESSICA DEL CARMEN', 'MATOS', 'DZUL', '2003-05-27', 'Femenino', 'Soltera', 'jessicacmd.27@gmail.com', 'tamayo1234', '9979732177', 'CALLE 45 SN POR 60 Y 62 RASTRO', 'OXKUTZKAB', '97880', 'MADJ030527MYNTZSA4', 'ROSARIO DEL CARMEN DZUL', '9971390277', 'VICTOR CERVERA', '', '', '2022-07-05'),
@@ -2294,7 +2293,32 @@ INSERT INTO `aspirantes` (`id`, `id_campus`, `id_oferta`, `nombre`, `paterno`, `
 (1495, 2, 20, 'FATIMA MARGARITA', 'CAAMAL', 'ALEJOS', '2004-05-13', 'Femenino', 'Soltera', 'fatima.caamal15@gmail.com', 'tamayo1234', '9971164500', 'CALLE 38 #178 ENTRE 15 Y 17 SAN JOAQUIN', 'TICUL', '97860', 'CAAF040513MYNMLTA2', 'ANA MARÍA ALEJOS ALONZO', '9971177458', 'CETIS 19', '', '', '2022-07-05'),
 (1496, 1, 6, 'DIANA ISABEL ', 'DZIB', 'KÚ', '2000-03-23', 'Femenino', 'Soltera', 'dianitadzibk23@gmail.com', 'dianadzibku23', '9971182567', 'CALLE 18 POR 17 Y 19', 'SANTA MARÍA ACÚ, HALACHÓ YUCATÁN', '97837', 'DIKD000323MYNZXNA1', 'MARCOS TEODORO DZIB PALMA', '9971144617', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN, PLANTEL HALACHÓ', '', '', '2022-07-05'),
 (1497, 1, 5, 'BRAAYAN JARED', 'PECH', 'TZEC', '2004-08-19', 'Masculino', 'Soltero', 'jaredpechtzec@gmail.com', 'SilviaChale03', '9993321094', 'DOMICILIO, CONOCIDO, HUBILA ', 'TIXKOKOB ', '97470', 'PETB040819HYNCZRA1', 'SILVIA MARTINA TZEC CHALE ', '9992708283', 'COBAY PLANTEL TIXKOKOB ', '', '', '2022-07-05'),
-(1498, 1, 3, 'CASSANDRA GABRIELA ', 'VAZQUEZ ', 'TREJO ', '2001-07-30', 'Femenino', 'Soltera', 'cassandrasosatrejo2001@gmail.com', '1234', '9991099822', 'CALLE 51 #377 X 22 Y 24 JUAN PABLO II', 'MERIDA', '97246', 'VATC010730MYNZRSA6', 'JOSE ANTONIO SOSA MOTA ', '9993531818', 'INSTITUTO EDUCATIVO LAS AMERICAS ', '', '1', '2022-07-05');
+(1498, 1, 3, 'CASSANDRA GABRIELA ', 'VAZQUEZ ', 'TREJO ', '2001-07-30', 'Femenino', 'Soltera', 'cassandrasosatrejo2001@gmail.com', '1234', '9991099822', 'CALLE 51 #377 X 22 Y 24 JUAN PABLO II', 'MERIDA', '97246', 'VATC010730MYNZRSA6', 'JOSE ANTONIO SOSA MOTA ', '9993531818', 'INSTITUTO EDUCATIVO LAS AMERICAS ', '', '1', '2022-07-05'),
+(1499, 1, 4, 'MARIA FERNANDA', 'PECH', 'ZUMÁRRAGA', '2000-11-07', 'Femenino', 'Soltera', 'mpechzumarraga@gmail.com', '1234', '9995047817', 'CALLE 8 NUM 78B X 21 Y 23 FELIPE CARRILLO PTO', 'PROGRESO', '97330', 'PEZF001107MYNCMRA6', 'GABRIEL SILVESTRE PECH PECH', '5532877668', 'COBAY PROGRESO', '', '1', '2022-07-05'),
+(1500, 1, 4, 'GENESIS DANIELA', 'RUBIO ', 'PECH', '2004-01-30', 'Femenino', 'Soltera', 'genesisdanielapech@gmail.com', '1234', '9995660732', 'CALLE 21A POR 28 Y 30 CAUCEL ', 'MERIDA', '97314', 'RUPG040130MYNBCNA9', 'GABRIELA DEL CARMEN PECH MUÑOZ', '9991538532', 'PREPA #10', '', '11', '2022-07-05'),
+(1501, 1, 5, 'BRISA GORETTI ', 'POVEDANO', 'CHAY', '2003-04-05', 'Femenino', 'Soltera', 'brisitapov@gmail.com', 'Brisitapov123', '9993571486', 'CALLE 18 POR 23 Y 23 A 368 SAN JOSE VERGEL', 'MERIDA ', '97173', 'POCB030405MYNVHRA1', 'FATIMA CHAY MARRUFO ', '9995758835', 'PREPA 1 UADY ', '', '11', '2022-07-05'),
+(1502, 1, 3, 'NAYELI NATALI', 'ITZA', 'CHE', '2004-11-04', 'Femenino', 'Soltera', 'nayelinataliitza@gmail.com', '1234', '9995062833', 'C 23 H 413 D X 2D Y 2C RES. LOS ENCINOS', 'MÉRIDA', '97370', 'IACN041104MYNTHYA6', 'MIGUEL ANGEL ITZA ESCAMILLA', '9999056105', 'PREPARATORIA SIQUEIROS', '', '1', '2022-07-05'),
+(1503, 1, 11, 'OSMAR JARED', 'CHIM', 'PAT', '1997-10-08', 'Masculino', 'Soltero', 'osmar.jared.8@gmail.com', '1234', '9994591761', 'CALLE 12 ORIENTE #219 X28 Y 81 UNIDAD MORELOS', 'MERIDA', '97190', 'CIPO971008HYNHTS05', 'LUANN BEATRIZ', '9991592136', 'CERT MÉRIDA', 'IMSS UMAE', '11', '2022-07-05'),
+(1504, 1, 5, 'ANGELA', 'GONZÁLEZ ', 'GAMBOA', '2002-01-04', 'Femenino', 'Soltera', 'angie.glez.gam@gmail.com', 'sagolsgam01', '9999109568', 'CALLE 88A #491C X 43 Y 45 INALÁMBRICA, 43 Y 45', 'MERIDA', '97069', 'GOGA020104MYNNMNA7', 'MARIA JOSÉ SAGOLS ORDOÑEZ ', '9991590619', 'COLEGIO SAN AGUSTÍN ', '', '', '2022-07-05'),
+(1505, 1, 5, 'MARTIN ALEJANDRO', 'CHI', 'PÉREZ', '2004-06-30', 'Masculino', 'Soltero', 'martinesperez227@gmail.com', '0572955210', '9821278129', 'CALLE 5 ENTRE 12 Y 14 COL, VENUSTIANO CARRANZA', 'CHAMPOTÓN', '24400', 'CIPM040630HCCHRRA1', 'MARTHA OLIVIA DE LOS ÁNGELES PÉREZ TINAL', '9821290845', 'COBACAM 09 CHAMPOTON', '', '', '2022-07-05'),
+(1506, 1, 5, 'SHIRLEY ABIGAIL', 'MORENO', 'FLORES', '2004-10-03', 'Femenino', 'Soltera', 'abigailmorenoflor@gmail.com', 'Shirlola', '9994982055', 'C 67 NUM 237 X 44 Y 46 FRACC. DEL SUR', 'MÉRIDA', '97287', 'MOFS041003MYNRLHA9', 'SOCORRO DEL CARMEN FLORES', '9995296555', 'ALIANZA DE CAMIONEROS', '', '1', '2022-07-05'),
+(1507, 1, 5, 'LEONARDO ISRAEL ', 'HERNÁNDEZ ', 'CAMPOS ', '2001-09-20', 'Masculino', 'Soltero', 'leonardoisrael092@gmail.com', '8711', '9993777306', 'CALLE 45 #396 X 134A Y 134B COL. EL PORVENIR', 'MÉRIDA ', '97226', 'HECL010920HYNRMNA1', 'ANEL MIJELI SULUB TEH', '9991027380', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN ', '', '', '2022-07-05'),
+(1508, 1, 6, 'JHONNY EMMANUEL', 'CAB', 'CEN', '2004-10-31', 'Masculino', 'Soltero', 'cabemmanuel83@gmail.com', 'Emmanuelcab$20041818', '9994737286', 'CALLE 64 X 43 Y 45 #682', 'CIUDAD CAUCEL', '97300', 'CACJ041031HYNBNHA7', 'JHONNY ULISES CAB ZAPATA', '9992672989', 'CENTRO UNIVERSITARIO REPUBLICA DE MÉXICO ', '', '', '2022-07-05'),
+(1509, 1, 5, 'ABRIL ESMERALDA', 'NAAL', 'BACELIS', '2004-11-26', 'Femenino', 'Soltera', 'abrilnaal11@gmail.com', '2611A2004', '9871113371', 'CALLE 6 NORTE ENTRE 20 Y 25 AV COLONIA CENTRO', 'COZUMEL', '77600', 'NABA041126MQRLCBA2', 'ALMA ROSA BACELIS PALMA', '9871129583', 'COLEGIO DE BACHILLERES', '', '', '2022-07-05'),
+(1510, 1, 5, 'GEILY CRISTINA', 'VERA ', 'POOT', '2004-02-25', 'Femenino', 'Soltera', 'geilypoot25@gmail.com', 'Samipiter2022', '9902529902', '24A 308 23 Y 23A', 'MERIDA ', '97256', 'VEPG040225MYNRTLA9', 'MARÍA CRISTINA POOT PAT', '9994384223', 'COBAY SANTA ROSA ', '', '', '2022-07-05'),
+(1511, 1, 5, 'JESSICA JACQUELIN ', 'CHALÉ ', 'COUOH', '2003-07-31', 'Femenino', 'Soltera', 'chjessica07@gmail.com', 'jesschale31', '9911159784', 'C.23 N93 X 12 Y 14', 'TIXKOKOB ', '97470', 'CACJ030731MYNHHSA3', 'GARY TEREZITA COUOH PEREZ ', '9911168598', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATAN (COBAY)', '', '', '2022-07-06'),
+(1512, 1, 5, 'YANELLY SARAI ', 'SANTIAGO ', 'AKE ', '2003-12-31', 'Femenino', 'Soltera', 'ysantiagoake@gmail.com', 'Eriz01234', '9992474416', 'CALLE 169 A NUM 304 X 60 Y 64 NUEVA SAN JOSÉ TECOH 3 ', 'MÉRIDA ', '97390 ', 'SAAY031231MYNNKNA8', 'MARIA JUANITA AKE CHAB ', '9993339931', 'ESCUELA PREPARATORIA ESTATAL NO.1 SERAPIO RENDON ', '', '', '2022-07-06'),
+(1513, 1, 3, 'YAHAIRA ARIDAY', 'MAY ', 'YAH', '2004-10-02', 'Femenino', 'Soltera', 'mayyahaira45@gmail.com', '1234', '9971143625', 'DOM. CONOCIDO CHUNCHUCMIL ', 'MAXCANU ', '97805', 'MAYY041002MYNYHHA4', 'SAIRI MARITZA CHI MAY ', '9971383681', 'TELEBACHILLERATO ', '', '11', '2022-07-06'),
+(1514, 1, 2, 'JAQUELINE GUADALUPE', 'QUIJANO', 'MEX', '2004-09-29', 'Femenino', 'Soltera', 'quijanojaqueline447@gmail.com', 'Misamigos', '9992154141', 'C 24 X 17 Y 19 TIXPEUAL', 'TIXKOKOB', '97386', 'QUMJ040929MYNJXQA7', 'ZOYLA GUADALUPE MEX MEDINA', '9999105522', 'COBAY TIXKOKOB', '', '11', '2022-07-06'),
+(1515, 1, 3, 'SAMANTHA METZLI ', 'ACOSTA ', 'CAAMAL ', '2004-09-23', 'Femenino', 'Soltera', 'sambelacosta@gmail.com', 'Lun4Acost4', '9995022693', 'CALLE 37 C ENTRE 104 Y 106 FRACCIONAMIENTO SOL CAUCEL', 'CIUDAD CAUCEL, MÉRIDA', '97314', 'AOCS040923MYNCMMA7', 'MARÍA ESTHER CAAMAL KOH', '9995464467', 'CONALEP MÉRIDA 3', '', '', '2022-07-06'),
+(1516, 2, 20, 'JOSIE MARISOL', 'BORGES', 'SOBERANIS', '2002-03-18', 'Femenino', 'Soltera', 'josieborges02@gmail.com', 'tamayo1234', '9971661151', 'CALLE 56 #109 POR 53 Y 55 CENTRO', 'OXKUTZKAB', '97880', 'BOSJ020318MYNRBSA7', 'MARGARITA SOLEDAD SOBERANIS', '9971051456', 'VICTOR CERVERA PACHECO', '', '', '2022-07-06'),
+(1517, 2, 21, 'CEYDI DEL ROSARIO ', 'MENDOZA', 'VAZQUEZ', '2001-05-22', 'Femenino', 'Soltera', 'mendoza.ceydi2224@gmail.com', 'tamayo1234', '9995621285', 'CALLE 21 #271 POR 38 Y 40 SAN ENRIQUE', 'TICUL', '97860', 'MEVC010522MYNNZYA5', 'ERASMO MEDOZA CAMPOS', '9971016413', 'PREPARATORIA CERT', '', '', '2022-07-06'),
+(1518, 1, 5, 'REYNA MARIA', 'MEX ', 'PAREDES', '2003-01-05', 'Femenino', 'Soltera', 'reyna.mex6@gmail.com', ' Close6497', '9995128387', 'C.24 #155I X27Y29 COL. STA. ELENA', 'UMAN', '97390', 'MEPR030105MYNXRYA9', 'ELSI MARIA MEX PAREDES', '9992323503', 'COBAY UMAN', '', '', '2022-07-06'),
+(1519, 2, 20, 'MELISSA ABIGAIL', 'TZUC', 'CAUICH', '2004-11-06', 'Femenino', 'Soltera', 'tzuccauichm@gmail.com', 'tamayo1234', '9994853620', 'CALLE 25 #228 POR 32 Y 34 SAN ROMAN', 'TICUL', '97860', 'TUCM041106MYNZCLA2', 'LIDIA AGIGAIL TZUC', '9971184352', 'PREPARATORIA CERT', '', '', '2022-07-06'),
+(1520, 1, 5, 'RICARDO', 'JIMENEZ ', 'LOPEZ ', '2002-07-24', 'Masculino', 'Soltero', 'richarsky75@gmail.com', 'escarcega1', '9995719778', 'C 2B/ 2B #443-12 SOL SAN PEDRO ', 'KANASIN', '97370', 'JILR020724HCCMPCA5', 'RICARDO JIMENEZ LOPEZ', '9995719778', 'CETIS 112 ', '', '', '2022-07-06'),
+(1521, 2, 20, 'SHERLY MELISSA', 'LOPEZ', 'CARDEÑA', '2004-08-23', 'Femenino', 'Soltera', 'shermel2323@gmail.com', 'tamayo1234', '9871137033', 'CALLE 8 #398 ENTRE 80 Y 80 BIS EMILIANO ZAPATA', 'QUINTANA ROO', '77620', 'LOCS040823MQRPRHA7', 'ALICIA NOEMI CARDEÑA DIAZ', '9871128639', 'BACHILLERATO ESTADO DE QUINTANA ROO', '', '', '2022-07-06'),
+(1522, 2, 22, 'GYSSEL VICTORIA', 'LAVADORES', 'HERRERA', '2004-03-17', 'Femenino', 'Soltera', 'yyssel_lavadores@hotmail.com', 'Gyslav18', '9911111500', 'C. 7 X 18 Y 20 #89. LOCALIDAD DZILAM GONZALEZ', 'DZILAM GONZALEZ', '97600', 'LAHG040317MYNVRYA6', 'JUAN MARCOS LAVADORES CAB', '9911053887', 'COLEGIO MARIA GONZALEZ PALMA', '', '12', '2022-07-06'),
+(1523, 1, 5, 'DAVER EDUARDO ', 'CORDOVA ', 'CANUL ', '2004-03-20', 'Femenino', 'Soltera', 'eduardocanul162020@gmail.com', 'Daverle4', '9889570461', 'CALLE27 #235 G X 38 Y 40 SANTA ROSA HUNUCMA ', 'HUNUCMA', '97350', 'COCD040320HYNRNVB8', 'MAYRA CANUL TZUC ', '9994502935', 'PREPARATORIA HUNUCMA ', '', '11', '2022-07-06');
 
 -- --------------------------------------------------------
 
@@ -2676,7 +2700,6 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (412, 519, '2022-03-28', '2022-03-28', 1, '2022-04-02', 1, 1),
 (413, 514, '2022-03-28', '2022-03-28', 1, '2022-04-02', 1, 1),
 (415, 517, '2022-03-28', '2022-03-31', 1, '2022-04-02', 1, 1),
-(416, 286, '2022-03-28', '2022-03-28', 1, '0000-00-00', 0, 1),
 (417, 520, '2022-03-29', '2022-03-29', 1, '2022-04-02', 1, 1),
 (418, 500, '2022-03-29', '2022-03-30', 1, '2022-04-16', 1, 1),
 (419, 389, '2022-03-29', '2022-03-29', 1, '2022-04-02', 1, 1),
@@ -2835,7 +2858,7 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (591, 656, '2022-04-28', '2022-04-30', 1, '0000-00-00', 0, 1),
 (593, 673, '2022-04-28', '2022-05-02', 1, '0000-00-00', 0, 1),
 (594, 635, '2022-04-28', '2022-05-01', 1, '0000-00-00', 0, 1),
-(595, 392, '2022-04-28', '2022-06-27', 1, '2022-07-02', 1, 0),
+(595, 392, '2022-04-28', '2022-06-27', 1, '2022-07-02', 1, 1),
 (596, 610, '2022-04-28', '2022-04-28', 1, '2022-05-07', 1, 1),
 (597, 699, '2022-04-28', '2022-04-30', 1, '2022-05-07', 1, 1),
 (598, 704, '2022-04-28', '2022-05-03', 1, '0000-00-00', 0, 1),
@@ -2981,7 +3004,7 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (747, 844, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
 (748, 854, '2022-05-13', '2022-05-14', 1, '0000-00-00', 0, 1),
 (749, 842, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
-(750, 840, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 0),
+(750, 840, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
 (751, 838, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
 (752, 839, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
 (753, 835, '2022-05-13', '2022-05-13', 1, '0000-00-00', 0, 1),
@@ -3123,7 +3146,7 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (901, 1020, '2022-06-08', '2022-06-09', 1, '2022-06-11', 1, 1),
 (902, 1002, '2022-06-08', '2022-06-08', 1, '2022-06-18', 1, 1),
 (903, 1026, '2022-06-08', '2022-06-10', 1, '2022-06-18', 1, 1),
-(904, 1024, '2022-06-08', '2022-06-18', 1, '2022-07-02', 1, 0),
+(904, 1024, '2022-06-08', '2022-06-18', 1, '2022-07-02', 1, 1),
 (905, 1022, '2022-06-09', '2022-06-10', 1, '2022-06-18', 1, 1),
 (906, 1025, '2022-06-09', '2022-06-10', 1, '2022-06-11', 1, 1),
 (909, 997, '2022-06-09', '2022-06-13', 1, '2022-06-18', 1, 1),
@@ -3136,9 +3159,9 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (916, 1033, '2022-06-10', '2022-06-10', 1, '2022-06-18', 1, 1),
 (917, 1043, '2022-06-10', '2022-06-13', 1, '2022-06-18', 1, 1),
 (918, 1045, '2022-06-10', '2022-06-13', 1, '2022-06-18', 1, 1),
-(919, 979, '2022-06-10', '2022-06-11', 1, '2022-06-11', 1, 1);
+(919, 979, '2022-06-10', '2022-06-11', 1, '2022-06-11', 1, 1),
+(920, 1032, '2022-06-10', '2022-06-10', 1, '2022-06-18', 1, 1);
 INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_examen_p`, `presentado_p`, `fecha_examen_d`, `presentado_d`, `resultado`) VALUES
-(920, 1032, '2022-06-10', '2022-06-10', 1, '2022-06-18', 1, 1),
 (921, 833, '2022-06-13', '0000-00-00', 0, '0000-00-00', 0, 0),
 (922, 1071, '2022-06-13', '2022-06-14', 1, '2022-06-18', 1, 1),
 (923, 1067, '2022-06-13', '2022-06-13', 1, '2022-06-25', 1, 1),
@@ -3181,7 +3204,7 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (961, 476, '2022-06-16', '2022-06-16', 1, '2022-06-25', 0, 0),
 (962, 1041, '2022-06-16', '2022-06-17', 1, '2022-06-25', 1, 1),
 (963, 995, '2022-06-16', '2022-06-23', 1, '2022-06-25', 1, 1),
-(964, 0, '2022-06-16', '2022-07-04', 1, '0000-00-00', 1, 0),
+(964, 0, '2022-06-16', '2022-07-05', 1, '0000-00-00', 1, 0),
 (966, 1073, '2022-06-16', '2022-06-17', 1, '2022-06-18', 1, 1),
 (967, 879, '2022-06-16', '2022-06-28', 1, '2022-07-02', 1, 1),
 (968, 1090, '2022-06-16', '2022-06-16', 1, '2022-06-18', 1, 1),
@@ -3196,12 +3219,12 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (979, 1122, '2022-06-20', '2022-06-21', 1, '2022-06-25', 1, 1),
 (980, 1117, '2022-06-20', '2022-06-20', 1, '2022-06-25', 1, 1),
 (981, 1082, '2022-06-20', '2022-06-20', 1, '2022-06-25', 1, 1),
-(982, 1120, '2022-06-20', '2022-06-20', 1, '2022-07-02', 1, 0),
+(982, 1120, '2022-06-20', '2022-06-20', 1, '2022-07-02', 1, 1),
 (983, 1125, '2022-06-20', '2022-06-21', 1, '2022-06-25', 1, 1),
-(984, 1128, '2022-06-20', '2022-06-28', 1, '2022-07-02', 1, 0),
+(984, 1128, '2022-06-20', '2022-06-28', 1, '2022-07-02', 1, 1),
 (985, 1127, '2022-06-20', '2022-06-21', 1, '2022-06-25', 1, 1),
 (986, 951, '2022-06-20', '2022-06-20', 1, '2022-05-18', 0, 0),
-(988, 1118, '2022-06-20', '2022-06-20', 1, '2022-07-02', 1, 0),
+(988, 1118, '2022-06-20', '2022-06-20', 1, '2022-07-02', 1, 1),
 (989, 1107, '2022-06-21', '2022-06-22', 1, '2022-06-25', 1, 1),
 (990, 1133, '2022-06-21', '2022-06-21', 1, '2022-06-25', 1, 1),
 (991, 1126, '2022-06-21', '2022-06-21', 1, '2022-06-25', 1, 1),
@@ -3210,9 +3233,9 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (994, 1115, '2022-06-21', '2022-06-21', 1, '2022-06-25', 1, 1),
 (995, 1116, '2022-06-21', '2022-06-22', 1, '2022-07-02', 1, 1),
 (997, 1031, '2022-06-21', '0000-00-00', 0, '0000-00-00', 0, 0),
-(998, 1136, '2022-06-21', '2022-06-21', 1, '2022-07-02', 1, 0),
+(998, 1136, '2022-06-21', '2022-06-21', 1, '2022-07-02', 1, 1),
 (999, 1130, '2022-06-21', '2022-06-21', 1, '2022-06-25', 1, 1),
-(1000, 1132, '2022-06-21', '2022-06-21', 1, '2022-07-02', 1, 0),
+(1000, 1132, '2022-06-21', '2022-06-21', 1, '2022-07-02', 1, 1),
 (1001, 1124, '2022-06-21', '2022-06-21', 1, '2022-06-25', 1, 1),
 (1002, 1138, '2022-06-22', '2022-06-23', 1, '2022-07-02', 0, 0),
 (1003, 1139, '2022-06-22', '2022-06-23', 1, '2022-07-02', 1, 1),
@@ -3222,22 +3245,22 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1008, 1146, '2022-06-22', '2022-06-22', 1, '2022-06-25', 1, 1),
 (1009, 1143, '2022-06-22', '2022-06-22', 1, '2022-06-25', 1, 1),
 (1010, 1151, '2022-06-22', '2022-06-27', 1, '2022-07-02', 0, 0),
-(1011, 1153, '2022-06-22', '2022-06-25', 1, '2022-07-02', 1, 0),
+(1011, 1153, '2022-06-22', '2022-06-25', 1, '2022-07-02', 1, 1),
 (1012, 1140, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
 (1013, 1149, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
 (1014, 1147, '2022-06-23', '2022-06-27', 1, '2022-07-02', 1, 1),
 (1015, 1150, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
-(1016, 1156, '2022-06-23', '2022-06-24', 1, '2022-07-02', 1, 0),
+(1016, 1156, '2022-06-23', '2022-06-24', 1, '2022-07-02', 1, 1),
 (1017, 1159, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
-(1018, 1157, '2022-06-23', '2022-06-23', 1, '2022-07-02', 1, 0),
+(1018, 1157, '2022-06-23', '2022-06-23', 1, '2022-07-02', 1, 1),
 (1019, 1158, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
 (1020, 1160, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
 (1022, 1165, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
 (1023, 1110, '2022-06-23', '2022-06-23', 1, '2022-06-25', 1, 1),
-(1024, 1163, '2022-06-23', '2022-06-24', 1, '2022-07-02', 1, 0),
+(1024, 1163, '2022-06-23', '2022-06-24', 1, '2022-07-02', 1, 1),
 (1025, 1162, '2022-06-23', '2022-06-24', 1, '2022-06-25', 1, 1),
-(1026, 1161, '2022-06-23', '2022-06-25', 1, '2022-07-02', 1, 0),
-(1027, 1167, '2022-06-23', '2022-06-25', 1, '2022-07-02', 1, 0),
+(1026, 1161, '2022-06-23', '2022-06-25', 1, '2022-07-02', 1, 1),
+(1027, 1167, '2022-06-23', '2022-06-25', 1, '2022-07-02', 1, 1),
 (1028, 1164, '2022-06-24', '2022-06-25', 1, '2022-07-02', 1, 1),
 (1029, 1166, '2022-06-24', '2022-06-24', 1, '2022-07-02', 0, 0),
 (1030, 1154, '2022-06-24', '2022-06-24', 1, '2022-06-25', 1, 1),
@@ -3245,13 +3268,13 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1032, 1170, '2022-06-24', '2022-06-25', 1, '2022-06-25', 1, 1),
 (1033, 1171, '2022-06-24', '2022-06-26', 1, '2022-07-02', 0, 0),
 (1034, 1169, '2022-06-24', '2022-06-24', 1, '2022-07-02', 0, 0),
-(1036, 1174, '2022-06-24', '2022-06-24', 1, '2022-07-02', 1, 0),
-(1037, 1173, '2022-06-24', '2022-06-25', 1, '2022-07-02', 1, 0),
-(1038, 1172, '2022-06-24', '2022-06-25', 1, '2022-07-02', 1, 0),
-(1039, 1176, '2022-06-27', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1036, 1174, '2022-06-24', '2022-06-24', 1, '2022-07-02', 1, 1),
+(1037, 1173, '2022-06-24', '2022-06-25', 1, '2022-07-02', 1, 1),
+(1038, 1172, '2022-06-24', '2022-06-25', 1, '2022-07-02', 1, 1),
+(1039, 1176, '2022-06-27', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1040, 1183, '2022-06-27', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1041, 1230, '2022-06-27', '2022-06-27', 1, '2022-07-09', 0, 0),
-(1042, 1189, '2022-06-27', '2022-06-27', 1, '2022-07-02', 1, 0),
+(1042, 1189, '2022-06-27', '2022-06-27', 1, '2022-07-02', 1, 1),
 (1043, 1186, '2022-06-27', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1044, 1261, '2022-06-28', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1046, 1262, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
@@ -3259,7 +3282,7 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1048, 1264, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1049, 1187, '2022-06-28', '2022-06-29', 1, '2022-07-09', 0, 0),
 (1050, 1184, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
-(1051, 1188, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1051, 1188, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1052, 1265, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1053, 1190, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1054, 1267, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
@@ -3268,24 +3291,24 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1058, 1129, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1059, 1268, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1060, 1269, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
-(1061, 1207, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
-(1062, 1192, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1061, 1207, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
+(1062, 1192, '2022-06-28', '2022-07-05', 1, '0000-00-00', 0, 0),
 (1063, 1270, '2022-06-28', '2022-06-29', 1, '2022-07-09', 0, 0),
 (1064, 1271, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1065, 1272, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1066, 1144, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
-(1067, 1193, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1067, 1193, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1068, 1194, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1069, 1196, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1070, 1199, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1071, 1201, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1073, 1204, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1073, 1204, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1075, 1206, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1076, 1211, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
-(1077, 1212, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1077, 1212, '2022-06-28', '2022-07-06', 1, '2022-07-09', 0, 0),
 (1078, 1213, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1079, 1214, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
-(1080, 1215, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1080, 1215, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1081, 1216, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1082, 1217, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1083, 1218, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
@@ -3308,24 +3331,24 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1102, 1245, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1103, 1203, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1104, 1246, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
-(1106, 1248, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1106, 1248, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1107, 1250, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1108, 1251, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1109, 1254, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1110, 1255, '2022-06-28', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1111, 1256, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1112, 1257, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
-(1113, 1258, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1112, 1257, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
+(1113, 1258, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1114, 1259, '2022-06-28', '2022-06-29', 1, '2022-07-02', 0, 0),
 (1115, 1181, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1116, 1177, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
-(1117, 1281, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1117, 1281, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1118, 1185, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1119, 1275, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
-(1120, 1276, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
+(1120, 1276, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1121, 1277, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
 (1122, 1279, '2022-06-28', '2022-06-29', 1, '2022-07-09', 0, 0),
-(1123, 1280, '2022-06-28', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1123, 1280, '2022-06-28', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1124, 1285, '2022-06-28', '2022-06-29', 1, '2022-07-09', 0, 0),
 (1125, 1282, '2022-06-28', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1126, 1284, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
@@ -3335,11 +3358,11 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1130, 1291, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1131, 1293, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
 (1132, 1283, '2022-06-28', '2022-06-28', 1, '2022-07-09', 0, 0),
-(1133, 1298, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
-(1134, 1289, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 0),
-(1135, 1273, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 0),
+(1133, 1298, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
+(1134, 1289, '2022-06-28', '2022-06-28', 1, '2022-07-02', 1, 1),
+(1135, 1273, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1136, 1295, '2022-06-28', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1137, 1253, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 0),
+(1137, 1253, '2022-06-28', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1138, 1303, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1139, 1305, '2022-06-29', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1140, 1197, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
@@ -3347,11 +3370,11 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1142, 1310, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1144, 1315, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1145, 1308, '2022-06-29', '2022-07-02', 1, '0000-00-00', 0, 0),
-(1146, 1313, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 0),
-(1147, 1312, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1146, 1313, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
+(1147, 1312, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1148, 1307, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1149, 1236, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
-(1150, 1306, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 0),
+(1150, 1306, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1151, 251, '2022-06-29', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1153, 1322, '2022-06-29', '2022-06-29', 1, '2022-07-09', 0, 0),
 (1154, 1311, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 1),
@@ -3364,49 +3387,48 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1162, 1296, '2022-06-29', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1163, 1297, '2022-06-29', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1164, 1301, '2022-06-29', '2022-06-30', 1, '2022-07-09', 0, 0),
-(1165, 1302, '2022-06-29', '2022-07-01', 1, '2022-07-02', 1, 0),
-(1166, 1324, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 0),
+(1165, 1302, '2022-06-29', '2022-07-01', 1, '2022-07-02', 1, 1),
+(1166, 1324, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
 (1167, 1328, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1168, 1314, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
-(1169, 1191, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 0),
-(1170, 1095, '2022-06-29', '2022-07-01', 1, '2022-07-02', 1, 0),
-(1171, 1317, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 0),
-(1172, 1333, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 0),
-(1173, 1353, '2022-06-30', '2022-07-02', 1, '2022-07-02', 1, 0),
+(1169, 1191, '2022-06-29', '2022-06-30', 1, '2022-07-02', 1, 1),
+(1170, 1095, '2022-06-29', '2022-07-01', 1, '2022-07-02', 1, 1),
+(1171, 1317, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
+(1172, 1333, '2022-06-29', '2022-06-29', 1, '2022-07-02', 1, 1),
+(1173, 1353, '2022-06-30', '2022-07-02', 1, '2022-07-02', 1, 1),
 (1174, 1351, '2022-06-30', '2022-07-01', 1, '2022-07-09', 0, 0),
 (1175, 1350, '2022-06-30', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1176, 539, '2022-06-30', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1177, 1352, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1178, 1356, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
-(1181, 1359, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1181, 1359, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1182, 1357, '2022-06-30', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1183, 1354, '2022-06-30', '2022-06-30', 1, '2022-07-04', 1, 1),
 (1184, 1364, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1185, 1362, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1186, 1368, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1187, 1242, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
-(1188, 1247, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1188, 1247, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1189, 1358, '2022-06-30', '2022-07-01', 1, '2022-07-09', 0, 0),
-(1190, 1299, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1190, 1299, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1191, 1327, '2022-06-30', '2022-06-30', 1, '2022-07-09', 0, 0),
-(1192, 1373, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1192, 1373, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1193, 1370, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1194, 1367, '2022-06-30', '2022-07-02', 1, '2022-07-09', 0, 0),
-(1195, 1309, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1195, 1309, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1197, 1329, '2022-06-30', '2022-07-03', 1, '2022-07-09', 0, 0),
-(1198, 1330, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1198, 1330, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1199, 1334, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1200, 1338, '2022-06-30', '2022-07-01', 1, '2022-07-09', 0, 0),
-(1201, 1340, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1201, 1340, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1202, 1341, '2022-06-30', '2022-07-01', 1, '2022-07-09', 0, 0),
 (1203, 1342, '2022-06-30', '2022-07-02', 1, '2022-07-09', 0, 0),
 (1204, 1343, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1207, 1375, '2022-06-30', '0000-00-00', 0, '2022-07-02', 0, 0),
-(1208, 1339, '2022-06-30', '2022-06-30', 1, '2022-07-04', 1, 0),
-(1209, 1386, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 0),
-(1210, 1384, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 0),
+(1208, 1339, '2022-06-30', '2022-06-30', 1, '2022-07-04', 1, 1),
+(1209, 1386, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 1),
+(1210, 1384, '2022-06-30', '2022-06-30', 1, '2022-07-02', 1, 1),
 (1212, 1381, '2022-06-30', '2022-07-03', 1, '2022-07-09', 0, 0),
-(1213, 1380, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1213, 1380, '2022-06-30', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1215, 1394, '2022-07-01', '2022-07-02', 1, '2022-07-09', 0, 0),
 (1216, 691, '2022-07-01', '2022-07-02', 1, '2022-07-09', 0, 0),
 (1217, 1395, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
@@ -3415,16 +3437,16 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1221, 1260, '2022-07-01', '2022-07-01', 1, '2022-07-09', 0, 0),
 (1222, 1390, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1223, 1376, '2022-07-01', '2022-07-01', 1, '2022-07-09', 0, 0),
-(1224, 1377, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1224, 1377, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1225, 1383, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1226, 1385, '2022-07-01', '0000-00-00', 0, '2022-07-02', 1, 0),
 (1227, 1399, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1228, 1402, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1229, 1408, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
-(1230, 1409, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1230, 1409, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1231, 1412, '2022-07-01', '2022-07-01', 1, '2022-07-09', 0, 0),
 (1232, 1407, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
-(1234, 1398, '2022-07-01', '2022-07-03', 1, '2022-07-05', 1, 0),
+(1234, 1398, '2022-07-01', '2022-07-03', 1, '2022-07-05', 1, 1),
 (1235, 1400, '2022-07-01', '2022-07-01', 1, '2022-07-09', 0, 0),
 (1236, 1403, '2022-07-01', '2022-07-02', 1, '2022-07-09', 0, 0),
 (1238, 1316, '2022-07-01', '2022-07-01', 1, '2022-07-09', 0, 0),
@@ -3434,16 +3456,16 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1243, 1391, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1244, 1393, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1245, 1372, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
-(1246, 1392, '2022-07-01', '2022-07-02', 1, '2022-07-02', 1, 0),
-(1247, 1406, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1246, 1392, '2022-07-01', '2022-07-02', 1, '2022-07-02', 1, 1),
+(1247, 1406, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1248, 1413, '2022-07-01', '2022-07-01', 1, '0000-00-00', 0, 0),
 (1249, 1325, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1250, 1425, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
-(1252, 1382, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1252, 1382, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1253, 1423, '2022-07-01', '2022-07-02', 1, '2022-07-09', 0, 0),
 (1254, 1416, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1255, 1427, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1256, 1428, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1256, 1428, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1257, 1426, '2022-07-01', '2022-07-02', 1, '2022-07-06', 0, 0),
 (1258, 1421, '2022-07-01', '2022-07-03', 1, '2022-07-09', 0, 0),
 (1259, 1420, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
@@ -3454,37 +3476,37 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1264, 1429, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1265, 1349, '2022-07-01', '2022-07-02', 1, '2022-07-02', 1, 1),
 (1266, 1361, '2022-07-01', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1268, 1363, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 0),
+(1268, 1363, '2022-07-01', '2022-07-01', 1, '2022-07-02', 1, 1),
 (1269, 1239, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
-(1270, 1360, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 0),
-(1272, 1379, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 0),
+(1270, 1360, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
+(1272, 1379, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
 (1273, 1424, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
-(1274, 1348, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 0),
+(1274, 1348, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
 (1276, 1433, '2022-07-02', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1277, 1435, '2022-07-02', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1278, 1404, '2022-07-02', '0000-00-00', 0, '0000-00-00', 1, 0),
-(1279, 1365, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 0),
+(1279, 1365, '2022-07-02', '2022-07-02', 1, '2022-07-02', 1, 1),
 (1280, 1442, '2022-07-04', '2022-07-04', 1, '2022-07-16', 0, 0),
 (1281, 1441, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1282, 1440, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1283, 1448, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1284, 1439, '2022-07-04', '2022-07-04', 1, '2022-07-16', 0, 0),
 (1285, 1437, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
-(1286, 1436, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1287, 1445, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1286, 1436, '2022-07-04', '2022-07-06', 1, '0000-00-00', 0, 0),
+(1287, 1445, '2022-07-04', '2022-07-05', 1, '2022-07-09', 0, 0),
 (1288, 1446, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1289, 1430, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1290, 1432, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1291, 1449, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1292, 1450, '2022-07-04', '2022-07-04', 1, '2022-07-05', 1, 0),
+(1292, 1450, '2022-07-04', '2022-07-04', 1, '2022-07-05', 1, 1),
 (1293, 1452, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
-(1294, 1454, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1294, 1454, '2022-07-04', '2022-07-05', 1, '2022-07-09', 0, 0),
 (1295, 1458, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1296, 1455, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1297, 1451, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1298, 1453, '2022-07-04', '2022-07-04', 1, '2022-07-16', 0, 0),
 (1300, 1093, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
-(1301, 1444, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1301, 1444, '2022-07-04', '2022-07-06', 1, '0000-00-00', 0, 0),
 (1302, 1456, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1303, 1461, '2022-07-04', '2022-07-04', 1, '2022-07-16', 0, 0),
 (1304, 1457, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
@@ -3494,14 +3516,45 @@ INSERT INTO `aspirantes_validacion` (`id`, `id_aspirante`, `fecha`, `fecha_exame
 (1309, 1468, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1310, 1410, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
 (1311, 1460, '2022-07-04', '2022-07-04', 1, '2022-07-09', 0, 0),
-(1312, 1443, '2022-07-04', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1313, 1488, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1312, 1443, '2022-07-04', '2022-07-05', 1, '2022-07-16', 0, 0),
 (1314, 1486, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
 (1315, 1489, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1316, 1493, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1317, 1371, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1318, 1374, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
-(1319, 1332, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0);
+(1316, 1493, '2022-07-05', '2022-07-06', 1, '2022-07-16', 0, 0),
+(1317, 1371, '2022-07-05', '2022-07-06', 1, '2022-07-09', 0, 0),
+(1318, 1374, '2022-07-05', '2022-07-05', 1, '2022-07-09', 0, 0),
+(1319, 1332, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1320, 1496, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1321, 1497, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1322, 1487, '2022-07-05', '2022-07-05', 1, '2022-07-16', 0, 0),
+(1323, 539, '2022-07-05', '2022-07-05', 1, '2022-07-16', 0, 0),
+(1324, 1504, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1325, 1237, '2022-07-05', '2022-07-05', 1, '2022-07-09', 0, 0),
+(1326, 1471, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1327, 1480, '2022-07-05', '2022-07-05', 1, '2022-07-09', 0, 0),
+(1328, 1477, '2022-07-05', '0000-00-00', 0, '2022-07-09', 0, 0),
+(1329, 1474, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1330, 1472, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1331, 1475, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1332, 1476, '2022-07-05', '2022-07-06', 1, '2022-07-09', 0, 0),
+(1333, 1479, '2022-07-05', '2022-07-06', 1, '0000-00-00', 0, 0),
+(1334, 1481, '2022-07-05', '2022-07-05', 1, '2022-07-09', 0, 0),
+(1335, 1482, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1336, 1463, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1337, 1469, '2022-07-05', '2022-07-05', 1, '2022-07-09', 0, 0),
+(1338, 1495, '2022-07-05', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1339, 1491, '2022-07-05', '2022-07-06', 1, '2022-07-09', 0, 0),
+(1340, 1509, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1341, 1508, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1342, 1506, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1343, 1505, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1344, 1514, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1345, 1512, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1346, 1511, '2022-07-06', '2022-07-06', 1, '2022-07-09', 0, 0),
+(1347, 1507, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1348, 1484, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1349, 1485, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1350, 1523, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0),
+(1351, 1488, '2022-07-06', '0000-00-00', 0, '0000-00-00', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -3545,7 +3598,8 @@ INSERT INTO `aspirantes_validacion_edu` (`id`, `id_aspirante`, `fecha`) VALUES
 (23, 1015, '2022-06-07'),
 (24, 251, '2022-06-29'),
 (25, 251, '2022-06-29'),
-(26, 357, '2022-07-05');
+(26, 357, '2022-07-05'),
+(27, 572, '2022-07-06');
 
 -- --------------------------------------------------------
 
@@ -5172,7 +5226,27 @@ INSERT INTO `comentarios` (`id`, `id_prospecto`, `id_asesor`, `comentarios`, `fe
 (1588, 3339, 3, 'VISITÓ LA ESCUELA CON SUS PAPÁ.', '2022-07-04', '14:01:23'),
 (1589, 3348, 3, 'VISITÓ LA ESCUELA ', '2022-07-04', '16:00:09'),
 (1590, 3351, 4, 'tiene información general\r\n', '2022-07-04', '17:04:38'),
-(1591, 3377, 3, 'VISITO LA ESCUELA ', '2022-07-05', '11:11:35');
+(1591, 3377, 3, 'VISITO LA ESCUELA ', '2022-07-05', '11:11:35'),
+(1592, 3392, 3, 'INTERESADO EN EL DOCTORADO SE LE BRINDÓ INFORMACIÓN EN EL OFICIAL Y LE INTERESA CONVENIO DEL SNTE ', '2022-07-05', '16:09:42'),
+(1593, 3393, 3, 'EGRESADA DEL CERT PREESCOLAR 2022', '2022-07-05', '16:26:42'),
+(1594, 3417, 4, 'TRABAJA EN CEDUNOEL, SE LE COMPARTE INFORMACIÓN POR LLAMADA Y SE ENVIA POR WHATS', '2022-07-06', '09:20:43');
+INSERT INTO `comentarios` (`id`, `id_prospecto`, `id_asesor`, `comentarios`, `fecha`, `hora`) VALUES
+(1595, 3418, 4, 'TRABAJA EN CEDUNOEL, SE LE COMPARTE INFORMACIÓN POR LLAMADA Y SE ENVIA POR WHATS', '2022-07-06', '09:21:35'),
+(1596, 3420, 4, 'ORIENTADOR DE PREPA, SE ENTERÓ EN FERIA DE CANACO', '2022-07-06', '09:55:03'),
+(1597, 3371, 3, 'INSCRITA EL 6 DE JULIO', '2022-07-06', '10:05:11'),
+(1598, 2661, 3, 'SE LE ENVÍO LA INFORMACIÓN POR WHATSAPP DE ASESOR ', '2022-07-06', '10:07:16'),
+(1599, 2683, 3, 'SE LE MANDÓ MENSAJE DEL WHATS DE ASESOR ', '2022-07-06', '10:08:49'),
+(1600, 3421, 4, 'TRABAJA EN CEDUNOEL, SE LE COMPARTE INFORMACIÓN POR LLAMADA Y SE ENVIA POR WHATS', '2022-07-06', '10:12:24'),
+(1601, 3416, 6, 'SE CONTACTO POR SEGUIMIENTO DE INFORMACIÓN', '2022-07-06', '10:34:05'),
+(1602, 3417, 6, 'DUPLICADO', '2022-07-06', '10:35:23'),
+(1603, 3418, 6, 'DUPLICADO', '2022-07-06', '10:35:44'),
+(1604, 3420, 6, 'SE CONTACTO POR SEGUIMIENETO DE INGRESO', '2022-07-06', '10:41:13'),
+(1605, 3421, 6, 'DUPLICADO', '2022-07-06', '10:42:05'),
+(1606, 3392, 6, 'CONTACTADO, PRIMER CONTACTO EN LA CANACO ES ORIENTADOR DE UNA PREPARATORIA', '2022-07-06', '10:44:22'),
+(1607, 3273, 6, 'SE REALIZO CONTACTO PARA SOLUCIONAR DUDAS DEL INGRESO', '2022-07-06', '10:47:57'),
+(1608, 3197, 6, 'SE CONTACTO POR SEGUIMIENTO DE INGRESO', '2022-07-06', '10:49:33'),
+(1609, 3426, 4, 'ORIENTADOR DE PREPA, SE ENTERÓ EN FERIA DE CANACO', '2022-07-06', '11:02:26'),
+(1610, 3428, 3, 'VISITO LA ESCUELA CON SUS MAMÁ', '2022-07-06', '11:30:11');
 
 -- --------------------------------------------------------
 
@@ -5735,7 +5809,30 @@ INSERT INTO `comentarios_aspirantes` (`id`, `id_aspirante`, `id_asesor`, `coment
 (539, 1230, 11, 'INSCRITA EN EL PLANTEL. (PREVIO REGISTRO EN LÍNEA)', '2022-07-04', '16:00:33'),
 (540, 1132, 11, 'INSCRITA EN EL PLANTEL. (PREVIO REGISTRO EN LÍNEA)', '2022-07-04', '16:02:18'),
 (541, 1332, 2, 'solicitar certificado al momento de la inscripción ', '2022-07-05', '11:30:14'),
-(542, 357, 3, 'INSCRITA ', '2022-07-05', '12:02:24');
+(542, 357, 3, 'INSCRITA ', '2022-07-05', '12:02:24'),
+(543, 1503, 4, 'VIENE A INSCRIBIRSE, SE TIENE APARTADO EL LUGAR ', '2022-07-05', '14:10:57'),
+(544, 1496, 2, 'Solicitar certificado al momento de la inscripción ', '2022-07-05', '14:11:49'),
+(545, 1189, 11, 'SE LE INFORMÓ QUE YA PUEDE PASAR A REALIZAR EL PAGO DE INSCRIPCIÓN Y TRAER SUS DOCUMENTOS. ', '2022-07-05', '15:34:20'),
+(546, 732, 11, 'INSCRITA EN EL PLANTEL. (PRESENTÓ EL CENEVAL EN JUNIO)', '2022-07-05', '16:18:30'),
+(547, 1503, 2, 'ESTA EN TRAMITE LA CÉDULA ', '2022-07-05', '16:28:28'),
+(548, 1480, 11, 'INSCRITA EN EL PLANTEL.', '2022-07-05', '17:38:44'),
+(549, 1483, 11, 'INSCRITA EN EL PLANTEL. (RESULTADOS DE OTRA ESCUELA).\r\n', '2022-07-05', '17:47:43'),
+(550, 1473, 11, 'REGISTRADA AL CENEVAL DE AGOSTO.', '2022-07-05', '17:48:48'),
+(551, 1299, 11, 'INSCRITA EN EL PLANTEL. (PREVIO REGISTRO EN LÍNEA).', '2022-07-05', '17:49:56'),
+(552, 1477, 11, 'INSCRITO EN EL PLANTEL. ', '2022-07-05', '17:51:49'),
+(553, 1474, 11, 'INSCRITO EN EL PLANTEL..', '2022-07-05', '17:56:16'),
+(554, 1472, 11, 'INSCRITO EN EL PLANTEL.', '2022-07-05', '18:02:48'),
+(555, 1475, 11, 'INSCRITA EN EL PLANTEL.', '2022-07-05', '18:12:45'),
+(556, 1479, 11, 'INSCRITA EN EL PLANTEL.', '2022-07-05', '18:32:26'),
+(557, 1476, 11, 'INSCRITO EN EL PLANTEL.', '2022-07-05', '18:32:56'),
+(558, 1479, 11, 'INSCRITA EN EL PLANTE. (PENDIENTE FOTOS Y CONSTANCIA DE ESTUDIOS).', '2022-07-05', '18:45:34'),
+(559, 1481, 11, 'INSCRITO EN EL PLANTEL. (PENDIENTE CONSTANCIA DE ESTUDIOS)', '2022-07-05', '18:49:48'),
+(560, 1478, 11, 'INSCRITA EN EL PLANTEL. (RESULTADOS DE OTRA ESCUELA)', '2022-07-05', '18:54:39'),
+(561, 1482, 11, 'INSCRITA EN EL PLANTEL.', '2022-07-05', '19:34:47'),
+(562, 1463, 11, 'INSCRITA EN EL PLANTEL. (PENDIENTE ACTA DE NACIMIENTO, CONSTANCIA DE ESTUDIOS Y FOTOS).', '2022-07-05', '19:44:56'),
+(563, 1469, 11, 'REGISTRO EN LÍNEA.', '2022-07-05', '19:49:26'),
+(564, 1491, 11, 'INSCRITA EN EL PLANTEL.', '2022-07-05', '20:16:37'),
+(565, 1485, 2, 'Solicitar constancia al momento de la inscripción ', '2022-07-06', '10:12:42');
 
 -- --------------------------------------------------------
 
@@ -5860,17 +5957,17 @@ CREATE TABLE `inv_campus_producto` (
 
 INSERT INTO `inv_campus_producto` (`id`, `id_producto`, `id_campus`, `cantidad`, `precio`, `mod_fecha_entrada`, `mod_hora_entrada`, `mod_fecha_salida`, `mod_hora_salida`, `mod_fecha_factura`, `mod_id_usuario`, `id_bodega`, `id_categoria`, `id_estatus`, `numero_serie`) VALUES
 (181, 91, 1, 25, 0, '2022-06-29', '18:41:58', '2022-06-29', '18:47:22', '0000-00-00', 37, 0, 0, 1, ''),
-(182, 91, 2, 31, 0, '2022-07-01', '17:33:55', '2022-07-04', '21:53:30', '0000-00-00', 21, 8, 9, 1, '0'),
+(182, 91, 2, 21, 0, '2022-07-06', '16:22:03', '2022-07-05', '22:22:04', '0000-00-00', 21, 8, 9, 1, '0'),
 (183, 92, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (184, 92, 2, 11, 0, '2022-06-21', '14:19:17', '2022-06-28', '21:54:54', '0000-00-00', 21, 8, 9, 1, '0'),
 (185, 93, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (186, 93, 2, 1, 0, '2022-06-24', '21:37:45', '2022-06-25', '17:30:19', '0000-00-00', 21, 8, 9, 1, '0'),
 (187, 94, 1, 55, 0, '2022-06-30', '17:49:00', NULL, NULL, '0000-00-00', NULL, 25, 0, 1, ''),
-(188, 94, 2, 32, 0, '2022-07-01', '17:34:35', '2022-07-04', '21:54:30', '0000-00-00', 21, 8, 9, 1, '0'),
+(188, 94, 2, 29, 0, '2022-07-01', '17:34:35', '2022-07-05', '22:23:12', '0000-00-00', 21, 8, 9, 1, '0'),
 (189, 95, 1, 25, 0, '2022-06-30', '17:26:15', NULL, NULL, '0000-00-00', NULL, 25, 0, 0, ''),
-(190, 95, 2, 21, 0, '2022-06-09', '14:35:37', '2022-07-01', '21:27:17', '0000-00-00', 21, 8, 9, 1, '0'),
+(190, 95, 2, 20, 0, '2022-06-09', '14:35:37', '2022-07-05', '22:15:34', '0000-00-00', 21, 8, 9, 1, '0'),
 (191, 96, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
-(192, 96, 2, 5, 0, '2022-06-18', '16:40:13', '2022-07-04', '22:13:58', '0000-00-00', 21, 8, 9, 1, '0'),
+(192, 96, 2, 2, 0, '2022-06-18', '16:40:13', '2022-07-05', '22:24:10', '0000-00-00', 21, 8, 9, 1, '0'),
 (193, 97, 1, 3, 0, '2022-06-29', '18:35:58', NULL, NULL, '0000-00-00', 37, 0, 0, 0, NULL),
 (194, 97, 2, 0, 0, '2022-05-27', '16:11:44', '0000-00-00', '00:00:00', '0000-00-00', 0, 9, 9, 0, '0'),
 (195, 98, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
@@ -6571,13 +6668,13 @@ INSERT INTO `inv_campus_producto` (`id`, `id_producto`, `id_campus`, `cantidad`,
 (2713, 1357, 1, 433, 0, '2022-05-19', '15:08:44', NULL, NULL, '0000-00-00', NULL, 3, 6, 0, '0'),
 (2714, 1357, 2, 128, 0, '2022-06-17', '18:51:38', NULL, NULL, '0000-00-00', NULL, 21, 31, 0, ''),
 (2715, 1358, 1, 150, 0, '2022-06-30', '17:50:10', NULL, NULL, '0000-00-00', NULL, 25, 0, 1, ''),
-(2716, 1358, 2, 8, 0, '2022-05-27', '16:16:58', '2022-07-02', '17:59:42', '0000-00-00', 21, 8, 10, 1, '0'),
+(2716, 1358, 2, 6, 0, '2022-05-27', '16:16:58', '2022-07-05', '22:11:14', '0000-00-00', 21, 8, 10, 1, '0'),
 (2717, 1359, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (2718, 1359, 2, 0, 0, '2022-05-20', '17:10:21', '2022-06-03', '14:13:23', '0000-00-00', 21, 8, 8, 1, '0'),
 (2719, 1360, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (2720, 1360, 2, 5, 0, '2022-05-20', '17:10:37', '0000-00-00', '00:00:00', '0000-00-00', 21, 8, 9, 1, '0'),
 (2721, 1361, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
-(2722, 1361, 2, 20, 0, '2022-05-20', '17:10:51', '2022-07-04', '21:44:11', '0000-00-00', 21, 8, 9, 1, '0'),
+(2722, 1361, 2, 18, 0, '2022-05-20', '17:10:51', '2022-07-05', '22:16:47', '0000-00-00', 21, 8, 9, 1, '0'),
 (2723, 1362, 1, 25, 0, '2022-06-30', '17:26:46', NULL, NULL, '0000-00-00', NULL, 0, 0, 0, ''),
 (2724, 1362, 2, 5, 0, '2022-06-09', '14:37:03', '2022-05-30', '21:38:14', '0000-00-00', 21, 8, 9, 1, '0'),
 (2725, 1363, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
@@ -7441,7 +7538,7 @@ INSERT INTO `inv_campus_producto` (`id`, `id_producto`, `id_campus`, `cantidad`,
 (3681, 1841, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (3682, 1841, 2, 0, 0, '2022-05-27', '16:24:44', '2022-06-16', '21:43:32', '0000-00-00', 21, 8, 15, 1, '0'),
 (3683, 1842, 1, NULL, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
-(3684, 1842, 2, 10, 0, '2022-06-27', '20:21:11', '2022-06-16', '13:16:45', '0000-00-00', 21, 8, 15, 1, '0'),
+(3684, 1842, 2, 7, 0, '2022-06-27', '20:21:11', '2022-07-05', '20:18:50', '0000-00-00', 21, 8, 15, 1, '0'),
 (3686, 1843, 2, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
 (3687, 1844, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 3, 6, 1, ''),
 (3688, 1844, 2, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 0, 0, 0, NULL),
@@ -7683,9 +7780,9 @@ INSERT INTO `inv_campus_producto` (`id`, `id_producto`, `id_campus`, `cantidad`,
 (3923, 1962, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 8, 15, 1, '0'),
 (3924, 1962, 2, 11, 0, '2022-06-18', '16:48:17', '2022-06-28', '14:04:05', '0000-00-00', 21, 8, 15, 1, '0'),
 (3925, 1963, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 8, 15, 1, '0'),
-(3926, 1963, 2, 200, 0, '2022-06-11', '17:26:07', '2022-06-28', '14:01:41', '0000-00-00', 21, 8, 15, 1, '0'),
+(3926, 1963, 2, 0, 0, '2022-06-11', '17:26:07', '2022-07-05', '20:16:06', '0000-00-00', 21, 8, 15, 1, '0'),
 (3927, 1964, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 8, 15, 1, '0'),
-(3928, 1964, 2, 200, 0, '2022-06-11', '17:25:16', '2022-06-28', '14:03:07', '0000-00-00', 21, 8, 15, 1, '0'),
+(3928, 1964, 2, 0, 0, '2022-06-11', '17:25:16', '2022-07-05', '20:17:31', '0000-00-00', 21, 8, 15, 1, '0'),
 (3929, 1965, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 8, 15, 1, '0'),
 (3930, 1965, 2, 0, 0, '2022-06-11', '17:35:24', '2022-06-28', '14:00:42', '0000-00-00', 21, 8, 15, 1, '0'),
 (3931, 1966, 1, 0, 0, NULL, NULL, NULL, NULL, '0000-00-00', NULL, 9, 15, 1, '0'),
@@ -8200,7 +8297,8 @@ INSERT INTO `inv_entrada_producto` (`id`, `id_usuario`, `fecha`, `hora`, `cantid
 (254, 21, '2022-07-01', '17:34:35', 30, '94', NULL, 'se ingresan 30 bultos de cal de materiales salomÃ³n', NULL, NULL, 2, '', 0, 0),
 (255, 21, '2022-07-04', '21:40:56', 4, '2010', NULL, 'se ingresa rodillos de peleterÃ­a la terminal', NULL, NULL, 2, '', 0, 0),
 (256, 21, '2022-07-04', '21:41:34', 4, '2012', NULL, 'se ingresa brochas de peleterÃ­a la terminal', NULL, NULL, 2, '', 0, 0),
-(257, 21, '2022-07-05', '17:16:45', 7, '1822', NULL, 'se ingresa polvo de piedra de materiales salomÃ³n', NULL, NULL, 2, '', 0, 0);
+(257, 21, '2022-07-05', '17:16:45', 7, '1822', NULL, 'se ingresa polvo de piedra de materiales salomÃ³n', NULL, NULL, 2, '', 0, 0),
+(258, 21, '2022-07-06', '16:22:03', 15, '91', NULL, 'se ingresan 15 bultos de cemento de materiales el angel', NULL, NULL, 2, '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -9841,7 +9939,20 @@ INSERT INTO `inv_salida_producto` (`id`, `id_usuario`, `fecha`, `hora`, `cantida
 (639, 21, '2022-07-04', '21:53:30', 1, NULL, '91', 0, NULL, 0, NULL, 'revocado del muro de promociÃ³n grupo chi&#13;&#10;&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 10, 0),
 (640, 21, '2022-07-04', '21:54:30', 2, NULL, '94', 0, NULL, 0, NULL, 'revocado del muro de promociÃ³n grupo Loeza&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 10, 0),
 (641, 21, '2022-07-04', '22:05:05', 1, NULL, '1667', 0, NULL, 0, NULL, 'pintado de exterior del edificio personal del cert', NULL, 2, '2', '0000-00-00', '0000-00-00', 11, 0),
-(642, 21, '2022-07-04', '22:13:58', 3, NULL, '96', 0, NULL, 0, NULL, 'enmasillado del tercer y segundo nivel grupo loeza', NULL, 2, '2', '0000-00-00', '0000-00-00', 8, 0);
+(642, 21, '2022-07-04', '22:13:58', 3, NULL, '96', 0, NULL, 0, NULL, 'enmasillado del tercer y segundo nivel grupo loeza', NULL, 2, '2', '0000-00-00', '0000-00-00', 8, 0),
+(643, 21, '2022-07-05', '20:16:06', 200, NULL, '1963', 0, NULL, 0, NULL, 'se utiliza en instalacion de lamparas y placas de climas en el tercer nivel grupo electricistas', NULL, 2, '2', '0000-00-00', '0000-00-00', 12, 0),
+(644, 21, '2022-07-05', '20:17:31', 200, NULL, '1964', 0, NULL, 0, NULL, 'instalaciÃ³n de lamparas y placas de climas del tercer nivel grupo electricistas', NULL, 2, '2', '0000-00-00', '0000-00-00', 12, 0),
+(645, 21, '2022-07-05', '20:18:50', 3, NULL, '1842', 0, NULL, 0, NULL, 'se utiliza en conexiones de lÃ­neas de las lampara del tercer nivel grupo electricistas', NULL, 2, '2', '0000-00-00', '0000-00-00', 12, 0),
+(646, 21, '2022-07-05', '22:09:40', 16, NULL, '91', 0, NULL, 0, NULL, 'colado del firme de la entrada y revocado del sardinel&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 8, 0),
+(647, 21, '2022-07-05', '22:11:14', 2, NULL, '1358', 0, NULL, 0, NULL, 'armado de la base del lavabo del baÃ±o de la sala de maestros grupo loeza', NULL, 2, '2', '0000-00-00', '0000-00-00', 8, 0),
+(648, 21, '2022-07-05', '22:15:34', 1, NULL, '95', 0, NULL, 0, NULL, 'se utiliza en el armado de la base del lavabo del baÃ±o de la sala de maestros grupo Loeza', NULL, 2, '2', '0000-00-00', '0000-00-00', 8, 0),
+(649, 21, '2022-07-05', '22:16:47', 2, NULL, '1361', 0, NULL, 0, NULL, 'emboquillado de las escalera,  grupo Loeza&#13;&#10;', NULL, 2, '2', '0000-00-00', '0000-00-00', 8, 0),
+(650, 21, '2022-07-05', '22:18:59', 6, NULL, '91', 0, NULL, 0, NULL, 'colado de firme de la caseta de vigilancia, enmasillado de la entrada grupo Sansores&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 9, 0),
+(651, 21, '2022-07-05', '22:20:05', 1, NULL, '94', 0, NULL, 0, NULL, 'colado de firme de la caseta de vigilancia, enmasillado de la entrada grupo Sansores&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 9, 0),
+(652, 21, '2022-07-05', '22:20:55', 1, NULL, '96', 0, NULL, 0, NULL, 'colado de firme de la caseta de vigilancia, enmasillado de la entrada grupo Sansores', NULL, 2, '1', '0000-00-00', '0000-00-00', 9, 0),
+(653, 21, '2022-07-05', '22:22:04', 3, NULL, '91', 0, NULL, 0, NULL, 'revocado del muro de promociÃ³n y entrada  grupo chi&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 10, 0),
+(654, 21, '2022-07-05', '22:23:12', 2, NULL, '94', 0, NULL, 0, NULL, 'revocado del muro de promociÃ³n y entrada  grupo chi&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 10, 0),
+(655, 21, '2022-07-05', '22:24:10', 2, NULL, '96', 0, NULL, 0, NULL, 'revocado del muro de promociÃ³n y entrada  grupo chi&#13;&#10;', NULL, 2, '1', '0000-00-00', '0000-00-00', 10, 0);
 
 -- --------------------------------------------------------
 
@@ -12995,7 +13106,7 @@ INSERT INTO `prospectos` (`id`, `id_campus`, `id_oferta`, `id_asesor`, `nombre`,
 (2658, 2, 24, 9, 'EMILI XIU ', 'emilixiu9@homail.com', '9997129047', 'Mañana', 'TICUL ', '11', '', '2022-06-05', 0),
 (2659, 1, 6, 3, 'DANIEL JAFET ALZIN ORDOÑEZ ', 'alzinaodaniel@hotmail.com', '9999700970', 'Mañana', 'CEM', '1', '', '2022-06-05', 0),
 (2660, 2, 22, 4, 'OCTAVIO FRANCISCO GONZÁLEZ SÁNCHEZ ', 'tabo041020@gmail.com', '9841760912', 'Mañana', 'COBAY SAN JOSÉ TZAL ', '6', '', '2022-06-05', 0),
-(2661, 1, 3, 3, 'ANDRÉS YAHID LAVADORES CHAN ', 'richarlavadores35@gmail.com', '9911182967', 'Tarde', 'PREPARATORIA ESTATAL VÍCTOR JESÚS MANZANILLA JIMÉNEZ ', '1', '', '2022-06-05', 0),
+(2661, 1, 3, 3, 'ANDRÉS YAHID LAVADORES CHAN ', 'richarlavadores35@gmail.com', '9911182967', 'Tarde', 'PREPARATORIA ESTATAL VÍCTOR JESÚS MANZANILLA JIMÉNEZ ', '1', '', '2022-06-05', 3),
 (2662, 1, 1, 3, 'ROMMEL ANDREY MAGAÑA CERÓN', 'taikmlia@hotmail.com', '9971070350', 'Mañana', 'COBAY TEKAX ', '1', '', '2022-06-05', 0),
 (2663, 2, 22, 4, 'KARINA MORTERA RIVEROLL', 'karinamorterar25@gmail.com', '9995795481', 'Mañana', 'CCAF', '11', '', '2022-06-05', 0),
 (2664, 1, 6, 3, 'ULISES SALVADOR HERNÁNDEZ GUZMÁN', 'ulisessalvadorhernandezguzman@gmail.com', '9983386156', 'Mañana', 'RUBÉN H RODRÍGUEZ MOGUEL', '11', '', '2022-06-05', 0),
@@ -13017,7 +13128,7 @@ INSERT INTO `prospectos` (`id`, `id_campus`, `id_oferta`, `id_asesor`, `nombre`,
 (2680, 1, 5, 5, 'LIZBETH YOLANDA TZAB POOL', 'lizbethtzab03@gmail.com', '9996179790', 'Mañana', 'TELEBACHILLERATO', '1', '', '2022-06-06', 0),
 (2681, 1, 7, 6, 'YUCELI ROMINA AGUILAR CHUC ', 'yuceliaguilar2@gmail.com', '9994241486', 'Indistinto', 'COBAY HUNUCMÁ ', '11', '', '2022-06-06', 0),
 (2682, 1, 4, 3, 'JOSÉ GILBERTO GARCÍA GARCÍA', 'josegilbertogarciagarcia535@gmail.com', '7822440722', 'Indistinto', 'UNIVERSIDAD VERACRUZANA', '12', '', '2022-06-06', 0),
-(2683, 1, 3, 3, 'JOANA  GUADALUPE ROSALES TUN', 'joanarosalestun171292@gmail.com', '9994119267', 'Tarde', 'IGNACIO COMONFORT ', '11', '', '2022-06-06', 0),
+(2683, 1, 3, 3, 'JOANA  GUADALUPE ROSALES TUN', 'joanarosalestun171292@gmail.com', '9994119267', 'Tarde', 'IGNACIO COMONFORT ', '11', '', '2022-06-06', 2),
 (2684, 1, 11, 4, 'KATIA GUADALUPE CASTILLO CRUZ', '', '9992751849', 'Mañana', 'CERT MÉRIDA', '11', '', '2022-06-06', 0),
 (2685, 1, 11, 4, 'KARLA GUADALUPE HUCHIN FUENTES', 'huchinkarla19@gmail.com', '9961093826', 'Tarde', 'UNIVERSIDAD MUNDO MAYA', '1', '', '2022-06-06', 0),
 (2686, 1, 6, 3, 'PABLO MAY ', 'pablito_may_chan_93@hotmail.com', '9992270825', 'Mañana', 'NORMAL ', '11', '', '2022-06-06', 0),
@@ -13714,7 +13825,49 @@ INSERT INTO `prospectos` (`id`, `id_campus`, `id_oferta`, `id_asesor`, `nombre`,
 (3384, 1, 11, 4, 'MICHELIN BETZABE DIAZ CASTILLO', 'alesiacastillo4@gmail.com', '9994989799', 'Mañana', 'INCIH', '11', '', '2022-07-05', 3),
 (3385, 2, 22, 4, 'DANIEL LARA', 'verticojr8@gmail.com', '9381705586', 'Indistinto', 'LUIS ALVAREZ BARRET', '12', '', '2022-07-05', 3),
 (3386, 2, 22, 11, 'ALBERTO ALEXANDRO PALOMO DUARTE', 'alex.paldux18@gmail.com', '9811817030', 'Mañana', 'INSTITUTO CAMPECHANO ', '11', '', '2022-07-05', 3),
-(3387, 1, 5, 5, 'ALBERTO ALEXANDRO PALOMO DUARTE ', 'alex.paldu624@gmail.com', '9811817030', 'Mañana', 'INSTITUTO CAMPECHANO ', '11', '', '2022-07-05', 3);
+(3387, 1, 5, 5, 'ALBERTO ALEXANDRO PALOMO DUARTE ', 'alex.paldu624@gmail.com', '9811817030', 'Mañana', 'INSTITUTO CAMPECHANO ', '11', '', '2022-07-05', 3),
+(3388, 1, 3, 3, 'BG VIANEY', 'Michellevillanueva1309@gmail.com', '9992648253', 'Mañana', '', '', '', '2022-07-05', 3),
+(3389, 1, 6, 3, 'ANA LAURA CONDE MARTINEZ ', 'analauracondemartinez@gmail.com', '9993251941', 'Indistinto', 'PREPARATORIA ESTATAL NO.10 RUBEN H RODRIGUEZ MOGUEL ', '12', '', '2022-07-05', 3),
+(3390, 1, 5, 5, 'MARTIN ALEJANDRO', 'martinesperez227@gmail.com', '9821278129', 'Mañana', 'COBACAM 09 CHAMPOTON', '11', '', '2022-07-05', 3),
+(3391, 1, 7, 6, 'JOSE HERNANDEZ', 'kevinlpzhdz@gmail.com', '8995276936', 'Mañana', '', '', '', '2022-07-05', 3),
+(3392, 1, 16, 6, 'DANIEL JESUS CONTRERAS DE LA CRUZ', '', '9995061161', 'Mañana', '', '4', '', '2022-07-05', 3),
+(3393, 1, 14, 6, 'MEZTLI ODONGEI LOPEZ ROSADO ', '', '9212242792', 'Mañana', 'CERT PREESCOLAR ', '11', '', '2022-07-05', 3),
+(3394, 1, 8, 5, 'ARLETH SHANTAL PERERA NOH ', 'pererashantal@gmail.com', '9841359416', 'Mañana', 'COBAY PLANTEL PETO', '1', '', '2022-07-05', 3),
+(3395, 1, 6, 3, 'ERIKA MARIANA GÓMEZ CENTENO', 'ricardouscanga76@gmail.com', '9996501947', 'Tarde', 'CONALEP MÉRIDA III', '1', '', '2022-07-05', 3),
+(3396, 1, 4, 3, 'MARÍA DEL PILAR ARAUJO CRISANTO ', 'arujopilar41@gmail.com', '9991003133', 'Mañana', 'CBTIS 120', '9', '', '2022-07-05', 3),
+(3397, 2, 22, 4, 'MIRLEY LEÓN ', 'mirleyleon01@gmail.com', '9995618888', 'Indistinto', 'COBAY', '1', '', '2022-07-05', 3),
+(3398, 2, 22, 11, 'GERALDY ', 'geraldymorales305@gmail.com', '9991262238', 'Mañana', 'UCEM', '1', '', '2022-07-05', 3),
+(3399, 2, 22, 4, 'SAÚL PÉREZ CARDENAS', 'saulcardenas7710@gmail.com', '5292123600', 'Mañana', 'CBTIS 85', '1', '', '2022-07-05', 3),
+(3400, 1, 11, 4, 'FERNANDO MONTALVO', 'superferjesus08@gmail.com', '9993779150', 'Mañana', 'ICEST', '1', '', '2022-07-05', 3),
+(3401, 2, 22, 4, 'ADAMARIS ESPINOSA HERNÁNDEZ ', 'dylanhumbertoe@gmail.com', '9971324954', 'Mañana', 'CERT', '1', '', '2022-07-05', 3),
+(3402, 2, 22, 4, 'OMAR YAIR HOY MORALES', 'omarhoy535@gmail.com', '9811375373', 'Indistinto', 'COBACAM', '11', '', '2022-07-05', 3),
+(3403, 2, 18, 8, 'GRISSEL GUADALUPE HERNANDEZ  GOMEZ ', 'grisselhernandez95@gmail.com', '9971384095', 'Indistinto', 'COBAY TICUL', '12', '', '2022-07-05', 3),
+(3404, 2, 22, 11, 'GRISSEL GUADALUPE HERNANDEZ GOMEZ ', 'grisselguadalupe@icloud.com', '9971384095', 'Indistinto', 'COBAY TICUL', '12', '', '2022-07-05', 3),
+(3405, 2, 22, 4, 'SANTIAGO CHAN CHAN ', 'grisselhernandez@icloud.com', '9971162087', 'Indistinto', 'COBAY AKIL', '1', '', '2022-07-05', 3),
+(3406, 1, 10, 4, 'EDGAR RODRIGO MANRIQUE AGUILAR ', 'manriquerodrigo488@gmail.com', '9851078115', 'Mañana', 'UNIVERSIDAD AUTÓNOMA DE YUCATÁN ', '11', '', '2022-07-05', 3),
+(3407, 1, 3, 3, 'CITLALY GUADALUPE LÓPEZ BALAM ', 'citlalyglb@gmail.com', '9911115964', 'Mañana', 'COBAY TEYA', '1', '', '2022-07-05', 3),
+(3408, 2, 22, 4, 'GAEL ALEJANDRO LÓPEZ PECH ', 'gaelopezpech@gmail.com', '9992513298', 'Mañana', 'PREPARATORIA PROGRESO', '6', '', '2022-07-05', 3),
+(3409, 1, 3, 3, 'FÁTIMA GPE CHABLE PALOMO ', 'fatimachable14@gmail.com', '9991557476', 'Tarde', 'CEUM', '6', '', '2022-07-05', 3),
+(3410, 1, 9, 4, 'MATA PACHECO NAYLA LUDYVIÑE ', 'naylamatapacheco@gmail.com', '9971633508', 'Indistinto', 'CERT TICUL', '12', '', '2022-07-05', 3),
+(3411, 2, 23, 8, 'MAYRA GUADALUPE CANO DZIB', 'mayracano1046@gmail.com', '9971017327', 'Indistinto', 'COLEGIO DE BACHILLERES DEL ESTADO DE YUCATÁN ', '11', '', '2022-07-05', 3),
+(3412, 1, 8, 5, 'DIEGO ADRIÁN PAT LÓPEZ ', 'diegoadrianpatlopez@gmail.com', '9994158971', 'Mañana', 'COLEGIO SAN AGUSTÍN ', '11', '', '2022-07-05', 3),
+(3413, 1, 6, 3, 'CAROLINA LÓPEZ ', 'qi.carolinalopez@gmail.com', '9991275818', 'Tarde', 'UADY', '12', '', '2022-07-05', 3),
+(3414, 1, 4, 3, 'KATHERINE FLORES HERNANDEZ ', 'fresita_dianita@live.com', '9332072672', 'Mañana', 'COLEGIO DE BACHILLERES DE TABASCO', '12', '', '2022-07-06', 3),
+(3415, 1, 6, 3, 'JENNIFER AMAIRANI VARGAS LÓPEZ ', 'jennifervar18@gmail.com', '9991930159', 'Tarde', 'PREPARATORIA ', '9', '', '2022-07-06', 3),
+(3416, 1, 14, 6, 'YARELI DURÁN ', 'yareliduransolis4@gmail.com', '9992078280', 'Mañana', 'CESS', '11', '', '2022-07-06', 3),
+(3417, 1, 14, 6, 'YARELI DURAM', '', '9992078280', 'Mañana', '', '12', '', '2022-07-06', 1),
+(3418, 1, 14, 6, 'YARELI DURAM', '', '9992078280', 'Mañana', '', '12', '', '2022-07-06', 1),
+(3419, 1, 3, 3, 'REINA LUCELI COB CUXIN ', 'luceliicob107@gmail.com', '9851345336', 'Indistinto', 'COBAY PLANTEL YAXCABÁ ', '1', '', '2022-07-06', 3),
+(3420, 1, 16, 6, 'DANIEL JESÚS CONTRERAS DE LA CRUZ.', '', '9995061161', 'Mañana', '', '6', '', '2022-07-06', 3),
+(3421, 1, 14, 6, 'YARELI DURAM', '', '9992078280', 'Mañana', '', '12', '', '2022-07-06', 1),
+(3422, 1, 9, 4, 'MARÍA AURELIA MARTÍN MÉZQUITA ', 'aureliam9707@gmail.com', '9993877984', 'Mañana', 'CERT', '12', '', '2022-07-06', 3),
+(3423, 2, 22, 11, 'SHERLY MELISSA LÓPEZ CARDEÑA ', 'shermel2323@gmail.com', '9871137033', 'Mañana', 'BACHILLERES COZUMEL ', '11', '', '2022-07-06', 3),
+(3424, 1, 4, 3, 'DAYANA GUADALUPE CASTILLO CAUICH ', 'castillocauichdayana@gmail.com', '9996489312', 'Mañana', 'COBAY', '1', '', '2022-07-06', 3),
+(3425, 1, 6, 3, 'ADRIANA LUZ', 'adriycortes@hotmail.com', '9994648609', 'Mañana', 'REPÚBLICA DE MÉXICO', '1', '', '2022-07-06', 3),
+(3426, 1, 16, 6, 'DANIEL JESÚS CONTRERAS DE LA CRUZ.', '', '9995061161', 'Mañana', '', '6', '', '2022-07-06', 3),
+(3427, 1, 4, 3, 'GLENDY MARILYN HOIL CASTRO', 'glendy049212@gmail.com', '9994374223', 'Mañana', 'CLEU ', '1', '', '2022-07-06', 3),
+(3428, 1, 8, 5, 'JORGE ALEXIS BOVADILLA CASILLAS ', 'abc_brasil@hotmail.com', '5632794805', 'Mañana', 'INSTITUTO PROGRESO Y ESPERANZA ', '8', '', '2022-07-06', 3),
+(3429, 2, 22, 4, 'ISAAC ALFONSO GONZÁLEZ VIDAL', 'isaacvidal08@gmail.com', '9381288440', 'Mañana', 'CETIS NO.20', '1', '', '2022-07-06', 3);
 
 -- --------------------------------------------------------
 
@@ -14892,7 +15045,7 @@ ALTER TABLE `web_oferta_educativa`
 -- AUTO_INCREMENT de la tabla `alumnos`
 --
 ALTER TABLE `alumnos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=749;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=750;
 
 --
 -- AUTO_INCREMENT de la tabla `area`
@@ -14904,19 +15057,19 @@ ALTER TABLE `area`
 -- AUTO_INCREMENT de la tabla `aspirantes`
 --
 ALTER TABLE `aspirantes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1499;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1524;
 
 --
 -- AUTO_INCREMENT de la tabla `aspirantes_validacion`
 --
 ALTER TABLE `aspirantes_validacion`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1320;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1352;
 
 --
 -- AUTO_INCREMENT de la tabla `aspirantes_validacion_edu`
 --
 ALTER TABLE `aspirantes_validacion_edu`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `campus`
@@ -14928,13 +15081,13 @@ ALTER TABLE `campus`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1592;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1611;
 
 --
 -- AUTO_INCREMENT de la tabla `comentarios_aspirantes`
 --
 ALTER TABLE `comentarios_aspirantes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=543;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=566;
 
 --
 -- AUTO_INCREMENT de la tabla `examen`
@@ -14976,7 +15129,7 @@ ALTER TABLE `inv_departamentos`
 -- AUTO_INCREMENT de la tabla `inv_entrada_producto`
 --
 ALTER TABLE `inv_entrada_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=258;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=259;
 
 --
 -- AUTO_INCREMENT de la tabla `inv_entrada_transferencia`
@@ -15012,7 +15165,7 @@ ALTER TABLE `inv_proyectos`
 -- AUTO_INCREMENT de la tabla `inv_salida_producto`
 --
 ALTER TABLE `inv_salida_producto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=643;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=656;
 
 --
 -- AUTO_INCREMENT de la tabla `inv_salida_transferencia`
@@ -15078,7 +15231,7 @@ ALTER TABLE `oferta_educativa`
 -- AUTO_INCREMENT de la tabla `prospectos`
 --
 ALTER TABLE `prospectos`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3388;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3430;
 
 --
 -- AUTO_INCREMENT de la tabla `prospectos_eventos`
